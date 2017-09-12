@@ -1,0 +1,22 @@
+switch.tv:
+  icon: mdi:television
+switch.receiver:
+  icon: mdi:speaker
+switch.spruitje:
+  icon: mdi:lightbulb
+switch.lamp_links_op_tv_meubel:
+  icon: mdi:lightbulb
+switch.mediaspeler:
+  icon: mdi:kodi
+switch.lampen_bij_het_raam:
+  icon: mdi:lightbulb
+group.all_automations:
+  hidden: false
+group.all_scripts:
+  hidden: false
+group.all_devices:
+  hidden: false
+group.all_switches:
+  hidden: false
+group.all_lights:
+  hidden: false

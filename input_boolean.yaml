@@ -1,0 +1,12 @@
+on_holiday:
+  name: Vakantietimer aan
+  initial: off
+  #icon: mdi:home
+admin_notifications:
+  name: Enable admin notifications
+  initial: on
+  icon: mdi:car
+receiver_ready:
+  name: Receiver ready
+televisie_ready:
+  name: TV ready

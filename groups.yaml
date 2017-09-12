@@ -1,0 +1,154 @@
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.media_select
+    - group.living_room_lights
+devices:
+  name: Apparaten
+  view: yes
+  icon: mdi:desktop-classic
+  entities:
+    - group.computers
+    - group.mv
+    - group.esp01
+    - group.mediaplayers
+    - device_tracker.alex
+    - device_tracker.joyce
+extended:
+  name: Uitgebreid
+  view: yes
+  icon: mdi:home-modern
+  entities:
+    - group.multimedia
+    - group.living_room_lights
+    - group.tradfri_lights
+    - input_boolean.on_holiday
+    - input_boolean.admin_notifications
+    - group.logger_select
+monitoring:
+  name: Monitoring
+  view: yes
+  icon: mdi:speedometer
+  entities:
+    - group.raspberry_pi
+    - group.fibaro_sensors
+admin:
+  name: Administrator
+  view: yes
+  icon: mdi:settings
+  entities:
+    - group.all_switches
+    - group.all_lights
+    - group.all_devices
+    - group.all_automations
+esp01:
+  name: On ESP01
+  entities:
+    - switch.extra_relay
+    - light.extra_light
+computers:
+  name: Computers
+  entities:
+    - switch.nuc
+    - switch.server
+logger_select:
+  name: Logger Level
+  entities:
+    - input_select.logger_level_homeassistant
+    - input_select.logger_level_zwave
+    - input_select.logger_level_tradfri
+media_select:
+  name: Media Selectie
+  entities:
+    - input_select.media_scene
+living_room_lights:
+  name: Lampen Woonkamer
+  entities:
+    - switch.spruitje
+    - light.linksvoor
+    - light.raam
+    - light.achter_bank
+    - light.linksachter
+    - light.schilderij
+    - group.eettafel_lights
+eettafel_lights:
+  name: Lampen Eettafel
+  entities:
+    - light.eettafel_1
+    - light.eettafel_2
+    - light.eettafel_3
+tradfri_lights:
+  name: Ikea Lampen
+  entities:
+    - light.linksvoor
+    - light.raam
+    - light.achter_bank
+    - light.linksachter
+    - light.schilderij
+    - light.eettafel_1
+    - light.eettafel_2
+    - light.eettafel_3
+    - light.hal
+multimedia:
+  name: Multimedia
+  entities:
+    - switch.tv
+    - switch.receiver
+    - switch.mediaspeler
+living_room:
+  name: Woonkamer
+  entities:
+    - group.multimedia
+    - group.living_room_lights
+living_room_dependable:
+  name: Woonkamer betrouwbaar
+  entities:
+    - group.multimedia
+    - switch.spruitje
+    - light.linksvoor
+    - light.schilderij
+lights_vacation:
+  name: Lampen voor afwezig
+  entities:
+    - switch.spruitje
+    - light.linksvoor
+people:
+  name: Aanwezigen
+  entities:
+    - device_tracker.alex
+    - device_tracker.joyce
+fibaro_sensors:
+  name: Fibaro Sensors
+  entities:
+    - sensor.schakelaars_achter_totaalverbruik_1
+    - sensor.schakelaars_achter_totaalverbruik_2
+    - sensor.schakelaars_achter_vermogen_1
+    - sensor.schakelaars_achter_vermogen_2
+raspberry_pi:
+  name: Pi
+  entities:
+    - sensor.cpu_use
+    - sensor.average_load_1m
+    - sensor.average_load_5m
+    - sensor.average_load_15m
+    - sensor.ram_use
+    - sensor.swap_use
+    - sensor.disk_use_
+    - sensor.disk_use_boot
+mediaplayers:
+  name: Mediaspelers
+  entities:
+    - media_player.receiver
+    - media_player.woonkamer
+mv:
+  name: Mechanische ventilatie
+  entities:
+    - fan.mechanische_ventilatie
+    - sensor.mv_vermogen
+    - sensor.mv_spanning
+    - sensor.mv_stroom
+    - sensor.mv_actief_vermogen
+    - sensor.mv_reactief_vermogen
+    - sensor.mv_power_factor
+    - sensor.mv_verbruik

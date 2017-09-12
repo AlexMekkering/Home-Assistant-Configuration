@@ -1,0 +1,44 @@
+- platform: yr
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /boot
+    - type: disk_use_percent
+      arg: /
+    - type: processor_use
+    - type: load_1m
+    - type: load_5m
+    - type: load_15m
+    - type: memory_use_percent
+    - type: swap_use_percent
+    - type: network_in
+      arg: eth0
+    - type: network_out
+      arg: eth0
+- platform: mqtt
+  name: "MV vermogen"
+  state_topic: "homeassistant/switch/sonoff_pow1/power"
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: "MV verbruik"
+  state_topic: "homeassistant/switch/sonoff_pow1/energy"
+  unit_of_measurement: "kWh"
+- platform: mqtt
+  name: "MV stroom"
+  state_topic: "homeassistant/switch/sonoff_pow1/current"
+  unit_of_measurement: "A"
+- platform: mqtt
+  name: "MV spanning"
+  state_topic: "homeassistant/switch/sonoff_pow1/voltage"
+  unit_of_measurement: "V"
+- platform: mqtt
+  name: "MV actief vermogen"
+  state_topic: "homeassistant/switch/sonoff_pow1/apower"
+  unit_of_measurement: "VA"
+- platform: mqtt
+  name: "MV reactief vermogen"
+  state_topic: "homeassistant/switch/sonoff_pow1/rpower"
+  unit_of_measurement: "VAR"
+- platform: mqtt
+  name: "MV power factor"
+  state_topic: "homeassistant/switch/sonoff_pow1/pfactor"

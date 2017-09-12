@@ -1,0 +1,4 @@
+host: !secret host_influxdb
+include:
+  domains:
+    - sensor

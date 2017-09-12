@@ -1,0 +1,2 @@
+turn_off_nuc: !secret command_turn_off_nuc
+turn_off_server: !secret command_turn_off_server

@@ -1,0 +1,30 @@
+media_scene:
+  name: Media scene
+  options:
+    - TV kijken
+    - Media kijken
+    - Radio luisteren
+    - Geen
+  initial: Geen
+  icon: mdi:monitor-multiple
+logger_level_homeassistant:
+  name: Logger Level Homeassistant
+  options:
+    - error
+    - warning
+    - info
+    - debug
+logger_level_zwave:
+  name: Logger Level ZWave
+  options:
+    - error
+    - warning
+    - info
+    - debug
+logger_level_tradfri:
+  name: Logger Level Tradfri
+  options:
+    - error
+    - warning
+    - info
+    - debug

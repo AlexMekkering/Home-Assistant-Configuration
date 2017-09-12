@@ -1,0 +1,482 @@
+- id: scene_select_radio
+  alias: Scene Select Radio
+  trigger:
+    platform: state
+    entity_id: input_select.media_scene
+    to: 'Radio luisteren'
+  action:
+    service: script.listen_radio
+- id: scene_select_tv
+  alias: Scene Select TV
+  trigger:
+    platform: state
+    entity_id: input_select.media_scene
+    to: 'TV kijken'
+  action:
+    service: script.watch_tv
+- id: scene_select_media
+  alias: Scene Select Media
+  trigger:
+    platform: state
+    entity_id: input_select.media_scene
+    to: 'Media kijken'
+  action:
+    service: script.watch_media
+- id: scene_select_geen
+  alias: Scene Select Geen
+  trigger:
+    platform: state
+    entity_id: input_select.media_scene
+    to: 'Geen'
+  action:
+    service: script.all_media_off
+- id: check_receiver_source
+  alias: Check Receiver source
+  initial_state: 'off'
+  trigger:
+    platform: time
+    seconds: '/5'
+  action:
+    - service: media_player.select_source
+      data_template:
+        entity_id: media_player.receiver
+        source: >
+          {% if is_state('input_select.media_scene', 'Radio luisteren') %}
+            Radio
+          {% else %}
+            TV
+          {% endif %}
+    - service_template: >
+        {% if is_state('input_select.media_scene', 'Geen') 
+           or (is_state('input_select.media_scene', 'TV kijken') and is_state_attr('media_player.receiver', 'source', 'TV'))
+           or (is_state('input_select.media_scene', 'Media kijken') and (is_state_attr('media_player.receiver', 'source', 'TV') or is_state_attr('media_player.receiver', 'source', 'Mediaplayer')))
+           or (is_state('input_select.media_scene', 'Radio luisteren') and is_state_attr('media_player.receiver', 'source', 'Radio')) %}
+          automation.turn_off
+        {% else %}
+          automation.turn_on
+        {% endif %}
+      data:
+        entity_id: automation.check_receiver_source
+- id: turn_on_mediaplayer
+  alias: Turn on mediaplayer
+  trigger:
+    platform: state
+    entity_id: automation.check_receiver_source
+    to: 'off'
+  condition:
+    condition: template
+    value_template: "{{ is_state('input_select.media_scene', 'Media kijken') }}"
+  action:
+    - service: switch.turn_on
+      entity_id: switch.mediaspeler
+- id: select_logger_level_homeassistant
+  alias: Select Logger Level Home Assistant
+  trigger:
+    platform: state
+    entity_id: input_select.logger_level_homeassistant
+  action:
+    - service: logger.set_level
+      data_template:
+        homeassistant: "{{ trigger.to_state.state }}"
+- id: select_logger_level
+  alias: Select Logger Level
+  trigger:
+    platform: state
+    entity_id: input_select.logger_level_zwave
+  action:
+    - service: logger.set_level
+      data_template:
+        openzwave: "{{ trigger.to_state.state }}"
+    - service: logger.set_level
+      data_template:
+        libopenzwave: "{{ trigger.to_state.state }}"
+    - service: logger.set_level
+      data_template:
+        homeassistant.components.zwave.util: "{{ trigger.to_state.state }}"
+- id: select_logger_level_tradfri
+  alias: Select Logger Level Tradfri
+  trigger:
+    platform: state
+    entity_id: input_select.logger_level_tradfri
+  action:
+    - service: logger.set_level
+      data_template:
+        pytradfri.coap_cli: "{{ trigger.to_state.state }}"
+- id: rc_buttons_spruitje
+  alias: RC Buttons Spruitje
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.remote
+  condition:
+    - condition: template
+      value_template: '{{ (trigger.event.data.scene_id // 10) == 1 }}'
+  action:
+    service_template: 'switch.turn_{% if (trigger.event.data.scene_id % 10) == 1 %}on{% else %}off{% endif %}'
+    data: 
+      entity_id: switch.spruitje
+- id: rc_buttons_linksvoor
+  alias: RC Buttons Linksvoor
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.remote
+  condition:
+    - condition: template
+      value_template: '{{ (trigger.event.data.scene_id // 10) == 2 }}'
+  action:
+    service_template: 'light.turn_{% if (trigger.event.data.scene_id % 10) == 1 %}on{% else %}off{% endif %}'
+    data: 
+      entity_id: light.linksvoor
+- id: rc_buttons_raam
+  alias: RC Buttons Raam
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.remote
+  condition:
+    - condition: template
+      value_template: '{{ (trigger.event.data.scene_id // 10) == 3 }}'
+  action:
+    service_template: 'light.turn_{% if (trigger.event.data.scene_id % 10) == 1 %}on{% else %}off{% endif %}'
+    data: 
+      entity_id: light.raam
+- id: rc_buttons_achter_de_bank
+  alias: RC Buttons Achter de bank
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.remote
+  condition:
+    - condition: template
+      value_template: '{{ (trigger.event.data.scene_id // 10) == 4 }}'
+  action:
+    service_template: 'light.turn_{% if (trigger.event.data.scene_id % 10) == 1 %}on{% else %}off{% endif %}'
+    data: 
+      entity_id: light.achter_bank
+- id: rc_buttons_linksachter
+  alias: RC Buttons Linksachter
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.remote
+  condition:
+    - condition: template
+      value_template: '{{ (trigger.event.data.scene_id // 10) == 5 }}'
+  action:
+    service_template: 'light.turn_{% if (trigger.event.data.scene_id % 10) == 1 %}on{% else %}off{% endif %}'
+    data: 
+      entity_id: light.linksachter
+- id: rc_buttons_schilderij
+  alias: RC Buttons Schilderij
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.remote
+  condition:
+    - condition: template
+      value_template: '{{ (trigger.event.data.scene_id // 10) == 6 }}'
+  action:
+    service_template: 'light.turn_{% if (trigger.event.data.scene_id % 10) == 1 %}on{% else %}off{% endif %}'
+    data: 
+      entity_id: light.schilderij
+- id: rc_buttons_volume
+  alias: RC Buttons Volume
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+     entity_id: zwave.remote
+  condition:
+    - condition: template
+      value_template: '{{ (trigger.event.data.scene_id // 10) == 7 }}'
+  action:
+    service_template: 'script.{% if (trigger.event.data.scene_id % 10) == 1 %}de{% else %}in{% endif %}crease_volume'
+- id: rc_lights_on
+  alias: RC Lights on
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.remote
+      scene_id: 111
+  action:
+    service: homeassistant.turn_on
+    data: 
+      entity_id: group.living_room_lights
+- id: rc_all_off
+  alias: RC All off
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.remote
+      scene_id: 112
+  action:
+    service: script.all_off
+- id: rc_watch_tv
+  alias: RC Watch TV
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.remote
+      scene_id: 81
+  action:
+    service: input_select.select_option
+    data:
+      entity_id: input_select.media_scene
+      option: 'TV kijken'
+- id: rc_tv_off
+  alias: RC TV Off
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.remote
+      scene_id: 82
+  action:
+    service: input_select.select_option
+    data:
+      entity_id: input_select.media_scene
+      option: 'Geen'
+- id: rc_watch_media
+  alias: RC Watch Media
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.remote
+      scene_id: 91
+  action:
+    service: input_select.select_option
+    data:
+      entity_id: input_select.media_scene
+      option: 'Media kijken'
+- id: rc_listen_radio
+  alias: RC Listen Radio
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.remote
+      scene_id: 101
+  action:
+    service: input_select.select_option
+    data:
+      entity_id: input_select.media_scene
+      option: 'Radio luisteren'
+- id: rc_radio_off
+  alias: RC Radio Off
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.remote
+      scene_id: 102
+  action:
+    service: input_select.select_option
+    data:
+      entity_id: input_select.media_scene
+      option: 'Geen'
+- id: rc_media_off
+  alias: RC Media Off
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.remote
+      scene_id: 92
+  action:
+    service: input_select.select_option
+    data:
+      entity_id: input_select.media_scene
+      option: 'Geen'
+- id: sunset_spruitje
+  alias: Sunset spruitje
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-00:20:00'
+  condition:
+    condition: state
+    entity_id: group.multimedia
+    state: 'on'
+  action:
+    - service: switch.turn_on
+      entity_id: switch.spruitje
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.on_holiday
+- id: sunset_lamp_links_achter
+  alias: Sunset lamp links achter
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-00:05:00'
+  condition:
+    condition: state
+    entity_id: switch.spruitje
+    state: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.linksachter
+- id: sunset_lamp_links_op_tv_meubel
+  alias: Sunset lamp links op tv meubel
+  trigger:
+    platform: sun
+    event: sunset
+  condition:
+    condition: state
+    entity_id: switch.spruitje
+    state: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.linksvoor
+- id: sunset_lamp_schilderij
+  alias: Sunset lamp schilderij
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '00:01:00'
+  condition:
+    condition: state
+    entity_id: switch.spruitje
+    state: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.schilderij
+- id: sunset_lamp_bij_het_raam
+  alias: Sunset lamp bij het raam
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '00:02:00'
+  condition:
+    condition: state
+    entity_id: switch.spruitje
+    state: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.raam
+- id: sunset_lamp_achter_de_bank
+  alias: Sunset lamp achter de bank
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '00:03:00'
+  condition:
+    condition: state
+    entity_id: switch.spruitje
+    state: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.achter_bank
+- id: holiday_evening_start
+  alias: Holiday Evening Start
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '+00:05:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: group.people
+        state: 'not_home'
+      - condition: state
+        entity_id: group.living_room_dependable
+        state: 'off'
+      - condition: state
+        entity_id: device_tracker.slaapkamer
+        state: 'not_home'
+      - condition: time
+        before: '21:00:00'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: group.lights_vacation
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.on_holiday
+    - service: script.notify_admin
+      data:
+        message: Vakantietimer geactiveerd
+- id: holiday_evening_end
+  alias: Holiday Evening End
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '+02:05:00'
+  condition:
+    condition: state
+    entity_id: input_boolean.on_holiday
+    state: 'on'
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.lights_vacation
+- id: holiday_morning_start
+  alias: Holiday Morning Start
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: '-01:00:00'
+  condition:
+    condition: state
+    entity_id: input_boolean.on_holiday
+    state: 'on'
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.lights_vacation
+- id: holiday_morning_end
+  alias: Holiday Morning End
+  trigger:
+    platform: sun
+    event: sunrise
+  condition:
+    condition: state
+    entity_id: input_boolean.on_holiday
+    state: 'on'
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.lights_vacation
+- id: startup
+  alias: Opstarten
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.media_scene
+        option: >
+          {% if is_state('switch.mediaspeler', 'on') %}
+            Media kijken
+          {% elif is_state('switch.tv', 'on') %}
+            TV kijken
+          {% elif is_state('switch.receiver', 'on') %}
+            Radio luisteren
+          {% else %}
+            Geen
+          {% endif %}
+- id: slaapkamer_on
+  alias: Slaapkamer Aan
+  trigger:
+    platform: state
+    entity_id: device_tracker.slaapkamer
+    to: 'home'
+  action:
+    - service: light.turn_on
+      entity_id: light.achterwand_slaapkamer
+- id: slaapkamer_off
+  alias: Slaapkamer Uit
+  trigger:
+    platform: state
+    entity_id: device_tracker.slaapkamer
+    to: 'not_home'
+  action:
+    - service: light.turn_off
+      entity_id: light.achterwand_slaapkamer

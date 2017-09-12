@@ -1,0 +1,180 @@
+###############################
+# Lights
+###############################
+all_lights_off:
+  alias: All Lights Off
+  sequence:
+#    - service: light.turn_on
+#      entity_id: light.hal
+    - service: switch.turn_off
+      entity_id: switch.spruitje
+#    - delay: 00:00:10
+    - service: light.turn_off
+      entity_id: light.achter_bank
+#    - delay: 00:00:10
+    - service: light.turn_off
+      entity_id: light.schilderij
+#    - delay: 00:00:10
+    - service: light.turn_off
+      entity_id: light.linksvoor
+#    - delay: 00:00:10
+    - service: light.turn_off
+      entity_id: light.raam
+#    - delay: 00:00:10
+    - service: light.turn_off
+      entity_id: light.linksachter
+    - service: homeassistant.turn_off
+      entity_id: group.eettafel_lights
+#    - delay: 00:00:10
+#    - service: light.turn_off
+#      entity_id: light.hal
+
+###############################
+# Media devices
+###############################
+shutdown_mediaplayer:
+  alias: Shutdown Mediaplayer
+  sequence:
+    - condition: state
+      entity_id: switch.mediaspeler
+      state: 'on'
+    - service: media_player.turn_off
+      entity_id: media_player.woonkamer
+    - wait_template: "{{ states.device_tracker.woonkamer.state == 'not_home' }}"
+      timeout: 00:01:00
+    - service: switch.turn_off
+      entity_id: switch.mediaspeler
+shutdown_tv:
+  alias: Shutdown TV
+  sequence:
+    - condition: state
+      entity_id: switch.tv
+      state: 'on'
+    - service: script.shutdown_mediaplayer
+    - wait_template: "{{ states.device_tracker.woonkamer.state == 'not_home' }}"
+      timeout: 00:01:00
+    - service: switch.turn_off
+      entity_id: switch.tv
+shutdown_receiver:
+  alias: Shutdown Receiver
+  sequence:
+    - condition: state
+      entity_id: switch.receiver
+      state: 'on'
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.receiver
+        source: 'TV'
+    - service: script.shutdown_tv
+    - wait_template: "{{ states.device_tracker.woonkamer.state == 'not_home' }}"
+      timeout: 00:01:00
+    - service: switch.turn_off
+      entity_id: switch.receiver
+setup_receiver_cold:
+  alias: Setup Receiver when it's been turned off
+  sequence:
+    - service: switch.turn_on
+      entity_id: switch.receiver
+powerup_receiver:
+  alias: Setup Receiver when it's ready to be
+  sequence:
+    - service: script.setup_receiver_cold
+powerup_tv:
+  alias: Powerup TV
+  sequence:
+    - service: script.powerup_receiver
+    - service: switch.turn_on
+      entity_id: switch.tv
+powerup_mediaplayer:
+  alias: Powerup Mediaplayer
+  sequence:
+    - service: script.powerup_tv
+
+###############################
+# Mediaplayer
+###############################
+increase_volume:
+  alias: Increase Volume
+  sequence:
+    - condition: state
+      entity_id: media_player.receiver
+      state: 'home'
+    - service: media_player.volume_set
+      data_template:
+        entity_id: media_player.receiver
+        volume_level: >
+          {{ (states.media_player.receiver.attributes.volume_level | float + 0.025) | round(4) }}
+decrease_volume:
+  alias: Decrease Volume
+  sequence:
+    - condition: state
+      entity_id: media_player.receiver
+      state: 'home'
+    - service: media_player.volume_set
+      data_template:
+        entity_id: media_player.receiver
+        volume_level: >
+          {{ (states.media_player.receiver.attributes.volume_level | float - 0.025) | round(4) }}
+
+###############################
+# Media scenes
+###############################
+listen_radio:
+  alias: Listen Radio
+  sequence:
+    - service: automation.turn_on
+      data:
+        entity_id: automation.check_receiver_source
+    - service: script.shutdown_tv
+    - service: script.powerup_receiver
+watch_tv:
+  alias: Watch TV
+  sequence:
+    - service: automation.turn_on
+      data:
+        entity_id: automation.check_receiver_source
+    - service: script.shutdown_mediaplayer
+    - wait_template: "{{ is_state('device_tracker.woonkamer', 'not_home') }}"
+      timeout: 00:01:00
+    - service: script.powerup_tv
+watch_media:
+  alias: Watch Media
+  sequence:
+    - service: automation.turn_on
+      data:
+        entity_id: automation.check_receiver_source
+    - service: script.powerup_mediaplayer
+all_media_off:
+  alias: All Media Off
+  sequence:
+    - service: script.shutdown_receiver
+all_off:
+  alias: All Off
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.media_scene
+        option: 'Geen'
+    - service: script.all_lights_off
+
+###############################
+# Notifications
+###############################
+notify_admin:
+  sequence:
+    - condition: state
+      entity_id: input_boolean.admin_notifications
+      state: 'on'
+    - service: notify.pushover_admin
+      data_template:
+        title: "Admin message"
+        message: "{{ message }}"
+notify_alert:
+  sequence:
+    - service: notify.pushover
+      data_template:
+        title: "Alert!!!"
+        message: "{{ message }}"
+        data:
+          priority: 1
+

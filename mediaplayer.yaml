@@ -1,0 +1,15 @@
+- platform: kodi
+  host: !secret host_woonkamer
+  name: Woonkamer
+  turn_off_action:
+    service: media_player.kodi_call_method
+    data_template:
+      entity_id: '{{ entity_id }}'
+      method: System.Shutdown
+- platform: onkyo
+  host: !secret host_receiver
+  name: Receiver
+  sources:
+    cd: TV
+    internet-radio: Radio
+    dvd: Mediaplayer
