@@ -58,6 +58,7 @@ notify: !include notify.yaml
 group: !include groups.yaml
 media_player: !include mediaplayer.yaml
 sensor: !include sensor.yaml
+binary_sensor: !include binary_sensor.yaml
 fan: !include fan.yaml
 switch: !include switch.yaml
 light: !include light.yaml

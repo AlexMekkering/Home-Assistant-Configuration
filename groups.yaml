@@ -41,6 +41,10 @@ monitoring:
   entities:
     - group.raspberry_pi
     - group.fibaro_sensors
+    - group.sonoff_pow_1_monitor
+    - group.sonoff_4ch_1_monitor
+    - group.sonoff_4chpro_1_monitor
+    - group.sonoff_s20_1_monitor
 admin:
   name: Administrator
   view: yes
@@ -173,3 +177,38 @@ mv:
     - sensor.mv_actief_vermogen
     - sensor.mv_reactief_vermogen
     - sensor.mv_power_factor
+sonoff_pow_1_monitor:
+  name: Sonoff POW monitor
+  entities:
+    - binary_sensor.sonoff_pow_status
+    - sensor.sonoff_pow_uptime
+    - sensor.sonoff_pow_freeheap
+    - sensor.sonoff_pow_rssi
+sonoff_4ch_1_monitor:
+  name: Sonoff 4CH monitor
+  entities:
+    - binary_sensor.sonoff_4ch_status
+    - sensor.sonoff_4ch_uptime
+    - sensor.sonoff_4ch_freeheap
+    - sensor.sonoff_4ch_rssi
+sonoff_4chpro_1_monitor:
+  name: Sonoff 4CH PRO monitor
+  entities:
+    - binary_sensor.sonoff_4ch_pro_status
+    - sensor.sonoff_4ch_pro_uptime
+    - sensor.sonoff_4ch_pro_freeheap
+    - sensor.sonoff_4ch_pro_rssi
+sonoff_s20_1_monitor:
+  name: Sonoff S20 monitor
+  entities:
+    - binary_sensor.sonoff_s20_status
+    - sensor.sonoff_s20_uptime
+    - sensor.sonoff_s20_freeheap
+    - sensor.sonoff_s20_rssi
+sonoff_monitors:
+  name: Sonoff Monitors
+  entities:
+    - group.sonoff_pow_1_monitor
+    - group.sonoff_4ch_1_monitor
+    - group.sonoff_4chpro_1_monitor
+    - group.sonoff_s20_1_monitor

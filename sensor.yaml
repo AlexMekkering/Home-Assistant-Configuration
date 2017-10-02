@@ -38,3 +38,43 @@
 - platform: mqtt
   name: "MV power factor"
   state_topic: "homeassistant/switch/sonoff_pow_1/factor"
+- platform: mqtt
+  name: "Sonoff POW uptime"
+  state_topic: "homeassistant/switch/sonoff_pow_1/uptime"
+- platform: mqtt
+  name: "Sonoff POW freeheap"
+  state_topic: "homeassistant/switch/sonoff_pow_1/freeheap"
+- platform: mqtt
+  name: "Sonoff POW rssi"
+  state_topic: "homeassistant/switch/sonoff_pow_1/rssi"
+  unit_of_measurement: "dB"
+- platform: mqtt
+  name: "Sonoff 4CH uptime"
+  state_topic: "homeassistant/switch/sonoff_4ch_1/uptime"
+- platform: mqtt
+  name: "Sonoff 4CH freeheap"
+  state_topic: "homeassistant/switch/sonoff_4ch_1/freeheap"
+- platform: mqtt
+  name: "Sonoff 4CH rssi"
+  state_topic: "homeassistant/switch/sonoff_4ch_1/rssi"
+  unit_of_measurement: "dB"
+- platform: mqtt
+  name: "Sonoff 4CH PRO uptime"
+  state_topic: "homeassistant/switch/sonoff_4chpro_1/uptime"
+- platform: mqtt
+  name: "Sonoff 4CH PRO freeheap"
+  state_topic: "homeassistant/switch/sonoff_4chpro_1/freeheap"
+- platform: mqtt
+  name: "Sonoff 4CH PRO rssi"
+  state_topic: "homeassistant/switch/sonoff_4chpro_1/rssi"
+  unit_of_measurement: "dB"
+- platform: mqtt
+  name: "Sonoff S20 uptime"
+  state_topic: "homeassistant/switch/sonoff_s20_1/uptime"
+- platform: mqtt
+  name: "Sonoff S20 freeheap"
+  state_topic: "homeassistant/switch/sonoff_s20_1/freeheap"
+- platform: mqtt
+  name: "Sonoff S20 rssi"
+  state_topic: "homeassistant/switch/sonoff_s20_1/rssi"
+  unit_of_measurement: "dB"
