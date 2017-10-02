@@ -17,28 +17,24 @@
       arg: eth0
 - platform: mqtt
   name: "MV vermogen"
-  state_topic: "homeassistant/switch/sonoff_pow1/power"
+  state_topic: "homeassistant/switch/sonoff_pow_1/power"
   unit_of_measurement: "W"
 - platform: mqtt
-  name: "MV verbruik"
-  state_topic: "homeassistant/switch/sonoff_pow1/energy"
-  unit_of_measurement: "kWh"
-- platform: mqtt
   name: "MV stroom"
-  state_topic: "homeassistant/switch/sonoff_pow1/current"
+  state_topic: "homeassistant/switch/sonoff_pow_1/current"
   unit_of_measurement: "A"
 - platform: mqtt
   name: "MV spanning"
-  state_topic: "homeassistant/switch/sonoff_pow1/voltage"
+  state_topic: "homeassistant/switch/sonoff_pow_1/voltage"
   unit_of_measurement: "V"
 - platform: mqtt
   name: "MV actief vermogen"
-  state_topic: "homeassistant/switch/sonoff_pow1/apower"
+  state_topic: "homeassistant/switch/sonoff_pow_1/apparent"
   unit_of_measurement: "VA"
 - platform: mqtt
   name: "MV reactief vermogen"
-  state_topic: "homeassistant/switch/sonoff_pow1/rpower"
+  state_topic: "homeassistant/switch/sonoff_pow_1/reactive"
   unit_of_measurement: "VAR"
 - platform: mqtt
   name: "MV power factor"
-  state_topic: "homeassistant/switch/sonoff_pow1/pfactor"
+  state_topic: "homeassistant/switch/sonoff_pow_1/factor"

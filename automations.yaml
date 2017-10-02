@@ -1,3 +1,6 @@
+###############################
+# Multimedia woonkamer
+###############################
 - id: scene_select_radio
   alias: Scene Select Radio
   trigger:
@@ -69,6 +72,29 @@
   action:
     - service: switch.turn_on
       entity_id: switch.mediaspeler
+- id: mediaspelers_off
+  alias: Mediaspelers Uit
+  trigger:
+    platform: state
+    entity_id: group.mediaspelers
+    to: 'off'
+  action:
+    - service: script.timed_shutdown_server
+- id: mediaspelers_on
+  alias: Mediaspelers Aan
+  trigger:
+    platform: state
+    entity_id: group.mediaspelers
+    to: 'on'
+  action:
+    - service: script.turn_off
+      entity_id: script.timed_shutdown_server
+    - service: switch.turn_on
+      entity_id: switch.server
+
+###############################
+# Home Assistant
+###############################
 - id: select_logger_level_homeassistant
   alias: Select Logger Level Home Assistant
   trigger:
@@ -102,6 +128,29 @@
     - service: logger.set_level
       data_template:
         pytradfri.coap_cli: "{{ trigger.to_state.state }}"
+- id: startup
+  alias: Opstarten
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.media_scene
+        option: >
+          {% if is_state('switch.mediaspeler', 'on') %}
+            Media kijken
+          {% elif is_state('switch.tv', 'on') %}
+            TV kijken
+          {% elif is_state('switch.receiver', 'on') %}
+            Radio luisteren
+          {% else %}
+            Geen
+          {% endif %}
+
+###############################
+# Remote Control
+###############################
 - id: rc_buttons_spruitje
   alias: RC Buttons Spruitje
   trigger:
@@ -113,9 +162,9 @@
     - condition: template
       value_template: '{{ (trigger.event.data.scene_id // 10) == 1 }}'
   action:
-    service_template: 'switch.turn_{% if (trigger.event.data.scene_id % 10) == 1 %}on{% else %}off{% endif %}'
+    service_template: 'light.turn_{% if (trigger.event.data.scene_id % 10) == 1 %}on{% else %}off{% endif %}'
     data: 
-      entity_id: switch.spruitje
+      entity_id: light.spruitje
 - id: rc_buttons_linksvoor
   alias: RC Buttons Linksvoor
   trigger:
@@ -298,19 +347,23 @@
     data:
       entity_id: input_select.media_scene
       option: 'Geen'
+
+###############################
+# Timers licht
+###############################
 - id: sunset_spruitje
   alias: Sunset spruitje
   trigger:
     platform: sun
     event: sunset
-    offset: '-00:20:00'
+    offset: '-00:30:00'
   condition:
     condition: state
     entity_id: group.multimedia
     state: 'on'
   action:
-    - service: switch.turn_on
-      entity_id: switch.spruitje
+    - service: light.turn_on
+      entity_id: light.spruitje
     - service: input_boolean.turn_off
       entity_id: input_boolean.on_holiday
 - id: sunset_lamp_links_achter
@@ -318,10 +371,10 @@
   trigger:
     platform: sun
     event: sunset
-    offset: '-00:05:00'
+    offset: '-00:25:00'
   condition:
     condition: state
-    entity_id: switch.spruitje
+    entity_id: light.spruitje
     state: 'on'
   action:
     - service: light.turn_on
@@ -331,9 +384,10 @@
   trigger:
     platform: sun
     event: sunset
+    offset: '-00:20:00'
   condition:
     condition: state
-    entity_id: switch.spruitje
+    entity_id: light.spruitje
     state: 'on'
   action:
     - service: light.turn_on
@@ -343,10 +397,10 @@
   trigger:
     platform: sun
     event: sunset
-    offset: '00:01:00'
+    offset: '-00:15:00'
   condition:
     condition: state
-    entity_id: switch.spruitje
+    entity_id: light.spruitje
     state: 'on'
   action:
     - service: light.turn_on
@@ -356,10 +410,10 @@
   trigger:
     platform: sun
     event: sunset
-    offset: '00:02:00'
+    offset: '-00:05:00'
   condition:
     condition: state
-    entity_id: switch.spruitje
+    entity_id: light.spruitje
     state: 'on'
   action:
     - service: light.turn_on
@@ -369,14 +423,18 @@
   trigger:
     platform: sun
     event: sunset
-    offset: '00:03:00'
+    offset: '00:00:00'
   condition:
     condition: state
-    entity_id: switch.spruitje
+    entity_id: light.spruitje
     state: 'on'
   action:
     - service: light.turn_on
       entity_id: light.achter_bank
+
+###############################
+# Vakantietimers
+###############################
 - id: holiday_evening_start
   alias: Holiday Evening Start
   trigger:
@@ -443,31 +501,16 @@
   action:
     service: homeassistant.turn_off
     entity_id: group.lights_vacation
-- id: startup
-  alias: Opstarten
-  trigger:
-    platform: homeassistant
-    event: start
-  action:
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.media_scene
-        option: >
-          {% if is_state('switch.mediaspeler', 'on') %}
-            Media kijken
-          {% elif is_state('switch.tv', 'on') %}
-            TV kijken
-          {% elif is_state('switch.receiver', 'on') %}
-            Radio luisteren
-          {% else %}
-            Geen
-          {% endif %}
+
+###############################
+# Slaapkamer
+###############################
 - id: slaapkamer_on
   alias: Slaapkamer Aan
   trigger:
     platform: state
-    entity_id: device_tracker.slaapkamer
-    to: 'home'
+    entity_id: switch.tv_slaapkamer
+    to: 'on'
   action:
     - service: light.turn_on
       entity_id: light.achterwand_slaapkamer
@@ -475,8 +518,45 @@
   alias: Slaapkamer Uit
   trigger:
     platform: state
-    entity_id: device_tracker.slaapkamer
-    to: 'not_home'
+    entity_id: switch.tv_slaapkamer
+    to: 'off'
   action:
     - service: light.turn_off
       entity_id: light.achterwand_slaapkamer
+- id: detect_slaapkamer_on
+  alias: Detect Slaapkamer Aan
+  trigger:
+    platform: state
+    entity_id: light.achterwand_slaapkamer
+    to: 'on'
+  action:
+    - service: switch.turn_on
+      entity_id: switch.rf_achterwand_slaapkamer
+- id: detect_slaapkamer_off
+  alias: Detect Slaapkamer Uit
+  trigger:
+    platform: state
+    entity_id: light.achterwand_slaapkamer
+    to: 'off'
+  action:
+    - service: switch.turn_off
+      entity_id: switch.rf_achterwand_slaapkamer
+- id: RF_slaapkamer_on
+  alias: RF Slaapkamer Aan
+  trigger:
+    platform: state
+    entity_id: switch.rf_achterwand_slaapkamer
+    to: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.achterwand_slaapkamer
+- id: RF_slaapkamer_off
+  alias: RF Slaapkamer Uit
+  trigger:
+    platform: state
+    entity_id: switch.rf_achterwand_slaapkamer
+    to: 'off'
+  action:
+    - service: light.turn_off
+      entity_id: light.achterwand_slaapkamer
+

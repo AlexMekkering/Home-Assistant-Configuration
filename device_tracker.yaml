@@ -1,10 +1,10 @@
-- platform: ping
-  interval_seconds: 10
-  count: 1
-  consider_home: 20
-  hosts:
-    woonkamer: !secret host_woonkamer
-    slaapkamer: !secret host_slaapkamer
+#- platform: ping
+#  interval_seconds: 10
+#  count: 1
+#  consider_home: 20
+#  hosts:
+#    woonkamer: !secret host_woonkamer
+#    slaapkamer: !secret host_slaapkamer
 #    televisie: !secret host_televisie
 - platform: ping
   interval_seconds: 60
@@ -12,4 +12,3 @@
   hosts:
     alex: !secret host_alex
     joyce: !secret host_joyce
-

@@ -1,15 +1,21 @@
 default_view:
   view: yes
-  icon: mdi:home
+  icon: mdi:home-assistant
   entities:
     - group.media_select
     - group.living_room_lights
+slaapkamer:
+  view: yes
+  icon: mdi:sleep
+  entities:
+    - group.slaapkamerbediening
 devices:
   name: Apparaten
   view: yes
   icon: mdi:desktop-classic
   entities:
     - group.computers
+    - group.mediaspelers
     - group.mv
     - group.esp01
     - group.mediaplayers
@@ -21,11 +27,13 @@ extended:
   icon: mdi:home-modern
   entities:
     - group.multimedia
+    - group.mediaspelers
     - group.living_room_lights
     - group.tradfri_lights
     - input_boolean.on_holiday
     - input_boolean.admin_notifications
     - group.logger_select
+    - sun.sun
 monitoring:
   name: Monitoring
   view: yes
@@ -42,6 +50,15 @@ admin:
     - group.all_lights
     - group.all_devices
     - group.all_automations
+    - group.all_scripts
+
+slaapkamerbediening:
+  name: Slaapkamerbediening
+  entities:
+    - light.achterwand_slaapkamer
+    - switch.tv_slaapkamer
+    - light.nachtlampje_alex
+    - light.nachtlampje_joyce
 esp01:
   name: On ESP01
   entities:
@@ -65,7 +82,7 @@ media_select:
 living_room_lights:
   name: Lampen Woonkamer
   entities:
-    - switch.spruitje
+    - light.spruitje
     - light.linksvoor
     - light.raam
     - light.achter_bank
@@ -96,6 +113,11 @@ multimedia:
     - switch.tv
     - switch.receiver
     - switch.mediaspeler
+mediaspelers:
+  name: Mediaspelers
+  entities:
+    - switch.mediaspeler
+    - switch.tv_slaapkamer
 living_room:
   name: Woonkamer
   entities:
@@ -105,13 +127,13 @@ living_room_dependable:
   name: Woonkamer betrouwbaar
   entities:
     - group.multimedia
-    - switch.spruitje
+    - light.spruitje
     - light.linksvoor
     - light.schilderij
 lights_vacation:
   name: Lampen voor afwezig
   entities:
-    - switch.spruitje
+    - light.spruitje
     - light.linksvoor
 people:
   name: Aanwezigen
@@ -151,4 +173,3 @@ mv:
     - sensor.mv_actief_vermogen
     - sensor.mv_reactief_vermogen
     - sensor.mv_power_factor
-    - sensor.mv_verbruik

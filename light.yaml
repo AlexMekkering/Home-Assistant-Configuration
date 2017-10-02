@@ -1,0 +1,24 @@
+- platform: mqtt
+  name: Spruitje
+  state_topic: "homeassistant/switch/sonoff_4ch_1/relay/2"
+  command_topic: "homeassistant/switch/sonoff_4ch_1/relay/2/set"
+  payload_off: "0"
+  payload_on: "1"
+- platform: mqtt
+  name: Achterwand Slaapkamer
+  state_topic: "homeassistant/switch/sonoff_s20_1/relay/0"
+  command_topic: "homeassistant/switch/sonoff_s20_1/relay/0/set"
+  payload_off: "0"
+  payload_on: "1"
+- platform: mqtt
+  name: Nachtlampje Alex
+  state_topic: "homeassistant/switch/sonoff_4chpro_1/relay/0"
+  command_topic: "homeassistant/switch/sonoff_4chpro_1/relay/0/set"
+  payload_off: "0"
+  payload_on: "1"
+- platform: mqtt
+  name: Nachtlampje Joyce
+  state_topic: "homeassistant/switch/sonoff_4chpro_1/relay/1"
+  command_topic: "homeassistant/switch/sonoff_4chpro_1/relay/1/set"
+  payload_off: "0"
+  payload_on: "1"
