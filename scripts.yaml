@@ -28,7 +28,17 @@ all_lights_off:
     - delay: 00:00:30
     - service: light.turn_off
       entity_id: light.hal
+    - service: script.prepare_for_bed
+prepare_for_bed:
+  alias: Klaarmaken om naar bed te gaan
+  sequence:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
     - service: light.turn_on
+      entity_id: light.achterwand_slaapkamer
+    - delay: 00:45:00
+    - service: light.turn_off
       entity_id: light.achterwand_slaapkamer
 
 ###############################
@@ -42,7 +52,7 @@ shutdown_mediaplayer:
       state: 'on'
     - service: media_player.turn_off
       entity_id: media_player.woonkamer
-    - delay: 00:00:05
+    - delay: 00:00:10
     - service: switch.turn_off
       entity_id: switch.mediaspeler
 shutdown_tv:
@@ -53,7 +63,7 @@ shutdown_tv:
       state: 'on'
     - service: script.shutdown_mediaplayer
     - wait_template: "{{ is_state('switch.mediaspeler', 'off') }}"
-      timeout: 00:00:10
+      timeout: 00:00:15
     - service: switch.turn_off
       entity_id: switch.tv
 shutdown_receiver:
@@ -62,13 +72,14 @@ shutdown_receiver:
     - condition: state
       entity_id: switch.receiver
       state: 'on'
+    - service: script.shutdown_tv
+    - wait_template: "{{ is_state('switch.tv', 'off') }}"
+      timeout: 00:00:20
     - service: media_player.select_source
       data:
         entity_id: media_player.receiver
         source: 'TV'
-    - service: script.shutdown_tv
-    - wait_template: "{{ is_state('switch.tv', 'off') }}"
-      timeout: 00:00:15
+    - delay: 00:00:05
     - service: switch.turn_off
       entity_id: switch.receiver
 setup_receiver_cold:

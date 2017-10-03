@@ -512,6 +512,11 @@
     entity_id: switch.tv_slaapkamer
     to: 'on'
   action:
+    - service: script.turn_off
+      entity_id: script.prepare_for_bed
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon' 
     - service: light.turn_on
       entity_id: light.achterwand_slaapkamer
 - id: slaapkamer_off
