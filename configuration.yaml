@@ -28,7 +28,7 @@ frontend:
 updater:
 
 # Discover some devices automatically
-discovery:
+#discovery:
 
 config:
 
@@ -53,6 +53,7 @@ zeroconf:
 logger: !include logger.yaml
 recorder: !include recorder.yaml
 zwave: !include zwave.yaml
+tradfri: !include tradfri.yaml
 influxdb: !include influxdb.yaml
 notify: !include notify.yaml
 group: !include groups.yaml
@@ -68,4 +69,5 @@ input_boolean: !include input_boolean.yaml
 automation: !include automations.yaml
 device_tracker: !include device_tracker.yaml
 script: !include scripts.yaml
+scene: !include_dir_list scenes
 shell_command: !include shell_command.yaml

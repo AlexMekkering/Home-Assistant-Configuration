@@ -1,3 +1,2 @@
 usb_path: !secret zwave_usb_path
-new_entity_ids: true
-#debug: true
+network_key: !secret zwave_network_key

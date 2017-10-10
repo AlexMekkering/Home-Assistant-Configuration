@@ -17,8 +17,7 @@ devices:
     - group.computers
     - group.mediaspelers
     - group.mv
-    - group.esp01
-    - group.mediaplayers
+    - group.transit_lights
     - device_tracker.alex
     - device_tracker.joyce
 extended:
@@ -63,11 +62,6 @@ slaapkamerbediening:
     - switch.tv_slaapkamer
     - light.nachtlampje_alex
     - light.nachtlampje_joyce
-esp01:
-  name: On ESP01
-  entities:
-    - switch.extra_relay
-    - light.extra_light
 computers:
   name: Computers
   entities:
@@ -99,6 +93,12 @@ eettafel_lights:
     - light.eettafel_1
     - light.eettafel_2
     - light.eettafel_3
+transit_lights:
+  name: Overige Lampen
+  entities:
+    - switch.hal_lamp
+    - switch.hal_buitenlamp_voor
+    - switch.overloop_lamp
 tradfri_lights:
   name: Ikea Lampen
   entities:
@@ -110,7 +110,6 @@ tradfri_lights:
     - light.eettafel_1
     - light.eettafel_2
     - light.eettafel_3
-    - light.hal
 multimedia:
   name: Multimedia
   entities:

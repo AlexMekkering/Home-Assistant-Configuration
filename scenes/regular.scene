@@ -1,0 +1,24 @@
+name: Woonkamer Regular
+entities:
+  light.spruitje:
+    state: on
+  light.linksvoor:
+    state: on
+    brightness: 165
+    color_temp: 370.78235076010384
+  light.achter_bank:
+    state: on
+    brightness: 147
+    color_temp: 370.78235076010384
+  light.raam:
+    state: on
+    brightness: 64
+    color_temp: 379.5066413662239
+  light.linksachter:
+    state: on
+    brightness: 86
+    color_temp: 370.78235076010384
+  light.schilderij:
+    state: on
+    brightness: 163
+    color_temp: 370.78235076010384

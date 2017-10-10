@@ -6,6 +6,16 @@ switch.receiver:
   icon: mdi:speaker
 switch.mediaspeler:
   icon: mdi:kodi
+switch.nuc:
+  icon: mdi:desktop-classic
+switch.server:
+  icon: mdi:desktop-tower
+switch.hal_lamp:
+  icon: mdi:lightbulb
+switch.hal_buitenlamp_voor:
+  icon: mdi:lightbulb
+switch.overloop_lamp:
+  icon: mdi:lightbulb
 group.all_automations:
   hidden: false
 group.all_scripts:
