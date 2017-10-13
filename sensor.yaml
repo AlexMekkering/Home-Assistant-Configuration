@@ -1,4 +1,7 @@
 - platform: yr
+- platform: dsmr
+  port: /dev/smartmeter
+  dsmr_version: 4
 - platform: systemmonitor
   resources:
     - type: disk_use_percent

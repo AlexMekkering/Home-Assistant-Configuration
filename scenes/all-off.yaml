@@ -1,0 +1,14 @@
+name: Woonkamer All Off
+entities:
+  light.spruitje:
+    state: off
+  light.linksvoor:
+    state: off
+  light.achter_bank:
+    state: off
+  light.raam:
+    state: off
+  light.linksachter:
+    state: off
+  light.schilderij:
+    state: off

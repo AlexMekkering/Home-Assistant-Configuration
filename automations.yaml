@@ -246,7 +246,14 @@
     - condition: template
       value_template: '{{ (trigger.event.data.scene_id // 10) == 7 }}'
   action:
-    service_template: 'script.{% if (trigger.event.data.scene_id % 10) == 1 %}de{% else %}in{% endif %}crease_volume'
+    service: scene.turn_on
+    data_template: 
+      entity_id: >
+        {% if (trigger.event.data.scene_id % 10) == 1 %}
+          scene.woonkamer_regular
+        {% else %}
+          scene.woonkamer_all_off
+        {% endif %}
 - id: rc_lights_on
   alias: RC Lights on
   trigger:
