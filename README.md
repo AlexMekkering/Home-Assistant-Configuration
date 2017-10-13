@@ -6,7 +6,7 @@ My main Home Assistant configuration
 ## Installation of required Arch Linux packages
 ```bash
 # make for Z-Wave and automake/autoconf for Tradfri
-sudo pacman -Syu autoconf automake make python
+sudo pacman -Syu --needed git python gcc sed grep autoconf automake make
 ```
 
 ##  Setting up Python virtualenv
