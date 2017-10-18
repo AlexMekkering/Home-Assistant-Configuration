@@ -38,8 +38,8 @@ monitoring:
   view: yes
   icon: mdi:speedometer
   entities:
-    - group.raspberry_pi
-    - group.fibaro_sensors
+    - group.upsquared
+    - group.smartmeter
     - group.sonoff_pow_1_monitor
     - group.sonoff_4ch_1_monitor
     - group.sonoff_4chpro_1_monitor
@@ -150,8 +150,8 @@ fibaro_sensors:
     - sensor.schakelaars_achter_totaalverbruik_2
     - sensor.schakelaars_achter_vermogen_1
     - sensor.schakelaars_achter_vermogen_2
-raspberry_pi:
-  name: Pi
+upsquared:
+  name: Up Squared
   entities:
     - sensor.cpu_use
     - sensor.average_load_1m
@@ -161,6 +161,21 @@ raspberry_pi:
     - sensor.swap_use
     - sensor.disk_use_
     - sensor.disk_use_boot
+    - !secret storage_sensor
+    - !secret network1_sensor_received
+    - !secret network1_sensor_sent
+    - !secret network2_sensor_received
+    - !secret network2_sensor_sent
+    - !secret network3_sensor_received
+    - !secret network3_sensor_sent
+smartmeter:
+  name: Smart Meter
+  entities:
+    - sensor.power_consumption
+    - sensor.hourly_gas_consumption
+    - sensor.power_consumption_low
+    - sensor.power_consumption_normal
+    - sensor.gas_consumption
 mediaplayers:
   name: Mediaspelers
   entities:

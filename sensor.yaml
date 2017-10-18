@@ -8,6 +8,8 @@
       arg: /boot
     - type: disk_use_percent
       arg: /
+    - type: disk_use_percent
+      arg: !secret storage_mount
     - type: processor_use
     - type: load_1m
     - type: load_5m
@@ -15,9 +17,17 @@
     - type: memory_use_percent
     - type: swap_use_percent
     - type: network_in
-      arg: eth0
+      arg: !secret network1_device
     - type: network_out
-      arg: eth0
+      arg: !secret network1_device
+    - type: network_in
+      arg: !secret network2_device
+    - type: network_out
+      arg: !secret network2_device
+    - type: network_in
+      arg: !secret network3_device
+    - type: network_out
+      arg: !secret network3_device
 - platform: mqtt
   name: "MV vermogen"
   state_topic: "homeassistant/switch/sonoff_pow_1/power"
