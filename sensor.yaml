@@ -4,6 +4,7 @@
   dsmr_version: 4
 - platform: systemmonitor
   resources:
+    - type: since_last_boot
     - type: disk_use_percent
       arg: /boot
     - type: disk_use_percent
