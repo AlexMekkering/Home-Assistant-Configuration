@@ -143,6 +143,34 @@ decrease_volume:
 ###############################
 # Media scenes
 ###############################
+select_geen:
+  alias: Select media scene Geen
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.media_scene
+        option: 'Geen'
+select_tv_kijken:
+  alias: Select media scene TV kijken
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.media_scene
+        option: 'TV kijken'
+select_media_kijken:
+  alias: Select media scene Media kijken
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.media_scene
+        option: 'Media kijken'
+select_radio_luisteren:
+  alias: Select media scene Radio luisteren
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.media_scene
+        option: 'Radio luisteren'
 listen_radio:
   alias: Listen Radio
   sequence:
@@ -175,10 +203,7 @@ all_media_off:
 all_off:
   alias: All Off
   sequence:
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.media_scene
-        option: 'Geen'
+    - service: script.select_geen
     - service: script.all_lights_off
 
 ###############################

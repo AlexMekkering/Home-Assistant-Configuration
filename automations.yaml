@@ -138,226 +138,85 @@
     platform: homeassistant
     event: start
   action:
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.media_scene
-        option: >
-          {% if is_state('switch.mediaspeler', 'on') %}
-            Media kijken
-          {% elif is_state('switch.tv', 'on') %}
-            TV kijken
-          {% elif is_state('switch.receiver', 'on') %}
-            Radio luisteren
-          {% else %}
-            Geen
-          {% endif %}
+    service_template: >
+      {% if is_state('switch.mediaspeler', 'on') %}
+        script.select_media_kijken
+      {% elif is_state('switch.tv', 'on') %}
+        script.select_tv_kijken
+      {% elif is_state('switch.receiver', 'on') %}
+        script.select_radio_luisteren
+      {% else %}
+        script.select_geen
+      {% endif %}
 
 ###############################
 # Remote Control
 ###############################
-- id: rc_buttons_spruitje
-  alias: RC Buttons Spruitje
+- id: rc_buttons
+  alias: RC Buttons
   trigger:
     platform: event
     event_type: zwave.scene_activated
     event_data:
       entity_id: zwave.remote
-  condition:
-    - condition: template
-      value_template: '{{ (trigger.event.data.scene_id // 10) == 1 }}'
   action:
-    service_template: 'light.turn_{% if (trigger.event.data.scene_id % 10) == 1 %}on{% else %}off{% endif %}'
-    data: 
-      entity_id: light.spruitje
-- id: rc_buttons_linksvoor
-  alias: RC Buttons Linksvoor
-  trigger:
-    platform: event
-    event_type: zwave.scene_activated
-    event_data:
-      entity_id: zwave.remote
-  condition:
-    - condition: template
-      value_template: '{{ (trigger.event.data.scene_id // 10) == 2 }}'
-  action:
-    service_template: 'light.turn_{% if (trigger.event.data.scene_id % 10) == 1 %}on{% else %}off{% endif %}'
-    data: 
-      entity_id: light.linksvoor
-- id: rc_buttons_raam
-  alias: RC Buttons Raam
-  trigger:
-    platform: event
-    event_type: zwave.scene_activated
-    event_data:
-      entity_id: zwave.remote
-  condition:
-    - condition: template
-      value_template: '{{ (trigger.event.data.scene_id // 10) == 3 }}'
-  action:
-    service_template: 'light.turn_{% if (trigger.event.data.scene_id % 10) == 1 %}on{% else %}off{% endif %}'
-    data: 
-      entity_id: light.raam
-- id: rc_buttons_achter_de_bank
-  alias: RC Buttons Achter de bank
-  trigger:
-    platform: event
-    event_type: zwave.scene_activated
-    event_data:
-      entity_id: zwave.remote
-  condition:
-    - condition: template
-      value_template: '{{ (trigger.event.data.scene_id // 10) == 4 }}'
-  action:
-    service_template: 'light.turn_{% if (trigger.event.data.scene_id % 10) == 1 %}on{% else %}off{% endif %}'
-    data: 
-      entity_id: light.achter_bank
-- id: rc_buttons_linksachter
-  alias: RC Buttons Linksachter
-  trigger:
-    platform: event
-    event_type: zwave.scene_activated
-    event_data:
-      entity_id: zwave.remote
-  condition:
-    - condition: template
-      value_template: '{{ (trigger.event.data.scene_id // 10) == 5 }}'
-  action:
-    service_template: 'light.turn_{% if (trigger.event.data.scene_id % 10) == 1 %}on{% else %}off{% endif %}'
-    data: 
-      entity_id: light.linksachter
-- id: rc_buttons_schilderij
-  alias: RC Buttons Schilderij
-  trigger:
-    platform: event
-    event_type: zwave.scene_activated
-    event_data:
-      entity_id: zwave.remote
-  condition:
-    - condition: template
-      value_template: '{{ (trigger.event.data.scene_id // 10) == 6 }}'
-  action:
-    service_template: 'light.turn_{% if (trigger.event.data.scene_id % 10) == 1 %}on{% else %}off{% endif %}'
-    data: 
-      entity_id: light.schilderij
-- id: rc_buttons_volume
-  alias: RC Buttons Volume
-  trigger:
-    platform: event
-    event_type: zwave.scene_activated
-    event_data:
-     entity_id: zwave.remote
-  condition:
-    - condition: template
-      value_template: '{{ (trigger.event.data.scene_id // 10) == 7 }}'
-  action:
-    service: scene.turn_on
+    service_template:  >
+        {% set row = trigger.event.data.scene_id // 10 %}
+        {% set side = trigger.event.data.scene_id % 10 %}
+        {% if row >= 1 and row <= 6 %}
+          light.turn_{% if side == 1 %}on{% else %}off{% endif %}
+        {% elif row == 7 %}
+          scene.turn_on
+        {% elif row >= 8 and row <= 10 %}
+          script.turn_on
+        {% elif row == 11 %}
+          {% if side == 1 %}
+            homeassistant.turn_on
+          {% else %}
+            script.turn_on
+          {% endif %}
+        {% endif %}
     data_template: 
       entity_id: >
-        {% if (trigger.event.data.scene_id % 10) == 1 %}
-          scene.woonkamer_regular
-        {% else %}
-          scene.woonkamer_all_off
+        {% set row = trigger.event.data.scene_id // 10 %}
+        {% set side = trigger.event.data.scene_id % 10 %}
+        {% if row == 1 %}
+          light.spruitje
+        {% elif row == 2 %}
+          light.linksvoor
+        {% elif row == 3 %}
+          light.raam
+        {% elif row == 4 %}
+          light.achter_bank
+        {% elif row == 5 %}
+          light.linksachter
+        {% elif row == 6 %}
+          light.schilderij
+        {% elif row == 7 %}
+          {% if side == 1 %}
+            scene.woonkamer_regular
+          {% else %}
+            scene.woonkamer_all_off
+          {% endif %}
+        {% elif row >= 8 and row <= 10 %}
+          {% if side == 1 %}
+            {% if row == 8 %}
+              script.select_tv_kijken
+            {% elif row == 9 %}
+              script.select_media_kijken
+            {% else %}
+              script.select_radio_luisteren
+            {% endif %}
+          {% else %}
+            script.select_geen
+          {% endif %}
+        {% elif row == 11 %}
+          {% if side == 1 %}
+            group.living_room_lights
+          {% else %}
+            script.all_off
+          {% endif %}
         {% endif %}
-- id: rc_lights_on
-  alias: RC Lights on
-  trigger:
-    platform: event
-    event_type: zwave.scene_activated
-    event_data:
-      entity_id: zwave.remote
-      scene_id: 111
-  action:
-    service: homeassistant.turn_on
-    data: 
-      entity_id: group.living_room_lights
-- id: rc_all_off
-  alias: RC All off
-  trigger:
-    platform: event
-    event_type: zwave.scene_activated
-    event_data:
-      entity_id: zwave.remote
-      scene_id: 112
-  action:
-    service: script.all_off
-- id: rc_watch_tv
-  alias: RC Watch TV
-  trigger:
-    platform: event
-    event_type: zwave.scene_activated
-    event_data:
-      entity_id: zwave.remote
-      scene_id: 81
-  action:
-    service: input_select.select_option
-    data:
-      entity_id: input_select.media_scene
-      option: 'TV kijken'
-- id: rc_tv_off
-  alias: RC TV Off
-  trigger:
-    platform: event
-    event_type: zwave.scene_activated
-    event_data:
-      entity_id: zwave.remote
-      scene_id: 82
-  action:
-    service: input_select.select_option
-    data:
-      entity_id: input_select.media_scene
-      option: 'Geen'
-- id: rc_watch_media
-  alias: RC Watch Media
-  trigger:
-    platform: event
-    event_type: zwave.scene_activated
-    event_data:
-      entity_id: zwave.remote
-      scene_id: 91
-  action:
-    service: input_select.select_option
-    data:
-      entity_id: input_select.media_scene
-      option: 'Media kijken'
-- id: rc_listen_radio
-  alias: RC Listen Radio
-  trigger:
-    platform: event
-    event_type: zwave.scene_activated
-    event_data:
-      entity_id: zwave.remote
-      scene_id: 101
-  action:
-    service: input_select.select_option
-    data:
-      entity_id: input_select.media_scene
-      option: 'Radio luisteren'
-- id: rc_radio_off
-  alias: RC Radio Off
-  trigger:
-    platform: event
-    event_type: zwave.scene_activated
-    event_data:
-      entity_id: zwave.remote
-      scene_id: 102
-  action:
-    service: input_select.select_option
-    data:
-      entity_id: input_select.media_scene
-      option: 'Geen'
-- id: rc_media_off
-  alias: RC Media Off
-  trigger:
-    platform: event
-    event_type: zwave.scene_activated
-    event_data:
-      entity_id: zwave.remote
-      scene_id: 92
-  action:
-    service: input_select.select_option
-    data:
-      entity_id: input_select.media_scene
-      option: 'Geen'
 
 ###############################
 # Timers licht
