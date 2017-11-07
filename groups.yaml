@@ -133,11 +133,13 @@ living_room_dependable:
     - light.spruitje
     - light.linksvoor
     - light.schilderij
+    - light.linksachter
 lights_vacation:
   name: Lampen voor afwezig
   entities:
     - light.spruitje
-    - light.linksvoor
+    - light.linksachter
+    - light.raam
 people:
   name: Aanwezigen
   entities:

@@ -160,7 +160,9 @@
     event_data:
       entity_id: zwave.remote
   action:
-    service_template:  >
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.on_holiday
+    - service_template:  >
         {% set row = trigger.event.data.scene_id // 10 %}
         {% set side = trigger.event.data.scene_id % 10 %}
         {% if row >= 1 and row <= 6 %}
@@ -176,51 +178,52 @@
             script.turn_on
           {% endif %}
         {% endif %}
-    data_template: 
-      entity_id: >
-        {% set row = trigger.event.data.scene_id // 10 %}
-        {% set side = trigger.event.data.scene_id % 10 %}
-        {% if row == 1 %}
-          light.spruitje
-        {% elif row == 2 %}
-          light.linksvoor
-        {% elif row == 3 %}
-          light.raam
-        {% elif row == 4 %}
-          light.achter_bank
-        {% elif row == 5 %}
-          light.linksachter
-        {% elif row == 6 %}
-          light.schilderij
-        {% elif row == 7 %}
-          {% if side == 1 %}
-            scene.woonkamer_regular
-          {% else %}
-            scene.woonkamer_all_off
-          {% endif %}
-        {% elif row >= 8 and row <= 10 %}
-          {% if side == 1 %}
-            {% if row == 8 %}
-              script.select_tv_kijken
-            {% elif row == 9 %}
-              script.select_media_kijken
+      data_template: 
+        entity_id: >
+          {% set row = trigger.event.data.scene_id // 10 %}
+          {% set side = trigger.event.data.scene_id % 10 %}
+          {% if row == 1 %}
+            light.spruitje
+          {% elif row == 2 %}
+            light.linksvoor
+          {% elif row == 3 %}
+            light.raam
+          {% elif row == 4 %}
+            light.achter_bank
+          {% elif row == 5 %}
+            light.linksachter
+          {% elif row == 6 %}
+            light.schilderij
+          {% elif row == 7 %}
+            {% if side == 1 %}
+              scene.woonkamer_regular
             {% else %}
-              script.select_radio_luisteren
+              scene.woonkamer_all_off
             {% endif %}
-          {% else %}
-            script.select_geen
+          {% elif row >= 8 and row <= 10 %}
+            {% if side == 1 %}
+              {% if row == 8 %}
+                script.select_tv_kijken
+              {% elif row == 9 %}
+                script.select_media_kijken
+              {% else %}
+                script.select_radio_luisteren
+              {% endif %}
+            {% else %}
+              script.select_geen
+            {% endif %}
+          {% elif row == 11 %}
+            {% if side == 1 %}
+              group.living_room_lights
+           {% else %}
+              script.all_off
+            {% endif %}
           {% endif %}
-        {% elif row == 11 %}
-          {% if side == 1 %}
-            group.living_room_lights
-          {% else %}
-            script.all_off
-          {% endif %}
-        {% endif %}
 
 ###############################
 # Timers licht
 ###############################
+
 - id: sunset_spruitje
   alias: Sunset spruitje
   trigger:
@@ -229,7 +232,7 @@
     offset: '-00:30:00'
   condition:
     condition: state
-    entity_id: group.multimedia
+    entity_id: group.living_room_dependable
     state: 'on'
   action:
     - service: light.turn_on
@@ -244,7 +247,7 @@
     offset: '-00:25:00'
   condition:
     condition: state
-    entity_id: light.spruitje
+    entity_id: group.living_room_dependable
     state: 'on'
   action:
     - service: light.turn_on
@@ -257,7 +260,7 @@
     offset: '-00:20:00'
   condition:
     condition: state
-    entity_id: light.spruitje
+    entity_id: group.living_room_dependable
     state: 'on'
   action:
     - service: light.turn_on
@@ -270,7 +273,7 @@
     offset: '-00:15:00'
   condition:
     condition: state
-    entity_id: light.spruitje
+    entity_id: group.living_room_dependable
     state: 'on'
   action:
     - service: light.turn_on
@@ -283,7 +286,7 @@
     offset: '-00:05:00'
   condition:
     condition: state
-    entity_id: light.spruitje
+    entity_id: group.living_room_dependable
     state: 'on'
   action:
     - service: light.turn_on
@@ -296,7 +299,7 @@
     offset: '00:00:00'
   condition:
     condition: state
-    entity_id: light.spruitje
+    entity_id: group.living_room_dependable
     state: 'on'
   action:
     - service: light.turn_on
