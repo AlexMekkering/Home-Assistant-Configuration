@@ -92,3 +92,13 @@
   name: "Sonoff S20 rssi"
   state_topic: "homeassistant/switch/sonoff_s20_1/rssi"
   unit_of_measurement: "dB"
+- platform: mqtt
+  name: "Sonoff Dual uptime"
+  state_topic: "homeassistant/switch/sonoff_dual_1/uptime"
+- platform: mqtt
+  name: "Sonoff Dual freeheap"
+  state_topic: "homeassistant/switch/sonoff_dual_1/freeheap"
+- platform: mqtt
+  name: "Sonoff Dual rssi"
+  state_topic: "homeassistant/switch/sonoff_dual_1/rssi"
+  unit_of_measurement: "dB"
