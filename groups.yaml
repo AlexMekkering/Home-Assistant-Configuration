@@ -44,7 +44,7 @@ monitoring:
     - group.sonoff_4ch_1_monitor
     - group.sonoff_4chpro_1_monitor
     - group.sonoff_s20_1_monitor
-    - group.sonoff_dual_1_monitor
+#    - group.sonoff_dual_1_monitor
 admin:
   name: Administrator
   view: yes
@@ -83,7 +83,6 @@ living_room_lights:
     - light.spruitje
     - light.linksvoor
     - light.raam
-    - light.kerstboom
     - light.linksachter
     - light.schilderij
     - group.eettafel_lights
@@ -133,14 +132,12 @@ living_room_dependable:
     - light.linksvoor
     - light.schilderij
     - light.linksachter
-    - light.kerstboom
 lights_vacation:
   name: Lampen voor afwezig
   entities:
     - light.spruitje
     - light.linksachter
     - light.raam
-    - light.kerstboom
 people:
   name: Aanwezigen
   entities:
@@ -223,13 +220,13 @@ sonoff_s20_1_monitor:
     - sensor.sonoff_s20_uptime
     - sensor.sonoff_s20_freeheap
     - sensor.sonoff_s20_rssi
-sonoff_dual_1_monitor:
-  name: Sonoff Dual monitor
-  entities:
-    - binary_sensor.sonoff_dual_status
-    - sensor.sonoff_dual_uptime
-    - sensor.sonoff_dual_freeheap
-    - sensor.sonoff_dual_rssi
+#sonoff_dual_1_monitor:
+#  name: Sonoff Dual monitor
+#  entities:
+#    - binary_sensor.sonoff_dual_status
+#    - sensor.sonoff_dual_uptime
+#    - sensor.sonoff_dual_freeheap
+#    - sensor.sonoff_dual_rssi
 sonoff_monitors:
   name: Sonoff Monitors
   entities:
@@ -237,4 +234,4 @@ sonoff_monitors:
     - group.sonoff_4ch_1_monitor
     - group.sonoff_4chpro_1_monitor
     - group.sonoff_s20_1_monitor
-    - group.sonoff_dual_1_monitor
+#    - group.sonoff_dual_1_monitor

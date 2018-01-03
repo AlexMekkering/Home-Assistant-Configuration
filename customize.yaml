@@ -16,8 +16,6 @@ switch.hal_buitenlamp_voor:
   icon: mdi:lightbulb
 switch.overloop_lamp:
   icon: mdi:lightbulb
-light.kerstboom:
-  icon: mdi:pine-tree
 group.all_automations:
   hidden: false
 group.all_scripts:

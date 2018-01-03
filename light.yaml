@@ -22,9 +22,3 @@
   command_topic: "homeassistant/switch/sonoff_4chpro_1/relay/1/set"
   payload_off: "0"
   payload_on: "1"
-- platform: mqtt
-  name: Kerstboom
-  state_topic: "homeassistant/switch/sonoff_dual_1/relay/0"
-  command_topic: "homeassistant/switch/sonoff_dual_1/relay/0/set"
-  payload_off: "0"
-  payload_on: "1"

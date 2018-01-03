@@ -45,7 +45,9 @@
     - service_template: >
         {% set scene = states.input_select.media_scene.state %}
         {% set source = states.media_player.receiver.attributes.source %}
-        {% if scene == 'Geen' or scene == 'TV kijken' and source == 'TV' or scene == 'Media kijken' and source in ('TV', 'Mediaplayer') %}
+        {% if scene == 'Geen' or scene == 'TV kijken' and source == 'TV'
+            or scene == 'Media kijken' and source == 'Mediaplayer'
+            or scene == 'Radio luisteren' and source == 'Radio' %}
           automation.turn_off
         {% else %}
           automation.turn_on
@@ -61,6 +63,8 @@
         source: >
           {% if is_state('input_select.media_scene', 'Radio luisteren') %}
             Radio
+          {% elif is_state('input_select.media_scene', 'Media kijken') %}
+            Mediaplayer
           {% else %}
             TV
           {% endif %}
@@ -188,8 +192,6 @@
             light.linksvoor
           {% elif row == 3 %}
             light.raam
-          {% elif row == 4 %}
-            light.kerstboom
           {% elif row == 5 %}
             light.linksachter
           {% elif row == 6 %}
@@ -291,19 +293,6 @@
   action:
     - service: light.turn_on
       entity_id: light.raam
-- id: sunset_kerstboom
-  alias: Sunset Kerstboom
-  trigger:
-    platform: sun
-    event: sunset
-    offset: '-00:30:00'
-  condition:
-    condition: state
-    entity_id: group.living_room_dependable
-    state: 'on'
-  action:
-    - service: light.turn_on
-      entity_id: light.kerstboom
 
 ###############################
 # Vakantietimers

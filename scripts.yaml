@@ -10,7 +10,7 @@ all_lights_off:
       entity_id: light.spruitje
 #    - delay: 00:00:10
     - service: light.turn_off
-      entity_id: light.achter_bank
+      entity_id: light.kerstboom
 #    - delay: 00:00:10
     - service: light.turn_off
       entity_id: light.schilderij
