@@ -55,6 +55,7 @@ admin:
     - group.all_devices
     - group.all_automations
     - group.all_scripts
+
 slaapkamerbediening:
   name: Slaapkamerbediening
   entities:
@@ -67,6 +68,7 @@ computers:
   entities:
     - switch.nuc
     - switch.server
+
 logger_select:
   name: Logger Level
   entities:
@@ -77,6 +79,7 @@ media_select:
   name: Media Selectie
   entities:
     - input_select.media_scene
+
 living_room_lights:
   name: Lampen Woonkamer
   entities:
@@ -108,6 +111,7 @@ tradfri_lights:
     - light.eettafel_1
     - light.eettafel_2
     - light.eettafel_3
+
 multimedia:
   name: Multimedia
   entities:
@@ -124,14 +128,17 @@ living_room:
   entities:
     - group.multimedia
     - group.living_room_lights
-living_room_dependable:
-  name: Woonkamer betrouwbaar
+someone_home:
+  name: Iemand thuis
   entities:
     - group.multimedia
     - light.spruitje
     - light.linksvoor
     - light.schilderij
     - light.linksachter
+    - switch.nuc
+    - binary_sensor.alex_home
+    - binary_sensor.joyce_home
 lights_vacation:
   name: Lampen voor afwezig
   entities:

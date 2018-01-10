@@ -28,3 +28,13 @@
 #  device_class: connectivity
 #  payload_on: "1"
 #  payload_off: "0"
+
+- platform: template
+  sensors:
+    alex_home:
+      friendly_name: "Alex is thuis"
+      value_template: "{{ is_state('device_tracker.alex', 'home') }}"
+    joyce_home:
+      friendly_name: "Joyce is thuis"
+      value_template: "{{ is_state('device_tracker.joyce', 'home') }}"
+
