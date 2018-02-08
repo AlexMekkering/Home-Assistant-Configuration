@@ -133,16 +133,14 @@ someone_home:
   entities:
     - group.multimedia
     - light.spruitje
-    - light.linksvoor
     - light.schilderij
-    - light.linksachter
     - switch.nuc
     - binary_sensor.alex_home
     - binary_sensor.joyce_home
 lights_vacation:
   name: Lampen voor afwezig
   entities:
-    - light.spruitje
+    - light.linksvoor
     - light.linksachter
     - light.raam
 people:

@@ -80,25 +80,25 @@
   action:
     - service: switch.turn_on
       entity_id: switch.mediaspeler
-- id: mediaspelers_off
-  alias: Mediaspelers Uit
-  trigger:
-    platform: state
-    entity_id: group.mediaspelers
-    to: 'off'
-  action:
-    - service: script.timed_shutdown_server
-- id: mediaspelers_on
-  alias: Mediaspelers Aan
-  trigger:
-    platform: state
-    entity_id: group.mediaspelers
-    to: 'on'
-  action:
-    - service: script.turn_off
-      entity_id: script.timed_shutdown_server
-    - service: switch.turn_on
-      entity_id: switch.server
+#- id: mediaspelers_off
+#  alias: Mediaspelers Uit
+#  trigger:
+#    platform: state
+#    entity_id: group.mediaspelers
+#    to: 'off'
+#  action:
+#    - service: script.timed_shutdown_server
+#- id: mediaspelers_on
+#  alias: Mediaspelers Aan
+#  trigger:
+#    platform: state
+#    entity_id: group.mediaspelers
+#    to: 'on'
+#  action:
+#    - service: script.turn_off
+#      entity_id: script.timed_shutdown_server
+#    - service: switch.turn_on
+#      entity_id: switch.server
 
 ###############################
 # Home Assistant
@@ -328,9 +328,8 @@
 - id: holiday_evening_end
   alias: Holiday Evening End
   trigger:
-    platform: sun
-    event: sunset
-    offset: '+02:05:00'
+    platform: time
+    at: '23:00:00'
   condition:
     condition: state
     entity_id: input_boolean.on_holiday
