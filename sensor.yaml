@@ -63,6 +63,9 @@
   state_topic: "homeassistant/switch/sonoff_pow_1/rssi"
   unit_of_measurement: "dB"
 - platform: mqtt
+  name: "Sonoff POW version"
+  state_topic: "homeassistant/switch/sonoff_pow_1/version"
+- platform: mqtt
   name: "Sonoff 4CH uptime"
   state_topic: "homeassistant/switch/sonoff_4ch_1/uptime"
 - platform: mqtt
@@ -72,6 +75,9 @@
   name: "Sonoff 4CH rssi"
   state_topic: "homeassistant/switch/sonoff_4ch_1/rssi"
   unit_of_measurement: "dB"
+- platform: mqtt
+  name: "Sonoff 4CH version"
+  state_topic: "homeassistant/switch/sonoff_4ch_1/version"
 - platform: mqtt
   name: "Sonoff 4CH PRO uptime"
   state_topic: "homeassistant/switch/sonoff_4chpro_1/uptime"
@@ -83,6 +89,9 @@
   state_topic: "homeassistant/switch/sonoff_4chpro_1/rssi"
   unit_of_measurement: "dB"
 - platform: mqtt
+  name: "Sonoff 4CH PRO version"
+  state_topic: "homeassistant/switch/sonoff_4chpro_1/version"
+- platform: mqtt
   name: "Sonoff S20 uptime"
   state_topic: "homeassistant/switch/sonoff_s20_1/uptime"
 - platform: mqtt
@@ -92,6 +101,9 @@
   name: "Sonoff S20 rssi"
   state_topic: "homeassistant/switch/sonoff_s20_1/rssi"
   unit_of_measurement: "dB"
+- platform: mqtt
+  name: "Sonoff S20 version"
+  state_topic: "homeassistant/switch/sonoff_s20_1/version"
 #- platform: mqtt
 #  name: "Sonoff Dual uptime"
 #  state_topic: "homeassistant/switch/sonoff_dual_1/uptime"

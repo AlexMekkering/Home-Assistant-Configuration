@@ -1,0 +1,78 @@
+switch.hal_lamp:
+  platform: zwave
+  unique_id: 4-72057594109837312
+switch.hal_buitenlamp_voor:
+  platform: zwave
+  unique_id: 4-144115188147765248
+sensor.hal_totaalverbruik_1:
+  platform: zwave
+  unique_id: 4-72057594110050306
+sensor.hal_totaalverbruik_2:
+  platform: zwave
+  unique_id: 4-144115188147978242
+sensor.hal_vermogen_1:
+  platform: zwave
+  unique_id: 4-72057594110050434
+sensor.hal_exporting:
+  platform: zwave
+  unique_id: 4-72057594110050816
+sensor.hal_vermogen_2:
+  platform: zwave
+  unique_id: 4-144115188147978370
+sensor.hal_exporting_2:
+  platform: zwave
+  unique_id: 4-144115188147978752
+sensor.hal_alarm_type:
+  platform: zwave
+  unique_id: 4-72057594111082497
+sensor.hal_alarm_level:
+  platform: zwave
+  unique_id: 4-72057594111082513
+sensor.hal_sourcenodeid:
+  platform: zwave
+  unique_id: 4-72057594111082529
+sensor.hal_heat:
+  platform: zwave
+  unique_id: 4-72057594111082609
+sensor.hal_power_management:
+  platform: zwave
+  unique_id: 4-72057594111082673
+switch.overloop_lamp:
+  platform: zwave
+  unique_id: 5-72057594126614528
+switch.overloop_not_connected:
+  platform: zwave
+  unique_id: 5-144115188164542464
+sensor.overloop_energy:
+  platform: zwave
+  unique_id: 5-72057594126827522
+sensor.overloop_energy_2:
+  platform: zwave
+  unique_id: 5-144115188164755458
+sensor.overloop_power:
+  platform: zwave
+  unique_id: 5-72057594126827650
+sensor.overloop_exporting:
+  platform: zwave
+  unique_id: 5-72057594126828032
+sensor.overloop_power_2:
+  platform: zwave
+  unique_id: 5-144115188164755586
+sensor.overloop_exporting_2:
+  platform: zwave
+  unique_id: 5-144115188164755968
+sensor.overloop_alarm_type:
+  platform: zwave
+  unique_id: 5-72057594127859713
+sensor.overloop_alarm_level:
+  platform: zwave
+  unique_id: 5-72057594127859729
+sensor.overloop_sourcenodeid:
+  platform: zwave
+  unique_id: 5-72057594127859745
+sensor.overloop_heat:
+  platform: zwave
+  unique_id: 5-72057594127859825
+sensor.overloop_power_management:
+  platform: zwave
+  unique_id: 5-72057594127859889
