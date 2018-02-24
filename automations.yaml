@@ -293,6 +293,23 @@
   action:
     - service: light.turn_on
       entity_id: light.raam
+- id: sunset_buitenlamp_voor
+  alias: Sunset buitenlamp voor
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '+00:30:00'
+  action:
+    - service: switch.turn_on
+      entity_id: switch.hal_buitenlamp_voor
+- id: midnight_buitenlamp_voor
+  alias: Midnight buitenlamp voor
+  trigger:
+    platform: time
+    at: '23:05:00'
+  action:
+    - service: switch.turn_off
+      entity_id: switch.hal_buitenlamp_voor
 
 ###############################
 # Vakantietimers
