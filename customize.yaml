@@ -26,3 +26,5 @@ group.all_switches:
   hidden: false
 group.all_lights:
   hidden: false
+script.all_off:
+  icon: mdi:power-plug-off

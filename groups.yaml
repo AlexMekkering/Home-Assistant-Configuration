@@ -4,6 +4,7 @@ default_view:
   entities:
     - group.media_select
     - group.living_room_lights
+    - script.all_off
 slaapkamer:
   view: yes
   icon: mdi:sleep
