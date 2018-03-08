@@ -406,24 +406,6 @@
   action:
     - service: light.turn_off
       entity_id: light.achterwand_slaapkamer
-- id: detect_slaapkamer_on
-  alias: Detect Slaapkamer Aan
-  trigger:
-    platform: state
-    entity_id: light.achterwand_slaapkamer
-    to: 'on'
-  action:
-    - service: switch.turn_on
-      entity_id: switch.rf_achterwand_slaapkamer
-- id: detect_slaapkamer_off
-  alias: Detect Slaapkamer Uit
-  trigger:
-    platform: state
-    entity_id: light.achterwand_slaapkamer
-    to: 'off'
-  action:
-    - service: switch.turn_off
-      entity_id: switch.rf_achterwand_slaapkamer
 - id: RF_slaapkamer_on
   alias: RF Slaapkamer Aan
   trigger:
@@ -431,15 +413,8 @@
     entity_id: switch.rf_achterwand_slaapkamer
     to: 'on'
   action:
-    - service: light.turn_on
+    - service: light.toggle
       entity_id: light.achterwand_slaapkamer
-- id: RF_slaapkamer_off
-  alias: RF Slaapkamer Uit
-  trigger:
-    platform: state
-    entity_id: switch.rf_achterwand_slaapkamer
-    to: 'off'
-  action:
-    - service: light.turn_off
-      entity_id: light.achterwand_slaapkamer
+    - service: switch.turn_off
+      entity_id: switch.rf_achterwand_slaapkamer
 
