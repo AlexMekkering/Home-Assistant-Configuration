@@ -155,6 +155,25 @@
 
 ###############################
 # Remote Control
+#
+# The ZME_RC2 has 11 rows of buttons
+# Each button triggers a zwave scene
+# The row of the pressed button can be determined with 'scene_id // 10'
+# The row-specific scene can be determined with 'scene_id % 10'
+# The row-specific scenes which buttons trigger are:
+# 
+# 1: Short press of the left button
+# 2: Short press of the right button
+# 3: Initiation of long pressing the left button
+# 4: Initiation of long pressing the right button
+# 5: Release of long pressing the left button
+# 6: Release of long pressing the right button
+#
+# For now, we only trigger on short press or initiation of long press (<= 4)
+# So the side of the button can be determined by '(scene_id % 10) % 2'
+# 1: left side
+# 0: right side
+#
 ###############################
 - id: rc_buttons
   alias: RC Buttons
@@ -163,12 +182,15 @@
     event_type: zwave.scene_activated
     event_data:
       entity_id: zwave.remote
+  condition:
+    condition: template
+    value_template: '{{ (trigger.event.data.scene_id % 10) <= 4 }}'
   action:
     - service: input_boolean.turn_off
       entity_id: input_boolean.on_holiday
     - service_template:  >
         {% set row = trigger.event.data.scene_id // 10 %}
-        {% set side = trigger.event.data.scene_id % 10 %}
+        {% set side = (trigger.event.data.scene_id % 10) % 2 %}
         {% if row >= 1 and row <= 6 %}
           light.turn_{% if side == 1 %}on{% else %}off{% endif %}
         {% elif row == 7 %}
@@ -185,7 +207,7 @@
       data_template: 
         entity_id: >
           {% set row = trigger.event.data.scene_id // 10 %}
-          {% set side = trigger.event.data.scene_id % 10 %}
+          {% set side = (trigger.event.data.scene_id % 10) % 2 %}
           {% if row == 1 %}
             light.spruitje
           {% elif row == 2 %}
