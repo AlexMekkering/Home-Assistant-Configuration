@@ -4,21 +4,17 @@ entities:
     state: on
   light.linksvoor:
     state: on
-    brightness: 165
-    color_temp: 370.78235076010384
-  light.achter_bank:
-    state: on
-    brightness: 147
-    color_temp: 370.78235076010384
+    brightness: 193
+    color_temp: 370
   light.raam:
     state: on
-    brightness: 64
-    color_temp: 379.5066413662239
+    brightness: 162
+    color_temp: 370
   light.linksachter:
     state: on
-    brightness: 86
-    color_temp: 370.78235076010384
+    brightness: 231
+    color_temp: 370
   light.schilderij:
     state: on
-    brightness: 163
-    color_temp: 370.78235076010384
+    brightness: 167
+    color_temp: 370

@@ -4,8 +4,6 @@ entities:
     state: off
   light.linksvoor:
     state: off
-  light.achter_bank:
-    state: off
   light.raam:
     state: off
   light.linksachter:

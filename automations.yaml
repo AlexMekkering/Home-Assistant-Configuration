@@ -191,9 +191,9 @@
     - service_template:  >
         {% set row = trigger.event.data.scene_id // 10 %}
         {% set side = (trigger.event.data.scene_id % 10) % 2 %}
-        {% if row >= 1 and row <= 6 %}
+        {% if row >= 1 and row <= 5 %}
           light.turn_{% if side == 1 %}on{% else %}off{% endif %}
-        {% elif row == 7 %}
+        {% elif row >= 6 and  row <= 7 %}
           scene.turn_on
         {% elif row >= 8 and row <= 10 %}
           script.turn_on
@@ -214,10 +214,16 @@
             light.linksvoor
           {% elif row == 3 %}
             light.raam
-          {% elif row == 5 %}
+          {% elif row == 4 %}
             light.linksachter
-          {% elif row == 6 %}
+          {% elif row == 5 %}
             light.schilderij
+          {% elif row == 6 %}
+            {% if side == 1 %}
+              scene.woonkamer_dim
+            {% else %}
+              scene.woonkamer_all_off
+            {% endif %}
           {% elif row == 7 %}
             {% if side == 1 %}
               scene.woonkamer_regular
