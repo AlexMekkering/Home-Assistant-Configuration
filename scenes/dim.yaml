@@ -1,0 +1,20 @@
+name: Woonkamer Dim
+entities:
+  light.spruitje:
+    state: on
+  light.linksvoor:
+    state: on
+    brightness: 96
+    color_temp: 370
+  light.raam:
+    state: on
+    brightness: 81
+    color_temp: 370
+  light.linksachter:
+    state: on
+    brightness: 115
+    color_temp: 370
+  light.schilderij:
+    state: on
+    brightness: 83
+    color_temp: 370
