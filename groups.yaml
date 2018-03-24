@@ -161,6 +161,7 @@ upsquared:
   entities:
     - sensor.since_last_boot
     - sensor.processor_use
+    - sensor.cpu_temperature
     - sensor.load_1m
     - sensor.load_5m
     - sensor.load_15m

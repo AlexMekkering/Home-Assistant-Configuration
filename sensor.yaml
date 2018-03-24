@@ -29,6 +29,17 @@
       arg: !secret network3_device
     - type: network_out
       arg: !secret network3_device
+########
+# CPU temperature
+########
+- platform: command_line
+  name: CPU Temperature
+  command: "cat /sys/class/thermal/thermal_zone0/temp"
+  unit_of_measurement: "°C"
+  value_template: '{{ (value | multiply(0.001)) | round(1) }}'
+########
+# Sonoff MQTT sensors
+########
 - platform: mqtt
   name: "MV vermogen"
   state_topic: "homeassistant/switch/sonoff_pow_1/power"
