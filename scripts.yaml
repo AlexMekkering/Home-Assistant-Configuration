@@ -171,6 +171,24 @@ select_radio_luisteren:
       data:
         entity_id: input_select.media_scene
         option: 'Radio luisteren'
+initial_select:
+  alias: Select media scene based on state
+  sequence:
+    - wait_template: "{{ is_state('binary_sensor.sonoff_4ch_status', 'on') }}"
+      timeout: 00:00:30
+    - condition: state
+      entity_id: binary_sensor.sonoff_4ch_status
+      state: 'on'
+    - service_template: >
+        {% if is_state('switch.mediaspeler', 'on') %}
+          script.select_media_kijken
+        {% elif is_state('switch.tv', 'on') %}
+          script.select_tv_kijken
+        {% elif is_state('switch.receiver', 'on') %}
+          script.select_radio_luisteren
+        {% else %}
+          script.select_geen
+        {% endif %}
 listen_radio:
   alias: Listen Radio
   sequence:

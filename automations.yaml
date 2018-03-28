@@ -142,16 +142,7 @@
     platform: homeassistant
     event: start
   action:
-    service_template: >
-      {% if is_state('switch.mediaspeler', 'on') %}
-        script.select_media_kijken
-      {% elif is_state('switch.tv', 'on') %}
-        script.select_tv_kijken
-      {% elif is_state('switch.receiver', 'on') %}
-        script.select_radio_luisteren
-      {% else %}
-        script.select_geen
-      {% endif %}
+    service: script.initial_select
 
 ###############################
 # Remote Control
