@@ -454,3 +454,61 @@
     - service: switch.turn_off
       entity_id: switch.rf_achterwand_slaapkamer
 
+###############################
+# Mechanische ventilatie
+###############################
+- id: MV Idle
+  alias: Mechanische ventilatie stationair
+  initial_state: 'off'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.mv_vermogen
+    above: 1
+    below: 15
+    for:
+      hours: 0
+      minutes: 30
+      seconds: 0
+  action:
+    - service: fan.turn_off
+      entity_id: fan.mechanische_ventilatie
+- id: MV Active
+  alias: Mechanische ventilatie aktief
+  initial_state: 'off'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.mv_vermogen
+    above: 15
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  action:
+    - condition: state
+      entity_id: fan.mechanische_ventilatie
+      state: 'on'
+    - service: automation.turn_on
+      entity_id: automation.mechanische_ventilatie_stationair
+- id: Start MV
+  alias: Mechanische ventilatie start
+  trigger:
+    platform: state
+    entity_id: fan.mechanische_ventilatie
+    to: 'on'
+  action:
+    - service: automation.turn_on
+      entity_id: automation.mechanische_ventilatie_aktief
+    - service: automation.turn_off
+      entity_id: automation.mechanische_ventilatie_stationair
+- id: Stop MV
+  alias: Mechanische ventilatie stop
+  trigger:
+    platform: state
+    entity_id: fan.mechanische_ventilatie
+    to: 'off'
+  action:
+    - service: automation.turn_off
+      entity_id: automation.mechanische_ventilatie_aktief
+    - service: automation.turn_off
+      entity_id: automation.mechanische_ventilatie_stationair
+
