@@ -425,6 +425,23 @@
   action:
     - service: light.turn_off
       entity_id: light.achterwand_slaapkamer
+- id: slaapkamer_achterwand_off
+  alias: Slaapkamer Achterwand Uit
+  trigger:
+    platform: state
+    entity_id: light.achterwand_slaapkamer
+    to: 'off'
+  action:
+    - service: script.timer_tv_slaapkamer
+- id: slaapkamer_achterwand_on
+  alias: Slaapkamer Achterwand Aan
+  trigger:
+    platform: state
+    entity_id: light.achterwand_slaapkamer
+    to: 'on'
+  action:
+    - service: script.turn_off
+      entity_id: script.timer_tv_slaapkamer
 - id: RF_slaapkamer_on
   alias: RF Slaapkamer Aan
   trigger:

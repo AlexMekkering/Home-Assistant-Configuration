@@ -43,6 +43,15 @@ prepare_for_bed:
     - delay: 00:45:00
     - service: light.turn_off
       entity_id: light.achterwand_slaapkamer
+timer_tv_slaapkamer:
+  alias: Timer TV Slaapkamer
+  sequence:
+    - condition: state
+      entity_id: switch.tv_slaapkamer
+      state: 'on'
+    - delay: '00:30:00'
+    - service: switch.turn_off
+      entity_id: switch.tv_slaapkamer
 
 ###############################
 # Media devices
