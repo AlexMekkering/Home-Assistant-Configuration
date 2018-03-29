@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/AlexMekkering/Home-Assistant-Configuration.svg?branch=master)](https://travis-ci.org/AlexMekkering/Home-Assistant-Configuration)
 # Home-Assistant-Configuration
 My main Home Assistant configuration
 
