@@ -45,6 +45,7 @@ monitoring:
     - group.sonoff_4ch_1_monitor
     - group.sonoff_4chpro_1_monitor
     - group.sonoff_s20_1_monitor
+    - group.sonoff_rfbr_1_monitor
 #    - group.sonoff_dual_1_monitor
 admin:
   name: Administrator
@@ -231,6 +232,15 @@ sonoff_s20_1_monitor:
     - sensor.sonoff_s20_uptime
     - sensor.sonoff_s20_freeheap
     - sensor.sonoff_s20_rssi
+sonoff_rfbr_1_monitor:
+  name: Sonoff RF Bridge monitor
+  entities:
+    - binary_sensor.sonoff_rf_bridge_status
+    - sensor.sonoff_rf_bridge_version
+    - sensor.sonoff_rf_bridge_uptime
+    - sensor.sonoff_rf_bridge_freeheap
+    - sensor.sonoff_rf_bridge_rssi
+    - sensor.sonoff_rf_bridge_rfin
 #sonoff_dual_1_monitor:
 #  name: Sonoff Dual monitor
 #  entities:
@@ -245,4 +255,5 @@ sonoff_monitors:
     - group.sonoff_4ch_1_monitor
     - group.sonoff_4chpro_1_monitor
     - group.sonoff_s20_1_monitor
+    - group.sonogg_rfbr_1_monitor
 #    - group.sonoff_dual_1_monitor

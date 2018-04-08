@@ -22,6 +22,12 @@
   device_class: connectivity
   payload_on: "1"
   payload_off: "0"
+- platform: mqtt
+  name: "Sonoff RF Bridge status"
+  state_topic: "homeassistant/switch/sonoff_rfbr_1/status"
+  device_class: connectivity
+  payload_on: "1"
+  payload_off: "0"
 #- platform: mqtt
 #  name: "Sonoff Dual status"
 #  state_topic: "homeassistant/switch/sonoff_dual_1/status"
