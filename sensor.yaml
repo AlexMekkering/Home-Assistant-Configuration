@@ -127,18 +127,18 @@
 #  unit_of_measurement: "dB"
 - platform: mqtt
   name: "Sonoff RF Bridge uptime"
-  state_topic: "homeassistant/switch/sonoff_rfbr_1/uptime"
+  state_topic: "homeassistant/switch/sonoff_rfbridge_1/uptime"
 - platform: mqtt
   name: "Sonoff RF Bridge freeheap"
-  state_topic: "homeassistant/switch/sonoff_rfbr_1/freeheap"
+  state_topic: "homeassistant/switch/sonoff_rfbridge_1/freeheap"
 - platform: mqtt
   name: "Sonoff RF Bridge rssi"
-  state_topic: "homeassistant/switch/sonoff_rfbr_1/rssi"
+  state_topic: "homeassistant/switch/sonoff_rfbridge_1/rssi"
   unit_of_measurement: "dB"
 - platform: mqtt
   name: "Sonoff RF Bridge version"
-  state_topic: "homeassistant/switch/sonoff_rfbr_1/version"
+  state_topic: "homeassistant/switch/sonoff_rfbridge_1/version"
 - platform: mqtt
   name: "Sonoff RF Bridge rfin"
-  state_topic: "homeassistant/switch/sonoff_rfbr_1/rfin"
+  state_topic: "homeassistant/switch/sonoff_rfbridge_1/rfin"
   value_template: "{{value[-6:]}}"
