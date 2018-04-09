@@ -29,6 +29,7 @@
       arg: !secret network3_device
     - type: network_out
       arg: !secret network3_device
+
 ########
 # CPU temperature
 ########
@@ -37,6 +38,7 @@
   command: "cat /sys/class/thermal/thermal_zone0/temp"
   unit_of_measurement: "°C"
   value_template: '{{ (value | multiply(0.001)) | round(1) }}'
+
 ########
 # Sonoff MQTT sensors
 ########
@@ -115,16 +117,6 @@
 - platform: mqtt
   name: "Sonoff S20 version"
   state_topic: "homeassistant/switch/sonoff_s20_1/version"
-#- platform: mqtt
-#  name: "Sonoff Dual uptime"
-#  state_topic: "homeassistant/switch/sonoff_dual_1/uptime"
-#- platform: mqtt
-#  name: "Sonoff Dual freeheap"
-#  state_topic: "homeassistant/switch/sonoff_dual_1/freeheap"
-#- platform: mqtt
-#  name: "Sonoff Dual rssi"
-#  state_topic: "homeassistant/switch/sonoff_dual_1/rssi"
-#  unit_of_measurement: "dB"
 - platform: mqtt
   name: "Sonoff RF Bridge uptime"
   state_topic: "homeassistant/switch/sonoff_rfbridge_1/uptime"
