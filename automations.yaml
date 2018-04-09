@@ -182,10 +182,8 @@
     - service_template:  >
         {% set row = trigger.event.data.scene_id // 10 %}
         {% set side = (trigger.event.data.scene_id % 10) % 2 %}
-        {% if row >= 1 and row <= 5 %}
+        {% if row == 1 %}
           light.turn_{% if side == 1 %}on{% else %}off{% endif %}
-        {% elif row >= 6 and  row <= 7 %}
-          scene.turn_on
         {% elif row >= 8 and row <= 10 %}
           script.turn_on
         {% elif row == 11 %}
@@ -194,6 +192,8 @@
           {% else %}
             script.turn_on
           {% endif %}
+        {% else %}
+          scene.turn_on
         {% endif %}
       data_template: 
         entity_id: >
@@ -201,26 +201,6 @@
           {% set side = (trigger.event.data.scene_id % 10) % 2 %}
           {% if row == 1 %}
             light.spruitje
-          {% elif row == 2 %}
-            light.linksvoor
-          {% elif row == 3 %}
-            light.raam
-          {% elif row == 4 %}
-            light.linksachter
-          {% elif row == 5 %}
-            light.schilderij
-          {% elif row == 6 %}
-            {% if side == 1 %}
-              scene.woonkamer_dim
-            {% else %}
-              scene.woonkamer_all_off
-            {% endif %}
-          {% elif row == 7 %}
-            {% if side == 1 %}
-              scene.woonkamer_regular
-            {% else %}
-              scene.woonkamer_all_off
-            {% endif %}
           {% elif row >= 8 and row <= 10 %}
             {% if side == 1 %}
               {% if row == 8 %}
@@ -236,9 +216,17 @@
           {% elif row == 11 %}
             {% if side == 1 %}
               group.living_room_lights
-           {% else %}
+            {% else %}
               script.all_off
             {% endif %}
+          {% elif side == 1 and row == 2 %}
+            scene.woonkamer_regular
+          {% elif side == 1 and row == 3 %}
+            scene.woonkamer_dim
+          {% elif side == 1 and row == 4 %}
+            scene.woonkamer_very_dim
+          {% else %}
+            scene.woonkamer_all_off
           {% endif %}
 
 ###############################
@@ -272,7 +260,9 @@
     state: 'on'
   action:
     - service: light.turn_on
-      entity_id: light.linksachter
+      data:
+        entity_id: light.linksachter
+        brightness: 231
 - id: sunset_lamp_links_op_tv_meubel
   alias: Sunset lamp links op tv meubel
   trigger:
@@ -285,7 +275,9 @@
     state: 'on'
   action:
     - service: light.turn_on
-      entity_id: light.linksvoor
+      data:
+        entity_id: light.linksvoor
+        brightness: 193
 - id: sunset_lamp_schilderij
   alias: Sunset lamp schilderij
   trigger:
@@ -298,7 +290,9 @@
     state: 'on'
   action:
     - service: light.turn_on
-      entity_id: light.schilderij
+      data:
+        entity_id: light.schilderij
+        brightness: 167
 - id: sunset_lamp_bij_het_raam
   alias: Sunset lamp bij het raam
   trigger:
@@ -311,7 +305,9 @@
     state: 'on'
   action:
     - service: light.turn_on
-      entity_id: light.raam
+      data:
+        entity_id: light.raam
+        brightness: 162
 - id: sunset_buitenlamp_voor
   alias: Sunset buitenlamp voor
   trigger:
