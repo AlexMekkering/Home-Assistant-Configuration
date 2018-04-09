@@ -179,7 +179,7 @@
   action:
     - service: input_boolean.turn_off
       entity_id: input_boolean.on_holiday
-    - service_template:  >
+    - service_template: >
         {% set row = trigger.event.data.scene_id // 10 %}
         {% set side = (trigger.event.data.scene_id % 10) % 2 %}
         {% if row == 1 %}
@@ -195,7 +195,7 @@
         {% else %}
           scene.turn_on
         {% endif %}
-      data_template: 
+      data_template:
         entity_id: >
           {% set row = trigger.event.data.scene_id // 10 %}
           {% set side = (trigger.event.data.scene_id % 10) % 2 %}
@@ -227,6 +227,30 @@
             scene.woonkamer_very_dim
           {% else %}
             scene.woonkamer_all_off
+          {% endif %}
+
+- id: rf_buttons
+  alias: RF Buttons
+  trigger:
+    platform: state
+    entity_id: sensor.sonoff_rf_bridge_rfin
+  action:
+    - service_template: >
+        {% set button = trigger.to_state.state %}
+        {% if button == "842162" %}
+          light.turn_on
+        {% elif button == "842168" %}
+          light.turn_off
+        {% else %}
+          script.turn_on
+        {% endif %}
+      data_template:
+        entity_id: >
+          {% set button = trigger.to_state.state %}
+          {% if button == "842162" or button == "842168" %}
+            light.spruitje
+          {% else %}
+            script.noop
           {% endif %}
 
 ###############################
