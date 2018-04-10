@@ -44,93 +44,93 @@
 ########
 - platform: mqtt
   name: "MV vermogen"
-  state_topic: "homeassistant/switch/sonoff_pow_1/power"
+  state_topic: "sonoff/pow_1/power"
   unit_of_measurement: "W"
 - platform: mqtt
   name: "MV stroom"
-  state_topic: "homeassistant/switch/sonoff_pow_1/current"
+  state_topic: "sonoff/pow_1/current"
   unit_of_measurement: "A"
 - platform: mqtt
   name: "MV spanning"
-  state_topic: "homeassistant/switch/sonoff_pow_1/voltage"
+  state_topic: "sonoff/pow_1/voltage"
   unit_of_measurement: "V"
 - platform: mqtt
   name: "MV actief vermogen"
-  state_topic: "homeassistant/switch/sonoff_pow_1/apparent"
+  state_topic: "sonoff/pow_1/apparent"
   unit_of_measurement: "VA"
 - platform: mqtt
   name: "MV reactief vermogen"
-  state_topic: "homeassistant/switch/sonoff_pow_1/reactive"
+  state_topic: "sonoff/pow_1/reactive"
   unit_of_measurement: "VAR"
 - platform: mqtt
   name: "MV power factor"
-  state_topic: "homeassistant/switch/sonoff_pow_1/factor"
+  state_topic: "sonoff/pow_1/factor"
 - platform: mqtt
   name: "Sonoff POW uptime"
-  state_topic: "homeassistant/switch/sonoff_pow_1/uptime"
+  state_topic: "sonoff/pow_1/uptime"
 - platform: mqtt
   name: "Sonoff POW freeheap"
-  state_topic: "homeassistant/switch/sonoff_pow_1/freeheap"
+  state_topic: "sonoff/pow_1/freeheap"
 - platform: mqtt
   name: "Sonoff POW rssi"
-  state_topic: "homeassistant/switch/sonoff_pow_1/rssi"
+  state_topic: "sonoff/pow_1/rssi"
   unit_of_measurement: "dB"
 - platform: mqtt
   name: "Sonoff POW version"
-  state_topic: "homeassistant/switch/sonoff_pow_1/version"
+  state_topic: "sonoff/pow_1/version"
 - platform: mqtt
   name: "Sonoff 4CH uptime"
-  state_topic: "homeassistant/switch/sonoff_4ch_1/uptime"
+  state_topic: "sonoff/4ch_1/uptime"
 - platform: mqtt
   name: "Sonoff 4CH freeheap"
-  state_topic: "homeassistant/switch/sonoff_4ch_1/freeheap"
+  state_topic: "sonoff/4ch_1/freeheap"
 - platform: mqtt
   name: "Sonoff 4CH rssi"
-  state_topic: "homeassistant/switch/sonoff_4ch_1/rssi"
+  state_topic: "sonoff/4ch_1/rssi"
   unit_of_measurement: "dB"
 - platform: mqtt
   name: "Sonoff 4CH version"
-  state_topic: "homeassistant/switch/sonoff_4ch_1/version"
+  state_topic: "sonoff/4ch_1/version"
 - platform: mqtt
   name: "Sonoff 4CH PRO uptime"
-  state_topic: "homeassistant/switch/sonoff_4chpro_1/uptime"
+  state_topic: "sonoff/4chpro_1/uptime"
 - platform: mqtt
   name: "Sonoff 4CH PRO freeheap"
-  state_topic: "homeassistant/switch/sonoff_4chpro_1/freeheap"
+  state_topic: "sonoff/4chpro_1/freeheap"
 - platform: mqtt
   name: "Sonoff 4CH PRO rssi"
-  state_topic: "homeassistant/switch/sonoff_4chpro_1/rssi"
+  state_topic: "sonoff/4chpro_1/rssi"
   unit_of_measurement: "dB"
 - platform: mqtt
   name: "Sonoff 4CH PRO version"
-  state_topic: "homeassistant/switch/sonoff_4chpro_1/version"
+  state_topic: "sonoff/4chpro_1/version"
 - platform: mqtt
   name: "Sonoff S20 uptime"
-  state_topic: "homeassistant/switch/sonoff_s20_1/uptime"
+  state_topic: "sonoff/s20_1/uptime"
 - platform: mqtt
   name: "Sonoff S20 freeheap"
-  state_topic: "homeassistant/switch/sonoff_s20_1/freeheap"
+  state_topic: "sonoff/s20_1/freeheap"
 - platform: mqtt
   name: "Sonoff S20 rssi"
-  state_topic: "homeassistant/switch/sonoff_s20_1/rssi"
+  state_topic: "sonoff/s20_1/rssi"
   unit_of_measurement: "dB"
 - platform: mqtt
   name: "Sonoff S20 version"
-  state_topic: "homeassistant/switch/sonoff_s20_1/version"
+  state_topic: "sonoff/s20_1/version"
 - platform: mqtt
   name: "Sonoff RF Bridge uptime"
-  state_topic: "homeassistant/switch/sonoff_rfbridge_1/uptime"
+  state_topic: "sonoff/rfbridge_1/uptime"
 - platform: mqtt
   name: "Sonoff RF Bridge freeheap"
-  state_topic: "homeassistant/switch/sonoff_rfbridge_1/freeheap"
+  state_topic: "sonoff/rfbridge_1/freeheap"
 - platform: mqtt
   name: "Sonoff RF Bridge rssi"
-  state_topic: "homeassistant/switch/sonoff_rfbridge_1/rssi"
+  state_topic: "sonoff/rfbridge_1/rssi"
   unit_of_measurement: "dB"
 - platform: mqtt
   name: "Sonoff RF Bridge version"
-  state_topic: "homeassistant/switch/sonoff_rfbridge_1/version"
+  state_topic: "sonoff/rfbridge_1/version"
 - platform: mqtt
   name: "Sonoff RF Bridge rfin"
-  state_topic: "homeassistant/switch/sonoff_rfbridge_1/rfin"
+  state_topic: "sonoff/rfbridge_1/rfin"
   value_template: "{{value[-6:]}}"

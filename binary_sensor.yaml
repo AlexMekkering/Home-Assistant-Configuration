@@ -1,30 +1,30 @@
 - platform: mqtt
   name: "Sonoff POW status"
-  state_topic: "homeassistant/switch/sonoff_pow_1/status"
+  state_topic: "sonoff/pow_1/status"
   device_class: connectivity
   payload_on: "1"
   payload_off: "0"
 - platform: mqtt
   name: "Sonoff 4CH status"
-  state_topic: "homeassistant/switch/sonoff_4ch_1/status"
+  state_topic: "sonoff/4ch_1/status"
   device_class: connectivity
   payload_on: "1"
   payload_off: "0"
 - platform: mqtt
   name: "Sonoff 4CH PRO status"
-  state_topic: "homeassistant/switch/sonoff_4chpro_1/status"
+  state_topic: "sonoff/4chpro_1/status"
   device_class: connectivity
   payload_on: "1"
   payload_off: "0"
 - platform: mqtt
   name: "Sonoff S20 status"
-  state_topic: "homeassistant/switch/sonoff_s20_1/status"
+  state_topic: "sonoff/s20_1/status"
   device_class: connectivity
   payload_on: "1"
   payload_off: "0"
 - platform: mqtt
   name: "Sonoff RF Bridge status"
-  state_topic: "homeassistant/switch/sonoff_rfbridge_1/status"
+  state_topic: "sonoff/rfbridge_1/status"
   device_class: connectivity
   payload_on: "1"
   payload_off: "0"

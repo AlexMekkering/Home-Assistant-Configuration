@@ -1,2 +1,2 @@
 broker: !secret host_mqtt
-discovery: true
+#discovery: true
