@@ -238,17 +238,15 @@
     - service_template: >
         {% set button = trigger.to_state.state %}
         {% if button == "842162" %}
-          light.turn_on
-        {% elif button == "842168" %}
-          light.turn_off
+          fan.turn_on
         {% else %}
           script.turn_on
         {% endif %}
       data_template:
         entity_id: >
           {% set button = trigger.to_state.state %}
-          {% if button == "842162" or button == "842168" %}
-            light.spruitje
+          {% if button == "842162" %}
+            fan.mechanische_ventilatie
           {% else %}
             script.noop
           {% endif %}
