@@ -1,78 +1,148 @@
 switch.hal_lamp:
+  name:
   platform: zwave
   unique_id: 4-72057594109837312
 switch.hal_buitenlamp_voor:
+  name:
   platform: zwave
   unique_id: 4-144115188147765248
 sensor.hal_totaalverbruik_1:
+  name:
   platform: zwave
   unique_id: 4-72057594110050306
 sensor.hal_totaalverbruik_2:
+  name:
   platform: zwave
   unique_id: 4-144115188147978242
 sensor.hal_vermogen_1:
+  name:
   platform: zwave
   unique_id: 4-72057594110050434
 sensor.hal_exporting:
+  name:
   platform: zwave
   unique_id: 4-72057594110050816
 sensor.hal_vermogen_2:
+  name:
   platform: zwave
   unique_id: 4-144115188147978370
 sensor.hal_exporting_2:
+  name:
   platform: zwave
   unique_id: 4-144115188147978752
 sensor.hal_alarm_type:
+  name:
   platform: zwave
   unique_id: 4-72057594111082497
 sensor.hal_alarm_level:
+  name:
   platform: zwave
   unique_id: 4-72057594111082513
 sensor.hal_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 4-72057594111082529
 sensor.hal_heat:
+  name:
   platform: zwave
   unique_id: 4-72057594111082609
 sensor.hal_power_management:
+  name:
   platform: zwave
   unique_id: 4-72057594111082673
 switch.overloop_lamp:
+  name:
   platform: zwave
   unique_id: 5-72057594126614528
 switch.overloop_not_connected:
+  name:
   platform: zwave
   unique_id: 5-144115188164542464
 sensor.overloop_energy:
+  name:
   platform: zwave
   unique_id: 5-72057594126827522
 sensor.overloop_energy_2:
+  name:
   platform: zwave
   unique_id: 5-144115188164755458
 sensor.overloop_power:
+  name:
   platform: zwave
   unique_id: 5-72057594126827650
 sensor.overloop_exporting:
+  name:
   platform: zwave
   unique_id: 5-72057594126828032
 sensor.overloop_power_2:
+  name:
   platform: zwave
   unique_id: 5-144115188164755586
 sensor.overloop_exporting_2:
+  name:
   platform: zwave
   unique_id: 5-144115188164755968
 sensor.overloop_alarm_type:
+  name:
   platform: zwave
   unique_id: 5-72057594127859713
 sensor.overloop_alarm_level:
+  name:
   platform: zwave
   unique_id: 5-72057594127859729
 sensor.overloop_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 5-72057594127859745
 sensor.overloop_heat:
+  name:
   platform: zwave
   unique_id: 5-72057594127859825
 sensor.overloop_power_management:
+  name:
   platform: zwave
   unique_id: 5-72057594127859889
+light.toilet:
+  name:
+  platform: tradfri
+  unique_id: light-7e121d520440009f-65548
+light.linksachter:
+  name:
+  platform: tradfri
+  unique_id: light-7e121d520440009f-65544
+light.linksvoor:
+  name:
+  platform: tradfri
+  unique_id: light-7e121d520440009f-65537
+light.eettafel_2:
+  name:
+  platform: tradfri
+  unique_id: light-7e121d520440009f-65540
+light.raam:
+  name:
+  platform: tradfri
+  unique_id: light-7e121d520440009f-65539
+light.eettafel_1:
+  name:
+  platform: tradfri
+  unique_id: light-7e121d520440009f-65538
+light.schilderij:
+  name:
+  platform: tradfri
+  unique_id: light-7e121d520440009f-65546
+light.eettafel_3:
+  name:
+  platform: tradfri
+  unique_id: light-7e121d520440009f-65541
+light.woonkamer:
+  name:
+  platform: tradfri
+  unique_id: group-7e121d520440009f-141878
+light.wc_beneden:
+  name:
+  platform: tradfri
+  unique_id: group-7e121d520440009f-141879
+light.eettafel:
+  name:
+  platform: tradfri
+  unique_id: group-7e121d520440009f-133675

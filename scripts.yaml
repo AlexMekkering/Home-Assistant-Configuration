@@ -14,23 +14,8 @@ all_lights_off:
   sequence:
     - service: switch.turn_on
       entity_id: switch.hal_lamp
-    - service: light.turn_off
-      entity_id: light.spruitje
-#    - delay: 00:00:10
-    - service: light.turn_off
-      entity_id: light.kerstboom
-#    - delay: 00:00:10
-    - service: light.turn_off
-      entity_id: light.schilderij
-#    - delay: 00:00:10
-    - service: light.turn_off
-      entity_id: light.linksvoor
-#    - delay: 00:00:10
-    - service: light.turn_off
-      entity_id: light.raam
-#    - delay: 00:00:10
-    - service: light.turn_off
-      entity_id: light.linksachter
+    - service: scene.turn_on
+      entity_id: scene.woonkamer_all_off
     - service: homeassistant.turn_off
       entity_id: group.eettafel_lights
     - delay: 00:00:05
@@ -43,14 +28,13 @@ all_lights_off:
 prepare_for_bed:
   alias: Klaarmaken om naar bed te gaan
   sequence:
-    - condition: state
-      entity_id: sun.sun
-      state: 'below_horizon'
     - service: light.turn_on
       entity_id: light.achterwand_slaapkamer
     - delay: 00:45:00
     - service: light.turn_off
       entity_id: light.achterwand_slaapkamer
+    - service: switch.turn_off
+      entity_id: switch.overloop_lamp
 timer_tv_slaapkamer:
   alias: Timer TV Slaapkamer
   sequence:
@@ -121,15 +105,6 @@ powerup_mediaplayer:
   alias: Powerup Mediaplayer
   sequence:
     - service: script.powerup_tv
-#timed_shutdown_server:
-#  alias: Timed Shutdown of Server
-#  sequence:
-#    - condition: state
-#      entity_id: switch.server
-#      state: 'on'
-#    - delay: 00:30:00
-#    - service: switch.turn_off
-#      entity_id: switch.server
 
 ###############################
 # Mediaplayer
