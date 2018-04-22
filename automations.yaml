@@ -263,7 +263,7 @@
     offset: '-00:30:00'
   condition:
     condition: state
-    entity_id: group.someone_home
+    entity_id: group.activity_at_home
     state: 'on'
   action:
     - service: light.turn_on
@@ -278,7 +278,7 @@
     offset: '-00:25:00'
   condition:
     condition: state
-    entity_id: group.someone_home
+    entity_id: group.activity_at_home
     state: 'on'
   action:
     - service: light.turn_on
@@ -293,7 +293,7 @@
     offset: '-00:20:00'
   condition:
     condition: state
-    entity_id: group.someone_home
+    entity_id: group.activity_at_home
     state: 'on'
   action:
     - service: light.turn_on
@@ -308,7 +308,7 @@
     offset: '-00:15:00'
   condition:
     condition: state
-    entity_id: group.someone_home
+    entity_id: group.activity_at_home
     state: 'on'
   action:
     - service: light.turn_on
@@ -323,7 +323,7 @@
     offset: '-00:05:00'
   condition:
     condition: state
-    entity_id: group.someone_home
+    entity_id: group.activity_at_home
     state: 'on'
   action:
     - service: light.turn_on
@@ -361,13 +361,7 @@
     condition: and
     conditions:
       - condition: state
-        entity_id: group.people
-        state: 'not_home'
-      - condition: state
         entity_id: group.someone_home
-        state: 'off'
-      - condition: state
-        entity_id: switch.tv_slaapkamer
         state: 'off'
       - condition: time
         before: '21:00:00'

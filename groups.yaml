@@ -130,13 +130,18 @@ living_room:
   entities:
     - group.multimedia
     - group.living_room_lights
-someone_home:
-  name: Iemand thuis
+activity_at_home:
+  name: Activiteit thuis
   entities:
     - group.multimedia
     - light.spruitje
     - light.schilderij
     - switch.nuc
+someone_home:
+  name: Iemand thuis
+  entities:
+    - group.activity_at_home
+    - group.slaapkamerbediening
     - binary_sensor.alex_home
     - binary_sensor.joyce_home
 lights_vacation:
