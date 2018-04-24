@@ -427,8 +427,8 @@
   action:
     - service: light.turn_off
       entity_id: light.achterwand_slaapkamer
-- id: slaapkamer_achterwand_off
-  alias: Slaapkamer Achterwand Uit
+- id: slaapkamer_achterwand
+  alias: Slaapkamer Achterwand
   trigger:
     platform: state
     entity_id: light.achterwand_slaapkamer
