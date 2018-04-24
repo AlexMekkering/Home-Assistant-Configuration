@@ -1,38 +1,25 @@
 ###############################
 # Multimedia woonkamer
 ###############################
-- id: scene_select_radio
-  alias: Scene Select Radio
+- id: scene_select
+  alias: Scene Select
   trigger:
     platform: state
     entity_id: input_select.media_scene
-    to: 'Radio luisteren'
   action:
-    service: script.listen_radio
-- id: scene_select_tv
-  alias: Scene Select TV
-  trigger:
-    platform: state
-    entity_id: input_select.media_scene
-    to: 'TV kijken'
-  action:
-    service: script.watch_tv
-- id: scene_select_media
-  alias: Scene Select Media
-  trigger:
-    platform: state
-    entity_id: input_select.media_scene
-    to: 'Media kijken'
-  action:
-    service: script.watch_media
-- id: scene_select_geen
-  alias: Scene Select Geen
-  trigger:
-    platform: state
-    entity_id: input_select.media_scene
-    to: 'Geen'
-  action:
-    service: script.all_media_off
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% set scene = trigger.to_state.state %}
+          {% if scene == 'Radio luisteren' %}
+            script.listen_radio
+          {% elif scene == 'TV kijken' %}
+            script.watch_tv
+          {% elif scene == 'Media kijken' %}
+            script.watch_media
+          {% else %}
+            script.all_media_off
+          {% endif %}
 - id: check_receiver_source
   alias: Check Receiver source
   initial_state: 'off'
