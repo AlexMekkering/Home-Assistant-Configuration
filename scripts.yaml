@@ -39,6 +39,16 @@ prepare_for_bed:
       entity_id: light.achterwand_slaapkamer
     - service: switch.turn_off
       entity_id: switch.overloop_lamp
+tv_slaapkamer_aan:
+  alias: TV slaapkamer aan
+  sequence:
+    - service: script.turn_off
+      entity_id: script.prepare_for_bed
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+    - service: light.turn_on
+      entity_id: light.achterwand_slaapkamer
 timer_tv_slaapkamer:
   alias: Timer TV Slaapkamer
   sequence:

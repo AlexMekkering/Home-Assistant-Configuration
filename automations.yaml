@@ -328,10 +328,14 @@
   trigger:
     platform: sun
     event: sunset
-    offset: '+00:30:00'
+    offset: '+00:05:00'
   action:
     - service: switch.turn_on
       entity_id: switch.hal_buitenlamp_voor
+    - service: automation.turn_on
+      entity_id: automation.midnight_buitenlamp_voor
+    - service: automation.turn_off
+      entity_id: automation.sunset_buitenlamp_voor
 - id: midnight_buitenlamp_voor
   alias: Midnight buitenlamp voor
   trigger:
@@ -340,6 +344,10 @@
   action:
     - service: switch.turn_off
       entity_id: switch.hal_buitenlamp_voor
+    - service: automation.turn_on
+      entity_id: automation.sunset_buitenlamp_voor
+    - service: automation.turn_off
+      entity_id: automation.midnight_buitenlamp_voor
 
 ###############################
 # Vakantietimers
@@ -408,29 +416,25 @@
 ###############################
 # Slaapkamer
 ###############################
-- id: slaapkamer_on
-  alias: Slaapkamer Aan
+- id: slaapkamer_tv
+  alias: Slaapkamer TV
   trigger:
     platform: state
     entity_id: switch.tv_slaapkamer
-    to: 'on'
   action:
-    - service: script.turn_off
-      entity_id: script.prepare_for_bed
-    - condition: state
-      entity_id: sun.sun
-      state: 'below_horizon' 
-    - service: light.turn_on
-      entity_id: light.achterwand_slaapkamer
-- id: slaapkamer_off
-  alias: Slaapkamer Uit
-  trigger:
-    platform: state
-    entity_id: switch.tv_slaapkamer
-    to: 'off'
-  action:
-    - service: light.turn_off
-      entity_id: light.achterwand_slaapkamer
+    - service_template: >
+        {% if trigger.to_state.state == 'on' %}
+          script.turn_on
+        {% else %}
+          light.turn_off
+        {% endif %}
+      data_template:
+        entity_id: >
+          {% if trigger.to_state.state == 'on' %}
+            script.tv_slaapkamer_aan
+          {% else %}
+            light.achterwand_slaapkamer
+          {% endif %}
 - id: slaapkamer_achterwand
   alias: Slaapkamer Achterwand
   trigger:
