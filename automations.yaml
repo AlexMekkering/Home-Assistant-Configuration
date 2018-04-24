@@ -177,8 +177,12 @@
     condition: template
     value_template: '{{ (trigger.event.data.scene_id % 10) <= 4 }}'
   action:
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.on_holiday
+    - service: automation.turn_off
+      entity_id: automation.holiday_evening_end
+    - service: automation.turn_off
+      entity_id: automation.holiday_morning_start
+    - service: automation.turn_off
+      entity_id: automation.holiday_morning_end
     - service_template: >
         {% set row = trigger.event.data.scene_id // 10 %}
         {% set side = (trigger.event.data.scene_id % 10) % 2 %}
@@ -268,8 +272,6 @@
   action:
     - service: light.turn_on
       entity_id: light.spruitje
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.on_holiday
 - id: sunset_lamp_links_achter
   alias: Sunset lamp links achter
   trigger:
@@ -366,50 +368,51 @@
       - condition: time
         before: '21:00:00'
   action:
-    - service: homeassistant.turn_on
-      entity_id: group.lights_vacation
-    - service: input_boolean.turn_on
-      entity_id: input_boolean.on_holiday
+    - service: scene.turn_on
+      entity_id: scene.vakantie
+    - service: automation.turn_on
+      entity_id: automation.holiday_evening_end
     - service: script.notify_admin
       data:
         message: Vakantietimer geactiveerd
 - id: holiday_evening_end
   alias: Holiday Evening End
+  initial_state: 'off'
   trigger:
     platform: time
     at: '23:00:00'
-  condition:
-    condition: state
-    entity_id: input_boolean.on_holiday
-    state: 'on'
   action:
-    service: homeassistant.turn_off
-    entity_id: group.lights_vacation
+    - service: scene.turn_on
+      entity_id: scene.woonkamer_all_off
+    - service: automation.turn_on
+      entity_id: automation.holiday_morning_start
+    - service: automation.turn_off
+      entity_id: automation.holiday_evening_end
 - id: holiday_morning_start
   alias: Holiday Morning Start
+  initial_state: 'off'
   trigger:
     platform: sun
     event: sunrise
     offset: '-01:00:00'
-  condition:
-    condition: state
-    entity_id: input_boolean.on_holiday
-    state: 'on'
   action:
-    service: homeassistant.turn_on
-    entity_id: group.lights_vacation
+    - service: scene.turn_on
+      entity_id: scene.vakantie
+    - service: automation.turn_on
+      entity_id: automation.holiday_morning_end
+    - service: automation.turn_off
+      entity_id: automation.holiday_morning_start
 - id: holiday_morning_end
   alias: Holiday Morning End
+  initial_state: 'off'
   trigger:
     platform: sun
     event: sunrise
-  condition:
-    condition: state
-    entity_id: input_boolean.on_holiday
-    state: 'on'
   action:
-    service: homeassistant.turn_off
-    entity_id: group.lights_vacation
+    - service: scen.turn_on
+      entity_id: scene.woonkamer_all_off
+    - service: automation.turn_off
+      entity_id: automation.holiday_morning_end
 
 ###############################
 # Slaapkamer

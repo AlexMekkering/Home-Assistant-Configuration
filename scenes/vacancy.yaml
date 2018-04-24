@@ -1,0 +1,18 @@
+name: Vakantie
+entities:
+  light.spruitje:
+    state: off
+  light.linksvoor:
+    state: on
+    brightness: 25
+    color_temp: 370
+  light.raam:
+    state: on
+    brightness: 25
+    color_temp: 370
+  light.linksachter:
+    state: on
+    brightness: 25
+    color_temp: 370
+  light.schilderij:
+    state: off

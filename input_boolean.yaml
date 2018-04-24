@@ -1,7 +1,3 @@
-on_holiday:
-  name: Vakantietimer aan
-  initial: off
-  #icon: mdi:home
 admin_notifications:
   name: Enable admin notifications
   initial: on

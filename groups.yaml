@@ -30,7 +30,6 @@ extended:
     - group.mediaspelers
     - group.living_room_lights
     - group.tradfri_lights
-    - input_boolean.on_holiday
     - input_boolean.admin_notifications
     - group.logger_select
     - sun.sun
@@ -144,12 +143,6 @@ someone_home:
     - group.slaapkamerbediening
     - binary_sensor.alex_home
     - binary_sensor.joyce_home
-lights_vacation:
-  name: Lampen voor afwezig
-  entities:
-    - light.linksvoor
-    - light.linksachter
-    - light.raam
 people:
   name: Aanwezigen
   entities:
