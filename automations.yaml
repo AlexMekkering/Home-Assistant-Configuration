@@ -250,12 +250,22 @@
 ###############################
 # Timers licht
 ###############################
-- id: sunset_spruitje
-  alias: Sunset spruitje
+- id: sunset_preparation
+  alias: Sunset Preparation
   trigger:
     platform: sun
     event: sunset
-    offset: '-00:30:00'
+    offset: '-01:00:00'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: group.sunset_automations
+- id: sunset_spruitje
+  alias: Sunset spruitje
+  initial_state: 'off'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-00:45:00'
   condition:
     condition: state
     entity_id: group.activity_at_home
@@ -265,6 +275,7 @@
       entity_id: light.spruitje
 - id: sunset_lamp_links_achter
   alias: Sunset lamp links achter
+  initial_state: 'off'
   trigger:
     platform: sun
     event: sunset
@@ -280,6 +291,7 @@
         brightness: 231
 - id: sunset_lamp_links_op_tv_meubel
   alias: Sunset lamp links op tv meubel
+  initial_state: 'off'
   trigger:
     platform: sun
     event: sunset
@@ -295,6 +307,7 @@
         brightness: 193
 - id: sunset_lamp_schilderij
   alias: Sunset lamp schilderij
+  initial_state: 'off'
   trigger:
     platform: sun
     event: sunset
@@ -310,6 +323,7 @@
         brightness: 167
 - id: sunset_lamp_bij_het_raam
   alias: Sunset lamp bij het raam
+  initial_state: 'off'
   trigger:
     platform: sun
     event: sunset
@@ -325,6 +339,7 @@
         brightness: 162
 - id: sunset_buitenlamp_voor
   alias: Sunset buitenlamp voor
+  initial_state: 'off'
   trigger:
     platform: sun
     event: sunset
@@ -338,22 +353,24 @@
       entity_id: automation.sunset_buitenlamp_voor
 - id: midnight_buitenlamp_voor
   alias: Midnight buitenlamp voor
+  initial_state: 'off'
   trigger:
     platform: time
     at: '23:05:00'
   action:
     - service: switch.turn_off
       entity_id: switch.hal_buitenlamp_voor
-    - service: automation.turn_on
-      entity_id: automation.sunset_buitenlamp_voor
     - service: automation.turn_off
       entity_id: automation.midnight_buitenlamp_voor
+    - service: homeassistant.turn_off
+      entity_id: group.sunset_automations
 
 ###############################
 # Vakantietimers
 ###############################
 - id: holiday_evening_start
   alias: Holiday Evening Start
+  initial_state: 'off'
   trigger:
     platform: sun
     event: sunset

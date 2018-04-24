@@ -56,7 +56,16 @@ admin:
     - group.all_devices
     - group.all_automations
     - group.all_scripts
-
+sunset_automations:
+  name: Sunset Automations
+  entities:
+    - automation.sunset_spruitje
+    - automation.sunset_lamp_links_achter
+    - automation.sunset_lamp_links_op_tv_meubel
+    - automation.sunset_lamp_schilderij
+    - automation.sunset_lamp_bij_het_raam
+    - automation.sunset_buitenlamp_voor
+    - automation.holiday_evening_start
 slaapkamerbediening:
   name: Slaapkamerbediening
   entities:
