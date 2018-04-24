@@ -57,6 +57,7 @@
           {% endif %}
 - id: turn_on_mediaplayer
   alias: Turn on mediaplayer
+  initial_state: 'off'
   trigger:
     platform: state
     entity_id: automation.check_receiver_source
@@ -67,6 +68,10 @@
   action:
     - service: switch.turn_on
       entity_id: switch.mediaspeler
+
+###############################
+# Server Control
+###############################
 #- id: mediaspelers_off
 #  alias: Mediaspelers Uit
 #  trigger:
@@ -245,7 +250,6 @@
 ###############################
 # Timers licht
 ###############################
-
 - id: sunset_spruitje
   alias: Sunset spruitje
   trigger:

@@ -25,6 +25,10 @@ all_lights_off:
     - service: switch.turn_off
       entity_id: switch.hal_lamp
     - service: script.prepare_for_bed
+
+###############################
+# Bedroom
+###############################
 prepare_for_bed:
   alias: Klaarmaken om naar bed te gaan
   sequence:
@@ -86,15 +90,11 @@ shutdown_receiver:
     - delay: 00:00:05
     - service: switch.turn_off
       entity_id: switch.receiver
-setup_receiver_cold:
-  alias: Setup Receiver when it's been turned off
-  sequence:
-    - service: switch.turn_on
-      entity_id: switch.receiver
 powerup_receiver:
   alias: Setup Receiver when it's ready to be
   sequence:
-    - service: script.setup_receiver_cold
+    - service: switch.turn_on
+      entity_id: switch.receiver
 powerup_tv:
   alias: Powerup TV
   sequence:
@@ -184,17 +184,19 @@ initial_select:
 listen_radio:
   alias: Listen Radio
   sequence:
+    - service: automation.turn_off
+      entity_id: automation.turn_on_mediaplayer
     - service: automation.turn_on
-      data:
-        entity_id: automation.check_receiver_source
+      entity_id: automation.check_receiver_source
     - service: script.shutdown_tv
     - service: script.powerup_receiver
 watch_tv:
   alias: Watch TV
   sequence:
+    - service: automation.turn_off
+      entity_id: automation.turn_on_mediaplayer
     - service: automation.turn_on
-      data:
-        entity_id: automation.check_receiver_source
+      entity_id: automation.check_receiver_source
     - service: script.shutdown_mediaplayer
     - wait_template: "{{ is_state('switch.mediaspeler', 'off') }}"
       timeout: 00:00:10
@@ -203,8 +205,9 @@ watch_media:
   alias: Watch Media
   sequence:
     - service: automation.turn_on
-      data:
-        entity_id: automation.check_receiver_source
+      entity_id: automation.turn_on_mediaplayer
+    - service: automation.turn_on
+      entity_id: automation.check_receiver_source
     - service: script.powerup_mediaplayer
 all_media_off:
   alias: All Media Off
