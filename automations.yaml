@@ -360,10 +360,10 @@
   action:
     - service: switch.turn_off
       entity_id: switch.hal_buitenlamp_voor
-    - service: automation.turn_off
-      entity_id: automation.midnight_buitenlamp_voor
     - service: homeassistant.turn_off
       entity_id: group.sunset_automations
+    - service: automation.turn_off
+      entity_id: automation.midnight_buitenlamp_voor
 
 ###############################
 # Vakantietimers
@@ -486,7 +486,6 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.mv_vermogen
-    above: 1
     below: 15
     for:
       hours: 0
@@ -512,25 +511,18 @@
       state: 'on'
     - service: automation.turn_on
       entity_id: automation.mechanische_ventilatie_stationair
-- id: Start MV
-  alias: Mechanische ventilatie start
+- id: MV
+  alias: Mechanische ventilatie
   trigger:
     platform: state
     entity_id: fan.mechanische_ventilatie
-    to: 'on'
   action:
-    - service: automation.turn_on
-      entity_id: automation.mechanische_ventilatie_aktief
-    - service: automation.turn_off
-      entity_id: automation.mechanische_ventilatie_stationair
-- id: Stop MV
-  alias: Mechanische ventilatie stop
-  trigger:
-    platform: state
-    entity_id: fan.mechanische_ventilatie
-    to: 'off'
-  action:
-    - service: automation.turn_off
+    - service_template: >
+        {% if is_state('fan.mechanische_ventilatie', 'off') %}
+          automation.turn_off
+        {% else %}
+          automation.turn_on
+        {% endif %}
       entity_id: automation.mechanische_ventilatie_aktief
     - service: automation.turn_off
       entity_id: automation.mechanische_ventilatie_stationair
