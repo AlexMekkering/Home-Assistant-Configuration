@@ -131,10 +131,13 @@
 - id: startup
   alias: Opstarten
   trigger:
-    platform: homeassistant
-    event: start
+    platform: time
+    seconds: '/1'
   action:
-    service: script.initial_select
+    - service: script.initial_select
+    - service: script.initial_mv
+    - service: automation.turn_off
+      entity_id: automation.opstarten
 
 ###############################
 # Remote Control
