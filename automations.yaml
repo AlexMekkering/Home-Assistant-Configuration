@@ -138,6 +138,13 @@
     - service: script.initial_mv
     - service: automation.turn_off
       entity_id: automation.opstarten
+    - condition: sun
+      after: sunset
+      after_offset: "-1:00:00"
+    - condition: time
+      before: '23:00:00'
+    - service: automation.trigger
+      entity_id: automation.sunset_preparation
 
 ###############################
 # Remote Control
