@@ -6,6 +6,14 @@
     data:
       entity_id: media_player.woonkamer
       method: System.Shutdown
+- platform: kodi
+  host: !secret host_slaapkamer
+  name: Slaapkamer
+  turn_off_action:
+    service: media_player.kodi_call_method
+    data:
+      entity_id: media_player.slaapkamer
+      method: System.Shutdown
 - platform: onkyo
   host: !secret host_receiver
   name: Receiver
@@ -13,3 +21,4 @@
     cd: TV
     internet-radio: Radio
     dvd: Mediaplayer
+

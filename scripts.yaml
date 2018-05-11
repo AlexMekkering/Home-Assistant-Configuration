@@ -81,6 +81,31 @@ timer_tv_slaapkamer:
       entity_id: switch.tv_slaapkamer
       state: 'on'
     - delay: '00:30:00'
+    - service: script.turn_off_tv_slaapkamer
+toggle_tv_slaapkamer:
+  alias: Toggle TV Slaapkamer
+  sequence:
+    - service_template: >
+        {% if is_state('switch.tv_slaapkamer', 'off') %}
+          switch.turn_on
+        {% else %}
+          script.turn_on
+        {% endif %}
+      data_template:
+        entity_id: >
+          {% if is_state('switch.tv_slaapkamer', 'off') %}
+            switch.tv_slaapkamer
+          {% else %}
+            script.turn_off_tv_slaapkamer
+          {% endif %}
+turn_off_tv_slaapkamer:
+  alias: Turn off TV Slaapkamer
+  sequence:
+    - service: media_player.turn_off
+      entity_id: media_player.slaapkamer
+    - service: light.turn_off
+      entity_id: light.achterwand_slaapkamer
+    - delay: 00:00:10
     - service: switch.turn_off
       entity_id: switch.tv_slaapkamer
 
@@ -142,7 +167,7 @@ powerup_mediaplayer:
     - service: script.powerup_tv
 
 ###############################
-# Mediaplayer
+# Receiver
 ###############################
 increase_volume:
   alias: Increase Volume

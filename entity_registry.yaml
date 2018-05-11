@@ -146,3 +146,19 @@ light.eettafel:
   name:
   platform: tradfri
   unique_id: group-7e121d520440009f-133675
+zwave.usb_stick:
+  name:
+  platform: zwave
+  unique_id: node-1
+zwave.remote:
+  name:
+  platform: zwave
+  unique_id: node-2
+zwave.hal:
+  name:
+  platform: zwave
+  unique_id: node-4
+zwave.overloop:
+  name:
+  platform: zwave
+  unique_id: node-5
