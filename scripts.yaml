@@ -37,6 +37,7 @@ initial_mv:
 all_lights_off:
   alias: All Lights Off
   sequence:
+    - service: script.prepare_for_bed
     - service: switch.turn_on
       entity_id: switch.hal_lamp
     - service: scene.turn_on
@@ -46,10 +47,9 @@ all_lights_off:
     - delay: 00:00:05
     - service: switch.turn_on
       entity_id: switch.overloop_lamp
-    - delay: 00:00:25
+    - delay: 00:00:55
     - service: switch.turn_off
       entity_id: switch.hal_lamp
-    - service: script.prepare_for_bed
 
 ###############################
 # Bedroom

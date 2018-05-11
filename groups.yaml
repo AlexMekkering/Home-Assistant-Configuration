@@ -144,12 +144,12 @@ activity_at_home:
     - group.multimedia
     - light.spruitje
     - light.schilderij
-    - switch.nuc
 someone_home:
   name: Iemand thuis
   entities:
     - group.activity_at_home
     - group.slaapkamerbediening
+    - switch.nuc
     - binary_sensor.alex_home
     - binary_sensor.joyce_home
 people:
