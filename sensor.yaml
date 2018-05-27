@@ -11,6 +11,8 @@
       arg: /
     - type: disk_use_percent
       arg: !secret storage_mount
+    - type: disk_use_percent
+      arg: !secret cache_mount
     - type: processor_use
     - type: load_1m
     - type: load_5m

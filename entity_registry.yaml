@@ -162,3 +162,11 @@ zwave.overloop:
   name:
   platform: zwave
   unique_id: node-5
+sensor.overloop_previous_reading:
+  name:
+  platform: zwave
+  unique_id: 5-72057594126827666
+sensor.overloop_interval:
+  name:
+  platform: zwave
+  unique_id: 5-72057594126827683

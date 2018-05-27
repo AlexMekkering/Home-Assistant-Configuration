@@ -178,6 +178,7 @@ upsquared:
     - sensor.disk_use_percent_
     - sensor.disk_use_percent_boot
     - !secret storage_sensor
+    - !secret cache_sensor
     - !secret network1_sensor_received
     - !secret network1_sensor_sent
     - !secret network2_sensor_received
