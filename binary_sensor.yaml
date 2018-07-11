@@ -1,30 +1,30 @@
 - platform: mqtt
   name: "Sonoff POW status"
-  state_topic: "sonoff/pow_1/status"
+  state_topic: "sonoff/pow-1/status"
   device_class: connectivity
   payload_on: "1"
   payload_off: "0"
 - platform: mqtt
   name: "Sonoff 4CH status"
-  state_topic: "sonoff/4ch_1/status"
+  state_topic: "sonoff/4ch-1/status"
   device_class: connectivity
   payload_on: "1"
   payload_off: "0"
 - platform: mqtt
   name: "Sonoff 4CH PRO status"
-  state_topic: "sonoff/4chpro_1/status"
+  state_topic: "sonoff/4chpro-1/status"
   device_class: connectivity
   payload_on: "1"
   payload_off: "0"
 - platform: mqtt
   name: "Sonoff S20 status"
-  state_topic: "sonoff/s20_1/status"
+  state_topic: "sonoff/s20-1/status"
   device_class: connectivity
   payload_on: "1"
   payload_off: "0"
 - platform: mqtt
   name: "Sonoff RF Bridge status"
-  state_topic: "sonoff/rfbridge_1/status"
+  state_topic: "sonoff/rfbridge-1/status"
   device_class: connectivity
   payload_on: "1"
   payload_off: "0"
@@ -37,4 +37,3 @@
     joyce_home:
       friendly_name: "Joyce is thuis"
       value_template: "{{ is_state('device_tracker.joyce', 'home') }}"
-
