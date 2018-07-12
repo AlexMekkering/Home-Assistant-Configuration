@@ -267,7 +267,7 @@
           {% endif %}
     - service: mqtt.publish
       data:
-        topic: "sonoff/rfbridge_1/rfin"
+        topic: "sonoff/rfbridge-1/rfin"
         payload: "------"
 
 ###############################
