@@ -6,3 +6,7 @@ receiver_ready:
   name: Receiver ready
 televisie_ready:
   name: TV ready
+zigbee_permit_join:
+  name: Allow devices to join
+  initial: off
+  icon: mdi:cellphone-wireless

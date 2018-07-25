@@ -136,3 +136,7 @@
   name: "Sonoff RF Bridge rfin"
   state_topic: "sonoff/rfbridge-1/rfin"
   value_template: "{{value[-6:]}}"
+- platform: mqtt
+  name: Bridge state
+  state_topic: "zigbee2mqtt/bridge/state"
+  icon: mdi:router-wireless
