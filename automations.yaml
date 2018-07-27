@@ -599,3 +599,18 @@
   - service: input_boolean.turn_off
     data:
       entity_id: input_boolean.zigbee_permit_join
+
+###############################
+# Rookmelders
+###############################
+- id: alert_rookmelder_hal
+  alias: Waarschuwing Rookmelder Hal
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.rookmelder_hal'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_alert
+    data:
+      message: Rook in de Hal

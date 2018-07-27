@@ -28,6 +28,18 @@
   device_class: connectivity
   payload_on: "1"
   payload_off: "0"
+- platform: mqtt
+  name: "Rookmelder Hal"
+  payload_on: true
+  payload_off: false
+  value_template: "{{ value_json.smoke }}"
+  device_class: smoke
+  json_attributes:
+    - battery
+    - voltage
+  state_topic: "zigbee2mqtt/0x00158d0002311adc"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unique_id: "0x00158d0002311adc_smoke_zigbee2mqtt"
 
 - platform: template
   sensors:
