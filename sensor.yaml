@@ -155,4 +155,8 @@
       friendly_name: "Batterijniveau"
       device_class: battery
       value_template: "{{ state_attr('zwave.rookmelder_hal', 'battery_level') }}"
+    rookmelder_overloop_battery_level:
+      friendly_name: "Batterijniveau"
+      device_class: battery
+      value_template: "{{ state_attr('zwave.rookmelder_overloop', 'battery_level') }}"
 

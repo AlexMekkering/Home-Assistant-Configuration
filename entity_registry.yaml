@@ -253,7 +253,7 @@ sensor.rookmelder_hal_alarm_level:
   name: Rookmelder Hal Alarm Level
   platform: zwave
   unique_id: 6-72057594144636945
-sensor.frookmelder_hal_sourcenodeid:
+sensor.rookmelder_hal_sourcenodeid:
   config_entry_id:
   name:
   platform: zwave
@@ -298,3 +298,73 @@ sensor.rookmelder_hal_heat_2:
   name:
   platform: zwave
   unique_id: 6-72057594145341505
+binary_sensor.rookmelder_overloop_sensor:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594160349184
+zwave.rookmelder_overloop:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-7
+sensor.rookmelder_overloop_temperature:
+  config_entry_id:
+  name: Temperatuur op de Overloop
+  platform: zwave
+  unique_id: 7-72057594160365586
+sensor.rookmelder_overloop_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414177
+sensor.rookmelder_overloop_smoke:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414209
+sensor.rookmelder_overloop_heat:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414257
+sensor.rookmelder_overloop_burglar:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414305
+sensor.rookmelder_overloop_power_management:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414321
+sensor.rookmelder_overloop_system:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414337
+sensor.rookmelder_overloop_general:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594162118657
+sensor.rookmelder_overloop_smoke_2:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594162118673
+sensor.rookmelder_overloop_heat_2:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594162118721
+sensor.rookmelder_overloop_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414145
+sensor.rookmelder_overloop_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414161

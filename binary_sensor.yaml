@@ -42,6 +42,13 @@
       device_class: "smoke"
       value_template: "{{ is_state('sensor.rookmelder_hal_smoke', '2') }}"
     test_rookmelder_hal:
-      friendly_name: "TEST Rookmelder in de Hal"
+      friendly_name: "TEST Rookmelder Hal"
       value_template: "{{ is_state('sensor.rookmelder_hal_smoke', '3') }}"
+    rook_overloop:
+      friendly_name: "Rook op de Overloop"
+      device_class: "smoke"
+      value_template: "{{ is_state('sensor.rookmelder_overloop_smoke', '2') }}"
+    test_rookmelder_overloop:
+      friendly_name: "TEST Rookmelder Overloop"
+      value_template: "{{ is_state('sensor.rookmelder_overloop_smoke', '3') }}"
 
