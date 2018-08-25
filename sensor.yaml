@@ -1,7 +1,7 @@
 - platform: yr
-- platform: dsmr
-  port: /dev/smartmeter
-  dsmr_version: 4
+# - platform: dsmr
+#   port: /dev/smartmeter
+#   dsmr_version: 4
 - platform: systemmonitor
   resources:
     - type: since_last_boot
@@ -31,6 +31,8 @@
       arg: !secret network3_device
     - type: network_out
       arg: !secret network3_device
+
+
 
 ########
 # CPU temperature
@@ -140,3 +142,17 @@
   name: Bridge state
   state_topic: "zigbee2mqtt/bridge/state"
   icon: mdi:router-wireless
+- platform: mqtt
+  name: "Power Consumption"
+  unit_of_measurement: "kW"
+  expire_after: 30
+  icon: "mdi:power-plug"
+  state_topic: "smartmeter/sensor/power_consumption/state"
+  availability_topic: "smartmeter/status"
+- platform: template
+  sensors:
+    rookmelder_hal_battery_level:
+      friendly_name: "Batterijniveau"
+      device_class: battery
+      value_template: "{{ state_attr('zwave.rookmelder_hal', 'battery_level') }}"
+

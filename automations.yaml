@@ -607,10 +607,21 @@
   alias: Waarschuwing Rookmelder Hal
   trigger:
   - platform: state
-    entity_id: 'binary_sensor.rookmelder_hal'
+    entity_id: 'binary_sensor.rook_hal'
     from: 'off'
     to: 'on'
   action:
   - service: script.notify_alert
+    data:
+      message: Rook in de Hal
+- id: test_rookmelder_hal
+  alias: Test Rookmelder Hal
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.test_rookmelder_hal'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_admin
     data:
       message: Rook in de Hal
