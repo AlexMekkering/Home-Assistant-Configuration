@@ -647,4 +647,26 @@
   - service: script.notify_admin
     data:
       message: TEST Rookmelder Overloop
+- id: alert_rookmelder_zolder
+  alias: Waarschuwing Rookmelder Zolder
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.rook_zolder'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_alert
+    data:
+      message: Rook op Zolder
+- id: test_rookmelder_zolder
+  alias: Test Rookmelder Zolder
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.test_rookmelder_zolder'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_admin
+    data:
+      message: TEST Rookmelder Zolder
 

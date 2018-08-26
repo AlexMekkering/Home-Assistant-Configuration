@@ -235,7 +235,7 @@ zwave.rookmelder_hal:
   unique_id: node-6
 binary_sensor.rookmelder_hal_smoke:
   config_entry_id:
-  name: Rook in de Hal
+  name:
   platform: zwave
   unique_id: 6-72057594143571968
 sensor.rookmelder_hal_temperature:
@@ -245,12 +245,12 @@ sensor.rookmelder_hal_temperature:
   unique_id: 6-72057594143588370
 sensor.rookmelder_hal_alarm_type:
   config_entry_id:
-  name: Rookmelder Hal Alarm Type
+  name:
   platform: zwave
   unique_id: 6-72057594144636929
 sensor.rookmelder_hal_alarm_level:
   config_entry_id:
-  name: Rookmelder Hal Alarm Level
+  name:
   platform: zwave
   unique_id: 6-72057594144636945
 sensor.rookmelder_hal_sourcenodeid:
@@ -368,3 +368,73 @@ sensor.rookmelder_overloop_alarm_level:
   name:
   platform: zwave
   unique_id: 7-72057594161414161
+binary_sensor.rookmelder_zolder_sensor:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594177126400
+zwave.rookmelder_zolder:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-8
+sensor.rookmelder_zolder_temperature:
+  config_entry_id:
+  name: Temperatuur op Zolder
+  platform: zwave
+  unique_id: 8-72057594177142802
+sensor.rookmelder_zolder_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191393
+sensor.rookmelder_zolder_smoke:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191425
+sensor.rookmelder_zolder_heat:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191473
+sensor.rookmelder_zolder_burglar:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191521
+sensor.rookmelder_zolder_power_management:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191537
+sensor.rookmelder_zolder_system:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191553
+sensor.rookmelder_zolder_general:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178895873
+sensor.rookmelder_zolder_smoke_2:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178895889
+sensor.rookmelder_zolder_heat_2:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178895937
+sensor.rookmelder_zolder_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191361
+sensor.rookmelder_zolder_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191377

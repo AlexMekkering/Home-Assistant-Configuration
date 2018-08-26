@@ -19,11 +19,17 @@ devices:
     - group.mediaspelers
     - group.mv
     - group.transit_lights
-    - group.rookmelder_hal
-    - group.rookmelder_overloop
     - device_tracker.alex
     - device_tracker.joyce
     - group.zigbee_group
+safety:
+  name: Veiligheid
+  view: yes
+  icon: mdi:verified
+  entities:
+    - group.rookmelder_hal
+    - group.rookmelder_overloop
+    - group.rookmelder_zolder
 extended:
   name: Uitgebreid
   view: yes
@@ -95,12 +101,19 @@ rookmelder_overloop:
     - sensor.rookmelder_overloop_temperature
     - binary_sensor.test_rookmelder_overloop
     - sensor.rookmelder_overloop_battery_level
-    - binary_sensor.behuizing_rookmelder_overloop
+rookmelder_zolder:
+  name: Rookmelder Zolder
+  entities:
+    - binary_sensor.rook_zolder
+    - sensor.rookmelder_zolder_temperature
+    - binary_sensor.test_rookmelder_zolder
+    - sensor.rookmelder_zolder_battery_level
 rookmelders:
   name: Rookmelders
   entities:
     - binary_sensor.rook_hal
     - binary_sensor.rook_overloop
+    - binary_sensor.rook_zolder
 zigbee_group:
   name: Zigbee
   entities:
