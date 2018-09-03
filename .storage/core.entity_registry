@@ -1,0 +1,624 @@
+{
+    "data": {
+        "entities": [
+            {
+                "config_entry_id": null,
+                "entity_id": "switch.hal_lamp",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594109837312"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "switch.hal_buitenlamp_voor",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-144115188147765248"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.hal_totaalverbruik_1",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594110050306"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.hal_totaalverbruik_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-144115188147978242"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.hal_vermogen_1",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594110050434"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.hal_exporting",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594110050816"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.hal_vermogen_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-144115188147978370"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.hal_exporting_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-144115188147978752"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.hal_alarm_type",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082497"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.hal_alarm_level",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082513"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.hal_sourcenodeid",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082529"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.hal_heat",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082609"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.hal_power_management",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082673"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "switch.overloop_lamp",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594126614528"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "switch.overloop_not_connected",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-144115188164542464"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.overloop_energy",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594126827522"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.overloop_energy_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-144115188164755458"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.overloop_power",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594126827650"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.overloop_exporting",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594126828032"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.overloop_power_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-144115188164755586"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.overloop_exporting_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-144115188164755968"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.overloop_alarm_type",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859713"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.overloop_alarm_level",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859729"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.overloop_sourcenodeid",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859745"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.overloop_heat",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859825"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.overloop_power_management",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859889"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "light.toilet",
+                "name": null,
+                "platform": "tradfri",
+                "unique_id": "light-7e121d520440009f-65548"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "light.linksachter",
+                "name": null,
+                "platform": "tradfri",
+                "unique_id": "light-7e121d520440009f-65544"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "light.linksvoor",
+                "name": null,
+                "platform": "tradfri",
+                "unique_id": "light-7e121d520440009f-65537"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "light.eettafel_2",
+                "name": null,
+                "platform": "tradfri",
+                "unique_id": "light-7e121d520440009f-65540"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "light.raam",
+                "name": null,
+                "platform": "tradfri",
+                "unique_id": "light-7e121d520440009f-65539"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "light.eettafel_1",
+                "name": null,
+                "platform": "tradfri",
+                "unique_id": "light-7e121d520440009f-65538"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "light.schilderij",
+                "name": null,
+                "platform": "tradfri",
+                "unique_id": "light-7e121d520440009f-65546"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "light.eettafel_3",
+                "name": null,
+                "platform": "tradfri",
+                "unique_id": "light-7e121d520440009f-65541"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "light.woonkamer",
+                "name": null,
+                "platform": "tradfri",
+                "unique_id": "group-7e121d520440009f-141878"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "light.wc_beneden",
+                "name": null,
+                "platform": "tradfri",
+                "unique_id": "group-7e121d520440009f-141879"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "light.eettafel",
+                "name": null,
+                "platform": "tradfri",
+                "unique_id": "group-7e121d520440009f-133675"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "zwave.usb_stick",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-1"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "zwave.remote",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-2"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "zwave.hal",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-4"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "zwave.overloop",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-5"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.overloop_previous_reading",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594126827666"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.overloop_interval",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594126827683"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.overloop_previous_reading_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-144115188164755474"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.overloop_interval_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-144115188164755491"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "light.tradfri_bulb_e27_ws_opal_980lm_4",
+                "name": null,
+                "platform": "tradfri",
+                "unique_id": "light-7e121d520440009f-65549"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "zwave.rookmelder_hal",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-6"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "binary_sensor.rookmelder_hal_smoke",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594143571968"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_hal_temperature",
+                "name": "Temperatuur in de Hal",
+                "platform": "zwave",
+                "unique_id": "6-72057594143588370"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_hal_alarm_type",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144636929"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_hal_alarm_level",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144636945"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_hal_sourcenodeid",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144636961"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_hal_smoke",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144636993"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_hal_heat",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144637041"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_hal_burglar",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144637089"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_hal_power_management",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144637105"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_hal_system",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144637121"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_hal_general",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594145341441"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_hal_smoke_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594145341457"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_hal_heat_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594145341505"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "binary_sensor.rookmelder_overloop_sensor",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594160349184"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "zwave.rookmelder_overloop",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-7"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_overloop_temperature",
+                "name": "Temperatuur op de Overloop",
+                "platform": "zwave",
+                "unique_id": "7-72057594160365586"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_overloop_sourcenodeid",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594161414177"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_overloop_smoke",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594161414209"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_overloop_heat",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594161414257"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_overloop_burglar",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594161414305"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_overloop_power_management",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594161414321"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_overloop_system",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594161414337"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_overloop_general",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594162118657"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_overloop_smoke_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594162118673"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_overloop_heat_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594162118721"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_overloop_alarm_type",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594161414145"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_overloop_alarm_level",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594161414161"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "binary_sensor.rookmelder_zolder_sensor",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594177126400"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "zwave.rookmelder_zolder",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-8"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_zolder_temperature",
+                "name": "Temperatuur op Zolder",
+                "platform": "zwave",
+                "unique_id": "8-72057594177142802"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_zolder_sourcenodeid",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178191393"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_zolder_smoke",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178191425"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_zolder_heat",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178191473"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_zolder_burglar",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178191521"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_zolder_power_management",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178191537"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_zolder_system",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178191553"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_zolder_general",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178895873"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_zolder_smoke_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178895889"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_zolder_heat_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178895937"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_zolder_alarm_type",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178191361"
+            },
+            {
+                "config_entry_id": null,
+                "entity_id": "sensor.rookmelder_zolder_alarm_level",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178191377"
+            }
+        ]
+    },
+    "key": "core.entity_registry",
+    "version": 1
+}

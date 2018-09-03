@@ -22,5 +22,8 @@ pyozw.sqlite
 ip_bans.yaml
 .*
 !/.gitignore
+!/.storage
+.storage/**
+!/.storage/core.entity_registry
 config
 ozw_config
