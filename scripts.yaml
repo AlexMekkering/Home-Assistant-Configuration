@@ -43,7 +43,7 @@ all_lights_off:
     - service: scene.turn_on
       entity_id: scene.woonkamer_all_off
     - service: homeassistant.turn_off
-      entity_id: group.eettafel_lights
+      entity_id: light.eettafel
     - delay: 00:00:05
     - service: switch.turn_on
       entity_id: switch.overloop_lamp

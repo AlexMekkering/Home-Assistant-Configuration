@@ -1,0 +1,231 @@
+name: Thuis
+views:
+  - name: Woonkamer
+    id: woonkamer
+    icon: mdi:home-assistant
+    cards:
+      - type: entities
+        title: Media Selectie
+        entities:
+          - input_select.media_scene
+
+      - type: glance
+        title: Lampen Woonkamer
+        show_state: false
+        entities:
+          - entity: light.spruitje
+            tap_action: toggle
+          - entity: light.linksvoor
+            tap_action: toggle
+          - entity: light.raam
+            tap_action: toggle
+          - entity: light.linksachter
+            tap_action: toggle
+          - entity: light.schilderij
+            tap_action: toggle
+          - entity: light.eettafel
+            tap_action: toggle
+          - entity: script.all_off
+            tap_action: toggle
+
+  - name: Slaapkamer
+    id: slaapkamer
+    icon: mdi:sleep
+    cards:
+      - type: entities
+        title: Bediening Slaapkamer
+        show_header_toggle: false
+        entities:
+          - entity: light.achterwand_slaapkamer
+          - entity: switch.tv_slaapkamer
+          - entity: light.nachtlampje_alex
+          - entity: light.nachtlampje_joyce
+
+  - name: Apparaten
+    id: apparaten
+    icon: mdi:desktop-classic
+    cards:
+      - type: glance
+        title: Overige Lampen
+        show_state: false
+        entities:
+          - entity: switch.hal_lamp
+            name: Hal
+            tap_action: toggle
+          - entity: switch.hal_buitenlamp_voor
+            name: Buiten
+            tap_action: toggle
+          - entity: switch.overloop_lamp
+            name: Overloop
+            tap_action: toggle
+
+      - type: glance
+        title: Computers
+        show_state: false
+        entities:
+          - entity: switch.nuc
+            tap_action: toggle
+          - entity: switch.server
+            tap_action: toggle
+
+      - type: entities
+        title: Mechanische Ventilatie
+        show_header_toggle: false
+        entities:
+          - entity: fan.mechanische_ventilatie
+          - entity: sensor.mv_vermogen
+          - entity: sensor.mv_spanning
+          - entity: sensor.mv_stroom
+          - entity: sensor.mv_actief_vermogen
+          - entity: sensor.mv_reactief_vermogen
+          - entity: sensor.mv_power_factor
+
+      - type: glance
+        title: Mediaspelers
+        show_state: false
+        entities:
+          - entity: media_player.receiver
+            tap_action: toggle
+          - entity: media_player.woonkamer
+            tap_action: toggle
+      
+  - name: Veiligheid
+    id: veiligheid
+    icon: mdi:verified
+    cards:
+      - type: entities
+        title: Rookmelder Hal
+        entities:
+          - binary_sensor.rook_hal
+          - sensor.rookmelder_hal_temperature
+          - binary_sensor.test_rookmelder_hal
+          - sensor.rookmelder_hal_battery_level
+
+      - type: entities
+        title: Rookmelder Overloop
+        entities:
+          - binary_sensor.rook_overloop
+          - sensor.rookmelder_overloop_temperature
+          - binary_sensor.test_rookmelder_overloop
+          - sensor.rookmelder_overloop_battery_level
+
+      - type: entities
+        title: Rookmelder Zolder
+        entities:
+          - binary_sensor.rook_zolder
+          - sensor.rookmelder_zolder_temperature
+          - binary_sensor.test_rookmelder_zolder
+          - sensor.rookmelder_zolder_battery_level
+
+  - name: Monitoring
+    id: monitoring
+    icon: mdi:speedometer
+    cards:
+      - type: entities
+        title: Up Squared
+        entities:
+          - sensor.since_last_boot
+          - sensor.processor_use
+          - sensor.cpu_temperature
+          - sensor.load_1m
+          - sensor.load_5m
+          - sensor.load_15m
+          - sensor.memory_use_percent
+          - sensor.swap_use_percent
+          - sensor.disk_use_percent_
+          - sensor.disk_use_percent_boot
+          - !secret storage_sensor
+          - !secret cache_sensor
+          - !secret network1_sensor_received
+          - !secret network1_sensor_sent
+          - !secret network2_sensor_received
+          - !secret network2_sensor_sent
+          - !secret network3_sensor_received
+          - !secret network3_sensor_sent
+
+      - type: entities
+        title: Smart Meter
+        entities:
+          - sensor.power_consumption
+
+      - type: glance
+        title: Aanwezigen
+        show_state: false
+        entities:
+          - entity: device_tracker.alex
+          - entity: device_tracker.joyce
+          - entity: sun.sun
+
+  - name: Settings
+    id: settings
+    icon: mdi:settings
+    cards:
+      - type: entities
+        title: Toggles
+        show_header_toggle: false
+        entities:
+          - input_boolean.admin_notifications
+
+      - type: entities
+        title: Logger Levels
+        show_header_toggle: false
+        entities:
+          - input_select.logger_level_homeassistant
+          - input_select.logger_level_zwave
+          - input_select.logger_level_tradfri
+
+  - name: Sonoff
+    id: sonoff
+    icon: mdi:switch
+    cards:
+      - type: entities
+        title: POW
+        show_header_toggle: false
+        entities:
+          - binary_sensor.sonoff_pow_status
+          - sensor.sonoff_pow_version
+          - sensor.sonoff_pow_uptime
+          - sensor.sonoff_pow_freeheap
+          - sensor.sonoff_pow_rssi
+
+      - type: entities
+        title: 4CH
+        show_header_toggle: false
+        entities:
+          - binary_sensor.sonoff_4ch_status
+          - sensor.sonoff_4ch_version
+          - sensor.sonoff_4ch_uptime
+          - sensor.sonoff_4ch_freeheap
+          - sensor.sonoff_4ch_rssi
+
+      - type: entities
+        title: 4CH Pro
+        show_header_toggle: false
+        entities:
+          - binary_sensor.sonoff_4ch_pro_status
+          - sensor.sonoff_4ch_pro_version
+          - sensor.sonoff_4ch_pro_uptime
+          - sensor.sonoff_4ch_pro_freeheap
+          - sensor.sonoff_4ch_pro_rssi
+
+      - type: entities
+        title: S20
+        show_header_toggle: false
+        entities:
+          - binary_sensor.sonoff_s20_status
+          - sensor.sonoff_s20_version
+          - sensor.sonoff_s20_uptime
+          - sensor.sonoff_s20_freeheap
+          - sensor.sonoff_s20_rssi
+
+      - type: entities
+        title: RF Bridge
+        show_header_toggle: false
+        entities:
+          - binary_sensor.sonoff_rf_bridge_status
+          - sensor.sonoff_rf_bridge_version
+          - sensor.sonoff_rf_bridge_uptime
+          - sensor.sonoff_rf_bridge_freeheap
+          - sensor.sonoff_rf_bridge_rssi
+          - sensor.sonoff_rf_bridge_rfin
+
