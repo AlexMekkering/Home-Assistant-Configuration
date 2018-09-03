@@ -139,13 +139,7 @@ living_room_lights:
     - light.raam
     - light.linksachter
     - light.schilderij
-    - group.eettafel_lights
-eettafel_lights:
-  name: Lampen Eettafel
-  entities:
-    - light.eettafel_1
-    - light.eettafel_2
-    - light.eettafel_3
+    - light.eettafel
 transit_lights:
   name: Overige Lampen
   entities:

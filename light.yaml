@@ -22,3 +22,9 @@
   command_topic: "sonoff/4chpro-1/relay/1/set"
   payload_off: "0"
   payload_on: "1"
+- platform: group
+  name: Eettafel
+  entities:
+    - light.eettafel_1
+    - light.eettafel_2
+    - light.eettafel_3
