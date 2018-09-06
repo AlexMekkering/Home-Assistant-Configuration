@@ -425,7 +425,7 @@
     platform: sun
     event: sunrise
   action:
-    - service: scen.turn_on
+    - service: scene.turn_on
       entity_id: scene.woonkamer_all_off
     - service: automation.turn_off
       entity_id: automation.holiday_morning_end
