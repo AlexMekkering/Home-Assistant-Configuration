@@ -40,6 +40,7 @@ views:
           - entity: switch.tv_slaapkamer
           - entity: light.nachtlampje_alex
           - entity: light.nachtlampje_joyce
+          - entity: script.timer_tv_slaapkamer
 
   - name: Apparaten
     id: apparaten
@@ -122,6 +123,11 @@ views:
     icon: mdi:speedometer
     cards:
       - type: entities
+        title: Smart Meter
+        entities:
+          - sensor.power_consumption
+
+      - type: entities
         title: Up Squared
         entities:
           - sensor.since_last_boot
@@ -142,11 +148,6 @@ views:
           - !secret network2_sensor_sent
           - !secret network3_sensor_received
           - !secret network3_sensor_sent
-
-      - type: entities
-        title: Smart Meter
-        entities:
-          - sensor.power_consumption
 
       - type: glance
         title: Aanwezigen
