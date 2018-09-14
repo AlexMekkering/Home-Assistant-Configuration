@@ -33,14 +33,19 @@ living_room_lights:
 activity_at_home:
   name: Activiteit thuis
   entities:
-    - group.multimedia
+    - switch.tv
+    - switch.receiver
+    - switch.mediaspeler
     - light.spruitje
     - light.schilderij
 someone_home:
   name: Iemand thuis
   entities:
     - group.activity_at_home
-    - group.slaapkamerbediening
+    - light.achterwand_slaapkamer
+    - switch.tv_slaapkamer
+    - light.nachtlampje_alex
+    - light.nachtlampje_joyce
     - switch.nuc
     - binary_sensor.alex_home
     - binary_sensor.joyce_home
