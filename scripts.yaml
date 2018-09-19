@@ -32,6 +32,17 @@ initial_mv:
       entity_id: automation.mechanische_ventilatie
 
 ###############################
+# RF
+###############################
+reset_rf:
+  alias: Reset RF
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "sonoff/rfbridge-1/rfin"
+        payload: "------"
+
+###############################
 # Lights
 ###############################
 all_lights_off:
