@@ -1,0 +1,4 @@
+name: Woonkamer Regular Stage 1
+entities:
+  light.spruitje:
+    state: on

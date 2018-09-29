@@ -1,0 +1,8 @@
+name: Woonkamer Regular Stage 2
+entities:
+  light.spruitje:
+    state: on
+  light.linksachter:
+    state: on
+    brightness: 231
+    color_temp: 370

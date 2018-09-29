@@ -1,4 +1,4 @@
-name: Woonkamer Regular
+name: Woonkamer Regular Stage 3
 entities:
   light.spruitje:
     state: on
@@ -9,12 +9,4 @@ entities:
   light.linksvoor:
     state: on
     brightness: 193
-    color_temp: 370
-  light.raam:
-    state: on
-    brightness: 162
-    color_temp: 370
-  light.raam:
-    state: on
-    brightness: 162
     color_temp: 370
