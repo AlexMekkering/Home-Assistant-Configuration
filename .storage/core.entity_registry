@@ -4,6 +4,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "switch.hal_lamp",
                 "name": null,
                 "platform": "zwave",
@@ -12,6 +13,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "switch.hal_buitenlamp_voor",
                 "name": null,
                 "platform": "zwave",
@@ -20,6 +22,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.hal_totaalverbruik_1",
                 "name": null,
                 "platform": "zwave",
@@ -28,6 +31,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.hal_totaalverbruik_2",
                 "name": null,
                 "platform": "zwave",
@@ -36,6 +40,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.hal_vermogen_1",
                 "name": null,
                 "platform": "zwave",
@@ -44,6 +49,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.hal_exporting",
                 "name": null,
                 "platform": "zwave",
@@ -52,6 +58,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.hal_vermogen_2",
                 "name": null,
                 "platform": "zwave",
@@ -60,6 +67,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.hal_exporting_2",
                 "name": null,
                 "platform": "zwave",
@@ -68,6 +76,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.hal_alarm_type",
                 "name": null,
                 "platform": "zwave",
@@ -76,6 +85,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.hal_alarm_level",
                 "name": null,
                 "platform": "zwave",
@@ -84,6 +94,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.hal_sourcenodeid",
                 "name": null,
                 "platform": "zwave",
@@ -92,6 +103,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.hal_heat",
                 "name": null,
                 "platform": "zwave",
@@ -100,6 +112,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.hal_power_management",
                 "name": null,
                 "platform": "zwave",
@@ -108,6 +121,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "switch.overloop_lamp",
                 "name": null,
                 "platform": "zwave",
@@ -116,6 +130,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "switch.overloop_not_connected",
                 "name": null,
                 "platform": "zwave",
@@ -124,6 +139,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.overloop_energy",
                 "name": null,
                 "platform": "zwave",
@@ -132,6 +148,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.overloop_energy_2",
                 "name": null,
                 "platform": "zwave",
@@ -140,6 +157,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.overloop_power",
                 "name": null,
                 "platform": "zwave",
@@ -148,6 +166,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.overloop_exporting",
                 "name": null,
                 "platform": "zwave",
@@ -156,6 +175,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.overloop_power_2",
                 "name": null,
                 "platform": "zwave",
@@ -164,6 +184,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.overloop_exporting_2",
                 "name": null,
                 "platform": "zwave",
@@ -172,6 +193,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.overloop_alarm_type",
                 "name": null,
                 "platform": "zwave",
@@ -180,6 +202,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.overloop_alarm_level",
                 "name": null,
                 "platform": "zwave",
@@ -188,6 +211,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.overloop_sourcenodeid",
                 "name": null,
                 "platform": "zwave",
@@ -196,6 +220,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.overloop_heat",
                 "name": null,
                 "platform": "zwave",
@@ -204,94 +229,106 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.overloop_power_management",
                 "name": null,
                 "platform": "zwave",
                 "unique_id": "5-72057594127859889"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
+                "device_id": "b6cc52381b1c443ea095d95380d6420a",
+                "disabled_by": null,
                 "entity_id": "light.toilet",
                 "name": null,
                 "platform": "tradfri",
                 "unique_id": "light-7e121d520440009f-65548"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
+                "device_id": "b61dfff292e54e2da78e80782b61b144",
+                "disabled_by": null,
                 "entity_id": "light.linksachter",
                 "name": null,
                 "platform": "tradfri",
                 "unique_id": "light-7e121d520440009f-65544"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
+                "device_id": "730a8b8e8f6c4c5bbd072deabf02d5a8",
+                "disabled_by": null,
                 "entity_id": "light.linksvoor",
                 "name": null,
                 "platform": "tradfri",
                 "unique_id": "light-7e121d520440009f-65537"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
+                "device_id": "621f27cda5fe4ef7adcc2ea646ca7df7",
+                "disabled_by": null,
                 "entity_id": "light.eettafel_2",
                 "name": null,
                 "platform": "tradfri",
                 "unique_id": "light-7e121d520440009f-65540"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
+                "device_id": "e570aeb794ae437395356b13a77eb0a2",
+                "disabled_by": null,
                 "entity_id": "light.raam",
                 "name": null,
                 "platform": "tradfri",
                 "unique_id": "light-7e121d520440009f-65539"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
+                "device_id": "70a1c90d432e44ffbde763df5278edb6",
+                "disabled_by": null,
                 "entity_id": "light.eettafel_1",
                 "name": null,
                 "platform": "tradfri",
                 "unique_id": "light-7e121d520440009f-65538"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
+                "device_id": "f542b25090ad4acd88ecd729d7d0f3cd",
+                "disabled_by": null,
                 "entity_id": "light.schilderij",
                 "name": null,
                 "platform": "tradfri",
                 "unique_id": "light-7e121d520440009f-65546"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
+                "device_id": "d3ee7e9cd5ff40bdbf28e94fb8364e19",
+                "disabled_by": null,
                 "entity_id": "light.eettafel_3",
                 "name": null,
                 "platform": "tradfri",
                 "unique_id": "light-7e121d520440009f-65541"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "light.woonkamer",
                 "name": null,
                 "platform": "tradfri",
                 "unique_id": "group-7e121d520440009f-141878"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "light.wc_beneden",
                 "name": null,
                 "platform": "tradfri",
                 "unique_id": "group-7e121d520440009f-141879"
             },
             {
-                "config_entry_id": null,
+                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "light.eettafel",
                 "name": null,
                 "platform": "tradfri",
@@ -300,6 +337,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "zwave.usb_stick",
                 "name": null,
                 "platform": "zwave",
@@ -308,6 +346,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "zwave.remote",
                 "name": null,
                 "platform": "zwave",
@@ -316,6 +355,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "zwave.hal",
                 "name": null,
                 "platform": "zwave",
@@ -324,6 +364,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "zwave.overloop",
                 "name": null,
                 "platform": "zwave",
@@ -332,6 +373,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.overloop_previous_reading",
                 "name": null,
                 "platform": "zwave",
@@ -340,6 +382,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.overloop_interval",
                 "name": null,
                 "platform": "zwave",
@@ -348,6 +391,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.overloop_previous_reading_2",
                 "name": null,
                 "platform": "zwave",
@@ -356,14 +400,16 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.overloop_interval_2",
                 "name": null,
                 "platform": "zwave",
                 "unique_id": "5-144115188164755491"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
+                "device_id": "e97bd2ceef5d4de08873855ef6f78205",
+                "disabled_by": null,
                 "entity_id": "light.tradfri_bulb_e27_ws_opal_980lm_4",
                 "name": null,
                 "platform": "tradfri",
@@ -372,6 +418,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "zwave.rookmelder_hal",
                 "name": "Rookmelder Hal",
                 "platform": "zwave",
@@ -380,6 +427,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "binary_sensor.rookmelder_hal_smoke",
                 "name": null,
                 "platform": "zwave",
@@ -388,6 +436,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_hal_temperature",
                 "name": "Temperatuur",
                 "platform": "zwave",
@@ -396,6 +445,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_hal_alarm_type",
                 "name": null,
                 "platform": "zwave",
@@ -404,6 +454,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_hal_alarm_level",
                 "name": null,
                 "platform": "zwave",
@@ -412,6 +463,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_hal_sourcenodeid",
                 "name": null,
                 "platform": "zwave",
@@ -420,6 +472,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_hal_smoke",
                 "name": null,
                 "platform": "zwave",
@@ -428,6 +481,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_hal_heat",
                 "name": null,
                 "platform": "zwave",
@@ -436,6 +490,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_hal_burglar",
                 "name": null,
                 "platform": "zwave",
@@ -444,6 +499,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_hal_power_management",
                 "name": null,
                 "platform": "zwave",
@@ -452,6 +508,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_hal_system",
                 "name": null,
                 "platform": "zwave",
@@ -460,6 +517,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_hal_general",
                 "name": null,
                 "platform": "zwave",
@@ -468,6 +526,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_hal_smoke_2",
                 "name": null,
                 "platform": "zwave",
@@ -476,6 +535,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_hal_heat_2",
                 "name": null,
                 "platform": "zwave",
@@ -484,6 +544,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "binary_sensor.rookmelder_overloop_sensor",
                 "name": null,
                 "platform": "zwave",
@@ -492,6 +553,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "zwave.rookmelder_overloop",
                 "name": "Rookmelder Overloop",
                 "platform": "zwave",
@@ -500,6 +562,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_overloop_temperature",
                 "name": "Temperatuur",
                 "platform": "zwave",
@@ -508,6 +571,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_overloop_sourcenodeid",
                 "name": null,
                 "platform": "zwave",
@@ -516,6 +580,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_overloop_smoke",
                 "name": null,
                 "platform": "zwave",
@@ -524,6 +589,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_overloop_heat",
                 "name": null,
                 "platform": "zwave",
@@ -532,6 +598,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_overloop_burglar",
                 "name": null,
                 "platform": "zwave",
@@ -540,6 +607,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_overloop_power_management",
                 "name": null,
                 "platform": "zwave",
@@ -548,6 +616,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_overloop_system",
                 "name": null,
                 "platform": "zwave",
@@ -556,6 +625,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_overloop_general",
                 "name": null,
                 "platform": "zwave",
@@ -564,6 +634,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_overloop_smoke_2",
                 "name": null,
                 "platform": "zwave",
@@ -572,6 +643,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_overloop_heat_2",
                 "name": null,
                 "platform": "zwave",
@@ -580,6 +652,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_overloop_alarm_type",
                 "name": null,
                 "platform": "zwave",
@@ -588,6 +661,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_overloop_alarm_level",
                 "name": null,
                 "platform": "zwave",
@@ -596,6 +670,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "binary_sensor.rookmelder_zolder_sensor",
                 "name": null,
                 "platform": "zwave",
@@ -604,6 +679,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "zwave.rookmelder_zolder",
                 "name": "Rookmelder Zolder",
                 "platform": "zwave",
@@ -612,6 +688,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_zolder_temperature",
                 "name": "Temperatuur",
                 "platform": "zwave",
@@ -620,6 +697,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_zolder_sourcenodeid",
                 "name": null,
                 "platform": "zwave",
@@ -628,6 +706,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_zolder_smoke",
                 "name": null,
                 "platform": "zwave",
@@ -636,6 +715,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_zolder_heat",
                 "name": null,
                 "platform": "zwave",
@@ -644,6 +724,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_zolder_burglar",
                 "name": null,
                 "platform": "zwave",
@@ -652,6 +733,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_zolder_power_management",
                 "name": null,
                 "platform": "zwave",
@@ -660,6 +742,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_zolder_system",
                 "name": null,
                 "platform": "zwave",
@@ -668,6 +751,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_zolder_general",
                 "name": null,
                 "platform": "zwave",
@@ -676,6 +760,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_zolder_smoke_2",
                 "name": null,
                 "platform": "zwave",
@@ -684,6 +769,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_zolder_heat_2",
                 "name": null,
                 "platform": "zwave",
@@ -692,6 +778,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_zolder_alarm_type",
                 "name": null,
                 "platform": "zwave",
@@ -700,6 +787,7 @@
             {
                 "config_entry_id": null,
                 "device_id": null,
+                "disabled_by": null,
                 "entity_id": "sensor.rookmelder_zolder_alarm_level",
                 "name": null,
                 "platform": "zwave",
