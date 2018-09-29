@@ -143,11 +143,39 @@
   state_topic: "zigbee2mqtt/bridge/state"
   icon: mdi:router-wireless
 - platform: mqtt
-  name: "Power Consumption"
+  name: "Smart Meter Power Consumption"
   unit_of_measurement: "kW"
   expire_after: 30
   icon: "mdi:power-plug"
   state_topic: "smartmeter/sensor/power_consumption/state"
+  availability_topic: "smartmeter/status"
+- platform: mqtt
+  name: "Smart Meter Uptime"
+  unit_of_measurement: "s"
+  expire_after: 45
+  icon: "mdi:timer"
+  state_topic: "smartmeter/sensor/uptime_sensor/state"
+  availability_topic: "smartmeter/status"
+- platform: mqtt
+  name: "Smart Meter WiFi Signal"
+  unit_of_measurement: "dB"
+  expire_after: 675
+  icon: "mdi:wifi"
+  state_topic: "smartmeter/sensor/wifi_signal/state"
+  availability_topic: "smartmeter/status"
+- platform: mqtt
+  name: "Luchtvochtigheid Meterkast"
+  unit_of_measurement: "%"
+  expire_after: 675
+  icon: "mdi:water-percent"
+  state_topic: "smartmeter/sensor/meterkast_luchtvochtigheid/state"
+  availability_topic: "smartmeter/status"
+- platform: mqtt
+  name: "Temperatuur Meterkast"
+  unit_of_measurement: "°C"
+  expire_after: 675
+  icon: "mdi:thermometer"
+  state_topic: "smartmeter/sensor/meterkast_temperatuur/state"
   availability_topic: "smartmeter/status"
 - platform: template
   sensors:
