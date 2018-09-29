@@ -28,3 +28,13 @@ logger_level_tradfri:
     - warning
     - info
     - debug
+light_scene:
+  name: Lichtscene
+  options:
+    - Uit
+    - Normaal
+    - Zacht
+    - Erg Zacht
+    - Vakantie
+  initial: Uit
+  icon: mdi:lightbulb

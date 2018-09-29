@@ -1,6 +1,27 @@
 ###############################
 # Multimedia woonkamer
 ###############################
+- id: light_scene_select
+  alias: Light Scene Select
+  trigger:
+    platform: state
+    entity_id: input_select.light_scene
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: >
+          {% set scene = trigger.to_state.state %}
+          {% if scene == 'Vakantie' %}
+            scene.vakantie
+          {% elif scene == 'Normaal' %}
+            scene.woonkamer_regular
+          {% elif scene == 'Zacht' %}
+            scene.woonkamer_dim
+          {% elif scene == 'Erg Zacht' %}
+            scene.woonkamer_very_dim
+          {% else %}
+            scene.woonkamer_all_off
+          {% endif %}
 - id: scene_select
   alias: Scene Select
   trigger:

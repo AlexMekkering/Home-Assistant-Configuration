@@ -5,9 +5,10 @@ views:
     icon: mdi:home-assistant
     cards:
       - type: entities
-        title: Media Selectie
+        title: Scene Selectie
         entities:
           - input_select.media_scene
+          - input_select.light_scene
 
       - type: glance
         title: Lampen Woonkamer
