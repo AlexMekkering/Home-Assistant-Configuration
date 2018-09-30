@@ -99,7 +99,6 @@ views:
         title: Rookmelder Hal
         entities:
           - binary_sensor.rook_hal
-          - sensor.rookmelder_hal_temperature
           - binary_sensor.test_rookmelder_hal
           - sensor.rookmelder_hal_battery_level
 
@@ -107,7 +106,6 @@ views:
         title: Rookmelder Overloop
         entities:
           - binary_sensor.rook_overloop
-          - sensor.rookmelder_overloop_temperature
           - binary_sensor.test_rookmelder_overloop
           - sensor.rookmelder_overloop_battery_level
 
@@ -115,9 +113,24 @@ views:
         title: Rookmelder Zolder
         entities:
           - binary_sensor.rook_zolder
-          - sensor.rookmelder_zolder_temperature
           - binary_sensor.test_rookmelder_zolder
           - sensor.rookmelder_zolder_battery_level
+
+  - name: Klimaat
+    id: klimaat
+    icon: mdi:thermometer-lines
+    cards:
+      - type: entities
+        title: Binnenklimaat
+        entities:
+          - sensor.luchtvochtigheid_meterkast
+          - sensor.temperatuur_meterkast
+          - entity: sensor.rookmelder_hal_temperature
+            name: Temperatuur Hal
+          - entity: sensor.rookmelder_overloop_temperature
+            name: Temperatuur Overloop
+          - entity: sensor.rookmelder_zolder_temperature
+            name: Temperatuur Zolder
 
   - name: Monitoring
     id: monitoring
