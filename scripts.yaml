@@ -234,6 +234,48 @@ select_radio_luisteren:
       data:
         entity_id: input_select.media_scene
         option: 'Radio luisteren'
+select_lights_regular:
+  alias: Select Light Scene Regular
+  sequence:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.light_scene
+        option: 'Normaal'
+select_lights_dim:
+  alias: Select Light Scene Regular
+  sequence:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.light_scene
+        option: 'Zacht'
+select_lights_very_dim:
+  alias: Select Light Scene Dim
+  sequence:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.light_scene
+        option: 'Erg Zacht'
+select_lights_very_dim:
+  alias: Select Light Scene Very Dim
+  sequence:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.light_scene
+        option: 'Erg Zacht'
+select_lights_vacancy:
+  alias: Select Light Scene Vacancy
+  sequence:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.light_scene
+        option: 'Vakantie'
+select_lights_all_off:
+  alias: Select Light Scene All Off
+  sequence:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.light_scene
+        option: 'Uit'
 listen_radio:
   alias: Listen Radio
   sequence:
