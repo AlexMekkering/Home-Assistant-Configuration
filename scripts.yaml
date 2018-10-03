@@ -242,19 +242,12 @@ select_lights_regular:
         entity_id: input_select.light_scene
         option: 'Normaal'
 select_lights_dim:
-  alias: Select Light Scene Regular
-  sequence:
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.light_scene
-        option: 'Zacht'
-select_lights_very_dim:
   alias: Select Light Scene Dim
   sequence:
     - service: input_select.select_option
       data_template:
         entity_id: input_select.light_scene
-        option: 'Erg Zacht'
+        option: 'Zacht'
 select_lights_very_dim:
   alias: Select Light Scene Very Dim
   sequence:
