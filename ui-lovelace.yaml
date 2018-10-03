@@ -141,8 +141,6 @@ views:
         entities:
           - entity: sensor.smart_meter_power_consumption
             name: Power Consumption
-          - sensor.luchtvochtigheid_meterkast
-          - sensor.temperatuur_meterkast
           - entity: sensor.smart_meter_uptime
             name: Uptime
           - entity: sensor.smart_meter_wifi_signal

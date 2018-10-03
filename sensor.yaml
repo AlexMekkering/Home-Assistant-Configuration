@@ -150,7 +150,7 @@
   state_topic: "smartmeter/sensor/power_consumption/state"
   availability_topic: "smartmeter/status"
 - platform: mqtt
-  name: "Smart Meter Uptime"
+  name: "Smart Meter Uptime Seconds"
   unit_of_measurement: "s"
   expire_after: 45
   icon: "mdi:timer"
@@ -191,4 +191,16 @@
       friendly_name: "Batterijniveau"
       device_class: battery
       value_template: "{{ state_attr('zwave.rookmelder_zolder', 'battery_level') }}"
-
+    smart_meter_uptime:
+      friendly_name: "Uptime"
+      icon_template: mdi:clock
+      value_template: >
+        {% set a = states.sensor.smart_meter_uptime_seconds.state | int %}
+        {% set minute = 60 %}
+        {% set hour = minute * 60 %}
+        {% set day = hour * 24 %}
+        {% set days = a // day %}
+        {% set hours = (a - days * day) // hour %}
+        {% set minutes = (a - days * day - hours * hour) // minute %}
+        {% set seconds = a % minute %}
+        {{ days }}d {{ hours }}:{{ minutes }}:{{ seconds }}
