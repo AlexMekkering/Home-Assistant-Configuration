@@ -20,7 +20,7 @@ sudo -iu homeassistant
 
 python -m venv venv
 . venv/bin/activate
-pip install -U homeassistant
+CFLAGS=-I/usr/lib/libffi-3.2.1/include pip install -U homeassistant
 exit
 ```
 
