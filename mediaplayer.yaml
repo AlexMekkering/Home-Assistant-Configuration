@@ -17,7 +17,7 @@
 - platform: onkyo
   host: !secret host_receiver
   name: Receiver
-  scan_interval: 86400
+#  scan_interval: 86400
   sources:
     cd: TV
     internet-radio: Radio

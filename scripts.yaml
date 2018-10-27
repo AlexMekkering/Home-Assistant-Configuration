@@ -183,8 +183,8 @@ powerup_mediaplayer:
 increase_volume:
   alias: Increase Volume
   sequence:
-    - service: home_assistant.update_entity
-      entity_id: media_player.receiver
+#    - service: homeassistant.update_entity
+#      entity_id: media_player.receiver
     - condition: state
       entity_id: media_player.receiver
       state: 'home'
@@ -196,8 +196,8 @@ increase_volume:
 decrease_volume:
   alias: Decrease Volume
   sequence:
-    - service: home_assistant.update_entity
-      entity_id: media_player.receiver
+#    - service: homeassistant.update_entity
+#      entity_id: media_player.receiver
     - condition: state
       entity_id: media_player.receiver
       state: 'home'
