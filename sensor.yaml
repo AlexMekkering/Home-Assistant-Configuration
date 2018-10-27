@@ -193,6 +193,7 @@
       value_template: "{{ state_attr('zwave.rookmelder_zolder', 'battery_level') }}"
     smart_meter_uptime:
       friendly_name: "Uptime"
+      entity_id: sensor.smart_meter_uptime_seconds
       icon_template: mdi:clock
       value_template: >
         {% set a = states.sensor.smart_meter_uptime_seconds.state | int %}

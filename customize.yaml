@@ -28,3 +28,5 @@ group.all_lights:
   hidden: false
 script.all_off:
   icon: mdi:power-plug-off
+script.timer_tv_slaapkamer:
+  icon: mdi:timer
