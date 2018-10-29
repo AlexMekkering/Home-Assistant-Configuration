@@ -48,8 +48,8 @@
     platform: time
     seconds: '/5'
   action:
-#    - service: homeassistant.update_entity
-#      entity_id: media_player.receiver
+    - service: homeassistant.update_entity
+      entity_id: media_player.receiver
     - condition: template
       value_template: '{{ states.media_player.receiver.attributes.source is defined }}'
     - service_template: >
