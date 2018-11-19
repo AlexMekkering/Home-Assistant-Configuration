@@ -51,8 +51,7 @@ all_lights_off:
     - service: script.prepare_for_bed
     - service: switch.turn_on
       entity_id: switch.hal_lamp
-    - service: scene.turn_on
-      entity_id: scene.woonkamer_all_off
+    - service: script.select_lights_all_off
     - service: homeassistant.turn_off
       entity_id: light.eettafel
     - delay: 00:00:05

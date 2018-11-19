@@ -413,8 +413,7 @@
     platform: time
     at: '23:00:00'
   action:
-    - service: scene.turn_on
-      entity_id: scene.woonkamer_all_off
+    - service: script.select_lights_all_off
     - service: automation.turn_on
       entity_id: automation.holiday_morning_start
     - service: automation.turn_off
@@ -440,8 +439,7 @@
     platform: sun
     event: sunrise
   action:
-    - service: scene.turn_on
-      entity_id: scene.woonkamer_all_off
+    - service: script.select_lights_all_off
     - service: automation.turn_off
       entity_id: automation.holiday_morning_end
 
