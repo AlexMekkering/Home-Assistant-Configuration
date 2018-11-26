@@ -350,8 +350,7 @@
     entity_id: group.activity_at_home
     state: 'on'
   action:
-    - service: script.turn_on
-      entity_id: script.select_lights_regular
+    - service: script.select_lights_regular
 - id: sunset_buitenlamp_voor
   alias: Sunset buitenlamp voor
   initial_state: 'off'
@@ -399,8 +398,7 @@
       - condition: time
         before: '21:00:00'
   action:
-    - service: scene.turn_on
-      entity_id: scene.vakantie
+    - service: script.select_lights_vacancy
     - service: automation.turn_on
       entity_id: automation.holiday_evening_end
     - service: script.notify_admin
@@ -426,8 +424,7 @@
     event: sunrise
     offset: '-01:00:00'
   action:
-    - service: scene.turn_on
-      entity_id: scene.vakantie
+    - service: script.select_lights_vacancy
     - service: automation.turn_on
       entity_id: automation.holiday_morning_end
     - service: automation.turn_off
