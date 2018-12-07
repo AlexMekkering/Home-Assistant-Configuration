@@ -162,7 +162,7 @@ views:
         type: entities
         title: Up Squared
         entities:
-          - sensor.since_last_boot
+          - sensor.last_boot
           - sensor.processor_use
           - sensor.cpu_temperature
           - sensor.load_1m
