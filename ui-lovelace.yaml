@@ -4,33 +4,25 @@ views:
     id: woonkamer
     icon: mdi:home-assistant
     cards:
-      - id: 57340b89331f4028b47e15dae86fe065  # Automatically created id
-        type: entities
+      - type: entities
+        id: 57340b89331f4028b47e15dae86fe065  # Automatically created id
         title: Scene Selectie
         entities:
           - input_select.media_scene
           - input_select.light_scene
-
-      - id: 8dba8a82ddc24a9591ff1889a73f2d24  # Automatically created id
-        type: glance
+        show_header_toggle: false
+      - type: entities
+        id: 8dba8a82ddc24a9591ff1889a73f2d24  # Automatically created id
         title: Lampen Woonkamer
-        show_state: false
         entities:
           - entity: light.spruitje
-            tap_action: toggle
           - entity: light.linksvoor
-            tap_action: toggle
           - entity: light.raam
-            tap_action: toggle
           - entity: light.linksachter
-            tap_action: toggle
           - entity: light.schilderij
-            tap_action: toggle
           - entity: light.eettafel
-            tap_action: toggle
           - entity: script.all_off
-            tap_action: toggle
-
+        show_header_toggle: false
   - name: Slaapkamer
     id: slaapkamer
     icon: mdi:sleep
@@ -50,21 +42,17 @@ views:
     id: apparaten
     icon: mdi:desktop-classic
     cards:
-      - id: dd2d5528e4f242ae92d59c702abbd8bf  # Automatically created id
-        type: glance
+      - type: entities
+        id: dd2d5528e4f242ae92d59c702abbd8bf  # Automatically created id
         title: Overige Lampen
-        show_state: false
         entities:
           - entity: switch.hal_lamp
             name: Hal
-            tap_action: toggle
           - entity: switch.hal_buitenlamp_voor
             name: Buiten
-            tap_action: toggle
           - entity: switch.overloop_lamp
             name: Overloop
-            tap_action: toggle
-
+        show_header_toggle: false
       - id: 072c460587b443a8818db9c13b9d1fb9  # Automatically created id
         type: glance
         title: Computers
@@ -102,36 +90,36 @@ views:
     id: veiligheid
     icon: mdi:verified
     cards:
-      - id: fba92bcbce3049c5b82d7e4704f20236  # Automatically created id
-        type: entities
+      - type: entities
+        id: fba92bcbce3049c5b82d7e4704f20236  # Automatically created id
         title: Rookmelder Hal
         entities:
           - binary_sensor.rook_hal
           - binary_sensor.test_rookmelder_hal
           - sensor.rookmelder_hal_battery_level
-
-      - id: e0dc7d99ff384fa682c92a239e85c425  # Automatically created id
-        type: entities
+        show_header_toggle: false
+      - type: entities
+        id: e0dc7d99ff384fa682c92a239e85c425  # Automatically created id
         title: Rookmelder Overloop
         entities:
           - binary_sensor.rook_overloop
           - binary_sensor.test_rookmelder_overloop
           - sensor.rookmelder_overloop_battery_level
-
-      - id: eef388ba8cbc4bf5a9605898ef5c14dc  # Automatically created id
-        type: entities
+        show_header_toggle: false
+      - type: entities
+        id: eef388ba8cbc4bf5a9605898ef5c14dc  # Automatically created id
         title: Rookmelder Zolder
         entities:
           - binary_sensor.rook_zolder
           - binary_sensor.test_rookmelder_zolder
           - sensor.rookmelder_zolder_battery_level
-
+        show_header_toggle: false
   - name: Klimaat
     id: klimaat
     icon: mdi:thermometer-lines
     cards:
-      - id: eaefa499511d4b3aab2e115425a9fb93  # Automatically created id
-        type: entities
+      - type: entities
+        id: eaefa499511d4b3aab2e115425a9fb93  # Automatically created id
         title: Binnenklimaat
         entities:
           - sensor.luchtvochtigheid_meterkast
@@ -142,13 +130,13 @@ views:
             name: Temperatuur Overloop
           - entity: sensor.rookmelder_zolder_temperature
             name: Temperatuur Zolder
-
+        show_header_toggle: false
   - name: Monitoring
     id: monitoring
     icon: mdi:speedometer
     cards:
-      - id: 4ec122099a1945e3b024ffe9d38e1d86  # Automatically created id
-        type: entities
+      - type: entities
+        id: 4ec122099a1945e3b024ffe9d38e1d86  # Automatically created id
         title: Smart Meter
         entities:
           - entity: sensor.smart_meter_power_consumption
@@ -157,9 +145,9 @@ views:
             name: Uptime
           - entity: sensor.smart_meter_wifi_signal
             name: WiFi Signaal
-
-      - id: ad51348c087e43acbd5f4e678f9b01bb  # Automatically created id
-        type: entities
+        show_header_toggle: false
+      - type: entities
+        id: ad51348c087e43acbd5f4e678f9b01bb  # Automatically created id
         title: Up Squared
         entities:
           - sensor.last_boot
@@ -180,7 +168,7 @@ views:
           - sensor.network_out_enp3s0
           - sensor.network_in_enp0s21f0u2u4
           - sensor.network_out_enp0s21f0u2u4
-
+        show_header_toggle: false
       - id: c65670a39fe14c5db3ec9fff8d57062a  # Automatically created id
         type: glance
         title: Aanwezigen
