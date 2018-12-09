@@ -28,3 +28,10 @@
     - light.eettafel_1
     - light.eettafel_2
     - light.eettafel_3
+
+- platform: mqtt
+  name: Kerstboom
+  state_topic: "sonoff/dual-1/relay/0"
+  command_topic: "sonoff/dual-1/relay/0/set"
+  payload_off: "0"
+  payload_on: "1"

@@ -10,3 +10,5 @@ entities:
     state: off
   light.schilderij:
     state: off
+  light.kerstboom:
+    state: off

@@ -18,3 +18,5 @@ entities:
     state: on
     brightness: 25
     color_temp: 370
+  light.kerstboom:
+    state: on
