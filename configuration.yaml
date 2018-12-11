@@ -51,6 +51,9 @@ sun:
 #tts:
 #  platform: google
 
+lovelace:
+  mode: yaml
+
 zeroconf:
 logger: !include logger.yaml
 recorder: !include recorder.yaml
