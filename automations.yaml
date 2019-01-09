@@ -19,8 +19,6 @@
             scene.woonkamer_dim
           {% elif scene == 'Erg Zacht' %}
             scene.woonkamer_very_dim
-          {% elif scene == 'Kerstboom' %}
-            scene.kerstboom
           {% else %}
             scene.woonkamer_all_off
           {% endif %}
@@ -236,8 +234,6 @@
             script.select_lights_very_dim
           {% elif side == 1 and row == 5 %}
             script.select_lights_vacancy
-          {% elif side == 1 and row == 6 %}
-            script.select_lights_kerstboom
           {% else %}
             script.select_lights_all_off
           {% endif %}

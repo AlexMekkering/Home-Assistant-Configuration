@@ -265,13 +265,6 @@ select_lights_vacancy:
       data_template:
         entity_id: input_select.light_scene
         option: 'Vakantie'
-select_lights_kerstboom:
-  alias: Select Light Scene Kerstboom
-  sequence:
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.light_scene
-        option: 'Kerstboom'
 select_lights_all_off:
   alias: Select Light Scene All Off
   sequence:
