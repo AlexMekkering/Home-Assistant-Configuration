@@ -158,10 +158,10 @@ views:
           - sensor.load_15m
           - sensor.memory_use_percent
           - sensor.swap_use_percent
-          - sensor.disk_use_percent_
+          - sensor.disk_use_percent
           - sensor.disk_use_percent_boot
-          - sensor.disk_use_percent_mntstorage
-          - sensor.disk_use_percent_mntcache
+          - sensor.disk_use_percent_mnt_storage
+          - sensor.disk_use_percent_mnt_cache
           - sensor.network_in_enp2s0
           - sensor.network_out_enp2s0
           - sensor.network_in_enp3s0
