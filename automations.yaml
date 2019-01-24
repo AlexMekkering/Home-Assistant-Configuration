@@ -45,8 +45,8 @@
   alias: Check Receiver source
   initial_state: 'off'
   trigger:
-    platform: time
-    seconds: '/5'
+    platform: time_pattern
+    seconds: '/05'
   action:
     - service: homeassistant.update_entity
       entity_id: media_player.receiver
@@ -131,8 +131,8 @@
 - id: startup
   alias: Opstarten
   trigger:
-    platform: time
-    seconds: '/1'
+    platform: homeassistant
+    event: start
   action:
     - service: script.initial_select
     - service: script.initial_mv
