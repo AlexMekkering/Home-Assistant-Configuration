@@ -39,7 +39,7 @@ cloud:
 
 
 # Enables support for tracking state changes over time.
-#history:
+history:
 
 # View all events in a logbook
 #logbook:
@@ -55,7 +55,7 @@ system_health:
 
 zeroconf:
 logger: !include logger.yaml
-recorder: !include recorder.yaml
+recorder:
 influxdb: !include influxdb.yaml
 notify: !include notify.yaml
 group: !include groups.yaml

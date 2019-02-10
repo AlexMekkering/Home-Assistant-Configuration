@@ -216,26 +216,39 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entities": [
+                            "cards": [
                                 {
-                                    "entity": "sensor.luchtvochtigheid_meterkast"
+                                    "entity": "sensor.rookmelder_zolder_temperature",
+                                    "graph": "line",
+                                    "type": "sensor"
                                 },
                                 {
-                                    "entity": "sensor.temperatuur_meterkast"
+                                    "entity": "sensor.rookmelder_overloop_temperature",
+                                    "graph": "line",
+                                    "type": "sensor"
                                 },
                                 {
-                                    "entity": "sensor.rookmelder_hal_temperature"
-                                },
-                                {
-                                    "entity": "sensor.rookmelder_overloop_temperature"
-                                },
-                                {
-                                    "entity": "sensor.rookmelder_zolder_temperature"
+                                    "entity": "sensor.rookmelder_hal_temperature",
+                                    "graph": "line",
+                                    "type": "sensor"
                                 }
                             ],
-                            "show_header_toggle": false,
-                            "title": "Binnenklimaat",
-                            "type": "entities"
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.temperatuur_meterkast",
+                                    "graph": "line",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "entity": "sensor.luchtvochtigheid_meterkast",
+                                    "graph": "line",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "type": "vertical-stack"
                         }
                     ],
                     "icon": "mdi:thermometer-lines",
