@@ -6,7 +6,7 @@
                 "device_id": "4cf03eb90d1b4bf88b3051a15f0de820",
                 "disabled_by": null,
                 "entity_id": "switch.hal_lamp",
-                "name": null,
+                "name": "Hal",
                 "platform": "zwave",
                 "unique_id": "4-72057594109837312"
             },
@@ -15,7 +15,7 @@
                 "device_id": "4cf03eb90d1b4bf88b3051a15f0de820",
                 "disabled_by": null,
                 "entity_id": "switch.hal_buitenlamp_voor",
-                "name": null,
+                "name": "Buiten",
                 "platform": "zwave",
                 "unique_id": "4-144115188147765248"
             },
@@ -123,7 +123,7 @@
                 "device_id": "5b49267b1e2f4de5a1fcf40c803907ec",
                 "disabled_by": null,
                 "entity_id": "switch.overloop_lamp",
-                "name": null,
+                "name": "Overloop",
                 "platform": "zwave",
                 "unique_id": "5-72057594126614528"
             },
@@ -438,7 +438,7 @@
                 "device_id": "077fa5c7908644d8a834851b097aac18",
                 "disabled_by": null,
                 "entity_id": "sensor.rookmelder_hal_temperature",
-                "name": "Temperatuur",
+                "name": "Temperatuur Hal",
                 "platform": "zwave",
                 "unique_id": "6-72057594143588370"
             },
@@ -564,7 +564,7 @@
                 "device_id": "d97bdad9aa0b44a58ee53ede6407ae55",
                 "disabled_by": null,
                 "entity_id": "sensor.rookmelder_overloop_temperature",
-                "name": "Temperatuur",
+                "name": "Temperatuur Overloop",
                 "platform": "zwave",
                 "unique_id": "7-72057594160365586"
             },
@@ -690,7 +690,7 @@
                 "device_id": "1d29fb58e9454f58b4be8a24b670176d",
                 "disabled_by": null,
                 "entity_id": "sensor.rookmelder_zolder_temperature",
-                "name": "Temperatuur",
+                "name": "Temperatuur Zolder",
                 "platform": "zwave",
                 "unique_id": "8-72057594177142802"
             },

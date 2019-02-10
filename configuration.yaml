@@ -51,8 +51,7 @@ sun:
 #tts:
 #  platform: google
 
-lovelace:
-  mode: yaml
+system_health:
 
 zeroconf:
 logger: !include logger.yaml

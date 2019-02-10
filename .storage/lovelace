@@ -1,0 +1,489 @@
+{
+    "data": {
+        "config": {
+            "title": "Home",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "input_select.media_scene"
+                                },
+                                {
+                                    "entity": "input_select.light_scene"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Scene Selectie",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.spruitje"
+                                },
+                                {
+                                    "entity": "light.linksvoor"
+                                },
+                                {
+                                    "entity": "light.raam"
+                                },
+                                {
+                                    "entity": "light.linksachter"
+                                },
+                                {
+                                    "entity": "light.schilderij"
+                                },
+                                {
+                                    "entity": "light.eettafel_4"
+                                }
+                            ],
+                            "show_header_toggle": true,
+                            "title": "Lampen",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:home-assistant",
+                    "path": "default_view",
+                    "title": "Woonkamer"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.achterwand_slaapkamer"
+                                },
+                                {
+                                    "entity": "switch.tv_slaapkamer"
+                                },
+                                {
+                                    "entity": "light.nachtlampje_alex"
+                                },
+                                {
+                                    "entity": "light.nachtlampje_joyce"
+                                },
+                                {
+                                    "entity": "script.timer_tv_slaapkamer"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Slaapkamer",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:sleep",
+                    "title": "Slaapkamer"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.hal_lamp"
+                                },
+                                {
+                                    "entity": "switch.hal_buitenlamp_voor"
+                                },
+                                {
+                                    "entity": "switch.overloop_lamp"
+                                }
+                            ],
+                            "title": "Overige Lampen",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.nuc"
+                                },
+                                {
+                                    "entity": "switch.server"
+                                }
+                            ],
+                            "show_state": false,
+                            "title": "Computers",
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "fan.mechanische_ventilatie"
+                                },
+                                {
+                                    "entity": "sensor.mv_vermogen"
+                                },
+                                {
+                                    "entity": "sensor.mv_spanning"
+                                },
+                                {
+                                    "entity": "sensor.mv_stroom"
+                                },
+                                {
+                                    "entity": "sensor.mv_actief_vermogen"
+                                },
+                                {
+                                    "entity": "sensor.mv_reactief_vermogen"
+                                },
+                                {
+                                    "entity": "sensor.mv_power_factor"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Mechanische Ventilatie",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "media_player.receiver"
+                                },
+                                {
+                                    "entity": "media_player.woonkamer"
+                                },
+                                {
+                                    "entity": "media_player.slaapkamer"
+                                }
+                            ],
+                            "show_state": false,
+                            "title": "Mediaspelers",
+                            "type": "glance"
+                        }
+                    ],
+                    "icon": "mdi:desktop-classic",
+                    "title": "Apparaten"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.rook_hal"
+                                },
+                                {
+                                    "entity": "binary_sensor.test_rookmelder_hal"
+                                },
+                                {
+                                    "entity": "sensor.rookmelder_hal_battery_level"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Rookmelder Hal",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.rook_overloop"
+                                },
+                                {
+                                    "entity": "binary_sensor.test_rookmelder_overloop"
+                                },
+                                {
+                                    "entity": "sensor.rookmelder_overloop_battery_level"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Rookmelder Overloop",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.rook_zolder"
+                                },
+                                {
+                                    "entity": "binary_sensor.test_rookmelder_zolder"
+                                },
+                                {
+                                    "entity": "sensor.rookmelder_zolder_battery_level"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Rookmelder Zolder",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:shield-check",
+                    "title": "Veiligheid"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.luchtvochtigheid_meterkast"
+                                },
+                                {
+                                    "entity": "sensor.temperatuur_meterkast"
+                                },
+                                {
+                                    "entity": "sensor.rookmelder_hal_temperature"
+                                },
+                                {
+                                    "entity": "sensor.rookmelder_overloop_temperature"
+                                },
+                                {
+                                    "entity": "sensor.rookmelder_zolder_temperature"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Binnenklimaat",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:thermometer-lines",
+                    "title": "Klimaat"
+                },
+                {
+                    "badges": [
+                        "device_tracker.alex",
+                        "device_tracker.joyce",
+                        "sun.sun"
+                    ],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.smart_meter_power_consumption",
+                                    "name": "Power Consumption"
+                                },
+                                {
+                                    "entity": "sensor.smart_meter_uptime"
+                                },
+                                {
+                                    "entity": "sensor.smart_meter_wifi_signal",
+                                    "name": "WiFi Signal"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Smart Meter",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.last_boot"
+                                },
+                                {
+                                    "entity": "sensor.processor_use"
+                                },
+                                {
+                                    "entity": "sensor.cpu_temperature"
+                                },
+                                {
+                                    "entity": "sensor.load_1m"
+                                },
+                                {
+                                    "entity": "sensor.load_5m"
+                                },
+                                {
+                                    "entity": "sensor.load_15m"
+                                },
+                                {
+                                    "entity": "sensor.memory_use_percent"
+                                },
+                                {
+                                    "entity": "sensor.swap_use_percent"
+                                },
+                                {
+                                    "entity": "sensor.disk_use_percent"
+                                },
+                                {
+                                    "entity": "sensor.disk_use_percent_boot"
+                                },
+                                {
+                                    "entity": "sensor.disk_use_percent_mnt_storage"
+                                },
+                                {
+                                    "entity": "sensor.disk_use_percent_mnt_cache"
+                                },
+                                {
+                                    "entity": "sensor.network_in_enp2s0"
+                                },
+                                {
+                                    "entity": "sensor.network_out_enp2s0"
+                                },
+                                {
+                                    "entity": "sensor.network_in_enp3s0"
+                                },
+                                {
+                                    "entity": "sensor.network_out_enp3s0"
+                                },
+                                {
+                                    "entity": "sensor.network_in_enp0s21f0u2u4"
+                                },
+                                {
+                                    "entity": "sensor.network_out_enp0s21f0u2u4"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Up Squared",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:speedometer",
+                    "title": "Monitoring"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "input_boolean.admin_notifications"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Toggles",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "input_select.logger_level_homeassistant"
+                                },
+                                {
+                                    "entity": "input_select.logger_level_zwave"
+                                },
+                                {
+                                    "entity": "input_select.logger_level_tradfri"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Logging Levels",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:settings",
+                    "title": "Settings"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.sonoff_pow_status"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_pow_version"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_pow_uptime"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_pow_freeheap"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_pow_rssi"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "POW",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.sonoff_4ch_status"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_4ch_version"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_4ch_uptime"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_4ch_freeheap"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_4ch_rssi"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "4CH",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.sonoff_4ch_pro_status"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_4ch_pro_version"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_4ch_pro_uptime"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_4ch_pro_freeheap"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_4ch_pro_rssi"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "4CH Pro",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.sonoff_s20_status"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_s20_version"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_s20_uptime"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_s20_freeheap"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_s20_rssi"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "S20",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.sonoff_rf_bridge_status"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_rf_bridge_version"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_rf_bridge_uptime"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_rf_bridge_freeheap"
+                                },
+                                {
+                                    "entity": "sensor.sonoff_rf_bridge_rssi"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "RF Bridge",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:switch",
+                    "title": "Sonoff"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

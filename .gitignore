@@ -25,5 +25,6 @@ ip_bans.yaml
 !/.storage
 .storage/**
 !/.storage/core.entity_registry
+!/.storage/lovelace
 config
 ozw_config
