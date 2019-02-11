@@ -37,7 +37,7 @@
                                     "entity": "light.schilderij"
                                 },
                                 {
-                                    "entity": "light.eettafel_4"
+                                    "entity": "light.eettafel"
                                 }
                             ],
                             "show_header_toggle": true,

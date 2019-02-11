@@ -130,6 +130,7 @@
         pytradfri.coap_cli: "{{ trigger.to_state.state }}"
 - id: startup
   alias: Opstarten
+  initial_state: 'on'
   trigger:
     platform: homeassistant
     event: start
@@ -137,6 +138,7 @@
     - service: script.initial_select
     - service: script.initial_mv
     - service: script.reset_rf
+    - service: script.detect_lights
     - service: automation.turn_off
       entity_id: automation.opstarten
     - condition: sun

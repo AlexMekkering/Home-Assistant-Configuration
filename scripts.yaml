@@ -30,6 +30,26 @@ initial_mv:
       timeout: 00:00:30
     - service: automation.trigger
       entity_id: automation.mechanische_ventilatie
+detect_lights:
+  alias: Detect light scene based on state
+  sequence:
+    - wait_template: "{{ is_state('binary_sensor.sonoff_4ch_status', 'on') }}"
+      timeout: 00:00:30
+    - condition: state
+      entity_id: binary_sensor.sonoff_4ch_status
+      state: 'on'
+    - service: automation.turn_off
+      entity_id: automation.light_scene_select
+    - service_template: >
+        {% if is_state('light.spruitje', 'on') %}
+          script.select_lights_dim
+        {% elif is_state('light.raam', 'on') %}
+          script.select_lights_vacancy
+        {% else %}
+          script.select_lights_all_off
+        {% endif %}
+    - service: automation.turn_on
+      entity_id: automation.light_scene_select
 
 ###############################
 # RF
@@ -37,6 +57,8 @@ initial_mv:
 reset_rf:
   alias: Reset RF
   sequence:
+    - wait_template: "{{ is_state('binary_sensor.sonoff_rf_bridge_status', 'on') }}"
+      timeout: 00:00:30
     - service: mqtt.publish
       data:
         topic: "sonoff/rfbridge-1/rfin"
