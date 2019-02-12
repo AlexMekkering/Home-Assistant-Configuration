@@ -20,32 +20,52 @@
                             "type": "entities"
                         },
                         {
-                            "entities": [
+                            "cards": [
                                 {
-                                    "entity": "light.spruitje"
+                                    "cards": [
+                                        {
+                                            "entity": "light.linksvoor",
+                                            "type": "light"
+                                        },
+                                        {
+                                            "entity": "light.spruitje",
+                                            "type": "light"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
                                 },
                                 {
-                                    "entity": "light.linksvoor"
+                                    "cards": [
+                                        {
+                                            "entity": "light.raam",
+                                            "type": "light"
+                                        },
+                                        {
+                                            "entity": "light.eettafel",
+                                            "type": "light"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
                                 },
                                 {
-                                    "entity": "light.raam"
-                                },
-                                {
-                                    "entity": "light.linksachter"
-                                },
-                                {
-                                    "entity": "light.schilderij"
-                                },
-                                {
-                                    "entity": "light.eettafel"
+                                    "cards": [
+                                        {
+                                            "entity": "light.linksachter",
+                                            "type": "light"
+                                        },
+                                        {
+                                            "entity": "light.schilderij",
+                                            "type": "light"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
                                 }
                             ],
-                            "show_header_toggle": true,
-                            "title": "Lampen",
-                            "type": "entities"
+                            "type": "vertical-stack"
                         }
                     ],
                     "icon": "mdi:home-assistant",
+                    "panel": false,
                     "path": "default_view",
                     "title": "Woonkamer"
                 },
@@ -219,36 +239,49 @@
                             "cards": [
                                 {
                                     "entity": "sensor.rookmelder_zolder_temperature",
-                                    "graph": "line",
+                                    "name": "Zolder",
                                     "type": "sensor"
                                 },
                                 {
                                     "entity": "sensor.rookmelder_overloop_temperature",
-                                    "graph": "line",
+                                    "name": "Overloop",
                                     "type": "sensor"
                                 },
                                 {
                                     "entity": "sensor.rookmelder_hal_temperature",
-                                    "graph": "line",
+                                    "name": "Hal",
                                     "type": "sensor"
                                 }
                             ],
-                            "type": "vertical-stack"
+                            "type": "horizontal-stack"
                         },
                         {
                             "cards": [
                                 {
                                     "entity": "sensor.temperatuur_meterkast",
-                                    "graph": "line",
                                     "type": "sensor"
                                 },
                                 {
                                     "entity": "sensor.luchtvochtigheid_meterkast",
-                                    "graph": "line",
                                     "type": "sensor"
                                 }
                             ],
-                            "type": "vertical-stack"
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "entities": [
+                                "sensor.rookmelder_zolder_temperature",
+                                "sensor.rookmelder_overloop_temperature",
+                                "sensor.rookmelder_hal_temperature",
+                                "sensor.temperatuur_meterkast"
+                            ],
+                            "type": "history-graph"
+                        },
+                        {
+                            "entities": [
+                                "sensor.luchtvochtigheid_meterkast"
+                            ],
+                            "type": "history-graph"
                         }
                     ],
                     "icon": "mdi:thermometer-lines",

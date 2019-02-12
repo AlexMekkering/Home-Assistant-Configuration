@@ -14,6 +14,7 @@ sunset_automations:
     - automation.sunset_lamp_schilderij
     - automation.sunset_lamp_bij_het_raam
     - automation.sunset_buitenlamp_voor
+    - automation.midnight_buitenlamp_voor
     - automation.holiday_evening_start
 rookmelders:
   name: Rookmelders

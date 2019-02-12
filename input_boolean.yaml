@@ -2,10 +2,6 @@ admin_notifications:
   name: Enable admin notifications
   initial: on
   icon: mdi:car
-receiver_ready:
-  name: Receiver ready
-televisie_ready:
-  name: TV ready
 zigbee_permit_join:
   name: Allow devices to join
   initial: off
