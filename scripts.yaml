@@ -70,12 +70,12 @@ reset_rf:
 all_lights_off:
   alias: All Lights Off
   sequence:
-    - service: script.prepare_for_bed
     - service: script.select_lights_all_off
     - service: homeassistant.turn_off
       entity_id: light.eettafel
     - condition: sun
       after: sunset
+    - service: script.prepare_for_bed
     - service: switch.turn_on
       entity_id: switch.hal_lamp
     - delay: 00:00:05
