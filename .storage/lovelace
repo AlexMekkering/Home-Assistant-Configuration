@@ -258,11 +258,11 @@
                         {
                             "cards": [
                                 {
-                                    "entity": "sensor.temperatuur_meterkast",
+                                    "entity": "sensor.meterkast_temperatuur",
                                     "type": "sensor"
                                 },
                                 {
-                                    "entity": "sensor.luchtvochtigheid_meterkast",
+                                    "entity": "sensor.meterkast_luchtvochtigheid",
                                     "type": "sensor"
                                 }
                             ],
@@ -273,13 +273,13 @@
                                 "sensor.rookmelder_zolder_temperature",
                                 "sensor.rookmelder_overloop_temperature",
                                 "sensor.rookmelder_hal_temperature",
-                                "sensor.temperatuur_meterkast"
+                                "sensor.meterkast_temperatuur"
                             ],
                             "type": "history-graph"
                         },
                         {
                             "entities": [
-                                "sensor.luchtvochtigheid_meterkast"
+                                "sensor.meterkast_luchtvochtigheid"
                             ],
                             "type": "history-graph"
                         }
@@ -297,14 +297,14 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "sensor.smart_meter_power_consumption",
+                                    "entity": "sensor.smartmeter_power_consumption",
                                     "name": "Power Consumption"
                                 },
                                 {
-                                    "entity": "sensor.smart_meter_uptime"
+                                    "entity": "sensor.smartmeter_uptime"
                                 },
                                 {
-                                    "entity": "sensor.smart_meter_wifi_signal",
+                                    "entity": "sensor.smartmeter_wifi_signal",
                                     "name": "WiFi Signal"
                                 }
                             ],
