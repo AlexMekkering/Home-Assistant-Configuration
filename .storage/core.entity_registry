@@ -855,6 +855,87 @@
                 "name": "Temperatuur Meterkast",
                 "platform": "esphome",
                 "unique_id": "smartmetersensormeterkast_temperatuur"
+            },
+            {
+                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
+                "device_id": "3e6264f801a84837a77a7fadecaeced0",
+                "disabled_by": null,
+                "entity_id": "sensor.esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "a020a61ad279-version"
+            },
+            {
+                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
+                "device_id": "3e6264f801a84837a77a7fadecaeced0",
+                "disabled_by": null,
+                "entity_id": "switch.smartmeter_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "smartmeterswitchsmartmeter_restart"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.slaapkamer_achterwand_button",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorslaapkamer_achterwand_button"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_achterwand_uptime_sensor",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae80581e3-uptime"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_achterwand_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae80581e3-wifisignal"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_achterwand_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae80581e3-version"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "light.slaapkamer_achterwand",
+                "name": "Achterwand Slaapkamer",
+                "platform": "esphome",
+                "unique_id": "bedroom_2lightslaapkamer_achterwand"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "light.slaapkamer_achterwand_green_led",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2lightslaapkamer_achterwand_green_led"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "switch.slaapkamer_achterwand_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2switchslaapkamer_achterwand_restart"
             }
         ]
     },

@@ -264,7 +264,7 @@
           {% if button == "6E9DA1" %}
             fan.mechanische_ventilatie
           {% elif button == "0DABE8" %}
-            light.achterwand_slaapkamer
+            light.slaapkamer_achterwand
           {% elif button == "0DABE2" %}
             script.toggle_tv_slaapkamer
           {% else %}
@@ -460,13 +460,13 @@
           {% if trigger.to_state.state == 'on' %}
             script.tv_slaapkamer_aan
           {% else %}
-            light.achterwand_slaapkamer
+            light.slaapkamer_achterwand
           {% endif %}
 - id: slaapkamer_achterwand
   alias: Slaapkamer Achterwand
   trigger:
     platform: state
-    entity_id: light.achterwand_slaapkamer
+    entity_id: light.slaapkamer_achterwand
   action:
     - service_template: >
         {% if trigger.to_state.state == 'on' %}
@@ -475,17 +475,6 @@
           script.turn_on
         {% endif %}
       entity_id: script.timer_tv_slaapkamer
-- id: RF_slaapkamer_on
-  alias: RF Slaapkamer Aan
-  trigger:
-    platform: state
-    entity_id: switch.rf_achterwand_slaapkamer
-    to: 'on'
-  action:
-    - service: light.toggle
-      entity_id: light.achterwand_slaapkamer
-    - service: switch.turn_off
-      entity_id: switch.rf_achterwand_slaapkamer
 
 ###############################
 # Mechanische ventilatie

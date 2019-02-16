@@ -5,12 +5,6 @@
   payload_off: "0"
   payload_on: "1"
 - platform: mqtt
-  name: Achterwand Slaapkamer
-  state_topic: "sonoff/s20-1/relay/0"
-  command_topic: "sonoff/s20-1/relay/0/set"
-  payload_off: "0"
-  payload_on: "1"
-- platform: mqtt
   name: Nachtlampje Alex
   state_topic: "sonoff/4chpro-1/relay/0"
   command_topic: "sonoff/4chpro-1/relay/0/set"

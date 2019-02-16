@@ -43,7 +43,7 @@ someone_home:
   name: Iemand thuis
   entities:
     - group.activity_at_home
-    - light.achterwand_slaapkamer
+    - light.slaapkamer_slaapkamer
     - switch.tv_slaapkamer
     - light.nachtlampje_alex
     - light.nachtlampje_joyce

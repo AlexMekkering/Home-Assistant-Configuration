@@ -92,10 +92,10 @@ prepare_for_bed:
   alias: Klaarmaken om naar bed te gaan
   sequence:
     - service: light.turn_on
-      entity_id: light.achterwand_slaapkamer
+      entity_id: light.slaapkamer_achterwand
     - delay: 00:45:00
     - service: light.turn_off
-      entity_id: light.achterwand_slaapkamer
+      entity_id: light.slaapkamer_achterwand
     - service: switch.turn_off
       entity_id: switch.overloop_lamp
 tv_slaapkamer_aan:
@@ -107,7 +107,7 @@ tv_slaapkamer_aan:
       entity_id: sun.sun
       state: 'below_horizon'
     - service: light.turn_on
-      entity_id: light.achterwand_slaapkamer
+      entity_id: light.slaapkamer_achterwand
 timer_tv_slaapkamer:
   alias: Timer TV Slaapkamer
   sequence:
@@ -138,7 +138,7 @@ turn_off_tv_slaapkamer:
     - service: media_player.turn_off
       entity_id: media_player.slaapkamer
     - service: light.turn_off
-      entity_id: light.achterwand_slaapkamer
+      entity_id: light.slaapkamer_achterwand
     - delay: 00:00:15
     - service: switch.turn_off
       entity_id: switch.tv_slaapkamer

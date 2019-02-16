@@ -75,7 +75,7 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "light.achterwand_slaapkamer"
+                                    "entity": "light.slaapkamer_achterwand"
                                 },
                                 {
                                     "entity": "switch.tv_slaapkamer"
