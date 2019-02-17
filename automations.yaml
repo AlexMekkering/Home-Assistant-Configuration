@@ -46,7 +46,7 @@
   initial_state: 'off'
   trigger:
     platform: time_pattern
-    seconds: '/05'
+    seconds: '/01'
   action:
     - service: homeassistant.update_entity
       entity_id: media_player.receiver
@@ -90,7 +90,7 @@
     value_template: "{{ is_state('input_select.media_scene', 'Media kijken') }}"
   action:
     - service: switch.turn_on
-      entity_id: switch.mediaspeler
+      entity_id: switch.tv_meubel_mediaplayer
 
 ###############################
 # Home Assistant
