@@ -1,10 +1,10 @@
-switch.tv:
+switch.tv_meubel_tv:
   icon: mdi:television
 switch.tv_slaapkamer:
   icon: mdi:television
-switch.receiver:
+switch.tv_meubel_receiver:
   icon: mdi:speaker
-switch.mediaspeler:
+switch.tv_meubel_mediaspeler:
   icon: mdi:kodi
 switch.nuc:
   icon: mdi:desktop-classic

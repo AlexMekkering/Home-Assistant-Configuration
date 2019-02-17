@@ -1,6 +1,6 @@
 name: Woonkamer Very Dim
 entities:
-  light.spruitje:
+  light.tv_meubel_spruitje:
     state: on
   light.linksvoor:
     state: on

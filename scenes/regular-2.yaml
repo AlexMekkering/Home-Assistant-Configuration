@@ -1,6 +1,6 @@
 name: Woonkamer Regular Stage 2
 entities:
-  light.spruitje:
+  light.tv_meubel_spruitje:
     state: on
   light.linksachter:
     state: on

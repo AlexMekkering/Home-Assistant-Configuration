@@ -25,7 +25,7 @@ rookmelders:
 living_room_lights:
   name: Lampen Woonkamer
   entities:
-    - light.spruitje
+    - light.tv_meubel_spruitje
     - light.linksvoor
     - light.raam
     - light.linksachter
@@ -34,10 +34,10 @@ living_room_lights:
 activity_at_home:
   name: Activiteit thuis
   entities:
-    - switch.tv
-    - switch.receiver
-    - switch.mediaspeler
-    - light.spruitje
+    - switch.tv_meubel_tv
+    - switch.tv_meubel_receiver
+    - switch.tv_meubel_mediaspeler
+    - light.tv_meubel_spruitje
     - light.schilderij
 someone_home:
   name: Iemand thuis

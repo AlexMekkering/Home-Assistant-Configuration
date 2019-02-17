@@ -1,4 +1,4 @@
 name: Woonkamer Regular Stage 1
 entities:
-  light.spruitje:
+  light.tv_meubel_spruitje:
     state: on

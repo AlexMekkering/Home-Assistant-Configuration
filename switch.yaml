@@ -12,33 +12,8 @@
     service: shell_command.turn_off_server
 
 - platform: mqtt
-  name: TV
-  state_topic: "sonoff/4ch-1/relay/0"
-  command_topic: "sonoff/4ch-1/relay/0/set"
-  payload_off: "0"
-  payload_on: "1"
-- platform: mqtt
-  name: Receiver
-  state_topic: "sonoff/4ch-1/relay/1"
-  command_topic: "sonoff/4ch-1/relay/1/set"
-  payload_off: "0"
-  payload_on: "1"
-- platform: mqtt
-  name: Mediaspeler
-  state_topic: "sonoff/4ch-1/relay/3"
-  command_topic: "sonoff/4ch-1/relay/3/set"
-  payload_off: "0"
-  payload_on: "1"
-
-- platform: mqtt
   name: TV Slaapkamer
   state_topic: "sonoff/4chpro-1/relay/2"
   command_topic: "sonoff/4chpro-1/relay/2/set"
-  payload_off: "0"
-  payload_on: "1"
-- platform: mqtt
-  name: RF Achterwand Slaapkamer
-  state_topic: "sonoff/4chpro-1/relay/3"
-  command_topic: "sonoff/4chpro-1/relay/3/set"
   payload_off: "0"
   payload_on: "1"

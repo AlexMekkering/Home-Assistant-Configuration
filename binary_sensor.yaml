@@ -5,20 +5,8 @@
   payload_on: "1"
   payload_off: "0"
 - platform: mqtt
-  name: "Sonoff 4CH status"
-  state_topic: "sonoff/4ch-1/status"
-  device_class: connectivity
-  payload_on: "1"
-  payload_off: "0"
-- platform: mqtt
   name: "Sonoff 4CH PRO status"
   state_topic: "sonoff/4chpro-1/status"
-  device_class: connectivity
-  payload_on: "1"
-  payload_off: "0"
-- platform: mqtt
-  name: "Sonoff S20 status"
-  state_topic: "sonoff/s20-1/status"
   device_class: connectivity
   payload_on: "1"
   payload_off: "0"

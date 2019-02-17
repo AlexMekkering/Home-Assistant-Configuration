@@ -83,19 +83,6 @@
   name: "Sonoff POW version"
   state_topic: "sonoff/pow-1/version"
 - platform: mqtt
-  name: "Sonoff 4CH uptime"
-  state_topic: "sonoff/4ch-1/uptime"
-- platform: mqtt
-  name: "Sonoff 4CH freeheap"
-  state_topic: "sonoff/4ch-1/freeheap"
-- platform: mqtt
-  name: "Sonoff 4CH rssi"
-  state_topic: "sonoff/4ch-1/rssi"
-  unit_of_measurement: "dB"
-- platform: mqtt
-  name: "Sonoff 4CH version"
-  state_topic: "sonoff/4ch-1/version"
-- platform: mqtt
   name: "Sonoff 4CH PRO uptime"
   state_topic: "sonoff/4chpro-1/uptime"
 - platform: mqtt
@@ -108,19 +95,6 @@
 - platform: mqtt
   name: "Sonoff 4CH PRO version"
   state_topic: "sonoff/4chpro-1/version"
-- platform: mqtt
-  name: "Sonoff S20 uptime"
-  state_topic: "sonoff/s20-1/uptime"
-- platform: mqtt
-  name: "Sonoff S20 freeheap"
-  state_topic: "sonoff/s20-1/freeheap"
-- platform: mqtt
-  name: "Sonoff S20 rssi"
-  state_topic: "sonoff/s20-1/rssi"
-  unit_of_measurement: "dB"
-- platform: mqtt
-  name: "Sonoff S20 version"
-  state_topic: "sonoff/s20-1/version"
 - platform: mqtt
   name: "Sonoff RF Bridge uptime"
   state_topic: "sonoff/rfbridge-1/uptime"

@@ -209,7 +209,7 @@
           {% set row = trigger.event.data.scene_id // 10 %}
           {% set side = (trigger.event.data.scene_id % 10) % 2 %}
           {% if row == 1 %}
-            light.spruitje
+            light.tv_meubel_spruitje
           {% elif row >= 8 and row <= 10 %}
             {% if side == 1 %}
               {% if row == 8 %}

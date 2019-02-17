@@ -28,7 +28,8 @@
                                             "type": "light"
                                         },
                                         {
-                                            "entity": "light.spruitje",
+                                            "entity": "light.tv_meubel_spruitje",
+                                            "name": "Spruitje",
                                             "type": "light"
                                         }
                                     ],
@@ -438,28 +439,6 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "binary_sensor.sonoff_4ch_status"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_4ch_version"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_4ch_uptime"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_4ch_freeheap"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_4ch_rssi"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "4CH",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
                                     "entity": "binary_sensor.sonoff_4ch_pro_status"
                                 },
                                 {
@@ -477,28 +456,6 @@
                             ],
                             "show_header_toggle": false,
                             "title": "4CH Pro",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.sonoff_s20_status"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_s20_version"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_s20_uptime"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_s20_freeheap"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_s20_rssi"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "S20",
                             "type": "entities"
                         },
                         {
