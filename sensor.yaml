@@ -130,16 +130,4 @@
       friendly_name: "Batterijniveau"
       device_class: battery
       value_template: "{{ state_attr('zwave.rookmelder_zolder', 'battery_level') }}"
-    smartmeter_uptime:
-      friendly_name: "Uptime"
-      icon_template: mdi:clock
-      value_template: >
-        {% set a = states.sensor.smartmeter_uptime_sensor.state | int %}
-        {% set minute = 60 %}
-        {% set hour = minute * 60 %}
-        {% set day = hour * 24 %}
-        {% set days = a // day %}
-        {% set hours = (a - days * day) // hour %}
-        {% set minutes = (a - days * day - hours * hour) // minute %}
-        {% set seconds = a % minute %}
-        {{ days }}d {{ hours }}:{{ minutes }}:{{ seconds }}
+
