@@ -1017,6 +1017,42 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "smartmetertext_sensorsmartmeter_uptime"
+            },
+            {
+                "config_entry_id": "ce1c40c5ea7f414489a1420d9fc38873",
+                "device_id": "74793c931639480fa85ef38f726dffbe",
+                "disabled_by": null,
+                "entity_id": "switch.4chpro_1_0",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "ESPURNA-857EC7_switch_0"
+            },
+            {
+                "config_entry_id": "ce1c40c5ea7f414489a1420d9fc38873",
+                "device_id": "74793c931639480fa85ef38f726dffbe",
+                "disabled_by": null,
+                "entity_id": "switch.4chpro_1_1",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "ESPURNA-857EC7_switch_1"
+            },
+            {
+                "config_entry_id": "ce1c40c5ea7f414489a1420d9fc38873",
+                "device_id": "74793c931639480fa85ef38f726dffbe",
+                "disabled_by": null,
+                "entity_id": "switch.4chpro_1_2",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "ESPURNA-857EC7_switch_2"
+            },
+            {
+                "config_entry_id": "ce1c40c5ea7f414489a1420d9fc38873",
+                "device_id": "74793c931639480fa85ef38f726dffbe",
+                "disabled_by": null,
+                "entity_id": "switch.4chpro_1_3",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "ESPURNA-857EC7_switch_3"
             }
         ]
     },
