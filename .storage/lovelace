@@ -408,28 +408,6 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "binary_sensor.sonoff_pow_status"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_pow_version"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_pow_uptime"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_pow_freeheap"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_pow_rssi"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "POW",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
                                     "entity": "binary_sensor.sonoff_4ch_pro_status"
                                 },
                                 {
