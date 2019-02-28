@@ -1,10 +1,4 @@
 - platform: mqtt
-  name: "Sonoff POW status"
-  state_topic: "sonoff/pow-1/status"
-  device_class: connectivity
-  payload_on: "1"
-  payload_off: "0"
-- platform: mqtt
   name: "Sonoff 4CH PRO status"
   state_topic: "sonoff/4chpro-1/status"
   device_class: connectivity

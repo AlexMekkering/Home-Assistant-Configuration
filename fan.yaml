@@ -1,6 +1,0 @@
-- platform: mqtt
-  name: Mechanische ventilatie
-  state_topic: "sonoff/pow-1/relay/0"
-  command_topic: "sonoff/pow-1/relay/0/set"
-  payload_off: "0"
-  payload_on: "1"

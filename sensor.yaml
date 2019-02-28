@@ -47,42 +47,6 @@
 # Sonoff MQTT sensors
 ########
 - platform: mqtt
-  name: "MV vermogen"
-  state_topic: "sonoff/pow-1/power"
-  unit_of_measurement: "W"
-- platform: mqtt
-  name: "MV stroom"
-  state_topic: "sonoff/pow-1/current"
-  unit_of_measurement: "A"
-- platform: mqtt
-  name: "MV spanning"
-  state_topic: "sonoff/pow-1/voltage"
-  unit_of_measurement: "V"
-- platform: mqtt
-  name: "MV actief vermogen"
-  state_topic: "sonoff/pow-1/apparent"
-  unit_of_measurement: "VA"
-- platform: mqtt
-  name: "MV reactief vermogen"
-  state_topic: "sonoff/pow-1/reactive"
-  unit_of_measurement: "VAR"
-- platform: mqtt
-  name: "MV power factor"
-  state_topic: "sonoff/pow-1/factor"
-- platform: mqtt
-  name: "Sonoff POW uptime"
-  state_topic: "sonoff/pow-1/uptime"
-- platform: mqtt
-  name: "Sonoff POW freeheap"
-  state_topic: "sonoff/pow-1/freeheap"
-- platform: mqtt
-  name: "Sonoff POW rssi"
-  state_topic: "sonoff/pow-1/rssi"
-  unit_of_measurement: "dB"
-- platform: mqtt
-  name: "Sonoff POW version"
-  state_topic: "sonoff/pow-1/version"
-- platform: mqtt
   name: "Sonoff 4CH PRO uptime"
   state_topic: "sonoff/4chpro-1/uptime"
 - platform: mqtt

@@ -133,25 +133,16 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "fan.mechanische_ventilatie"
+                                    "entity": "fan.ventilatie"
                                 },
                                 {
-                                    "entity": "sensor.mv_vermogen"
+                                    "entity": "sensor.ventilatie_power"
                                 },
                                 {
-                                    "entity": "sensor.mv_spanning"
+                                    "entity": "sensor.ventilatie_voltage"
                                 },
                                 {
-                                    "entity": "sensor.mv_stroom"
-                                },
-                                {
-                                    "entity": "sensor.mv_actief_vermogen"
-                                },
-                                {
-                                    "entity": "sensor.mv_reactief_vermogen"
-                                },
-                                {
-                                    "entity": "sensor.mv_power_factor"
+                                    "entity": "sensor.ventilatie_current"
                                 }
                             ],
                             "show_header_toggle": false,

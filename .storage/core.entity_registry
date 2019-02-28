@@ -1053,6 +1053,87 @@
                 "name": null,
                 "platform": "mqtt",
                 "unique_id": "ESPURNA-857EC7_switch_3"
+            },
+            {
+                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
+                "device_id": "29681c1e46e14b8cb856ee445c753619",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.ventilatie_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationbinary_sensorventilatie_status"
+            },
+            {
+                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
+                "device_id": "29681c1e46e14b8cb856ee445c753619",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_power",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationsensorventilatie_power"
+            },
+            {
+                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
+                "device_id": "29681c1e46e14b8cb856ee445c753619",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_current",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationsensorventilatie_current"
+            },
+            {
+                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
+                "device_id": "29681c1e46e14b8cb856ee445c753619",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae8071da8-wifisignal"
+            },
+            {
+                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
+                "device_id": "29681c1e46e14b8cb856ee445c753619",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_voltage",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationsensorventilatie_voltage"
+            },
+            {
+                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
+                "device_id": "29681c1e46e14b8cb856ee445c753619",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae8071da8-version"
+            },
+            {
+                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
+                "device_id": "29681c1e46e14b8cb856ee445c753619",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationtext_sensorventilatie_uptime"
+            },
+            {
+                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
+                "device_id": "29681c1e46e14b8cb856ee445c753619",
+                "disabled_by": null,
+                "entity_id": "fan.ventilatie",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationfanventilatie"
+            },
+            {
+                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
+                "device_id": "29681c1e46e14b8cb856ee445c753619",
+                "disabled_by": null,
+                "entity_id": "switch.ventilatie_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationswitchventilatie_restart"
             }
         ]
     },
