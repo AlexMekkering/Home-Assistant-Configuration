@@ -136,7 +136,6 @@
     event: start
   action:
     - service: script.detect_media
-    - service: script.detect_mv
     - service: script.detect_lights
     - service: script.reset_rf
     - service: automation.turn_off
