@@ -1121,19 +1121,37 @@
                 "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
                 "device_id": "29681c1e46e14b8cb856ee445c753619",
                 "disabled_by": null,
-                "entity_id": "fan.ventilatie",
+                "entity_id": "switch.ventilatie_restart",
                 "name": null,
                 "platform": "esphome",
-                "unique_id": "ventilationfanventilatie"
+                "unique_id": "ventilationswitchventilatie_restart"
             },
             {
                 "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
                 "device_id": "29681c1e46e14b8cb856ee445c753619",
                 "disabled_by": null,
-                "entity_id": "switch.ventilatie_restart",
+                "entity_id": "binary_sensor.ventilatie_activated",
                 "name": null,
                 "platform": "esphome",
-                "unique_id": "ventilationswitchventilatie_restart"
+                "unique_id": "ventilationbinary_sensorventilatie_activated"
+            },
+            {
+                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
+                "device_id": "29681c1e46e14b8cb856ee445c753619",
+                "disabled_by": null,
+                "entity_id": "switch.ventilatie",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationswitchventilatie"
+            },
+            {
+                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
+                "device_id": "29681c1e46e14b8cb856ee445c753619",
+                "disabled_by": null,
+                "entity_id": "switch.ventilatie_auto_poweroff",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationswitchventilatie_auto_poweroff"
             }
         ]
     },

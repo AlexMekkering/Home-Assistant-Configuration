@@ -133,7 +133,7 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "fan.ventilatie"
+                                    "entity": "switch.ventilatie"
                                 },
                                 {
                                     "entity": "sensor.ventilatie_power"

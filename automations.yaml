@@ -262,7 +262,7 @@
         entity_id: >
           {% set button = trigger.to_state.state %}
           {% if button == "6E9DA1" %}
-            fan.ventilatie
+            switch.ventilatie
           {% elif button == "0DABE8" %}
             light.slaapkamer_achterwand
           {% elif button == "0DABE2" %}
@@ -475,56 +475,6 @@
           script.turn_on
         {% endif %}
       entity_id: script.timer_tv_slaapkamer
-
-###############################
-# Mechanische ventilatie
-###############################
-- id: MV Idle
-  alias: Mechanische ventilatie stationair
-  initial_state: 'off'
-  trigger:
-    platform: numeric_state
-    entity_id: sensor.ventilatie_power
-    below: 15
-    for:
-      hours: 0
-      minutes: 30
-      seconds: 0
-  action:
-    - service: fan.turn_off
-      entity_id: fan.ventilatie
-- id: MV Active
-  alias: Mechanische ventilatie aktief
-  initial_state: 'off'
-  trigger:
-    platform: numeric_state
-    entity_id: sensor.ventilatie_vermogen
-    above: 15
-    for:
-      hours: 0
-      minutes: 5
-      seconds: 0
-  action:
-    - condition: state
-      entity_id: fan.ventilatie
-      state: 'on'
-    - service: automation.turn_on
-      entity_id: automation.mechanische_ventilatie_stationair
-- id: MV
-  alias: Mechanische ventilatie
-  trigger:
-    platform: state
-    entity_id: fan.ventilatie
-  action:
-    - service_template: >
-        {% if is_state('fan.mechanische_ventilatie', 'off') %}
-          automation.turn_off
-        {% else %}
-          automation.turn_on
-        {% endif %}
-      entity_id: automation.mechanische_ventilatie_aktief
-    - service: automation.turn_off
-      entity_id: automation.mechanische_ventilatie_stationair
 
 ###############################
 # zigbee2mqtt bridge
