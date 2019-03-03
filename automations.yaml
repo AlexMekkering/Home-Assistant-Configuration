@@ -252,7 +252,7 @@
     - service_template: >
         {% set button = trigger.to_state.state %}
         {% if button == "6E9DA1" %}
-          fan.turn_on
+          switch.turn_on
         {% elif button == "0DABE8" %}
           light.toggle
         {% else %}
