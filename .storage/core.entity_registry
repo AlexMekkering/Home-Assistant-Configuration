@@ -813,7 +813,7 @@
             },
             {
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "3e6264f801a84837a77a7fadecaeced0",
+                "device_id": "f5455beee935402995dbda0c838e6676",
                 "disabled_by": null,
                 "entity_id": "sensor.meterkast_luchtvochtigheid",
                 "name": "Luchtvochtigheid Meterkast",
@@ -822,7 +822,7 @@
             },
             {
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "3e6264f801a84837a77a7fadecaeced0",
+                "device_id": "f5455beee935402995dbda0c838e6676",
                 "disabled_by": null,
                 "entity_id": "sensor.smartmeter_power_consumption",
                 "name": null,
@@ -831,16 +831,7 @@
             },
             {
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "3e6264f801a84837a77a7fadecaeced0",
-                "disabled_by": null,
-                "entity_id": "sensor.smartmeter_wifi_signal",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "a020a61ad279-wifisignal"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "3e6264f801a84837a77a7fadecaeced0",
+                "device_id": "f5455beee935402995dbda0c838e6676",
                 "disabled_by": null,
                 "entity_id": "sensor.meterkast_temperatuur",
                 "name": "Temperatuur Meterkast",
@@ -849,21 +840,48 @@
             },
             {
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "3e6264f801a84837a77a7fadecaeced0",
-                "disabled_by": null,
-                "entity_id": "sensor.smartmeter_esphome_version",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "a020a61ad279-version"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "3e6264f801a84837a77a7fadecaeced0",
+                "device_id": "f5455beee935402995dbda0c838e6676",
                 "disabled_by": null,
                 "entity_id": "switch.smartmeter_restart",
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "smartmeterswitchsmartmeter_restart"
+            },
+            {
+                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
+                "device_id": "f5455beee935402995dbda0c838e6676",
+                "disabled_by": null,
+                "entity_id": "sensor.smartmeter_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "cc50e304cccb-wifisignal"
+            },
+            {
+                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
+                "device_id": "f5455beee935402995dbda0c838e6676",
+                "disabled_by": null,
+                "entity_id": "sensor.smartmeter_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "cc50e304cccb-version"
+            },
+            {
+                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
+                "device_id": "f5455beee935402995dbda0c838e6676",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.smartmeter_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "smartmeterbinary_sensorsmartmeter_status"
+            },
+            {
+                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
+                "device_id": "f5455beee935402995dbda0c838e6676",
+                "disabled_by": null,
+                "entity_id": "sensor.smartmeter_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "smartmetertext_sensorsmartmeter_uptime"
             },
             {
                 "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
@@ -999,24 +1017,6 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "living_1text_sensortv_meubel_uptime"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "3e6264f801a84837a77a7fadecaeced0",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.smartmeter_status",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "smartmeterbinary_sensorsmartmeter_status"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "3e6264f801a84837a77a7fadecaeced0",
-                "disabled_by": null,
-                "entity_id": "sensor.smartmeter_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "smartmetertext_sensorsmartmeter_uptime"
             },
             {
                 "config_entry_id": "ce1c40c5ea7f414489a1420d9fc38873",

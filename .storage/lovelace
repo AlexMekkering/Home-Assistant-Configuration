@@ -143,6 +143,9 @@
                                 },
                                 {
                                     "entity": "sensor.ventilatie_current"
+                                },
+                                {
+                                    "entity": "switch.ventilatie_auto_poweroff"
                                 }
                             ],
                             "show_header_toggle": false,
