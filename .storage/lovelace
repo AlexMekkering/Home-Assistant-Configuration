@@ -20,49 +20,29 @@
                             "type": "entities"
                         },
                         {
-                            "cards": [
+                            "entities": [
                                 {
-                                    "cards": [
-                                        {
-                                            "entity": "light.linksvoor",
-                                            "type": "light"
-                                        },
-                                        {
-                                            "entity": "light.tv_meubel_spruitje",
-                                            "name": "Spruitje",
-                                            "type": "light"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
+                                    "entity": "light.tv_meubel_spruitje"
                                 },
                                 {
-                                    "cards": [
-                                        {
-                                            "entity": "light.raam",
-                                            "type": "light"
-                                        },
-                                        {
-                                            "entity": "light.eettafel",
-                                            "type": "light"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
+                                    "entity": "light.linksvoor"
                                 },
                                 {
-                                    "cards": [
-                                        {
-                                            "entity": "light.linksachter",
-                                            "type": "light"
-                                        },
-                                        {
-                                            "entity": "light.schilderij",
-                                            "type": "light"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
+                                    "entity": "light.raam"
+                                },
+                                {
+                                    "entity": "light.linksachter"
+                                },
+                                {
+                                    "entity": "light.schilderij"
+                                },
+                                {
+                                    "entity": "light.eettafel"
                                 }
                             ],
-                            "type": "vertical-stack"
+                            "show_header_toggle": true,
+                            "title": "Verlichting",
+                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:home-assistant",
@@ -233,8 +213,8 @@
                         {
                             "cards": [
                                 {
-                                    "entity": "sensor.rookmelder_zolder_temperature",
-                                    "name": "Zolder",
+                                    "entity": "sensor.rookmelder_hal_temperature",
+                                    "name": "Hal",
                                     "type": "sensor"
                                 },
                                 {
@@ -243,8 +223,8 @@
                                     "type": "sensor"
                                 },
                                 {
-                                    "entity": "sensor.rookmelder_hal_temperature",
-                                    "name": "Hal",
+                                    "entity": "sensor.rookmelder_zolder_temperature",
+                                    "name": "Zolder",
                                     "type": "sensor"
                                 }
                             ],
@@ -259,24 +239,39 @@
                                 {
                                     "entity": "sensor.meterkast_luchtvochtigheid",
                                     "type": "sensor"
+                                },
+                                {
+                                    "entity": "sensor.meterkast_luchtdruk",
+                                    "type": "sensor"
                                 }
                             ],
                             "type": "horizontal-stack"
                         },
                         {
-                            "entities": [
-                                "sensor.rookmelder_zolder_temperature",
-                                "sensor.rookmelder_overloop_temperature",
-                                "sensor.rookmelder_hal_temperature",
-                                "sensor.meterkast_temperatuur"
+                            "cards": [
+                                {
+                                    "entity": "sensor.garage_temperatuur",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "entity": "sensor.buiten_temperatuur",
+                                    "type": "sensor"
+                                }
                             ],
-                            "type": "history-graph"
+                            "type": "horizontal-stack"
                         },
                         {
-                            "entities": [
-                                "sensor.meterkast_luchtvochtigheid"
+                            "cards": [
+                                {
+                                    "entity": "sensor.garage_luchtvochtigheid",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "entity": "sensor.garage_luchtdruk",
+                                    "type": "sensor"
+                                }
                             ],
-                            "type": "history-graph"
+                            "type": "horizontal-stack"
                         }
                     ],
                     "icon": "mdi:thermometer-lines",
@@ -399,6 +394,19 @@
                             ],
                             "show_header_toggle": false,
                             "title": "Logging Levels",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "input_boolean.zigbee_permit_join"
+                                },
+                                {
+                                    "entity": "timer.zigbee_permit_join"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Zigbee",
                             "type": "entities"
                         }
                     ],

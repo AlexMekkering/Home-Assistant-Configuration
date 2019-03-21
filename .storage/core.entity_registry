@@ -1019,42 +1019,6 @@
                 "unique_id": "living_1text_sensortv_meubel_uptime"
             },
             {
-                "config_entry_id": "ce1c40c5ea7f414489a1420d9fc38873",
-                "device_id": "74793c931639480fa85ef38f726dffbe",
-                "disabled_by": null,
-                "entity_id": "switch.4chpro_1_0",
-                "name": null,
-                "platform": "mqtt",
-                "unique_id": "ESPURNA-857EC7_switch_0"
-            },
-            {
-                "config_entry_id": "ce1c40c5ea7f414489a1420d9fc38873",
-                "device_id": "74793c931639480fa85ef38f726dffbe",
-                "disabled_by": null,
-                "entity_id": "switch.4chpro_1_1",
-                "name": null,
-                "platform": "mqtt",
-                "unique_id": "ESPURNA-857EC7_switch_1"
-            },
-            {
-                "config_entry_id": "ce1c40c5ea7f414489a1420d9fc38873",
-                "device_id": "74793c931639480fa85ef38f726dffbe",
-                "disabled_by": null,
-                "entity_id": "switch.4chpro_1_2",
-                "name": null,
-                "platform": "mqtt",
-                "unique_id": "ESPURNA-857EC7_switch_2"
-            },
-            {
-                "config_entry_id": "ce1c40c5ea7f414489a1420d9fc38873",
-                "device_id": "74793c931639480fa85ef38f726dffbe",
-                "disabled_by": null,
-                "entity_id": "switch.4chpro_1_3",
-                "name": null,
-                "platform": "mqtt",
-                "unique_id": "ESPURNA-857EC7_switch_3"
-            },
-            {
                 "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
                 "device_id": "29681c1e46e14b8cb856ee445c753619",
                 "disabled_by": null,
@@ -1152,6 +1116,96 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "ventilationswitchventilatie_auto_poweroff"
+            },
+            {
+                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
+                "device_id": "f5455beee935402995dbda0c838e6676",
+                "disabled_by": null,
+                "entity_id": "sensor.meterkast_luchtdruk",
+                "name": "Luchtdruk Meterkast",
+                "platform": "esphome",
+                "unique_id": "smartmetersensormeterkast_luchtdruk"
+            },
+            {
+                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
+                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_luchtdruk",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "garagesensorgarage_luchtdruk"
+            },
+            {
+                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
+                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "cc50e304d6d9-wifisignal"
+            },
+            {
+                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
+                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_temperatuur",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "garagesensorgarage_temperatuur"
+            },
+            {
+                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
+                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "disabled_by": null,
+                "entity_id": "sensor.buiten_temperatuur",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dallas-1E0114406D3EAA28"
+            },
+            {
+                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
+                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_luchtvochtigheid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "garagesensorgarage_luchtvochtigheid"
+            },
+            {
+                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
+                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "garagetext_sensorgarage_uptime"
+            },
+            {
+                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
+                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "cc50e304d6d9-version"
+            },
+            {
+                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
+                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.garage_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "garagebinary_sensorgarage_status"
+            },
+            {
+                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
+                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "disabled_by": null,
+                "entity_id": "switch.garage_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "garageswitchgarage_restart"
             }
         ]
     },
