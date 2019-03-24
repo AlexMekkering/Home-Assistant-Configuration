@@ -1206,6 +1206,15 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "garageswitchgarage_restart"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.remote_ui",
+                "name": null,
+                "platform": "cloud",
+                "unique_id": "cloud-remote-ui-connectivity"
             }
         ]
     },

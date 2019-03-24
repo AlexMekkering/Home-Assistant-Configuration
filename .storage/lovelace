@@ -38,6 +38,9 @@
                                 },
                                 {
                                     "entity": "light.eettafel"
+                                },
+                                {
+                                    "entity": "script.all_off"
                                 }
                             ],
                             "show_header_toggle": true,
