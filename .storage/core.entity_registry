@@ -1215,6 +1215,60 @@
                 "name": null,
                 "platform": "cloud",
                 "unique_id": "cloud-remote-ui-connectivity"
+            },
+            {
+                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
+                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
+                "disabled_by": null,
+                "entity_id": "switch.veranda_wandcontactdoos_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "veranda_wcdswitchveranda_wandcontactdoos_restart"
+            },
+            {
+                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
+                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
+                "disabled_by": null,
+                "entity_id": "switch.veranda_wandcontactdoos",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "veranda_wcdswitchveranda_wandcontactdoos"
+            },
+            {
+                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
+                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.veranda_wandcontactdoos_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "veranda_wcdbinary_sensorveranda_wandcontactdoos_status"
+            },
+            {
+                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
+                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_wandcontactdoos_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "3c71bf2bdf38-wifisignal"
+            },
+            {
+                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
+                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_wandcontactdoos_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "veranda_wcdtext_sensorveranda_wandcontactdoos_uptime"
+            },
+            {
+                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
+                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_wandcontactdoos_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "3c71bf2bdf38-version"
             }
         ]
     },

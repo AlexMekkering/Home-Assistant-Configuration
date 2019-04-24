@@ -95,6 +95,9 @@
                                 },
                                 {
                                     "entity": "switch.overloop_lamp"
+                                },
+                                {
+                                    "entity": "switch.veranda_wandcontactdoos"
                                 }
                             ],
                             "title": "Overige Lampen",
