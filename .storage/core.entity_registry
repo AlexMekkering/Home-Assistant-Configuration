@@ -1155,15 +1155,6 @@
             },
             {
                 "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "b67d81ff56744faea0314f4db07cbae7",
-                "disabled_by": null,
-                "entity_id": "sensor.garage_luchtdruk",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "garagesensorgarage_luchtdruk"
-            },
-            {
-                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
                 "device_id": "1aa56ca266214a93bfb871282ec87624",
                 "disabled_by": null,
                 "entity_id": "sensor.garage_wifi_signal",
