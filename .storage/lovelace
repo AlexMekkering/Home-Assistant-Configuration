@@ -260,20 +260,11 @@
                                     "type": "sensor"
                                 },
                                 {
-                                    "entity": "sensor.buiten_temperatuur",
-                                    "type": "sensor"
-                                }
-                            ],
-                            "type": "horizontal-stack"
-                        },
-                        {
-                            "cards": [
-                                {
                                     "entity": "sensor.garage_luchtvochtigheid",
                                     "type": "sensor"
                                 },
                                 {
-                                    "entity": "sensor.garage_luchtdruk",
+                                    "entity": "sensor.buiten_temperatuur",
                                     "type": "sensor"
                                 }
                             ],

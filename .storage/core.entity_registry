@@ -813,7 +813,7 @@
             },
             {
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "f5455beee935402995dbda0c838e6676",
+                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
                 "disabled_by": null,
                 "entity_id": "sensor.meterkast_luchtvochtigheid",
                 "name": "Luchtvochtigheid Meterkast",
@@ -822,7 +822,7 @@
             },
             {
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "f5455beee935402995dbda0c838e6676",
+                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
                 "disabled_by": null,
                 "entity_id": "sensor.smartmeter_power_consumption",
                 "name": null,
@@ -831,7 +831,7 @@
             },
             {
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "f5455beee935402995dbda0c838e6676",
+                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
                 "disabled_by": null,
                 "entity_id": "sensor.meterkast_temperatuur",
                 "name": "Temperatuur Meterkast",
@@ -840,7 +840,7 @@
             },
             {
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "f5455beee935402995dbda0c838e6676",
+                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
                 "disabled_by": null,
                 "entity_id": "switch.smartmeter_restart",
                 "name": null,
@@ -849,25 +849,25 @@
             },
             {
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "f5455beee935402995dbda0c838e6676",
+                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
                 "disabled_by": null,
                 "entity_id": "sensor.smartmeter_wifi_signal",
                 "name": null,
                 "platform": "esphome",
-                "unique_id": "cc50e304cccb-wifisignal"
+                "unique_id": "dc4f2265d1cb-wifisignal"
             },
             {
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "f5455beee935402995dbda0c838e6676",
+                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
                 "disabled_by": null,
                 "entity_id": "sensor.smartmeter_esphome_version",
                 "name": null,
                 "platform": "esphome",
-                "unique_id": "cc50e304cccb-version"
+                "unique_id": "dc4f2265d1cb-version"
             },
             {
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "f5455beee935402995dbda0c838e6676",
+                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
                 "disabled_by": null,
                 "entity_id": "binary_sensor.smartmeter_status",
                 "name": null,
@@ -876,12 +876,39 @@
             },
             {
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "f5455beee935402995dbda0c838e6676",
+                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
                 "disabled_by": null,
                 "entity_id": "sensor.smartmeter_uptime",
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "smartmetertext_sensorsmartmeter_uptime"
+            },
+            {
+                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
+                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
+                "disabled_by": null,
+                "entity_id": "sensor.smartmeter_ip_address",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "smartmetertext_sensorsmartmeter_ip_address"
+            },
+            {
+                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
+                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
+                "disabled_by": null,
+                "entity_id": "sensor.smartmeter_ssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "smartmetertext_sensorsmartmeter_ssid"
+            },
+            {
+                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
+                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
+                "disabled_by": null,
+                "entity_id": "sensor.smartmeter_bssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "smartmetertext_sensorsmartmeter_bssid"
             },
             {
                 "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
@@ -1119,7 +1146,7 @@
             },
             {
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "f5455beee935402995dbda0c838e6676",
+                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
                 "disabled_by": null,
                 "entity_id": "sensor.meterkast_luchtdruk",
                 "name": "Luchtdruk Meterkast",
@@ -1137,16 +1164,16 @@
             },
             {
                 "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "device_id": "1aa56ca266214a93bfb871282ec87624",
                 "disabled_by": null,
                 "entity_id": "sensor.garage_wifi_signal",
                 "name": null,
                 "platform": "esphome",
-                "unique_id": "cc50e304d6d9-wifisignal"
+                "unique_id": "dc4f2265d21d-wifisignal"
             },
             {
                 "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "device_id": "1aa56ca266214a93bfb871282ec87624",
                 "disabled_by": null,
                 "entity_id": "sensor.garage_temperatuur",
                 "name": null,
@@ -1155,16 +1182,16 @@
             },
             {
                 "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "device_id": "1aa56ca266214a93bfb871282ec87624",
                 "disabled_by": null,
                 "entity_id": "sensor.buiten_temperatuur",
                 "name": null,
                 "platform": "esphome",
-                "unique_id": "dallas-1E0114406D3EAA28"
+                "unique_id": "dallas-DE011438B6F4AA28"
             },
             {
                 "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "device_id": "1aa56ca266214a93bfb871282ec87624",
                 "disabled_by": null,
                 "entity_id": "sensor.garage_luchtvochtigheid",
                 "name": null,
@@ -1173,7 +1200,7 @@
             },
             {
                 "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "device_id": "1aa56ca266214a93bfb871282ec87624",
                 "disabled_by": null,
                 "entity_id": "sensor.garage_uptime",
                 "name": null,
@@ -1182,16 +1209,16 @@
             },
             {
                 "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "device_id": "1aa56ca266214a93bfb871282ec87624",
                 "disabled_by": null,
                 "entity_id": "sensor.garage_esphome_version",
                 "name": null,
                 "platform": "esphome",
-                "unique_id": "cc50e304d6d9-version"
+                "unique_id": "dc4f2265d21d-version"
             },
             {
                 "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "device_id": "1aa56ca266214a93bfb871282ec87624",
                 "disabled_by": null,
                 "entity_id": "binary_sensor.garage_status",
                 "name": null,
@@ -1200,12 +1227,39 @@
             },
             {
                 "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "b67d81ff56744faea0314f4db07cbae7",
+                "device_id": "1aa56ca266214a93bfb871282ec87624",
                 "disabled_by": null,
                 "entity_id": "switch.garage_restart",
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "garageswitchgarage_restart"
+            },
+            {
+                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
+                "device_id": "1aa56ca266214a93bfb871282ec87624",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_ssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "garagetext_sensorgarage_ssid"
+            },
+            {
+                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
+                "device_id": "1aa56ca266214a93bfb871282ec87624",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_ip_address",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "garagetext_sensorgarage_ip_address"
+            },
+            {
+                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
+                "device_id": "1aa56ca266214a93bfb871282ec87624",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_bssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "garagetext_sensorgarage_bssid"
             },
             {
                 "config_entry_id": null,
