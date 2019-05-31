@@ -1,16 +1,15 @@
 - platform: wake_on_lan
   name: NUC
   mac_address: !secret mac_nuc
-  host: nuc
+  host: nuc.local
   turn_off:
     service: shell_command.turn_off_nuc
 - platform: wake_on_lan
   name: Server
   mac_address: !secret mac_server
-  host: server
+  host: server.local
   turn_off:
     service: shell_command.turn_off_server
-
 - platform: mqtt
   name: TV Slaapkamer
   state_topic: "sonoff/4chpro-1/relay/2"

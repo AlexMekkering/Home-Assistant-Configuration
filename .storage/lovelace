@@ -106,19 +106,6 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "switch.nuc"
-                                },
-                                {
-                                    "entity": "switch.server"
-                                }
-                            ],
-                            "show_state": false,
-                            "title": "Computers",
-                            "type": "glance"
-                        },
-                        {
-                            "entities": [
-                                {
                                     "entity": "switch.ventilatie"
                                 },
                                 {
@@ -136,6 +123,35 @@
                             ],
                             "show_header_toggle": false,
                             "title": "Mechanische Ventilatie",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.nuc"
+                                },
+                                {
+                                    "entity": "switch.server"
+                                }
+                            ],
+                            "show_state": false,
+                            "title": "Computers",
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.zolder_pc"
+                                },
+                                {
+                                    "entity": "switch.zolder_printer"
+                                },
+                                {
+                                    "entity": "light.zolder_bureaulamp"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Zolder",
                             "type": "entities"
                         },
                         {
@@ -269,6 +285,23 @@
                                 }
                             ],
                             "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.slaapkamer_temperatuur",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "entity": "sensor.slaapkamer_luchtvochtigheid",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "entity": "sensor.slaapkamer_luchtdruk",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "type": "horizontal-stack"
                         }
                     ],
                     "icon": "mdi:thermometer-lines",
@@ -288,15 +321,14 @@
                                     "name": "Power Consumption"
                                 },
                                 {
-                                    "entity": "sensor.smartmeter_uptime"
+                                    "entity": "sensor.smartmeter_total_consumption",
+                                    "name": "Total"
                                 },
                                 {
-                                    "entity": "sensor.smartmeter_wifi_signal",
-                                    "name": "WiFi Signal"
+                                    "entity": "sensor.smartmeter_uptime"
                                 }
                             ],
                             "show_header_toggle": false,
-                            "title": "Smart Meter",
                             "type": "entities"
                         },
                         {
@@ -455,6 +487,37 @@
                             ],
                             "show_header_toggle": false,
                             "title": "RF Bridge",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.slaapkamer_achterwand_ip_address"
+                                },
+                                {
+                                    "entity": "sensor.slaapkamerklimaat_ip_address"
+                                },
+                                {
+                                    "entity": "sensor.garage_ip_address"
+                                },
+                                {
+                                    "entity": "sensor.smartmeter_ip_address"
+                                },
+                                {
+                                    "entity": "sensor.tv_meubel_ip_address"
+                                },
+                                {
+                                    "entity": "sensor.ventilatie_ip_address"
+                                },
+                                {
+                                    "entity": "sensor.veranda_wandcontactdoos_ip_address"
+                                },
+                                {
+                                    "entity": "sensor.zolder_ip_address"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Esphome",
                             "type": "entities"
                         }
                     ],
