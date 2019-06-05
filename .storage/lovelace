@@ -233,75 +233,118 @@
                     "badges": [],
                     "cards": [
                         {
-                            "cards": [
-                                {
-                                    "entity": "sensor.rookmelder_hal_temperature",
-                                    "name": "Hal",
-                                    "type": "sensor"
-                                },
-                                {
-                                    "entity": "sensor.rookmelder_overloop_temperature",
-                                    "name": "Overloop",
-                                    "type": "sensor"
-                                },
-                                {
-                                    "entity": "sensor.rookmelder_zolder_temperature",
-                                    "name": "Zolder",
-                                    "type": "sensor"
-                                }
-                            ],
-                            "type": "horizontal-stack"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "entity": "sensor.meterkast_temperatuur",
-                                    "type": "sensor"
-                                },
-                                {
-                                    "entity": "sensor.meterkast_luchtvochtigheid",
-                                    "type": "sensor"
-                                },
-                                {
-                                    "entity": "sensor.meterkast_luchtdruk",
-                                    "type": "sensor"
-                                }
-                            ],
-                            "type": "horizontal-stack"
-                        },
-                        {
-                            "cards": [
+                            "entities": [
                                 {
                                     "entity": "sensor.garage_temperatuur",
-                                    "type": "sensor"
+                                    "name": "Temperatuur"
                                 },
                                 {
                                     "entity": "sensor.garage_luchtvochtigheid",
-                                    "type": "sensor"
+                                    "name": "Luchtvochtigheid"
                                 },
                                 {
                                     "entity": "sensor.buiten_temperatuur",
-                                    "type": "sensor"
+                                    "name": "Buitentemperatuur"
                                 }
                             ],
-                            "type": "horizontal-stack"
+                            "show_header_toggle": false,
+                            "title": "Garage",
+                            "type": "entities"
                         },
                         {
-                            "cards": [
+                            "entities": [
+                                {
+                                    "entity": "sensor.woonkamer_temperatuur",
+                                    "name": "Temperatuur"
+                                },
+                                {
+                                    "entity": "sensor.woonkamer_luchtvochtigheid",
+                                    "name": "Luchtvochtigheid"
+                                },
+                                {
+                                    "entity": "sensor.woonkamer_luchtdruk",
+                                    "name": "Luchtdruk"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Woonkamer",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
                                 {
                                     "entity": "sensor.slaapkamer_temperatuur",
-                                    "type": "sensor"
+                                    "name": "Temperatuur"
                                 },
                                 {
                                     "entity": "sensor.slaapkamer_luchtvochtigheid",
-                                    "type": "sensor"
+                                    "name": "Luchtvochtigheid"
                                 },
                                 {
                                     "entity": "sensor.slaapkamer_luchtdruk",
-                                    "type": "sensor"
+                                    "name": "Luchtdruk"
                                 }
                             ],
-                            "type": "horizontal-stack"
+                            "show_header_toggle": false,
+                            "title": "Slaapkamer",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.zolder_temperatuur",
+                                    "name": "Temperatuur"
+                                },
+                                {
+                                    "entity": "sensor.zolder_luchtvochtigheid",
+                                    "name": "Luchtvochtigheid"
+                                },
+                                {
+                                    "entity": "sensor.zolder_luchtdruk",
+                                    "name": "Luchtdruk"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Zolder",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.meterkast_temperatuur",
+                                    "name": "Temperatuur"
+                                },
+                                {
+                                    "entity": "sensor.meterkast_luchtvochtigheid",
+                                    "name": "Luchtvochtigheid"
+                                },
+                                {
+                                    "entity": "sensor.meterkast_luchtdruk",
+                                    "name": "Luchtdruk"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Meterkast",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.rookmelder_zolder_temperature",
+                                    "name": "Zolder"
+                                },
+                                {
+                                    "entity": "sensor.rookmelder_overloop_temperature",
+                                    "name": "Overloop"
+                                },
+                                {
+                                    "entity": "sensor.rookmelder_hal_temperature",
+                                    "name": "Hal"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Temeraturen Rookmelders",
+                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:thermometer-lines",
