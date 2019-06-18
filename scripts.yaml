@@ -102,7 +102,7 @@ timer_tv_slaapkamer:
   alias: Timer TV Slaapkamer
   sequence:
     - condition: state
-      entity_id: switch.tv_slaapkamer
+      entity_id: switch.slaapkamer_tv
       state: 'on'
     - delay: '00:30:00'
     - service: script.turn_off_tv_slaapkamer
@@ -110,15 +110,15 @@ toggle_tv_slaapkamer:
   alias: Toggle TV Slaapkamer
   sequence:
     - service_template: >
-        {% if is_state('switch.tv_slaapkamer', 'off') %}
+        {% if is_state('switch.slaapkamer_tv', 'off') %}
           switch.turn_on
         {% else %}
           script.turn_on
         {% endif %}
       data_template:
         entity_id: >
-          {% if is_state('switch.tv_slaapkamer', 'off') %}
-            switch.tv_slaapkamer
+          {% if is_state('switch.slaapkamer_tv', 'off') %}
+            switch.slaapkamer_tv
           {% else %}
             script.turn_off_tv_slaapkamer
           {% endif %}
@@ -131,7 +131,7 @@ turn_off_tv_slaapkamer:
       entity_id: light.slaapkamer_achterwand
     - delay: 00:00:15
     - service: switch.turn_off
-      entity_id: switch.tv_slaapkamer
+      entity_id: switch.slaapkamer_tv
 
 ###############################
 # Media devices

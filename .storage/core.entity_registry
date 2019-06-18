@@ -1683,6 +1683,105 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "living_1sensorwoonkamer_temperatuur"
+            },
+            {
+                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
+                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
+                "disabled_by": null,
+                "entity_id": "light.nachtlampje_alex",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1lightnachtlampje_alex"
+            },
+            {
+                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
+                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
+                "disabled_by": null,
+                "entity_id": "light.nachtlampje_joyce",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1lightnachtlampje_joyce"
+            },
+            {
+                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
+                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
+                "disabled_by": null,
+                "entity_id": "switch.slaapkamer_tv",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1switchslaapkamer_tv"
+            },
+            {
+                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
+                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
+                "disabled_by": null,
+                "entity_id": "switch.slaapkamer_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1switchslaapkamer_restart"
+            },
+            {
+                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
+                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.slaapkamer_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1binary_sensorslaapkamer_status"
+            },
+            {
+                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
+                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194857ec7-wifisignal"
+            },
+            {
+                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
+                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194857ec7-version"
+            },
+            {
+                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
+                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_ip_address",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1text_sensorslaapkamer_ip_address"
+            },
+            {
+                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
+                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_bssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1text_sensorslaapkamer_bssid"
+            },
+            {
+                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
+                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_ssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1text_sensorslaapkamer_ssid"
+            },
+            {
+                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
+                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1text_sensorslaapkamer_uptime"
             }
         ]
     },

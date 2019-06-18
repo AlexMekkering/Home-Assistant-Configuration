@@ -62,7 +62,7 @@
                                     "entity": "light.slaapkamer_achterwand"
                                 },
                                 {
-                                    "entity": "switch.tv_slaapkamer"
+                                    "entity": "switch.slaapkamer_tv"
                                 },
                                 {
                                     "entity": "light.nachtlampje_alex"
