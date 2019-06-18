@@ -491,28 +491,6 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "binary_sensor.sonoff_4ch_pro_status"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_4ch_pro_version"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_4ch_pro_uptime"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_4ch_pro_freeheap"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_4ch_pro_rssi"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "4CH Pro",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
                                     "entity": "binary_sensor.sonoff_rf_bridge_status"
                                 },
                                 {
@@ -534,6 +512,9 @@
                         },
                         {
                             "entities": [
+                                {
+                                    "entity": "sensor.slaapkamer_ip_address"
+                                },
                                 {
                                     "entity": "sensor.slaapkamer_achterwand_ip_address"
                                 },

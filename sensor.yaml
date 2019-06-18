@@ -47,19 +47,6 @@
 # Sonoff MQTT sensors
 ########
 - platform: mqtt
-  name: "Sonoff 4CH PRO uptime"
-  state_topic: "sonoff/4chpro-1/uptime"
-- platform: mqtt
-  name: "Sonoff 4CH PRO freeheap"
-  state_topic: "sonoff/4chpro-1/freeheap"
-- platform: mqtt
-  name: "Sonoff 4CH PRO rssi"
-  state_topic: "sonoff/4chpro-1/rssi"
-  unit_of_measurement: "dB"
-- platform: mqtt
-  name: "Sonoff 4CH PRO version"
-  state_topic: "sonoff/4chpro-1/version"
-- platform: mqtt
   name: "Sonoff RF Bridge uptime"
   state_topic: "sonoff/rfbridge-1/uptime"
 - platform: mqtt
