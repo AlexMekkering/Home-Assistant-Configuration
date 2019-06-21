@@ -480,6 +480,19 @@
                             "show_header_toggle": false,
                             "title": "Zigbee",
                             "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.sonoff_rf_bridge_rfin"
+                                },
+                                {
+                                    "entity": "script.reset_rf"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "RF",
+                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:settings",

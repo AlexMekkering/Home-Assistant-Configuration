@@ -246,13 +246,18 @@
     entity_id: sensor.sonoff_rf_bridge_rfin
   condition:
     condition: template
-    value_template: '{{ trigger.to_state.state in ["6E9DA1","0DABE2","0DABE8"] }}'
+    value_template: '{{ trigger.to_state.state in ["6E9DA1","0DABE2","0DABE8","842162","842161","842168"] }}'
   action:
     - service_template: >
         {% set button = trigger.to_state.state %}
-        {% if button == "6E9DA1" %}
+        {% set switchOnCodes = ("6E9DA1",) %}
+        {% set switchToggleCodes = ("842162","842161") %}
+        {% set lightToggleCodes = ("0DABE8","842168") %}
+        {% if button in switchOnCodes %}
           switch.turn_on
-        {% elif button == "0DABE8" %}
+        {% elif button in switchToggleCodes %}
+          switch.toggle
+        {% elif button in lightToggleCodes %}
           light.toggle
         {% else %}
           script.turn_on
@@ -266,6 +271,12 @@
             light.slaapkamer_achterwand
           {% elif button == "0DABE2" %}
             script.toggle_tv_slaapkamer
+          {% elif button == "842162" %}
+            switch.zolder_pc
+          {% elif button == "842161" %}
+            switch.zolder_printer
+          {% elif button == "842168" %}
+            light.zolder_bureaulamp
           {% else %}
             script.noop
           {% endif %}
