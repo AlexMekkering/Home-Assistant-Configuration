@@ -488,6 +488,9 @@
                                 },
                                 {
                                     "entity": "script.reset_rf"
+                                },
+                                {
+                                    "entity": "automation.rf_buttons"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -530,9 +533,6 @@
                                 },
                                 {
                                     "entity": "sensor.slaapkamer_achterwand_ip_address"
-                                },
-                                {
-                                    "entity": "sensor.slaapkamerklimaat_ip_address"
                                 },
                                 {
                                     "entity": "sensor.garage_ip_address"

@@ -12,7 +12,7 @@
             },
             {
                 "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "4cf03eb90d1b4bf88b3051a15f0de820",
+                "device_id": "9d9201d7af044a59a9d76d9e59730a43",
                 "disabled_by": null,
                 "entity_id": "switch.hal_buitenlamp_voor",
                 "name": "Buiten",
@@ -30,7 +30,7 @@
             },
             {
                 "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "4cf03eb90d1b4bf88b3051a15f0de820",
+                "device_id": "9d9201d7af044a59a9d76d9e59730a43",
                 "disabled_by": null,
                 "entity_id": "sensor.hal_totaalverbruik_2",
                 "name": null,
@@ -57,7 +57,7 @@
             },
             {
                 "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "4cf03eb90d1b4bf88b3051a15f0de820",
+                "device_id": "9d9201d7af044a59a9d76d9e59730a43",
                 "disabled_by": null,
                 "entity_id": "sensor.hal_vermogen_2",
                 "name": null,
@@ -66,7 +66,7 @@
             },
             {
                 "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "4cf03eb90d1b4bf88b3051a15f0de820",
+                "device_id": "9d9201d7af044a59a9d76d9e59730a43",
                 "disabled_by": null,
                 "entity_id": "sensor.hal_exporting_2",
                 "name": null,
@@ -129,7 +129,7 @@
             },
             {
                 "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "5b49267b1e2f4de5a1fcf40c803907ec",
+                "device_id": "d2ecc14763cd4def83b6b15a77f0fac1",
                 "disabled_by": null,
                 "entity_id": "switch.overloop_not_connected",
                 "name": null,
@@ -147,7 +147,7 @@
             },
             {
                 "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "5b49267b1e2f4de5a1fcf40c803907ec",
+                "device_id": "d2ecc14763cd4def83b6b15a77f0fac1",
                 "disabled_by": null,
                 "entity_id": "sensor.overloop_energy_2",
                 "name": null,
@@ -174,7 +174,7 @@
             },
             {
                 "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "5b49267b1e2f4de5a1fcf40c803907ec",
+                "device_id": "d2ecc14763cd4def83b6b15a77f0fac1",
                 "disabled_by": null,
                 "entity_id": "sensor.overloop_power_2",
                 "name": null,
@@ -183,7 +183,7 @@
             },
             {
                 "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "5b49267b1e2f4de5a1fcf40c803907ec",
+                "device_id": "d2ecc14763cd4def83b6b15a77f0fac1",
                 "disabled_by": null,
                 "entity_id": "sensor.overloop_exporting_2",
                 "name": null,
@@ -236,107 +236,8 @@
                 "unique_id": "5-72057594127859889"
             },
             {
-                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
-                "device_id": "b6cc52381b1c443ea095d95380d6420a",
-                "disabled_by": null,
-                "entity_id": "light.toilet",
-                "name": null,
-                "platform": "tradfri",
-                "unique_id": "light-7e121d520440009f-65548"
-            },
-            {
-                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
-                "device_id": "b61dfff292e54e2da78e80782b61b144",
-                "disabled_by": null,
-                "entity_id": "light.linksachter",
-                "name": null,
-                "platform": "tradfri",
-                "unique_id": "light-7e121d520440009f-65544"
-            },
-            {
-                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
-                "device_id": "730a8b8e8f6c4c5bbd072deabf02d5a8",
-                "disabled_by": null,
-                "entity_id": "light.linksvoor",
-                "name": null,
-                "platform": "tradfri",
-                "unique_id": "light-7e121d520440009f-65537"
-            },
-            {
-                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
-                "device_id": "621f27cda5fe4ef7adcc2ea646ca7df7",
-                "disabled_by": null,
-                "entity_id": "light.eettafel_2",
-                "name": null,
-                "platform": "tradfri",
-                "unique_id": "light-7e121d520440009f-65540"
-            },
-            {
-                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
-                "device_id": "e570aeb794ae437395356b13a77eb0a2",
-                "disabled_by": null,
-                "entity_id": "light.raam",
-                "name": null,
-                "platform": "tradfri",
-                "unique_id": "light-7e121d520440009f-65539"
-            },
-            {
-                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
-                "device_id": "70a1c90d432e44ffbde763df5278edb6",
-                "disabled_by": null,
-                "entity_id": "light.eettafel_1",
-                "name": null,
-                "platform": "tradfri",
-                "unique_id": "light-7e121d520440009f-65538"
-            },
-            {
-                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
-                "device_id": "f542b25090ad4acd88ecd729d7d0f3cd",
-                "disabled_by": null,
-                "entity_id": "light.schilderij",
-                "name": null,
-                "platform": "tradfri",
-                "unique_id": "light-7e121d520440009f-65546"
-            },
-            {
-                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
-                "device_id": "d3ee7e9cd5ff40bdbf28e94fb8364e19",
-                "disabled_by": null,
-                "entity_id": "light.eettafel_3",
-                "name": null,
-                "platform": "tradfri",
-                "unique_id": "light-7e121d520440009f-65541"
-            },
-            {
-                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "light.woonkamer",
-                "name": null,
-                "platform": "tradfri",
-                "unique_id": "group-7e121d520440009f-141878"
-            },
-            {
-                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "light.wc_beneden",
-                "name": null,
-                "platform": "tradfri",
-                "unique_id": "group-7e121d520440009f-141879"
-            },
-            {
-                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "light.eettafel",
-                "name": null,
-                "platform": "tradfri",
-                "unique_id": "group-7e121d520440009f-133675"
-            },
-            {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "b0138725be5d4f1b9e23b6f7786e258d",
                 "disabled_by": null,
                 "entity_id": "zwave.usb_stick",
                 "name": null,
@@ -344,8 +245,8 @@
                 "unique_id": "node-1"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "0aeb1ae903f445849f3e067a6cb743e5",
                 "disabled_by": null,
                 "entity_id": "zwave.remote",
                 "name": null,
@@ -353,8 +254,8 @@
                 "unique_id": "node-2"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "4cf03eb90d1b4bf88b3051a15f0de820",
                 "disabled_by": null,
                 "entity_id": "zwave.hal",
                 "name": null,
@@ -362,8 +263,8 @@
                 "unique_id": "node-4"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "5b49267b1e2f4de5a1fcf40c803907ec",
                 "disabled_by": null,
                 "entity_id": "zwave.overloop",
                 "name": null,
@@ -390,7 +291,7 @@
             },
             {
                 "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "5b49267b1e2f4de5a1fcf40c803907ec",
+                "device_id": "d2ecc14763cd4def83b6b15a77f0fac1",
                 "disabled_by": null,
                 "entity_id": "sensor.overloop_previous_reading_2",
                 "name": null,
@@ -399,7 +300,7 @@
             },
             {
                 "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "5b49267b1e2f4de5a1fcf40c803907ec",
+                "device_id": "d2ecc14763cd4def83b6b15a77f0fac1",
                 "disabled_by": null,
                 "entity_id": "sensor.overloop_interval_2",
                 "name": null,
@@ -407,17 +308,8 @@
                 "unique_id": "5-144115188164755491"
             },
             {
-                "config_entry_id": "ffbb75e28f004af598dd322ec6514f13",
-                "device_id": "e97bd2ceef5d4de08873855ef6f78205",
-                "disabled_by": null,
-                "entity_id": "light.tradfri_bulb_e27_ws_opal_980lm_4",
-                "name": null,
-                "platform": "tradfri",
-                "unique_id": "light-7e121d520440009f-65549"
-            },
-            {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "077fa5c7908644d8a834851b097aac18",
                 "disabled_by": null,
                 "entity_id": "zwave.rookmelder_hal",
                 "name": "Rookmelder Hal",
@@ -551,8 +443,8 @@
                 "unique_id": "7-72057594160349184"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "d97bdad9aa0b44a58ee53ede6407ae55",
                 "disabled_by": null,
                 "entity_id": "zwave.rookmelder_overloop",
                 "name": "Rookmelder Overloop",
@@ -677,8 +569,8 @@
                 "unique_id": "8-72057594177126400"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "1d29fb58e9454f58b4be8a24b670176d",
                 "disabled_by": null,
                 "entity_id": "zwave.rookmelder_zolder",
                 "name": "Rookmelder Zolder",
@@ -1253,15 +1145,6 @@
                 "unique_id": "garagetext_sensorgarage_bssid"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "binary_sensor.remote_ui",
-                "name": null,
-                "platform": "cloud",
-                "unique_id": "cloud-remote-ui-connectivity"
-            },
-            {
                 "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
                 "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
                 "disabled_by": null,
@@ -1323,105 +1206,6 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "smartmetersensorsmartmeter_total_consumption"
-            },
-            {
-                "config_entry_id": "3d18101623fe4b51990b638d8d390b03",
-                "device_id": "79e30b5c45c747aba68af7914e446222",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_luchtdruk",
-                "name": "Luchtdruk Slaapkamer",
-                "platform": "esphome",
-                "unique_id": "bedroom_3sensorslaapkamer_luchtdruk"
-            },
-            {
-                "config_entry_id": "3d18101623fe4b51990b638d8d390b03",
-                "device_id": "79e30b5c45c747aba68af7914e446222",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamerklimaat_wifi_signal",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "cc50e304cccb-wifisignal"
-            },
-            {
-                "config_entry_id": "3d18101623fe4b51990b638d8d390b03",
-                "device_id": "79e30b5c45c747aba68af7914e446222",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_temperatuur",
-                "name": "Temperatuur Slaapkamer",
-                "platform": "esphome",
-                "unique_id": "bedroom_3sensorslaapkamer_temperatuur"
-            },
-            {
-                "config_entry_id": "3d18101623fe4b51990b638d8d390b03",
-                "device_id": "79e30b5c45c747aba68af7914e446222",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_luchtvochtigheid",
-                "name": "Luchtvochtigheid Slaapkamer",
-                "platform": "esphome",
-                "unique_id": "bedroom_3sensorslaapkamer_luchtvochtigheid"
-            },
-            {
-                "config_entry_id": "3d18101623fe4b51990b638d8d390b03",
-                "device_id": "79e30b5c45c747aba68af7914e446222",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamerklimaat_ssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_3text_sensorslaapkamerklimaat_ssid"
-            },
-            {
-                "config_entry_id": "3d18101623fe4b51990b638d8d390b03",
-                "device_id": "79e30b5c45c747aba68af7914e446222",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamerklimaat_ip_address",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_3text_sensorslaapkamerklimaat_ip_address"
-            },
-            {
-                "config_entry_id": "3d18101623fe4b51990b638d8d390b03",
-                "device_id": "79e30b5c45c747aba68af7914e446222",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamerklimaat_bssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_3text_sensorslaapkamerklimaat_bssid"
-            },
-            {
-                "config_entry_id": "3d18101623fe4b51990b638d8d390b03",
-                "device_id": "79e30b5c45c747aba68af7914e446222",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamerklimaat_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_3text_sensorslaapkamerklimaat_uptime"
-            },
-            {
-                "config_entry_id": "3d18101623fe4b51990b638d8d390b03",
-                "device_id": "79e30b5c45c747aba68af7914e446222",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamerklimaat_esphome_version",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "cc50e304cccb-version"
-            },
-            {
-                "config_entry_id": "3d18101623fe4b51990b638d8d390b03",
-                "device_id": "79e30b5c45c747aba68af7914e446222",
-                "disabled_by": null,
-                "entity_id": "switch.slaapkamerklimaat_restart",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_3switchslaapkamerklimaat_restart"
-            },
-            {
-                "config_entry_id": "3d18101623fe4b51990b638d8d390b03",
-                "device_id": "79e30b5c45c747aba68af7914e446222",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.slaapkamerklimaat_status",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_3binary_sensorslaapkamerklimaat_status"
             },
             {
                 "config_entry_id": "f97cea92bcff424888258259a989d74d",
@@ -1782,6 +1566,114 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "bedroom_1text_sensorslaapkamer_uptime"
+            },
+            {
+                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
+                "device_id": "a890b108a14540a1a9ed825447cf4d92",
+                "disabled_by": null,
+                "entity_id": "light.schilderij",
+                "name": null,
+                "platform": "deconz",
+                "unique_id": "00:0b:57:ff:fe:e8:92:b4-01"
+            },
+            {
+                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
+                "device_id": "0eed0de2ee994ed396f150387e604051",
+                "disabled_by": null,
+                "entity_id": "light.raam",
+                "name": null,
+                "platform": "deconz",
+                "unique_id": "00:0b:57:ff:fe:27:1e:c0-01"
+            },
+            {
+                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
+                "device_id": "78d915fa40724e95a12683b8c53ec84c",
+                "disabled_by": null,
+                "entity_id": "light.linksvoor",
+                "name": null,
+                "platform": "deconz",
+                "unique_id": "00:0b:57:ff:fe:10:4d:b1-01"
+            },
+            {
+                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
+                "device_id": "5134de2bcbb647169f7bd156a167a8b2",
+                "disabled_by": null,
+                "entity_id": "light.linksachter",
+                "name": null,
+                "platform": "deconz",
+                "unique_id": "00:0b:57:ff:fe:b8:55:6b-01"
+            },
+            {
+                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
+                "device_id": "528d62adc5fc483c8f3b2ae6e19c3a59",
+                "disabled_by": null,
+                "entity_id": "light.eettafel3",
+                "name": null,
+                "platform": "deconz",
+                "unique_id": "00:0b:57:ff:fe:13:f7:a5-01"
+            },
+            {
+                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
+                "device_id": "e440b55422fb41f293e584e0e55ae546",
+                "disabled_by": null,
+                "entity_id": "light.eettafel1",
+                "name": null,
+                "platform": "deconz",
+                "unique_id": "00:0b:57:ff:fe:30:92:ee-01"
+            },
+            {
+                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
+                "device_id": "a1719f4ebdd74b3c825c27ea2f07e6ed",
+                "disabled_by": null,
+                "entity_id": "light.eettafel2",
+                "name": null,
+                "platform": "deconz",
+                "unique_id": "00:0b:57:ff:fe:2a:42:41-01"
+            },
+            {
+                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
+                "device_id": "558c12e32ee24350aa2dfbcfa38b40cd",
+                "disabled_by": null,
+                "entity_id": "sensor.daylight",
+                "name": null,
+                "platform": "deconz",
+                "unique_id": "00:21:2e:ff:ff:04:84:81-01"
+            },
+            {
+                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
+                "device_id": "cf14f5519811452292c914b4624d7dd0",
+                "disabled_by": null,
+                "entity_id": "sensor.tradfri_remote_control_battery_level",
+                "name": null,
+                "platform": "deconz",
+                "unique_id": "00:0b:57:ff:fe:11:86:7e-01-1000"
+            },
+            {
+                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
+                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_luchtdruk",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1sensorslaapkamer_luchtdruk"
+            },
+            {
+                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
+                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_luchtvochtigheid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1sensorslaapkamer_luchtvochtigheid"
+            },
+            {
+                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
+                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_temperatuur",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1sensorslaapkamer_temperatuur"
             }
         ]
     },

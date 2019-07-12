@@ -1,1 +1,4 @@
 default: error
+# logs:
+#   pydeconz: debug
+#   homeassistant.components.deconz: debug
