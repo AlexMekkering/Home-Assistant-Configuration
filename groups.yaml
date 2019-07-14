@@ -47,7 +47,7 @@ someone_home:
     - switch.slaapkamer_tv
     - light.nachtlampje_alex
     - light.nachtlampje_joyce
-    - switch.nuc
+    - switch.zolder_pc
     - binary_sensor.alex_home
     - binary_sensor.joyce_home
 

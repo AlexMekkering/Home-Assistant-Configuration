@@ -106,41 +106,6 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "switch.ventilatie"
-                                },
-                                {
-                                    "entity": "sensor.ventilatie_power"
-                                },
-                                {
-                                    "entity": "sensor.ventilatie_voltage"
-                                },
-                                {
-                                    "entity": "sensor.ventilatie_current"
-                                },
-                                {
-                                    "entity": "switch.ventilatie_auto_poweroff"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Mechanische Ventilatie",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.nuc"
-                                },
-                                {
-                                    "entity": "switch.server"
-                                }
-                            ],
-                            "show_state": false,
-                            "title": "Computers",
-                            "type": "glance"
-                        },
-                        {
-                            "entities": [
-                                {
                                     "entity": "switch.zolder_pc"
                                 },
                                 {
@@ -169,6 +134,28 @@
                             "show_state": false,
                             "title": "Mediaspelers",
                             "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.ventilatie"
+                                },
+                                {
+                                    "entity": "sensor.ventilatie_power"
+                                },
+                                {
+                                    "entity": "sensor.ventilatie_voltage"
+                                },
+                                {
+                                    "entity": "sensor.ventilatie_current"
+                                },
+                                {
+                                    "entity": "switch.ventilatie_auto_poweroff"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Mechanische Ventilatie",
+                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:desktop-classic",
