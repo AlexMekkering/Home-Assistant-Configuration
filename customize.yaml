@@ -1,31 +1,9 @@
-switch.tv_meubel_tv:
-  icon: mdi:television
-switch.tv_slaapkamer:
-  icon: mdi:television
-switch.tv_meubel_receiver:
-  icon: mdi:speaker
-switch.tv_meubel_mediaspeler:
-  icon: mdi:kodi
-switch.nuc:
-  icon: mdi:desktop-classic
-switch.server:
-  icon: mdi:desktop-tower
 switch.hal_lamp:
   icon: mdi:lightbulb
 switch.hal_buitenlamp_voor:
   icon: mdi:lightbulb
 switch.overloop_lamp:
   icon: mdi:lightbulb
-group.all_automations:
-  hidden: false
-group.all_scripts:
-  hidden: false
-group.all_devices:
-  hidden: false
-group.all_switches:
-  hidden: false
-group.all_lights:
-  hidden: false
 script.all_off:
   icon: mdi:power-plug-off
 script.timer_tv_slaapkamer:

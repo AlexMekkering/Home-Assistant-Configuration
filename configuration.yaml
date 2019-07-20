@@ -62,9 +62,6 @@ group: !include groups.yaml
 media_player: !include mediaplayer.yaml
 sensor: !include sensor.yaml
 binary_sensor: !include binary_sensor.yaml
-fan: !include fan.yaml
-switch: !include switch.yaml
-light: !include light.yaml
 input_select: !include input_select.yaml
 input_boolean: !include input_boolean.yaml
 automation: !include automations.yaml

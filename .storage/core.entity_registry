@@ -770,15 +770,6 @@
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
                 "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
                 "disabled_by": null,
-                "entity_id": "sensor.smartmeter_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "smartmetertext_sensorsmartmeter_uptime"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
-                "disabled_by": null,
                 "entity_id": "sensor.smartmeter_ip_address",
                 "name": null,
                 "platform": "esphome",
@@ -911,15 +902,6 @@
                 "unique_id": "bedroom_2binary_sensorslaapkamer_achterwand_status"
             },
             {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_achterwand_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_2text_sensorslaapkamer_achterwand_uptime"
-            },
-            {
                 "config_entry_id": "f97cea92bcff424888258259a989d74d",
                 "device_id": "85fdea95027140e88e53572fe8cb1f98",
                 "disabled_by": null,
@@ -927,15 +909,6 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "living_1binary_sensortv_meubel_status"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "sensor.tv_meubel_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "living_1text_sensortv_meubel_uptime"
             },
             {
                 "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
@@ -990,15 +963,6 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "2c3ae8071da8-version"
-            },
-            {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "sensor.ventilatie_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "ventilationtext_sensorventilatie_uptime"
             },
             {
                 "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
@@ -1080,15 +1044,6 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "garagesensorgarage_luchtvochtigheid"
-            },
-            {
-                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "1aa56ca266214a93bfb871282ec87624",
-                "disabled_by": null,
-                "entity_id": "sensor.garage_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "garagetext_sensorgarage_uptime"
             },
             {
                 "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
@@ -1179,15 +1134,6 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "3c71bf2bdf38-wifisignal"
-            },
-            {
-                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
-                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
-                "disabled_by": null,
-                "entity_id": "sensor.veranda_wandcontactdoos_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "veranda_wcdtext_sensorveranda_wandcontactdoos_uptime"
             },
             {
                 "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
@@ -1332,15 +1278,6 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "attic_1text_sensorzolder_ssid"
-            },
-            {
-                "config_entry_id": "408f595a40914407952195627181e8ed",
-                "device_id": "8d97f9efbd1942018347a2ab7381a193",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1text_sensorzolder_uptime"
             },
             {
                 "config_entry_id": "408f595a40914407952195627181e8ed",
@@ -1559,15 +1496,6 @@
                 "unique_id": "bedroom_1text_sensorslaapkamer_ssid"
             },
             {
-                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
-                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_1text_sensorslaapkamer_uptime"
-            },
-            {
                 "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
                 "device_id": "a890b108a14540a1a9ed825447cf4d92",
                 "disabled_by": null,
@@ -1674,6 +1602,78 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "bedroom_1sensorslaapkamer_temperatuur"
+            },
+            {
+                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
+                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
+                "disabled_by": null,
+                "entity_id": "sensor.smartmeter_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f2265d1cb-uptime"
+            },
+            {
+                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
+                "device_id": "1aa56ca266214a93bfb871282ec87624",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f2265d21d-uptime"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_achterwand_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae80581e3-uptime"
+            },
+            {
+                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
+                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194857ec7-uptime"
+            },
+            {
+                "config_entry_id": "f97cea92bcff424888258259a989d74d",
+                "device_id": "85fdea95027140e88e53572fe8cb1f98",
+                "disabled_by": null,
+                "entity_id": "sensor.tv_meubel_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194891236-uptime"
+            },
+            {
+                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
+                "device_id": "29681c1e46e14b8cb856ee445c753619",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae8071da8-uptime"
+            },
+            {
+                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
+                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_wandcontactdoos_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "3c71bf2bdf38-uptime"
+            },
+            {
+                "config_entry_id": "408f595a40914407952195627181e8ed",
+                "device_id": "8d97f9efbd1942018347a2ab7381a193",
+                "disabled_by": null,
+                "entity_id": "sensor.zolder_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194a3458d-uptime"
             }
         ]
     },
