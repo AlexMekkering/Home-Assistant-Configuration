@@ -448,7 +448,7 @@
                                     "entity": "input_select.logger_level_zwave"
                                 },
                                 {
-                                    "entity": "input_select.logger_level_tradfri"
+                                    "entity": "input_select.logger_level_deconz"
                                 }
                             ],
                             "show_header_toggle": false,

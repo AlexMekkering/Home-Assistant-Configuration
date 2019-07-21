@@ -21,8 +21,8 @@ logger_level_zwave:
     - warning
     - info
     - debug
-logger_level_tradfri:
-  name: Logger Level Tradfri
+logger_level_deconz:
+  name: Logger Level deCONZ
   options:
     - error
     - warning

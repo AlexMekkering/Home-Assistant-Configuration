@@ -119,15 +119,18 @@
     - service: logger.set_level
       data_template:
         homeassistant.components.zwave.util: "{{ trigger.to_state.state }}"
-- id: select_logger_level_tradfri
-  alias: Select Logger Level Tradfri
+- id: select_logger_level_deconz
+  alias: Select Logger Level deCONZ
   trigger:
     platform: state
-    entity_id: input_select.logger_level_tradfri
+    entity_id: input_select.logger_level_deconz
   action:
     - service: logger.set_level
       data_template:
-        pytradfri.coap_cli: "{{ trigger.to_state.state }}"
+        pydeconz: "{{ trigger.to_state.state }}"
+    - service: logger.set_level
+      data_template:
+        homeassistant.components.deconz: "{{ trigger.to_state.state }}"
 - id: startup
   alias: Opstarten
   initial_state: 'on'
