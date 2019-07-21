@@ -242,48 +242,48 @@
             script.select_lights_all_off
           {% endif %}
 
-- id: rf_buttons
-  alias: RF Buttons
+###############################
+# Rookmelders
+###############################
+- id: rf_button_tv_slaapkamer
+  alias: RF Button TV Slaapkamer
   trigger:
-    platform: state
-    entity_id: sensor.sonoff_rf_bridge_rfin
-  condition:
-    condition: template
-    value_template: '{{ trigger.to_state.state in ["6E9DA1","0DABE2","0DABE8","842162","842161","842168"] }}'
+  - platform: state
+    entity_id: 'binary_sensor.rf_button_tv_slaapkamer'
+    from: 'off'
+    to: 'on'
   action:
-    - service_template: >
-        {% set button = trigger.to_state.state %}
-        {% set switchOnCodes = ("6E9DA1",) %}
-        {% set switchToggleCodes = ("842162","842161") %}
-        {% set lightToggleCodes = ("0DABE8","842168") %}
-        {% if button in switchOnCodes %}
-          switch.turn_on
-        {% elif button in switchToggleCodes %}
-          switch.toggle
-        {% elif button in lightToggleCodes %}
-          light.toggle
-        {% else %}
-          script.turn_on
-        {% endif %}
-      data_template:
-        entity_id: >
-          {% set button = trigger.to_state.state %}
-          {% if button == "6E9DA1" %}
-            switch.ventilatie
-          {% elif button == "0DABE8" %}
-            light.slaapkamer_achterwand
-          {% elif button == "0DABE2" %}
-            script.toggle_tv_slaapkamer
-          {% elif button == "842162" %}
-            switch.zolder_pc
-          {% elif button == "842161" %}
-            switch.zolder_printer
-          {% elif button == "842168" %}
-            light.zolder_bureaulamp
-          {% else %}
-            script.noop
-          {% endif %}
-    - service: script.reset_rf
+  - service: script.toggle_tv_slaapkamer
+- id: rf_button_pc_zolder
+  alias: RF Button PC Zolder
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.rf_button_pc_zolder'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: switch.toggle
+    entity_id: switch.zolder_pc
+- id: rf_button_printer
+  alias: RF Button Printer
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.rf_button_printer'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: switch.toggle
+    entity_id: switch.zolder_printer
+- id: rf_button_bureaulamp_zolder
+  alias: RF Button Bureaulamp Zolder
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.rf_button_bureaulamp_zolder'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: light.toggle
+    entity_id: light.zolder_bureaulamp
 
 ###############################
 # Timers licht

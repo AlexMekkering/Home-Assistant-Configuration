@@ -44,19 +44,6 @@ detect_lights:
       entity_id: automation.light_scene_select
 
 ###############################
-# RF
-###############################
-reset_rf:
-  alias: Reset RF
-  sequence:
-    - wait_template: "{{ is_state('binary_sensor.sonoff_rf_bridge_status', 'on') }}"
-      timeout: 00:00:30
-    - service: mqtt.publish
-      data:
-        topic: "sonoff/rfbridge-1/rfin"
-        payload: "------"
-
-###############################
 # Lights
 ###############################
 all_lights_off:

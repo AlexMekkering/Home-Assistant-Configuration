@@ -410,12 +410,6 @@
                                 },
                                 {
                                     "entity": "sensor.network_out_enp3s0"
-                                },
-                                {
-                                    "entity": "sensor.network_in_enp0s21f0u2u4"
-                                },
-                                {
-                                    "entity": "sensor.network_out_enp0s21f0u2u4"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -454,22 +448,6 @@
                             "show_header_toggle": false,
                             "title": "Logging Levels",
                             "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.sonoff_rf_bridge_rfin"
-                                },
-                                {
-                                    "entity": "script.reset_rf"
-                                },
-                                {
-                                    "entity": "automation.rf_buttons"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "RF",
-                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:settings",
@@ -478,28 +456,6 @@
                 {
                     "badges": [],
                     "cards": [
-                        {
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.sonoff_rf_bridge_status"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_rf_bridge_version"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_rf_bridge_uptime"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_rf_bridge_freeheap"
-                                },
-                                {
-                                    "entity": "sensor.sonoff_rf_bridge_rssi"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "RF Bridge",
-                            "type": "entities"
-                        },
                         {
                             "entities": [
                                 {

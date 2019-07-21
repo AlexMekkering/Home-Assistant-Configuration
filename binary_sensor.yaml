@@ -1,10 +1,3 @@
-- platform: mqtt
-  name: "Sonoff RF Bridge status"
-  state_topic: "sonoff/rfbridge-1/status"
-  device_class: connectivity
-  payload_on: "1"
-  payload_off: "0"
-
 - platform: template
   sensors:
     alex_home:

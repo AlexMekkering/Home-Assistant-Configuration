@@ -1674,6 +1674,69 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "600194a3458d-uptime"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "person.alex",
+                "name": null,
+                "platform": "person",
+                "unique_id": "c5b38477183e4edc8b1ef47c2c0d5890"
+            },
+            {
+                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
+                "device_id": "29681c1e46e14b8cb856ee445c753619",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.ventilatie_rf_button",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationbinary_sensorventilatie_rf_button"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.rf_button_bureaulamp_zolder",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorrf_button_bureaulamp_zolder"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.rf_button_printer",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorrf_button_printer"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.rf_button_pc_zolder",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorrf_button_pc_zolder"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.slaapkamer_achterwand_rf_button",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorslaapkamer_achterwand_rf_button"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.rf_button_tv_slaapkamer",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorrf_button_tv_slaapkamer"
             }
         ]
     },
