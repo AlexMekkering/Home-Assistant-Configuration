@@ -1352,33 +1352,6 @@
                 "unique_id": "attic_1lightzolder_bureaulamp"
             },
             {
-                "config_entry_id": "408f595a40914407952195627181e8ed",
-                "device_id": "8d97f9efbd1942018347a2ab7381a193",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_luchtdruk",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1sensorzolder_luchtdruk"
-            },
-            {
-                "config_entry_id": "408f595a40914407952195627181e8ed",
-                "device_id": "8d97f9efbd1942018347a2ab7381a193",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_luchtvochtigheid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1sensorzolder_luchtvochtigheid"
-            },
-            {
-                "config_entry_id": "408f595a40914407952195627181e8ed",
-                "device_id": "8d97f9efbd1942018347a2ab7381a193",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_temperatuur",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1sensorzolder_temperatuur"
-            },
-            {
                 "config_entry_id": "f97cea92bcff424888258259a989d74d",
                 "device_id": "85fdea95027140e88e53572fe8cb1f98",
                 "disabled_by": null,

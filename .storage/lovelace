@@ -279,25 +279,6 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "sensor.zolder_temperatuur",
-                                    "name": "Temperatuur"
-                                },
-                                {
-                                    "entity": "sensor.zolder_luchtvochtigheid",
-                                    "name": "Luchtvochtigheid"
-                                },
-                                {
-                                    "entity": "sensor.zolder_luchtdruk",
-                                    "name": "Luchtdruk"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Zolder",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
                                     "entity": "sensor.meterkast_temperatuur",
                                     "name": "Temperatuur"
                                 },
