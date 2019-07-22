@@ -483,11 +483,20 @@
   action:
     - service_template: >
         {% if trigger.to_state.state == 'on' %}
-          script.turn_off
+          timer.cancel
         {% else %}
-          script.turn_on
+          timer.start
         {% endif %}
-      entity_id: script.timer_tv_slaapkamer
+      entity_id: timer.tv_slaapkamer
+- id: timer_tv_slaapkamer
+  alias: Timer TV Slaapkamer
+  trigger:
+    - platform: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.tv_slaapkamer
+  action:
+    - service: script.turn_off_tv_slaapkamer
 
 ###############################
 # Rookmelders

@@ -71,7 +71,7 @@
                                     "entity": "light.nachtlampje_joyce"
                                 },
                                 {
-                                    "entity": "script.timer_tv_slaapkamer"
+                                    "entity": "timer.tv_slaapkamer"
                                 }
                             ],
                             "show_header_toggle": false,

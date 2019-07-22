@@ -87,14 +87,6 @@ tv_slaapkamer_aan:
       state: 'below_horizon'
     - service: light.turn_on
       entity_id: light.slaapkamer_achterwand
-timer_tv_slaapkamer:
-  alias: Timer TV Slaapkamer
-  sequence:
-    - condition: state
-      entity_id: switch.slaapkamer_tv
-      state: 'on'
-    - delay: '00:30:00'
-    - service: script.turn_off_tv_slaapkamer
 toggle_tv_slaapkamer:
   alias: Toggle TV Slaapkamer
   sequence:
