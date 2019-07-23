@@ -311,16 +311,13 @@
                                 }
                             ],
                             "show_header_toggle": false,
-                            "title": "Temeraturen Rookmelders",
+                            "title": "Temperaturen Rookmelders",
                             "type": "entities"
                         },
                         {
                             "entities": [
                                 {
                                     "entity": "sensor.temperatuurverschil_buiten_binnen"
-                                },
-                                {
-                                    "entity": "automation.notificatie_temperatuur_buiten_binnen"
                                 }
                             ],
                             "show_header_toggle": false,

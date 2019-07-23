@@ -16,6 +16,7 @@ default_config:
 
 logger: !include logger.yaml
 recorder:
+  purge_keep_days: 1
 influxdb: !include influxdb.yaml
 notify: !include notify.yaml
 group: !include groups.yaml
