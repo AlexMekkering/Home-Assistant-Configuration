@@ -313,6 +313,19 @@
                             "show_header_toggle": false,
                             "title": "Temeraturen Rookmelders",
                             "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.temperatuurverschil_buiten_binnen"
+                                },
+                                {
+                                    "entity": "automation.notificatie_temperatuur_buiten_binnen"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Temperatuurmonitoring",
+                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:thermometer-lines",

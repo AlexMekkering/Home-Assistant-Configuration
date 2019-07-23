@@ -497,6 +497,19 @@
         entity_id: timer.tv_slaapkamer
   action:
     - service: script.turn_off_tv_slaapkamer
+- id: notify_temperature_difference
+  alias: Notificatie Temperatuur Buiten-Binnen
+  initial_state: 'off'
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.temperatuurverschil_buiten_binnen
+    above: 0
+  action:
+  - service: script.notify_admin
+    data:
+      message: Temperatuur buiten hoger dan binnen
+  - service: automation.turn_off
+    entity_id: automation.notify_temperature_difference
 
 ###############################
 # Rookmelders

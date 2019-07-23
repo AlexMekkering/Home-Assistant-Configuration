@@ -51,4 +51,8 @@
       friendly_name: "Batterijniveau"
       device_class: battery
       value_template: "{{ state_attr('zwave.rookmelder_zolder', 'battery_level') }}"
+    temperatuurverschil_buiten_binnen:
+      friendly_name: Temperatuurverschil Buiten-Binnen
+      device_class: temperature
+      value_template: "{{ (states('sensor.buiten_temperatuur')|float - states('sensor.woonkamer_temperatuur')|float)|round(1) }}"
 
