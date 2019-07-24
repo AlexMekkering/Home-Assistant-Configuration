@@ -243,7 +243,7 @@
           {% endif %}
 
 ###############################
-# Rookmelders
+# RF Buttons
 ###############################
 - id: rf_button_tv_slaapkamer
   alias: RF Button TV Slaapkamer
@@ -254,36 +254,6 @@
     to: 'on'
   action:
   - service: script.toggle_tv_slaapkamer
-- id: rf_button_pc_zolder
-  alias: RF Button PC Zolder
-  trigger:
-  - platform: state
-    entity_id: 'binary_sensor.rf_button_pc_zolder'
-    from: 'off'
-    to: 'on'
-  action:
-  - service: switch.toggle
-    entity_id: switch.zolder_pc
-- id: rf_button_printer
-  alias: RF Button Printer
-  trigger:
-  - platform: state
-    entity_id: 'binary_sensor.rf_button_printer'
-    from: 'off'
-    to: 'on'
-  action:
-  - service: switch.toggle
-    entity_id: switch.zolder_printer
-- id: rf_button_bureaulamp_zolder
-  alias: RF Button Bureaulamp Zolder
-  trigger:
-  - platform: state
-    entity_id: 'binary_sensor.rf_button_bureaulamp_zolder'
-    from: 'off'
-    to: 'on'
-  action:
-  - service: light.toggle
-    entity_id: light.zolder_bureaulamp
 
 ###############################
 # Timers licht

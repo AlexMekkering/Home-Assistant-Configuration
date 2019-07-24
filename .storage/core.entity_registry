@@ -1262,96 +1262,6 @@
                 "unique_id": "veranda_wcdtext_sensorveranda_wandcontactdoos_ssid"
             },
             {
-                "config_entry_id": "408f595a40914407952195627181e8ed",
-                "device_id": "8d97f9efbd1942018347a2ab7381a193",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_wifi_signal",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "600194a3458d-wifisignal"
-            },
-            {
-                "config_entry_id": "408f595a40914407952195627181e8ed",
-                "device_id": "8d97f9efbd1942018347a2ab7381a193",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_ssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1text_sensorzolder_ssid"
-            },
-            {
-                "config_entry_id": "408f595a40914407952195627181e8ed",
-                "device_id": "8d97f9efbd1942018347a2ab7381a193",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_esphome_version",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "600194a3458d-version"
-            },
-            {
-                "config_entry_id": "408f595a40914407952195627181e8ed",
-                "device_id": "8d97f9efbd1942018347a2ab7381a193",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_bssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1text_sensorzolder_bssid"
-            },
-            {
-                "config_entry_id": "408f595a40914407952195627181e8ed",
-                "device_id": "8d97f9efbd1942018347a2ab7381a193",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_ip_address",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1text_sensorzolder_ip_address"
-            },
-            {
-                "config_entry_id": "408f595a40914407952195627181e8ed",
-                "device_id": "8d97f9efbd1942018347a2ab7381a193",
-                "disabled_by": null,
-                "entity_id": "switch.zolder_pc",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1switchzolder_pc"
-            },
-            {
-                "config_entry_id": "408f595a40914407952195627181e8ed",
-                "device_id": "8d97f9efbd1942018347a2ab7381a193",
-                "disabled_by": null,
-                "entity_id": "switch.zolder_printer",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1switchzolder_printer"
-            },
-            {
-                "config_entry_id": "408f595a40914407952195627181e8ed",
-                "device_id": "8d97f9efbd1942018347a2ab7381a193",
-                "disabled_by": null,
-                "entity_id": "switch.zolder_restart",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1switchzolder_restart"
-            },
-            {
-                "config_entry_id": "408f595a40914407952195627181e8ed",
-                "device_id": "8d97f9efbd1942018347a2ab7381a193",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.zolder_status",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1binary_sensorzolder_status"
-            },
-            {
-                "config_entry_id": "408f595a40914407952195627181e8ed",
-                "device_id": "8d97f9efbd1942018347a2ab7381a193",
-                "disabled_by": null,
-                "entity_id": "light.zolder_bureaulamp",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1lightzolder_bureaulamp"
-            },
-            {
                 "config_entry_id": "f97cea92bcff424888258259a989d74d",
                 "device_id": "85fdea95027140e88e53572fe8cb1f98",
                 "disabled_by": null,
@@ -1640,15 +1550,6 @@
                 "unique_id": "3c71bf2bdf38-uptime"
             },
             {
-                "config_entry_id": "408f595a40914407952195627181e8ed",
-                "device_id": "8d97f9efbd1942018347a2ab7381a193",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "600194a3458d-uptime"
-            },
-            {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
@@ -1658,51 +1559,6 @@
                 "unique_id": "c5b38477183e4edc8b1ef47c2c0d5890"
             },
             {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.ventilatie_rf_button",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "ventilationbinary_sensorventilatie_rf_button"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.rf_button_bureaulamp_zolder",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_2binary_sensorrf_button_bureaulamp_zolder"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.rf_button_printer",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_2binary_sensorrf_button_printer"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.rf_button_pc_zolder",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_2binary_sensorrf_button_pc_zolder"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.slaapkamer_achterwand_rf_button",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_2binary_sensorslaapkamer_achterwand_rf_button"
-            },
-            {
                 "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
                 "device_id": "9d68535326de4adcae86b926a4e9d556",
                 "disabled_by": null,
@@ -1710,6 +1566,105 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "bedroom_2binary_sensorrf_button_tv_slaapkamer"
+            },
+            {
+                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
+                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.zolder_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "attic_1binary_sensorzolder_status"
+            },
+            {
+                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
+                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
+                "disabled_by": null,
+                "entity_id": "switch.zolder_printer",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "attic_1switchzolder_printer"
+            },
+            {
+                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
+                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
+                "disabled_by": null,
+                "entity_id": "switch.zolder_pc",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "attic_1switchzolder_pc"
+            },
+            {
+                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
+                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
+                "disabled_by": null,
+                "entity_id": "switch.zolder_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "attic_1switchzolder_restart"
+            },
+            {
+                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
+                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
+                "disabled_by": null,
+                "entity_id": "sensor.zolder_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f22caa403-wifisignal"
+            },
+            {
+                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
+                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
+                "disabled_by": null,
+                "entity_id": "sensor.zolder_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f22caa403-uptime"
+            },
+            {
+                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
+                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
+                "disabled_by": null,
+                "entity_id": "sensor.zolder_bssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "attic_1text_sensorzolder_bssid"
+            },
+            {
+                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
+                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
+                "disabled_by": null,
+                "entity_id": "sensor.zolder_ip_address",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "attic_1text_sensorzolder_ip_address"
+            },
+            {
+                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
+                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
+                "disabled_by": null,
+                "entity_id": "sensor.zolder_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f22caa403-version"
+            },
+            {
+                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
+                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
+                "disabled_by": null,
+                "entity_id": "sensor.zolder_ssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "attic_1text_sensorzolder_ssid"
+            },
+            {
+                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
+                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
+                "disabled_by": null,
+                "entity_id": "light.zolder_bureaulamp",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "attic_1lightzolder_bureaulamp"
             }
         ]
     },
