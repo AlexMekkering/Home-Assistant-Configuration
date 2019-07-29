@@ -1665,6 +1665,15 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "attic_1lightzolder_bureaulamp"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "person.joyce",
+                "name": null,
+                "platform": "person",
+                "unique_id": "5f5144362d8d4776855459b70e633841"
             }
         ]
     },

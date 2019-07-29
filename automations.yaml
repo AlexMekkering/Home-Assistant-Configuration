@@ -476,7 +476,11 @@
   action:
     - service: script.notify_admin
       data:
-        message: Buiten is het warmer dan binnen
+        message: Het is buiten warmer dan binnen
+    - service: automation.turn_on
+      entity_id: automation.notificatie_koud_buiten        
+    - service: automation.turn_off
+      entity_id: automation.notificatie_warm_buiten
 - id: notify_cold_outside
   alias: Notificatie Koud Buiten
   trigger:
@@ -486,7 +490,11 @@
   action:
     - service: script.notify_admin
       data:
-        message: Buiten is het kouder dan binnen
+        message: Het is buiten kouder dan binnen
+    - service: automation.turn_on
+      entity_id: automation.notificatie_warm_buiten        
+    - service: automation.turn_off
+      entity_id: automation.notificatie_koud_buiten
 
 ###############################
 # Rookmelders

@@ -330,8 +330,8 @@
                 },
                 {
                     "badges": [
-                        "device_tracker.alex",
-                        "device_tracker.joyce",
+                        "person.alex",
+                        "person.joyce",
                         "sun.sun"
                     ],
                     "cards": [
