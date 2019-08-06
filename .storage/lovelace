@@ -37,9 +37,6 @@
                                     "entity": "light.schilderij"
                                 },
                                 {
-                                    "entity": "light.eettafel"
-                                },
-                                {
                                     "entity": "script.all_off"
                                 }
                             ],
@@ -97,7 +94,7 @@
                                     "entity": "switch.overloop_lamp"
                                 },
                                 {
-                                    "entity": "switch.veranda_wandcontactdoos"
+                                    "entity": "light.veranda_verlichting"
                                 }
                             ],
                             "title": "Overige Lampen",
@@ -332,7 +329,8 @@
                     "badges": [
                         "person.alex",
                         "person.joyce",
-                        "sun.sun"
+                        "sun.sun",
+                        "sensor.daylight"
                     ],
                     "cards": [
                         {
@@ -468,7 +466,7 @@
                                     "entity": "sensor.ventilatie_ip_address"
                                 },
                                 {
-                                    "entity": "sensor.veranda_wandcontactdoos_ip_address"
+                                    "entity": "sensor.veranda_verlichting_ip_address"
                                 },
                                 {
                                     "entity": "sensor.zolder_ip_address"

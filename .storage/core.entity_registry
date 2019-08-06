@@ -1100,51 +1100,6 @@
                 "unique_id": "garagetext_sensorgarage_bssid"
             },
             {
-                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
-                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
-                "disabled_by": null,
-                "entity_id": "switch.veranda_wandcontactdoos_restart",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "veranda_wcdswitchveranda_wandcontactdoos_restart"
-            },
-            {
-                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
-                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
-                "disabled_by": null,
-                "entity_id": "switch.veranda_wandcontactdoos",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "veranda_wcdswitchveranda_wandcontactdoos"
-            },
-            {
-                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
-                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.veranda_wandcontactdoos_status",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "veranda_wcdbinary_sensorveranda_wandcontactdoos_status"
-            },
-            {
-                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
-                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
-                "disabled_by": null,
-                "entity_id": "sensor.veranda_wandcontactdoos_wifi_signal",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "3c71bf2bdf38-wifisignal"
-            },
-            {
-                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
-                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
-                "disabled_by": null,
-                "entity_id": "sensor.veranda_wandcontactdoos_esphome_version",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "3c71bf2bdf38-version"
-            },
-            {
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
                 "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
                 "disabled_by": null,
@@ -1233,33 +1188,6 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "ventilationtext_sensorventilatie_bssid"
-            },
-            {
-                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
-                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
-                "disabled_by": null,
-                "entity_id": "sensor.veranda_wandcontactdoos_bssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "veranda_wcdtext_sensorveranda_wandcontactdoos_bssid"
-            },
-            {
-                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
-                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
-                "disabled_by": null,
-                "entity_id": "sensor.veranda_wandcontactdoos_ip_address",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "veranda_wcdtext_sensorveranda_wandcontactdoos_ip_address"
-            },
-            {
-                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
-                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
-                "disabled_by": null,
-                "entity_id": "sensor.veranda_wandcontactdoos_ssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "veranda_wcdtext_sensorveranda_wandcontactdoos_ssid"
             },
             {
                 "config_entry_id": "f97cea92bcff424888258259a989d74d",
@@ -1541,15 +1469,6 @@
                 "unique_id": "2c3ae8071da8-uptime"
             },
             {
-                "config_entry_id": "f03785a4ed86483e8a19ddf9bb302219",
-                "device_id": "a8471a5f23c44278a1742a38a2c8d4b8",
-                "disabled_by": null,
-                "entity_id": "sensor.veranda_wandcontactdoos_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "3c71bf2bdf38-uptime"
-            },
-            {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
@@ -1674,6 +1593,87 @@
                 "name": null,
                 "platform": "person",
                 "unique_id": "5f5144362d8d4776855459b70e633841"
+            },
+            {
+                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
+                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
+                "disabled_by": null,
+                "entity_id": "light.veranda_verlichting",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "veranda_lightslightveranda_verlichting"
+            },
+            {
+                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
+                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
+                "disabled_by": null,
+                "entity_id": "switch.veranda_verlichting_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "veranda_lightsswitchveranda_verlichting_restart"
+            },
+            {
+                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
+                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_verlichting_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "3c71bf2bdf38-wifisignal"
+            },
+            {
+                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
+                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_verlichting_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "3c71bf2bdf38-uptime"
+            },
+            {
+                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
+                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_verlichting_bssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "veranda_lightstext_sensorveranda_verlichting_bssid"
+            },
+            {
+                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
+                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_verlichting_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "3c71bf2bdf38-version"
+            },
+            {
+                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
+                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_verlichting_ssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "veranda_lightstext_sensorveranda_verlichting_ssid"
+            },
+            {
+                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
+                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_verlichting_ip_address",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "veranda_lightstext_sensorveranda_verlichting_ip_address"
+            },
+            {
+                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
+                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.veranda_verlichting_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "veranda_lightsbinary_sensorveranda_verlichting_status"
             }
         ]
     },
