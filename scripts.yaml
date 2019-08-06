@@ -30,6 +30,10 @@ detect_lights:
     - condition: state
       entity_id: binary_sensor.tv_meubel_status
       state: 'on'
+    - service: script.silent_light_scene_select
+silent_light_scene_select:
+  alias: Silent Light Scene Select
+  sequence:
     - service: automation.turn_off
       entity_id: automation.light_scene_select
     - service_template: >
@@ -52,6 +56,8 @@ all_lights_off:
     - service: script.select_lights_all_off
     - service: homeassistant.turn_off
       entity_id: light.eettafel
+    - service: light.turn_off
+      entity_id: light.veranda_verlichting
     - condition: sun
       after: sunset
     - service: script.prepare_for_bed

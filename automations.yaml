@@ -140,7 +140,6 @@
   action:
     - service: script.detect_media
     - service: script.detect_lights
-    - service: script.reset_rf
     - service: automation.turn_off
       entity_id: automation.opstarten
     - condition: sun
@@ -281,6 +280,7 @@
   action:
     - service: scene.turn_on
       entity_id: scene.woonkamer_regular_stage_1
+    - service: script.silent_light_scene_select
 - id: sunset_lamp_links_achter
   alias: Sunset lamp links achter
   initial_state: 'off'
@@ -295,6 +295,7 @@
   action:
     - service: scene.turn_on
       entity_id: scene.woonkamer_regular_stage_2
+    - service: script.silent_light_scene_select
 - id: sunset_lamp_links_op_tv_meubel
   alias: Sunset lamp links op tv meubel
   initial_state: 'off'
@@ -309,6 +310,7 @@
   action:
     - service: scene.turn_on
       entity_id: scene.woonkamer_regular_stage_3
+    - service: script.silent_light_scene_select
 - id: sunset_lamp_schilderij
   alias: Sunset lamp schilderij
   initial_state: 'off'
@@ -323,6 +325,7 @@
   action:
     - service: scene.turn_on
       entity_id: scene.woonkamer_regular_stage_4
+    - service: script.silent_light_scene_select
 - id: sunset_lamp_bij_het_raam
   alias: Sunset lamp bij het raam
   initial_state: 'off'
@@ -336,6 +339,20 @@
     state: 'on'
   action:
     - service: script.select_lights_regular
+- id: sunset_veranda_verlichting
+  alias: Sunset veranda verlichting
+  initial_state: 'off'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '+00:05:00'
+  condition:
+    condition: state
+    entity_id: group.activity_at_home
+    state: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.veranda_verlichting
 - id: sunset_buitenlamp_voor
   alias: Sunset buitenlamp voor
   initial_state: 'off'
