@@ -217,6 +217,12 @@
                     "badges": [],
                     "cards": [
                         {
+                            "entity": "climate.verwarming",
+                            "name": "Verwarming",
+                            "theme": "Backend-selected",
+                            "type": "thermostat"
+                        },
+                        {
                             "entities": [
                                 {
                                     "entity": "sensor.garage_temperatuur",
@@ -319,6 +325,28 @@
                             ],
                             "show_header_toggle": false,
                             "title": "Temperatuurmonitoring",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "climate.verwarming"
+                                },
+                                {
+                                    "entity": "sensor.ch_water_temp_verwarming"
+                                },
+                                {
+                                    "entity": "sensor.control_setpoint_verwarming"
+                                },
+                                {
+                                    "entity": "sensor.ch_water_pressure_verwarming"
+                                },
+                                {
+                                    "entity": "sensor.outside_temp_verwarming"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Centrale verwarming",
                             "type": "entities"
                         }
                     ],

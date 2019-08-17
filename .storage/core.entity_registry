@@ -246,15 +246,6 @@
             },
             {
                 "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "0aeb1ae903f445849f3e067a6cb743e5",
-                "disabled_by": null,
-                "entity_id": "zwave.remote",
-                "name": null,
-                "platform": "zwave",
-                "unique_id": "node-2"
-            },
-            {
-                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
                 "device_id": "4cf03eb90d1b4bf88b3051a15f0de820",
                 "disabled_by": null,
                 "entity_id": "zwave.hal",
@@ -270,42 +261,6 @@
                 "name": null,
                 "platform": "zwave",
                 "unique_id": "node-5"
-            },
-            {
-                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "5b49267b1e2f4de5a1fcf40c803907ec",
-                "disabled_by": null,
-                "entity_id": "sensor.overloop_previous_reading",
-                "name": null,
-                "platform": "zwave",
-                "unique_id": "5-72057594126827666"
-            },
-            {
-                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "5b49267b1e2f4de5a1fcf40c803907ec",
-                "disabled_by": null,
-                "entity_id": "sensor.overloop_interval",
-                "name": null,
-                "platform": "zwave",
-                "unique_id": "5-72057594126827683"
-            },
-            {
-                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "d2ecc14763cd4def83b6b15a77f0fac1",
-                "disabled_by": null,
-                "entity_id": "sensor.overloop_previous_reading_2",
-                "name": null,
-                "platform": "zwave",
-                "unique_id": "5-144115188164755474"
-            },
-            {
-                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "d2ecc14763cd4def83b6b15a77f0fac1",
-                "disabled_by": null,
-                "entity_id": "sensor.overloop_interval_2",
-                "name": null,
-                "platform": "zwave",
-                "unique_id": "5-144115188164755491"
             },
             {
                 "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
@@ -684,24 +639,6 @@
                 "name": null,
                 "platform": "zwave",
                 "unique_id": "8-72057594178191377"
-            },
-            {
-                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "5b49267b1e2f4de5a1fcf40c803907ec",
-                "disabled_by": null,
-                "entity_id": "sensor.overloop_previous_reading_3",
-                "name": null,
-                "platform": "zwave",
-                "unique_id": "5-72057594126827538"
-            },
-            {
-                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
-                "device_id": "5b49267b1e2f4de5a1fcf40c803907ec",
-                "disabled_by": null,
-                "entity_id": "sensor.overloop_interval_3",
-                "name": null,
-                "platform": "zwave",
-                "unique_id": "5-72057594126827555"
             },
             {
                 "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
@@ -1674,6 +1611,78 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "veranda_lightsbinary_sensorveranda_verlichting_status"
+            },
+            {
+                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
+                "device_id": "b1b4b17ec8b1485bbea45912f7dcb199",
+                "disabled_by": null,
+                "entity_id": "light.tradfri_remote_control_2",
+                "name": null,
+                "platform": "deconz",
+                "unique_id": "00212EFFFF048481-/groups/57105"
+            },
+            {
+                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
+                "device_id": "f57c74a01a404d8bb4a893c55f651c90",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.tradfri_motion_sensor",
+                "name": null,
+                "platform": "deconz",
+                "unique_id": "00:0b:57:ff:fe:95:3b:f7-01-0006"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "climate.verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.rf_button_watch_media",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorrf_button_watch_media"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.rf_button_all_off",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorrf_button_all_off"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.rf_button_listen_music",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorrf_button_listen_music"
+            },
+            {
+                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
+                "device_id": "9d68535326de4adcae86b926a4e9d556",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.rf_button_watch_tv",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorrf_button_watch_tv"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "17d6d9812bcb47e3936ca877e297232c",
+                "disabled_by": null,
+                "entity_id": "zwave.remote",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-9"
             }
         ]
     },

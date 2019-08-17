@@ -254,6 +254,46 @@
   action:
   - service: script.toggle_tv_slaapkamer
 
+- id: rf_button_watch_tv
+  alias: RF Button Watch TV
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.rf_button_watch_tv'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.select_tv_kijken
+
+- id: rf_button_watch_media
+  alias: RF Button Watch Media
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.rf_button_watch_media'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.select_media_kijken
+
+- id: rf_button_listen_music
+  alias: RF Button Listen Music
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.rf_button_listen_music'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.select_radio_luisteren
+
+- id: rf_button_all_off
+  alias: RF Button All Off
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.rf_button_all_off'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.all_off
+
 ###############################
 # Timers licht
 ###############################
@@ -447,7 +487,7 @@
   alias: Slaapkamer TV
   trigger:
     platform: state
-    entity_id: switch.tv_slaapkamer
+    entity_id: switch.slaapkamer_tv
   action:
     - service_template: >
         {% if trigger.to_state.state == 'on' %}
@@ -583,3 +623,16 @@
     data:
       message: TEST Rookmelder Zolder
 
+###############################
+# Centrale verwarming
+###############################
+- id: thermostat_outside_temperature
+  alias: Buitentemperatuur Thermostaat
+  trigger:
+  - platform: state
+    entity_id: 'sensor.buiten_temperatuur'
+  action:
+  - service: opentherm_gw.set_outside_temperature
+    data_template:
+      gateway_id: verwarming
+      temperature: "{{ trigger.to_state.state }}"
