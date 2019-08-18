@@ -1683,6 +1683,15 @@
                 "name": null,
                 "platform": "zwave",
                 "unique_id": "node-9"
+            },
+            {
+                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
+                "device_id": "5aa5998539784724afc9b83e1f09600a",
+                "disabled_by": null,
+                "entity_id": "light.living",
+                "name": null,
+                "platform": "deconz",
+                "unique_id": "00212EFFFF048481-/groups/3"
             }
         ]
     },

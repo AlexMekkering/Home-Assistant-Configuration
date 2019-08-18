@@ -11,8 +11,8 @@
       data_template:
         entity_id: >
           {% set scene = trigger.to_state.state %}
-          {% if scene == 'Vakantie' %}
-            scene.vakantie
+          {% if scene == 'Afwezig' %}
+            scene.away
           {% elif scene == 'Normaal' %}
             scene.woonkamer_regular
           {% elif scene == 'Zacht' %}
@@ -236,7 +236,7 @@
           {% elif side == 1 and row == 4 %}
             script.select_lights_very_dim
           {% elif side == 1 and row == 5 %}
-            script.select_lights_vacancy
+            script.select_lights_away
           {% else %}
             script.select_lights_all_off
           {% endif %}
@@ -438,12 +438,12 @@
       - condition: time
         before: '21:00:00'
   action:
-    - service: script.select_lights_vacancy
+    - service: script.select_lights_away
     - service: automation.turn_on
       entity_id: automation.holiday_evening_end
     - service: script.notify_admin
       data:
-        message: Vakantietimer geactiveerd
+        message: Afwezigheidstimer geactiveerd
 - id: holiday_evening_end
   alias: Holiday Evening End
   initial_state: 'off'
@@ -464,7 +464,7 @@
     event: sunrise
     offset: '-01:00:00'
   action:
-    - service: script.select_lights_vacancy
+    - service: script.select_lights_away
     - service: automation.turn_on
       entity_id: automation.holiday_morning_end
     - service: automation.turn_off

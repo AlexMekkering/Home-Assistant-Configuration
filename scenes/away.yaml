@@ -1,0 +1,4 @@
+name: Away
+entities:
+  scene.spruitje_off: true
+  scene.living_away: true

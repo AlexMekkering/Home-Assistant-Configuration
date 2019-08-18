@@ -40,7 +40,7 @@ silent_light_scene_select:
         {% if is_state('light.tv_meubel_spruitje', 'on') %}
           script.select_lights_dim
         {% elif is_state('light.raam', 'on') %}
-          script.select_lights_vacancy
+          script.select_lights_away
         {% else %}
           script.select_lights_all_off
         {% endif %}
@@ -259,13 +259,13 @@ select_lights_very_dim:
       data_template:
         entity_id: input_select.light_scene
         option: 'Erg Zacht'
-select_lights_vacancy:
-  alias: Select Light Scene Vacancy
+select_lights_away:
+  alias: Select Light Scene Away
   sequence:
     - service: input_select.select_option
       data_template:
         entity_id: input_select.light_scene
-        option: 'Vakantie'
+        option: 'Afwezig'
 select_lights_all_off:
   alias: Select Light Scene All Off
   sequence:

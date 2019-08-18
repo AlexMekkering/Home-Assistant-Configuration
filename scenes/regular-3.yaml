@@ -1,12 +1,4 @@
 name: Woonkamer Regular Stage 3
 entities:
-  light.tv_meubel_spruitje:
-    state: on
-  light.linksachter:
-    state: on
-    brightness: 231
-    color_temp: 370
-  light.linksvoor:
-    state: on
-    brightness: 193
-    color_temp: 370
+  scene.spruitje_on: true
+  scene.living_regular_phase_2: true

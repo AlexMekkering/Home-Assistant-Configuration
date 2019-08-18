@@ -35,6 +35,6 @@ light_scene:
     - Normaal
     - Zacht
     - Erg Zacht
-    - Vakantie
+    - Afwezig
   initial: Uit
   icon: mdi:lightbulb

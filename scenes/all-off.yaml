@@ -1,12 +1,4 @@
 name: Woonkamer All Off
 entities:
-  light.tv_meubel_spruitje:
-    state: off
-  light.linksvoor:
-    state: off
-  light.raam:
-    state: off
-  light.linksachter:
-    state: off
-  light.schilderij:
-    state: off
+  scene.spruitje_off: true
+  scene.living_off: true
