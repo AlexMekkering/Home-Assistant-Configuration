@@ -34,6 +34,7 @@ detect_lights:
 silent_light_scene_select:
   alias: Silent Light Scene Select
   sequence:
+    - delay: 00:00:02
     - service: automation.turn_off
       entity_id: automation.light_scene_select
     - service_template: >
