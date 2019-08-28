@@ -1692,6 +1692,15 @@
                 "name": null,
                 "platform": "deconz",
                 "unique_id": "00212EFFFF048481-/groups/3"
+            },
+            {
+                "config_entry_id": "cce588a5cf97475e8666a57f63f21bb4",
+                "device_id": "a9a9f184d3d24eee94e9ac8e816ad04d",
+                "disabled_by": null,
+                "entity_id": "device_tracker.alex_s_oneplus_a5010",
+                "name": null,
+                "platform": "mobile_app",
+                "unique_id": "8dd4d504ff8b410a89af085c97a14269"
             }
         ]
     },

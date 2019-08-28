@@ -184,11 +184,11 @@
     value_template: '{{ (trigger.event.data.scene_id % 10) <= 5 }}'
   action:
     - service: automation.turn_off
-      entity_id: automation.holiday_evening_end
+      entity_id: automation.away_evening_end
     - service: automation.turn_off
-      entity_id: automation.holiday_morning_start
+      entity_id: automation.away_morning_start
     - service: automation.turn_off
-      entity_id: automation.holiday_morning_end
+      entity_id: automation.away_morning_end
     - service_template: >
         {% set row = trigger.event.data.scene_id // 10 %}
         {% set side = (trigger.event.data.scene_id % 10) % 2 %}
@@ -422,8 +422,8 @@
 ###############################
 # Vakantietimers
 ###############################
-- id: holiday_evening_start
-  alias: Holiday Evening Start
+- id: away_evening_start
+  alias: Away Evening Start
   initial_state: 'off'
   trigger:
     platform: sun
@@ -440,12 +440,12 @@
   action:
     - service: script.select_lights_away
     - service: automation.turn_on
-      entity_id: automation.holiday_evening_end
+      entity_id: automation.away_evening_end
     - service: script.notify_admin
       data:
-        message: Afwezigheidstimer geactiveerd
-- id: holiday_evening_end
-  alias: Holiday Evening End
+        message: Afwezigheidsmodus geactiveerd
+- id: away_evening_end
+  alias: Away Evening End
   initial_state: 'off'
   trigger:
     platform: time
@@ -453,11 +453,11 @@
   action:
     - service: script.select_lights_all_off
     - service: automation.turn_on
-      entity_id: automation.holiday_morning_start
+      entity_id: automation.away_morning_start
     - service: automation.turn_off
-      entity_id: automation.holiday_evening_end
-- id: holiday_morning_start
-  alias: Holiday Morning Start
+      entity_id: automation.away_evening_end
+- id: away_morning_start
+  alias: Away Morning Start
   initial_state: 'off'
   trigger:
     platform: sun
@@ -466,11 +466,11 @@
   action:
     - service: script.select_lights_away
     - service: automation.turn_on
-      entity_id: automation.holiday_morning_end
+      entity_id: automation.away_morning_end
     - service: automation.turn_off
-      entity_id: automation.holiday_morning_start
-- id: holiday_morning_end
-  alias: Holiday Morning End
+      entity_id: automation.away_morning_start
+- id: away_morning_end
+  alias: Away Morning End
   initial_state: 'off'
   trigger:
     platform: sun
@@ -478,7 +478,7 @@
   action:
     - service: script.select_lights_all_off
     - service: automation.turn_off
-      entity_id: automation.holiday_morning_end
+      entity_id: automation.away_morning_end
 
 ###############################
 # Slaapkamer
