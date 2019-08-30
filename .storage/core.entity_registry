@@ -1701,6 +1701,15 @@
                 "name": null,
                 "platform": "mobile_app",
                 "unique_id": "8dd4d504ff8b410a89af085c97a14269"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.updater",
+                "name": null,
+                "platform": "updater",
+                "unique_id": "updater"
             }
         ]
     },
