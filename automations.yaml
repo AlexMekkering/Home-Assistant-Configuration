@@ -19,6 +19,8 @@
             scene.woonkamer_dim
           {% elif scene == 'Erg Zacht' %}
             scene.woonkamer_very_dim
+          {% elif scene == 'Maximaal' %}
+            scene.woonkamer_maximal
           {% else %}
             scene.woonkamer_all_off
           {% endif %}
@@ -189,28 +191,13 @@
       entity_id: automation.away_morning_start
     - service: automation.turn_off
       entity_id: automation.away_morning_end
-    - service_template: >
-        {% set row = trigger.event.data.scene_id // 10 %}
-        {% set side = (trigger.event.data.scene_id % 10) % 2 %}
-        {% if row == 1 %}
-          light.turn_{% if side == 1 %}on{% else %}off{% endif %}
-        {% elif row >= 8 and row <= 10 %}
-          script.turn_on
-        {% elif row == 11 %}
-          {% if side == 1 %}
-            homeassistant.turn_on
-          {% else %}
-            script.turn_on
-          {% endif %}
-        {% else %}
-          script.turn_on
-        {% endif %}
+    - service: script.turn_on
       data_template:
         entity_id: >
           {% set row = trigger.event.data.scene_id // 10 %}
           {% set side = (trigger.event.data.scene_id % 10) % 2 %}
           {% if row == 1 %}
-            light.tv_meubel_spruitje
+            script.spruitje_{% if side == 1 %}on{% else %}off{% endif %}
           {% elif row >= 8 and row <= 10 %}
             {% if side == 1 %}
               {% if row == 8 %}
@@ -225,7 +212,7 @@
             {% endif %}
           {% elif row == 11 %}
             {% if side == 1 %}
-              group.living_room_lights
+              script.select_lights_maximal
             {% else %}
               script.all_off
             {% endif %}
@@ -393,6 +380,8 @@
   action:
     - service: light.turn_on
       entity_id: light.veranda_verlichting
+    - service: automation.turn_off
+      entity_id: automation.sunset_veranda_verlichting
 - id: sunset_buitenlamp_voor
   alias: Sunset buitenlamp voor
   initial_state: 'off'

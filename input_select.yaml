@@ -36,5 +36,6 @@ light_scene:
     - Zacht
     - Erg Zacht
     - Afwezig
+    - Maximaal
   initial: Uit
   icon: mdi:lightbulb
