@@ -16,7 +16,7 @@ sunset_automations:
     - automation.sunset_buitenlamp_voor
     - automation.sunset_veranda_verlichting
     - automation.midnight_buitenlamp_voor
-    - automation.holiday_evening_start
+    - automation.away_evening_start
 rookmelders:
   name: Rookmelders
   entities:
