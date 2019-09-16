@@ -185,12 +185,6 @@
     condition: template
     value_template: '{{ (trigger.event.data.scene_id % 10) <= 5 }}'
   action:
-    - service: automation.turn_off
-      entity_id: automation.away_evening_end
-    - service: automation.turn_off
-      entity_id: automation.away_morning_start
-    - service: automation.turn_off
-      entity_id: automation.away_morning_end
     - service: script.turn_on
       data_template:
         entity_id: >
@@ -468,6 +462,21 @@
     - service: script.select_lights_all_off
     - service: automation.turn_off
       entity_id: automation.away_morning_end
+- id: away_cancel
+  alias: Away Cancel
+  initial_state: 'off'
+  trigger:
+    platform: state
+    entity_id: group.someone_home
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: group.away
+    state: 'on'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: group.away
 
 ###############################
 # Slaapkamer
