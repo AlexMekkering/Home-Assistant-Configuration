@@ -63,7 +63,7 @@ all_lights_off:
   alias: All Lights Off
   sequence:
     - service: script.select_lights_all_off
-    - service: homeassistant.turn_off
+    - service: light.turn_off
       entity_id: light.eettafel
     - service: light.turn_off
       entity_id: light.veranda_verlichting
@@ -88,6 +88,14 @@ spruitje_off:
     - service: light.turn_off
       entity_id: light.tv_meubel_spruitje
     - service: script.silent_light_scene_select
+veranda_lights_on:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.veranda_verlichting
+veranda_lights_off:
+  sequence:
+    - service: light.turn_off
+      entity_id: light.veranda_verlichting
 select_lights_maximal:
   alias: Select Light Scene Maximal
   sequence:

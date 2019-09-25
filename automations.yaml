@@ -192,6 +192,8 @@
           {% set side = (trigger.event.data.scene_id % 10) % 2 %}
           {% if row == 1 %}
             script.spruitje_{% if side == 1 %}on{% else %}off{% endif %}
+          {% elif row == 7 %}
+            script.veranda_lights_{% if side == 1 %}on{% else %}off{% endif %}
           {% elif row >= 8 and row <= 10 %}
             {% if side == 1 %}
               {% if row == 8 %}
