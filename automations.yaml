@@ -93,6 +93,25 @@
   action:
     - service: switch.turn_on
       entity_id: switch.tv_meubel_mediaplayer
+- id: toggle_living
+  alias: Toggle Living
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.woonkamer_binnenkomst
+  condition:
+    condition: template
+    value_template: '{{ (trigger.event.data.scene_id // 10) == 2 }}'
+  action:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state('group.living_room_lights', 'on') %}
+            script.all_off
+          {% else %}
+            script.select_lights_regular
+          {% endif %}
 
 ###############################
 # Home Assistant

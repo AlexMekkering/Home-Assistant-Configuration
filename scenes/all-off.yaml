@@ -2,3 +2,4 @@ name: Woonkamer All Off
 entities:
   scene.spruitje_off: true
   scene.living_off: true
+  scene.eettafel_off: true

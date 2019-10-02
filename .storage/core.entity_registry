@@ -1710,6 +1710,123 @@
                 "name": null,
                 "platform": "updater",
                 "unique_id": "updater"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "9279c312a7d6431ea515c53747ba0e74",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgd212_dimmer_2_power",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "10-72057594210713730"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "9279c312a7d6431ea515c53747ba0e74",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgd212_dimmer_2_exporting",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "10-72057594210714112"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "9279c312a7d6431ea515c53747ba0e74",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgd212_dimmer_2_energy",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "10-72057594210713602"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "9279c312a7d6431ea515c53747ba0e74",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgd212_dimmer_2_alarm_type",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "10-72057594211745793"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "9279c312a7d6431ea515c53747ba0e74",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgd212_dimmer_2_alarm_level",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "10-72057594211745809"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "9279c312a7d6431ea515c53747ba0e74",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgd212_dimmer_2_sourcenodeid",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "10-72057594211745825"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "9279c312a7d6431ea515c53747ba0e74",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgd212_dimmer_2_heat",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "10-72057594211745905"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "9279c312a7d6431ea515c53747ba0e74",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgd212_dimmer_2_power_management",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "10-72057594211745969"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "9279c312a7d6431ea515c53747ba0e74",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgd212_dimmer_2_system",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "10-72057594211745985"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "9279c312a7d6431ea515c53747ba0e74",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgd212_dimmer_2_power_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "10-72057594210697282"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "9279c312a7d6431ea515c53747ba0e74",
+                "disabled_by": null,
+                "entity_id": "light.eettafel",
+                "name": "Eettafel",
+                "platform": "zwave",
+                "unique_id": "10-72057594210516993"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "5a56fc8614c54ba8ad9d32f681a971f4",
+                "disabled_by": null,
+                "entity_id": "light.living_virtual",
+                "name": "Living Virtual",
+                "platform": "zwave",
+                "unique_id": "10-144115188248444929"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "9279c312a7d6431ea515c53747ba0e74",
+                "disabled_by": null,
+                "entity_id": "zwave.woonkamer_binnenkomst",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-10"
             }
         ]
     },
