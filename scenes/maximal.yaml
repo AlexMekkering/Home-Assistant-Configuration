@@ -1,4 +1,5 @@
 name: Woonkamer Maximal
 entities:
   scene.spruitje_on: true
-  scene.living_regular: true
+  scene.living_max: true
+  scene.eettafel_on: true
