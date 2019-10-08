@@ -48,7 +48,7 @@
   initial_state: 'off'
   trigger:
     platform: time_pattern
-    seconds: '/01'
+    seconds: '/05'
   action:
     - service: homeassistant.update_entity
       entity_id: media_player.receiver
