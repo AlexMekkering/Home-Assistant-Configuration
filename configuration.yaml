@@ -28,9 +28,6 @@ input_boolean: !include input_boolean.yaml
 automation: !include automations.yaml
 device_tracker: !include device_tracker.yaml
 script: !include scripts.yaml
-scene: !include_dir_list scenes
+scene: !include scenes.yaml
 shell_command: !include shell_command.yaml
 timer: !include timer.yaml
-opentherm_gw:
-  verwarming:
-    device: !secret opentherm_gw_device

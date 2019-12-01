@@ -641,609 +641,6 @@
                 "unique_id": "8-72057594178191377"
             },
             {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
-                "disabled_by": null,
-                "entity_id": "sensor.meterkast_luchtvochtigheid",
-                "name": "Luchtvochtigheid Meterkast",
-                "platform": "esphome",
-                "unique_id": "smartmetersensormeterkast_luchtvochtigheid"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
-                "disabled_by": null,
-                "entity_id": "sensor.smartmeter_power_consumption",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "smartmetersensorsmartmeter_power_consumption"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
-                "disabled_by": null,
-                "entity_id": "sensor.meterkast_temperatuur",
-                "name": "Temperatuur Meterkast",
-                "platform": "esphome",
-                "unique_id": "smartmetersensormeterkast_temperatuur"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
-                "disabled_by": null,
-                "entity_id": "switch.smartmeter_restart",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "smartmeterswitchsmartmeter_restart"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
-                "disabled_by": null,
-                "entity_id": "sensor.smartmeter_wifi_signal",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "dc4f2265d1cb-wifisignal"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
-                "disabled_by": null,
-                "entity_id": "sensor.smartmeter_esphome_version",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "dc4f2265d1cb-version"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.smartmeter_status",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "smartmeterbinary_sensorsmartmeter_status"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
-                "disabled_by": null,
-                "entity_id": "sensor.smartmeter_ip_address",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "smartmetertext_sensorsmartmeter_ip_address"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
-                "disabled_by": null,
-                "entity_id": "sensor.smartmeter_ssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "smartmetertext_sensorsmartmeter_ssid"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
-                "disabled_by": null,
-                "entity_id": "sensor.smartmeter_bssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "smartmetertext_sensorsmartmeter_bssid"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_achterwand_wifi_signal",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "2c3ae80581e3-wifisignal"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_achterwand_esphome_version",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "2c3ae80581e3-version"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "light.slaapkamer_achterwand",
-                "name": "Achterwand Slaapkamer",
-                "platform": "esphome",
-                "unique_id": "bedroom_2lightslaapkamer_achterwand"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "switch.slaapkamer_achterwand_restart",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_2switchslaapkamer_achterwand_restart"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "sensor.tv_meubel_wifi_signal",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "600194891236-wifisignal"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "sensor.tv_meubel_esphome_version",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "600194891236-version"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "switch.tv_meubel_mediaplayer",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "living_1switchtv_meubel_mediaplayer"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "switch.tv_meubel_restart",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "living_1switchtv_meubel_restart"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "switch.tv_meubel_tv",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "living_1switchtv_meubel_tv"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "switch.tv_meubel_receiver",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "living_1switchtv_meubel_receiver"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "light.tv_meubel_spruitje",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "living_1lighttv_meubel_spruitje"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.slaapkamer_achterwand_status",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_2binary_sensorslaapkamer_achterwand_status"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.tv_meubel_status",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "living_1binary_sensortv_meubel_status"
-            },
-            {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.ventilatie_status",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "ventilationbinary_sensorventilatie_status"
-            },
-            {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "sensor.ventilatie_power",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "ventilationsensorventilatie_power"
-            },
-            {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "sensor.ventilatie_current",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "ventilationsensorventilatie_current"
-            },
-            {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "sensor.ventilatie_wifi_signal",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "2c3ae8071da8-wifisignal"
-            },
-            {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "sensor.ventilatie_voltage",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "ventilationsensorventilatie_voltage"
-            },
-            {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "sensor.ventilatie_esphome_version",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "2c3ae8071da8-version"
-            },
-            {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "switch.ventilatie_restart",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "ventilationswitchventilatie_restart"
-            },
-            {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.ventilatie_activated",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "ventilationbinary_sensorventilatie_activated"
-            },
-            {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "switch.ventilatie",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "ventilationswitchventilatie"
-            },
-            {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "switch.ventilatie_auto_poweroff",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "ventilationswitchventilatie_auto_poweroff"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
-                "disabled_by": null,
-                "entity_id": "sensor.meterkast_luchtdruk",
-                "name": "Luchtdruk Meterkast",
-                "platform": "esphome",
-                "unique_id": "smartmetersensormeterkast_luchtdruk"
-            },
-            {
-                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "1aa56ca266214a93bfb871282ec87624",
-                "disabled_by": null,
-                "entity_id": "sensor.garage_wifi_signal",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "dc4f2265d21d-wifisignal"
-            },
-            {
-                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "1aa56ca266214a93bfb871282ec87624",
-                "disabled_by": null,
-                "entity_id": "sensor.garage_temperatuur",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "garagesensorgarage_temperatuur"
-            },
-            {
-                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "1aa56ca266214a93bfb871282ec87624",
-                "disabled_by": null,
-                "entity_id": "sensor.buiten_temperatuur",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "dallas-DE011438B6F4AA28"
-            },
-            {
-                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "1aa56ca266214a93bfb871282ec87624",
-                "disabled_by": null,
-                "entity_id": "sensor.garage_luchtvochtigheid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "garagesensorgarage_luchtvochtigheid"
-            },
-            {
-                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "1aa56ca266214a93bfb871282ec87624",
-                "disabled_by": null,
-                "entity_id": "sensor.garage_esphome_version",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "dc4f2265d21d-version"
-            },
-            {
-                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "1aa56ca266214a93bfb871282ec87624",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.garage_status",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "garagebinary_sensorgarage_status"
-            },
-            {
-                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "1aa56ca266214a93bfb871282ec87624",
-                "disabled_by": null,
-                "entity_id": "switch.garage_restart",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "garageswitchgarage_restart"
-            },
-            {
-                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "1aa56ca266214a93bfb871282ec87624",
-                "disabled_by": null,
-                "entity_id": "sensor.garage_ssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "garagetext_sensorgarage_ssid"
-            },
-            {
-                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "1aa56ca266214a93bfb871282ec87624",
-                "disabled_by": null,
-                "entity_id": "sensor.garage_ip_address",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "garagetext_sensorgarage_ip_address"
-            },
-            {
-                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "1aa56ca266214a93bfb871282ec87624",
-                "disabled_by": null,
-                "entity_id": "sensor.garage_bssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "garagetext_sensorgarage_bssid"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
-                "disabled_by": null,
-                "entity_id": "sensor.smartmeter_total_consumption",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "smartmetersensorsmartmeter_total_consumption"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "sensor.tv_meubel_bssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "living_1text_sensortv_meubel_bssid"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "sensor.tv_meubel_ip_address",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "living_1text_sensortv_meubel_ip_address"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "sensor.tv_meubel_ssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "living_1text_sensortv_meubel_ssid"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_achterwand_ssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_2text_sensorslaapkamer_achterwand_ssid"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_achterwand_bssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_2text_sensorslaapkamer_achterwand_bssid"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_achterwand_ip_address",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_2text_sensorslaapkamer_achterwand_ip_address"
-            },
-            {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "sensor.ventilatie_ssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "ventilationtext_sensorventilatie_ssid"
-            },
-            {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "sensor.ventilatie_ip_address",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "ventilationtext_sensorventilatie_ip_address"
-            },
-            {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "sensor.ventilatie_bssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "ventilationtext_sensorventilatie_bssid"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "sensor.woonkamer_luchtdruk",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "living_1sensorwoonkamer_luchtdruk"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "sensor.woonkamer_luchtvochtigheid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "living_1sensorwoonkamer_luchtvochtigheid"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "sensor.woonkamer_temperatuur",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "living_1sensorwoonkamer_temperatuur"
-            },
-            {
-                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
-                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
-                "disabled_by": null,
-                "entity_id": "light.nachtlampje_alex",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_1lightnachtlampje_alex"
-            },
-            {
-                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
-                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
-                "disabled_by": null,
-                "entity_id": "light.nachtlampje_joyce",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_1lightnachtlampje_joyce"
-            },
-            {
-                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
-                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
-                "disabled_by": null,
-                "entity_id": "switch.slaapkamer_tv",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_1switchslaapkamer_tv"
-            },
-            {
-                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
-                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
-                "disabled_by": null,
-                "entity_id": "switch.slaapkamer_restart",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_1switchslaapkamer_restart"
-            },
-            {
-                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
-                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.slaapkamer_status",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_1binary_sensorslaapkamer_status"
-            },
-            {
-                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
-                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_wifi_signal",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "600194857ec7-wifisignal"
-            },
-            {
-                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
-                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_esphome_version",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "600194857ec7-version"
-            },
-            {
-                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
-                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_ip_address",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_1text_sensorslaapkamer_ip_address"
-            },
-            {
-                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
-                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_bssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_1text_sensorslaapkamer_bssid"
-            },
-            {
-                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
-                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_ssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_1text_sensorslaapkamer_ssid"
-            },
-            {
                 "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
                 "device_id": "a890b108a14540a1a9ed825447cf4d92",
                 "disabled_by": null,
@@ -1281,129 +678,12 @@
             },
             {
                 "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
-                "device_id": "528d62adc5fc483c8f3b2ae6e19c3a59",
-                "disabled_by": null,
-                "entity_id": "light.eettafel3",
-                "name": null,
-                "platform": "deconz",
-                "unique_id": "00:0b:57:ff:fe:13:f7:a5-01"
-            },
-            {
-                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
-                "device_id": "e440b55422fb41f293e584e0e55ae546",
-                "disabled_by": null,
-                "entity_id": "light.eettafel1",
-                "name": null,
-                "platform": "deconz",
-                "unique_id": "00:0b:57:ff:fe:30:92:ee-01"
-            },
-            {
-                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
-                "device_id": "a1719f4ebdd74b3c825c27ea2f07e6ed",
-                "disabled_by": null,
-                "entity_id": "light.eettafel2",
-                "name": null,
-                "platform": "deconz",
-                "unique_id": "00:0b:57:ff:fe:2a:42:41-01"
-            },
-            {
-                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
                 "device_id": "558c12e32ee24350aa2dfbcfa38b40cd",
                 "disabled_by": null,
                 "entity_id": "sensor.daylight",
                 "name": null,
                 "platform": "deconz",
                 "unique_id": "00:21:2e:ff:ff:04:84:81-01"
-            },
-            {
-                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
-                "device_id": "cf14f5519811452292c914b4624d7dd0",
-                "disabled_by": null,
-                "entity_id": "sensor.tradfri_remote_control_battery_level",
-                "name": null,
-                "platform": "deconz",
-                "unique_id": "00:0b:57:ff:fe:11:86:7e-01-1000"
-            },
-            {
-                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
-                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_luchtdruk",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_1sensorslaapkamer_luchtdruk"
-            },
-            {
-                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
-                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_luchtvochtigheid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_1sensorslaapkamer_luchtvochtigheid"
-            },
-            {
-                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
-                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_temperatuur",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_1sensorslaapkamer_temperatuur"
-            },
-            {
-                "config_entry_id": "17ebce58d0e74e40b34dd86e2a5edd24",
-                "device_id": "9adf4f72886c43ac8d73b05e75e0c306",
-                "disabled_by": null,
-                "entity_id": "sensor.smartmeter_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "dc4f2265d1cb-uptime"
-            },
-            {
-                "config_entry_id": "c64d5a7003e348de873e9a32224e5cc2",
-                "device_id": "1aa56ca266214a93bfb871282ec87624",
-                "disabled_by": null,
-                "entity_id": "sensor.garage_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "dc4f2265d21d-uptime"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_achterwand_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "2c3ae80581e3-uptime"
-            },
-            {
-                "config_entry_id": "70b9da97258a4be79b3e9590fbef602b",
-                "device_id": "fbfd137f41274d57bcc1b952d1ff89f4",
-                "disabled_by": null,
-                "entity_id": "sensor.slaapkamer_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "600194857ec7-uptime"
-            },
-            {
-                "config_entry_id": "f97cea92bcff424888258259a989d74d",
-                "device_id": "85fdea95027140e88e53572fe8cb1f98",
-                "disabled_by": null,
-                "entity_id": "sensor.tv_meubel_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "600194891236-uptime"
-            },
-            {
-                "config_entry_id": "2f76d828785b4fcdb1303b9720e3b070",
-                "device_id": "29681c1e46e14b8cb856ee445c753619",
-                "disabled_by": null,
-                "entity_id": "sensor.ventilatie_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "2c3ae8071da8-uptime"
             },
             {
                 "config_entry_id": null,
@@ -1415,114 +695,6 @@
                 "unique_id": "c5b38477183e4edc8b1ef47c2c0d5890"
             },
             {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.rf_button_tv_slaapkamer",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_2binary_sensorrf_button_tv_slaapkamer"
-            },
-            {
-                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
-                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.zolder_status",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1binary_sensorzolder_status"
-            },
-            {
-                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
-                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
-                "disabled_by": null,
-                "entity_id": "switch.zolder_printer",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1switchzolder_printer"
-            },
-            {
-                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
-                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
-                "disabled_by": null,
-                "entity_id": "switch.zolder_pc",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1switchzolder_pc"
-            },
-            {
-                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
-                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
-                "disabled_by": null,
-                "entity_id": "switch.zolder_restart",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1switchzolder_restart"
-            },
-            {
-                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
-                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_wifi_signal",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "dc4f22caa403-wifisignal"
-            },
-            {
-                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
-                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "dc4f22caa403-uptime"
-            },
-            {
-                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
-                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_bssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1text_sensorzolder_bssid"
-            },
-            {
-                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
-                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_ip_address",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1text_sensorzolder_ip_address"
-            },
-            {
-                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
-                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_esphome_version",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "dc4f22caa403-version"
-            },
-            {
-                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
-                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
-                "disabled_by": null,
-                "entity_id": "sensor.zolder_ssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1text_sensorzolder_ssid"
-            },
-            {
-                "config_entry_id": "4261e5cb03b64d89937a4d5057f6a9c4",
-                "device_id": "7a4e50f1768b4b6d84708411bd86f03b",
-                "disabled_by": null,
-                "entity_id": "light.zolder_bureaulamp",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "attic_1lightzolder_bureaulamp"
-            },
-            {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
@@ -1530,87 +702,6 @@
                 "name": null,
                 "platform": "person",
                 "unique_id": "5f5144362d8d4776855459b70e633841"
-            },
-            {
-                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
-                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
-                "disabled_by": null,
-                "entity_id": "light.veranda_verlichting",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "veranda_lightslightveranda_verlichting"
-            },
-            {
-                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
-                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
-                "disabled_by": null,
-                "entity_id": "switch.veranda_verlichting_restart",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "veranda_lightsswitchveranda_verlichting_restart"
-            },
-            {
-                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
-                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
-                "disabled_by": null,
-                "entity_id": "sensor.veranda_verlichting_wifi_signal",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "3c71bf2bdf38-wifisignal"
-            },
-            {
-                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
-                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
-                "disabled_by": null,
-                "entity_id": "sensor.veranda_verlichting_uptime",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "3c71bf2bdf38-uptime"
-            },
-            {
-                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
-                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
-                "disabled_by": null,
-                "entity_id": "sensor.veranda_verlichting_bssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "veranda_lightstext_sensorveranda_verlichting_bssid"
-            },
-            {
-                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
-                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
-                "disabled_by": null,
-                "entity_id": "sensor.veranda_verlichting_esphome_version",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "3c71bf2bdf38-version"
-            },
-            {
-                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
-                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
-                "disabled_by": null,
-                "entity_id": "sensor.veranda_verlichting_ssid",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "veranda_lightstext_sensorveranda_verlichting_ssid"
-            },
-            {
-                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
-                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
-                "disabled_by": null,
-                "entity_id": "sensor.veranda_verlichting_ip_address",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "veranda_lightstext_sensorveranda_verlichting_ip_address"
-            },
-            {
-                "config_entry_id": "17c0fcb6a4784eaca49ba686d04912e3",
-                "device_id": "572cc4e4c4554deca97d65dbcdd6e044",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.veranda_verlichting_status",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "veranda_lightsbinary_sensorveranda_verlichting_status"
             },
             {
                 "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
@@ -1629,51 +720,6 @@
                 "name": null,
                 "platform": "deconz",
                 "unique_id": "00:0b:57:ff:fe:95:3b:f7-01-0006"
-            },
-            {
-                "config_entry_id": null,
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "climate.verwarming",
-                "name": null,
-                "platform": "opentherm_gw",
-                "unique_id": "verwarming"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.rf_button_watch_media",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_2binary_sensorrf_button_watch_media"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.rf_button_all_off",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_2binary_sensorrf_button_all_off"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.rf_button_listen_music",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_2binary_sensorrf_button_listen_music"
-            },
-            {
-                "config_entry_id": "a2262b8b4fe94a29ba2df4e98d146a42",
-                "device_id": "9d68535326de4adcae86b926a4e9d556",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.rf_button_watch_tv",
-                "name": null,
-                "platform": "esphome",
-                "unique_id": "bedroom_2binary_sensorrf_button_watch_tv"
             },
             {
                 "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
@@ -1827,6 +873,987 @@
                 "name": null,
                 "platform": "zwave",
                 "unique_id": "node-10"
+            },
+            {
+                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
+                "device_id": "cf14f5519811452292c914b4624d7dd0",
+                "disabled_by": null,
+                "entity_id": "sensor.eettafel_verlichting_battery_level",
+                "name": null,
+                "platform": "deconz",
+                "unique_id": "00:0b:57:ff:fe:11:86:7e-battery"
+            },
+            {
+                "config_entry_id": "a64ce0ba0d134b42afab3bab8521c7e7",
+                "device_id": "f57c74a01a404d8bb4a893c55f651c90",
+                "disabled_by": null,
+                "entity_id": "sensor.beweging_achtertuin_battery_level",
+                "name": null,
+                "platform": "deconz",
+                "unique_id": "00:0b:57:ff:fe:95:3b:f7-battery"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "077fa5c7908644d8a834851b097aac18",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgsd002_smoke_sensor_battery_level",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144882689"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "d97bdad9aa0b44a58ee53ede6407ae55",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgsd002_smoke_sensor_battery_level_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594161659905"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "1d29fb58e9454f58b4be8a24b670176d",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgsd002_smoke_sensor_battery_level_3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178437121"
+            },
+            {
+                "config_entry_id": "6027cfe5f46d4371ac9853b35ba70d67",
+                "device_id": "17d6d9812bcb47e3936ca877e297232c",
+                "disabled_by": null,
+                "entity_id": "sensor.z_wave_me_zme_rc2_remote_control_battery_level",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594195214337"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "climate.verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming"
+            },
+            {
+                "config_entry_id": "5c45e15852114a9ca807ba6b4ba3214e",
+                "device_id": "143e615689844d67823fdbf951b20196",
+                "disabled_by": null,
+                "entity_id": "switch.zolder_printer",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "attic_1switchzolder_printer"
+            },
+            {
+                "config_entry_id": "5c45e15852114a9ca807ba6b4ba3214e",
+                "device_id": "143e615689844d67823fdbf951b20196",
+                "disabled_by": null,
+                "entity_id": "switch.zolder_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "attic_1switchzolder_restart"
+            },
+            {
+                "config_entry_id": "5c45e15852114a9ca807ba6b4ba3214e",
+                "device_id": "143e615689844d67823fdbf951b20196",
+                "disabled_by": null,
+                "entity_id": "switch.zolder_pc",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "attic_1switchzolder_pc"
+            },
+            {
+                "config_entry_id": "5c45e15852114a9ca807ba6b4ba3214e",
+                "device_id": "143e615689844d67823fdbf951b20196",
+                "disabled_by": null,
+                "entity_id": "sensor.zolder_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f22caa403-uptime"
+            },
+            {
+                "config_entry_id": "5c45e15852114a9ca807ba6b4ba3214e",
+                "device_id": "143e615689844d67823fdbf951b20196",
+                "disabled_by": null,
+                "entity_id": "sensor.zolder_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f22caa403-wifisignal"
+            },
+            {
+                "config_entry_id": "5c45e15852114a9ca807ba6b4ba3214e",
+                "device_id": "143e615689844d67823fdbf951b20196",
+                "disabled_by": null,
+                "entity_id": "sensor.zolder_ip_address",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f22caa403-wifiinfo-ip"
+            },
+            {
+                "config_entry_id": "5c45e15852114a9ca807ba6b4ba3214e",
+                "device_id": "143e615689844d67823fdbf951b20196",
+                "disabled_by": null,
+                "entity_id": "sensor.zolder_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f22caa403-version"
+            },
+            {
+                "config_entry_id": "5c45e15852114a9ca807ba6b4ba3214e",
+                "device_id": "143e615689844d67823fdbf951b20196",
+                "disabled_by": null,
+                "entity_id": "sensor.zolder_bssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f22caa403-wifiinfo-bssid"
+            },
+            {
+                "config_entry_id": "5c45e15852114a9ca807ba6b4ba3214e",
+                "device_id": "143e615689844d67823fdbf951b20196",
+                "disabled_by": null,
+                "entity_id": "sensor.zolder_ssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f22caa403-wifiinfo-ssid"
+            },
+            {
+                "config_entry_id": "5c45e15852114a9ca807ba6b4ba3214e",
+                "device_id": "143e615689844d67823fdbf951b20196",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.zolder_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "attic_1binary_sensorzolder_status"
+            },
+            {
+                "config_entry_id": "5c45e15852114a9ca807ba6b4ba3214e",
+                "device_id": "143e615689844d67823fdbf951b20196",
+                "disabled_by": null,
+                "entity_id": "light.zolder_bureaulamp",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "attic_1lightzolder_bureaulamp"
+            },
+            {
+                "config_entry_id": "d37742969f5942e39e7b024844c891b2",
+                "device_id": "4e8dc851ab9b4f158e1aec73efe045e3",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_luchtdruk",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1sensorslaapkamer_luchtdruk"
+            },
+            {
+                "config_entry_id": "d37742969f5942e39e7b024844c891b2",
+                "device_id": "4e8dc851ab9b4f158e1aec73efe045e3",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_luchtvochtigheid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1sensorslaapkamer_luchtvochtigheid"
+            },
+            {
+                "config_entry_id": "d37742969f5942e39e7b024844c891b2",
+                "device_id": "4e8dc851ab9b4f158e1aec73efe045e3",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194857ec7-uptime"
+            },
+            {
+                "config_entry_id": "d37742969f5942e39e7b024844c891b2",
+                "device_id": "4e8dc851ab9b4f158e1aec73efe045e3",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_temperatuur",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1sensorslaapkamer_temperatuur"
+            },
+            {
+                "config_entry_id": "d37742969f5942e39e7b024844c891b2",
+                "device_id": "4e8dc851ab9b4f158e1aec73efe045e3",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194857ec7-wifisignal"
+            },
+            {
+                "config_entry_id": "d37742969f5942e39e7b024844c891b2",
+                "device_id": "4e8dc851ab9b4f158e1aec73efe045e3",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_ssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194857ec7-wifiinfo-ssid"
+            },
+            {
+                "config_entry_id": "d37742969f5942e39e7b024844c891b2",
+                "device_id": "4e8dc851ab9b4f158e1aec73efe045e3",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_bssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194857ec7-wifiinfo-bssid"
+            },
+            {
+                "config_entry_id": "d37742969f5942e39e7b024844c891b2",
+                "device_id": "4e8dc851ab9b4f158e1aec73efe045e3",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194857ec7-version"
+            },
+            {
+                "config_entry_id": "d37742969f5942e39e7b024844c891b2",
+                "device_id": "4e8dc851ab9b4f158e1aec73efe045e3",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_ip_address",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194857ec7-wifiinfo-ip"
+            },
+            {
+                "config_entry_id": "d37742969f5942e39e7b024844c891b2",
+                "device_id": "4e8dc851ab9b4f158e1aec73efe045e3",
+                "disabled_by": null,
+                "entity_id": "light.nachtlampje_alex",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1lightnachtlampje_alex"
+            },
+            {
+                "config_entry_id": "d37742969f5942e39e7b024844c891b2",
+                "device_id": "4e8dc851ab9b4f158e1aec73efe045e3",
+                "disabled_by": null,
+                "entity_id": "light.nachtlampje_joyce",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1lightnachtlampje_joyce"
+            },
+            {
+                "config_entry_id": "d37742969f5942e39e7b024844c891b2",
+                "device_id": "4e8dc851ab9b4f158e1aec73efe045e3",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.slaapkamer_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1binary_sensorslaapkamer_status"
+            },
+            {
+                "config_entry_id": "d37742969f5942e39e7b024844c891b2",
+                "device_id": "4e8dc851ab9b4f158e1aec73efe045e3",
+                "disabled_by": null,
+                "entity_id": "switch.slaapkamer_tv",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1switchslaapkamer_tv"
+            },
+            {
+                "config_entry_id": "d37742969f5942e39e7b024844c891b2",
+                "device_id": "4e8dc851ab9b4f158e1aec73efe045e3",
+                "disabled_by": null,
+                "entity_id": "switch.slaapkamer_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_1switchslaapkamer_restart"
+            },
+            {
+                "config_entry_id": "f8aabdfdf0f5409586de99504908b236",
+                "device_id": "c5191faccbe044fcacd917755a4a67bb",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_achterwand_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae80581e3-uptime"
+            },
+            {
+                "config_entry_id": "f8aabdfdf0f5409586de99504908b236",
+                "device_id": "c5191faccbe044fcacd917755a4a67bb",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_achterwand_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae80581e3-wifisignal"
+            },
+            {
+                "config_entry_id": "f8aabdfdf0f5409586de99504908b236",
+                "device_id": "c5191faccbe044fcacd917755a4a67bb",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_achterwand_bssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae80581e3-wifiinfo-bssid"
+            },
+            {
+                "config_entry_id": "f8aabdfdf0f5409586de99504908b236",
+                "device_id": "c5191faccbe044fcacd917755a4a67bb",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_achterwand_ip_address",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae80581e3-wifiinfo-ip"
+            },
+            {
+                "config_entry_id": "f8aabdfdf0f5409586de99504908b236",
+                "device_id": "c5191faccbe044fcacd917755a4a67bb",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_achterwand_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae80581e3-version"
+            },
+            {
+                "config_entry_id": "f8aabdfdf0f5409586de99504908b236",
+                "device_id": "c5191faccbe044fcacd917755a4a67bb",
+                "disabled_by": null,
+                "entity_id": "sensor.slaapkamer_achterwand_ssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae80581e3-wifiinfo-ssid"
+            },
+            {
+                "config_entry_id": "f8aabdfdf0f5409586de99504908b236",
+                "device_id": "c5191faccbe044fcacd917755a4a67bb",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.rf_button_listen_music",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorrf_button_listen_music"
+            },
+            {
+                "config_entry_id": "f8aabdfdf0f5409586de99504908b236",
+                "device_id": "c5191faccbe044fcacd917755a4a67bb",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.rf_button_all_off",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorrf_button_all_off"
+            },
+            {
+                "config_entry_id": "f8aabdfdf0f5409586de99504908b236",
+                "device_id": "c5191faccbe044fcacd917755a4a67bb",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.rf_button_watch_tv",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorrf_button_watch_tv"
+            },
+            {
+                "config_entry_id": "f8aabdfdf0f5409586de99504908b236",
+                "device_id": "c5191faccbe044fcacd917755a4a67bb",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.slaapkamer_achterwand_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorslaapkamer_achterwand_status"
+            },
+            {
+                "config_entry_id": "f8aabdfdf0f5409586de99504908b236",
+                "device_id": "c5191faccbe044fcacd917755a4a67bb",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.rf_button_watch_media",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorrf_button_watch_media"
+            },
+            {
+                "config_entry_id": "f8aabdfdf0f5409586de99504908b236",
+                "device_id": "c5191faccbe044fcacd917755a4a67bb",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.rf_button_tv_slaapkamer",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2binary_sensorrf_button_tv_slaapkamer"
+            },
+            {
+                "config_entry_id": "f8aabdfdf0f5409586de99504908b236",
+                "device_id": "c5191faccbe044fcacd917755a4a67bb",
+                "disabled_by": null,
+                "entity_id": "switch.slaapkamer_achterwand_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2switchslaapkamer_achterwand_restart"
+            },
+            {
+                "config_entry_id": "f8aabdfdf0f5409586de99504908b236",
+                "device_id": "c5191faccbe044fcacd917755a4a67bb",
+                "disabled_by": null,
+                "entity_id": "light.slaapkamer_achterwand",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "bedroom_2lightslaapkamer_achterwand"
+            },
+            {
+                "config_entry_id": "f21821b39e5e4fa0be4e67d13b68bdb1",
+                "device_id": "1cfe6448c7664873a9443932c9835371",
+                "disabled_by": null,
+                "entity_id": "switch.garage_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "garageswitchgarage_restart"
+            },
+            {
+                "config_entry_id": "f21821b39e5e4fa0be4e67d13b68bdb1",
+                "device_id": "1cfe6448c7664873a9443932c9835371",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.garage_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "garagebinary_sensorgarage_status"
+            },
+            {
+                "config_entry_id": "f21821b39e5e4fa0be4e67d13b68bdb1",
+                "device_id": "1cfe6448c7664873a9443932c9835371",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_luchtvochtigheid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "garagesensorgarage_luchtvochtigheid"
+            },
+            {
+                "config_entry_id": "f21821b39e5e4fa0be4e67d13b68bdb1",
+                "device_id": "1cfe6448c7664873a9443932c9835371",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f2265d21d-uptime"
+            },
+            {
+                "config_entry_id": "f21821b39e5e4fa0be4e67d13b68bdb1",
+                "device_id": "1cfe6448c7664873a9443932c9835371",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_temperatuur",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "garagesensorgarage_temperatuur"
+            },
+            {
+                "config_entry_id": "f21821b39e5e4fa0be4e67d13b68bdb1",
+                "device_id": "1cfe6448c7664873a9443932c9835371",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f2265d21d-wifisignal"
+            },
+            {
+                "config_entry_id": "f21821b39e5e4fa0be4e67d13b68bdb1",
+                "device_id": "1cfe6448c7664873a9443932c9835371",
+                "disabled_by": null,
+                "entity_id": "sensor.buiten_temperatuur",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dallas-DE011438B6F4AA28"
+            },
+            {
+                "config_entry_id": "f21821b39e5e4fa0be4e67d13b68bdb1",
+                "device_id": "1cfe6448c7664873a9443932c9835371",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_ssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f2265d21d-wifiinfo-ssid"
+            },
+            {
+                "config_entry_id": "f21821b39e5e4fa0be4e67d13b68bdb1",
+                "device_id": "1cfe6448c7664873a9443932c9835371",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_ip_address",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f2265d21d-wifiinfo-ip"
+            },
+            {
+                "config_entry_id": "f21821b39e5e4fa0be4e67d13b68bdb1",
+                "device_id": "1cfe6448c7664873a9443932c9835371",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_bssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f2265d21d-wifiinfo-bssid"
+            },
+            {
+                "config_entry_id": "f21821b39e5e4fa0be4e67d13b68bdb1",
+                "device_id": "1cfe6448c7664873a9443932c9835371",
+                "disabled_by": null,
+                "entity_id": "sensor.garage_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f2265d21d-version"
+            },
+            {
+                "config_entry_id": "51edc7cee17b4685ae6984cca9829558",
+                "device_id": "f248eb491e10420f9dd55f215204121e",
+                "disabled_by": null,
+                "entity_id": "light.tv_meubel_spruitje",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "living_1lighttv_meubel_spruitje"
+            },
+            {
+                "config_entry_id": "51edc7cee17b4685ae6984cca9829558",
+                "device_id": "f248eb491e10420f9dd55f215204121e",
+                "disabled_by": null,
+                "entity_id": "switch.tv_meubel_receiver",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "living_1switchtv_meubel_receiver"
+            },
+            {
+                "config_entry_id": "51edc7cee17b4685ae6984cca9829558",
+                "device_id": "f248eb491e10420f9dd55f215204121e",
+                "disabled_by": null,
+                "entity_id": "switch.tv_meubel_tv",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "living_1switchtv_meubel_tv"
+            },
+            {
+                "config_entry_id": "51edc7cee17b4685ae6984cca9829558",
+                "device_id": "f248eb491e10420f9dd55f215204121e",
+                "disabled_by": null,
+                "entity_id": "switch.tv_meubel_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "living_1switchtv_meubel_restart"
+            },
+            {
+                "config_entry_id": "51edc7cee17b4685ae6984cca9829558",
+                "device_id": "f248eb491e10420f9dd55f215204121e",
+                "disabled_by": null,
+                "entity_id": "switch.tv_meubel_mediaplayer",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "living_1switchtv_meubel_mediaplayer"
+            },
+            {
+                "config_entry_id": "51edc7cee17b4685ae6984cca9829558",
+                "device_id": "f248eb491e10420f9dd55f215204121e",
+                "disabled_by": null,
+                "entity_id": "sensor.woonkamer_luchtdruk",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "living_1sensorwoonkamer_luchtdruk"
+            },
+            {
+                "config_entry_id": "51edc7cee17b4685ae6984cca9829558",
+                "device_id": "f248eb491e10420f9dd55f215204121e",
+                "disabled_by": null,
+                "entity_id": "sensor.tv_meubel_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194891236-wifisignal"
+            },
+            {
+                "config_entry_id": "51edc7cee17b4685ae6984cca9829558",
+                "device_id": "f248eb491e10420f9dd55f215204121e",
+                "disabled_by": null,
+                "entity_id": "sensor.tv_meubel_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194891236-uptime"
+            },
+            {
+                "config_entry_id": "51edc7cee17b4685ae6984cca9829558",
+                "device_id": "f248eb491e10420f9dd55f215204121e",
+                "disabled_by": null,
+                "entity_id": "sensor.woonkamer_luchtvochtigheid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "living_1sensorwoonkamer_luchtvochtigheid"
+            },
+            {
+                "config_entry_id": "51edc7cee17b4685ae6984cca9829558",
+                "device_id": "f248eb491e10420f9dd55f215204121e",
+                "disabled_by": null,
+                "entity_id": "sensor.woonkamer_temperatuur",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "living_1sensorwoonkamer_temperatuur"
+            },
+            {
+                "config_entry_id": "51edc7cee17b4685ae6984cca9829558",
+                "device_id": "f248eb491e10420f9dd55f215204121e",
+                "disabled_by": null,
+                "entity_id": "sensor.tv_meubel_ssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194891236-wifiinfo-ssid"
+            },
+            {
+                "config_entry_id": "51edc7cee17b4685ae6984cca9829558",
+                "device_id": "f248eb491e10420f9dd55f215204121e",
+                "disabled_by": null,
+                "entity_id": "sensor.tv_meubel_ip_address",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194891236-wifiinfo-ip"
+            },
+            {
+                "config_entry_id": "51edc7cee17b4685ae6984cca9829558",
+                "device_id": "f248eb491e10420f9dd55f215204121e",
+                "disabled_by": null,
+                "entity_id": "sensor.tv_meubel_bssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194891236-wifiinfo-bssid"
+            },
+            {
+                "config_entry_id": "51edc7cee17b4685ae6984cca9829558",
+                "device_id": "f248eb491e10420f9dd55f215204121e",
+                "disabled_by": null,
+                "entity_id": "sensor.tv_meubel_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "600194891236-version"
+            },
+            {
+                "config_entry_id": "51edc7cee17b4685ae6984cca9829558",
+                "device_id": "f248eb491e10420f9dd55f215204121e",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.tv_meubel_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "living_1binary_sensortv_meubel_status"
+            },
+            {
+                "config_entry_id": "02decea725f7433e8ea8909ac33f5e88",
+                "device_id": "76fdaf9582c14757a0b2dafa484bcd98",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.smartmeter_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "smartmeterbinary_sensorsmartmeter_status"
+            },
+            {
+                "config_entry_id": "02decea725f7433e8ea8909ac33f5e88",
+                "device_id": "76fdaf9582c14757a0b2dafa484bcd98",
+                "disabled_by": null,
+                "entity_id": "sensor.smartmeter_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f2265d1cb-wifisignal"
+            },
+            {
+                "config_entry_id": "02decea725f7433e8ea8909ac33f5e88",
+                "device_id": "76fdaf9582c14757a0b2dafa484bcd98",
+                "disabled_by": null,
+                "entity_id": "sensor.meterkast_temperatuur",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "smartmetersensormeterkast_temperatuur"
+            },
+            {
+                "config_entry_id": "02decea725f7433e8ea8909ac33f5e88",
+                "device_id": "76fdaf9582c14757a0b2dafa484bcd98",
+                "disabled_by": null,
+                "entity_id": "sensor.smartmeter_total_consumption",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "smartmetersensorsmartmeter_total_consumption"
+            },
+            {
+                "config_entry_id": "02decea725f7433e8ea8909ac33f5e88",
+                "device_id": "76fdaf9582c14757a0b2dafa484bcd98",
+                "disabled_by": null,
+                "entity_id": "sensor.smartmeter_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f2265d1cb-uptime"
+            },
+            {
+                "config_entry_id": "02decea725f7433e8ea8909ac33f5e88",
+                "device_id": "76fdaf9582c14757a0b2dafa484bcd98",
+                "disabled_by": null,
+                "entity_id": "sensor.meterkast_luchtdruk",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "smartmetersensormeterkast_luchtdruk"
+            },
+            {
+                "config_entry_id": "02decea725f7433e8ea8909ac33f5e88",
+                "device_id": "76fdaf9582c14757a0b2dafa484bcd98",
+                "disabled_by": null,
+                "entity_id": "sensor.meterkast_luchtvochtigheid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "smartmetersensormeterkast_luchtvochtigheid"
+            },
+            {
+                "config_entry_id": "02decea725f7433e8ea8909ac33f5e88",
+                "device_id": "76fdaf9582c14757a0b2dafa484bcd98",
+                "disabled_by": null,
+                "entity_id": "sensor.smartmeter_power_consumption",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "smartmetersensorsmartmeter_power_consumption"
+            },
+            {
+                "config_entry_id": "02decea725f7433e8ea8909ac33f5e88",
+                "device_id": "76fdaf9582c14757a0b2dafa484bcd98",
+                "disabled_by": null,
+                "entity_id": "sensor.smartmeter_bssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f2265d1cb-wifiinfo-bssid"
+            },
+            {
+                "config_entry_id": "02decea725f7433e8ea8909ac33f5e88",
+                "device_id": "76fdaf9582c14757a0b2dafa484bcd98",
+                "disabled_by": null,
+                "entity_id": "sensor.smartmeter_ip_address",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f2265d1cb-wifiinfo-ip"
+            },
+            {
+                "config_entry_id": "02decea725f7433e8ea8909ac33f5e88",
+                "device_id": "76fdaf9582c14757a0b2dafa484bcd98",
+                "disabled_by": null,
+                "entity_id": "sensor.smartmeter_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f2265d1cb-version"
+            },
+            {
+                "config_entry_id": "02decea725f7433e8ea8909ac33f5e88",
+                "device_id": "76fdaf9582c14757a0b2dafa484bcd98",
+                "disabled_by": null,
+                "entity_id": "sensor.smartmeter_ssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "dc4f2265d1cb-wifiinfo-ssid"
+            },
+            {
+                "config_entry_id": "02decea725f7433e8ea8909ac33f5e88",
+                "device_id": "76fdaf9582c14757a0b2dafa484bcd98",
+                "disabled_by": null,
+                "entity_id": "switch.smartmeter_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "smartmeterswitchsmartmeter_restart"
+            },
+            {
+                "config_entry_id": "0f1d39bb03194966bd0d623811704eb7",
+                "device_id": "e31c9b358c36426992578e4abfec2947",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae8071da8-wifisignal"
+            },
+            {
+                "config_entry_id": "0f1d39bb03194966bd0d623811704eb7",
+                "device_id": "e31c9b358c36426992578e4abfec2947",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_voltage",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationsensorventilatie_voltage"
+            },
+            {
+                "config_entry_id": "0f1d39bb03194966bd0d623811704eb7",
+                "device_id": "e31c9b358c36426992578e4abfec2947",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_current",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationsensorventilatie_current"
+            },
+            {
+                "config_entry_id": "0f1d39bb03194966bd0d623811704eb7",
+                "device_id": "e31c9b358c36426992578e4abfec2947",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_power",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationsensorventilatie_power"
+            },
+            {
+                "config_entry_id": "0f1d39bb03194966bd0d623811704eb7",
+                "device_id": "e31c9b358c36426992578e4abfec2947",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae8071da8-uptime"
+            },
+            {
+                "config_entry_id": "0f1d39bb03194966bd0d623811704eb7",
+                "device_id": "e31c9b358c36426992578e4abfec2947",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae8071da8-version"
+            },
+            {
+                "config_entry_id": "0f1d39bb03194966bd0d623811704eb7",
+                "device_id": "e31c9b358c36426992578e4abfec2947",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_ip_address",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae8071da8-wifiinfo-ip"
+            },
+            {
+                "config_entry_id": "0f1d39bb03194966bd0d623811704eb7",
+                "device_id": "e31c9b358c36426992578e4abfec2947",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_ssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae8071da8-wifiinfo-ssid"
+            },
+            {
+                "config_entry_id": "0f1d39bb03194966bd0d623811704eb7",
+                "device_id": "e31c9b358c36426992578e4abfec2947",
+                "disabled_by": null,
+                "entity_id": "sensor.ventilatie_bssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "2c3ae8071da8-wifiinfo-bssid"
+            },
+            {
+                "config_entry_id": "0f1d39bb03194966bd0d623811704eb7",
+                "device_id": "e31c9b358c36426992578e4abfec2947",
+                "disabled_by": null,
+                "entity_id": "switch.ventilatie_auto_poweroff",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationswitchventilatie_auto_poweroff"
+            },
+            {
+                "config_entry_id": "0f1d39bb03194966bd0d623811704eb7",
+                "device_id": "e31c9b358c36426992578e4abfec2947",
+                "disabled_by": null,
+                "entity_id": "switch.ventilatie",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationswitchventilatie"
+            },
+            {
+                "config_entry_id": "0f1d39bb03194966bd0d623811704eb7",
+                "device_id": "e31c9b358c36426992578e4abfec2947",
+                "disabled_by": null,
+                "entity_id": "switch.ventilatie_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationswitchventilatie_restart"
+            },
+            {
+                "config_entry_id": "0f1d39bb03194966bd0d623811704eb7",
+                "device_id": "e31c9b358c36426992578e4abfec2947",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.ventilatie_activated",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationbinary_sensorventilatie_activated"
+            },
+            {
+                "config_entry_id": "0f1d39bb03194966bd0d623811704eb7",
+                "device_id": "e31c9b358c36426992578e4abfec2947",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.ventilatie_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "ventilationbinary_sensorventilatie_status"
+            },
+            {
+                "config_entry_id": "b7e99d99c8584bc5b34750434b013d1d",
+                "device_id": "d65d950688b44f9881b38a0b9f0ba0b4",
+                "disabled_by": null,
+                "entity_id": "switch.veranda_verlichting_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "veranda_lightsswitchveranda_verlichting_restart"
+            },
+            {
+                "config_entry_id": "b7e99d99c8584bc5b34750434b013d1d",
+                "device_id": "d65d950688b44f9881b38a0b9f0ba0b4",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_verlichting_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "3c71bf2bdf38-uptime"
+            },
+            {
+                "config_entry_id": "b7e99d99c8584bc5b34750434b013d1d",
+                "device_id": "d65d950688b44f9881b38a0b9f0ba0b4",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_verlichting_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "3c71bf2bdf38-wifisignal"
+            },
+            {
+                "config_entry_id": "b7e99d99c8584bc5b34750434b013d1d",
+                "device_id": "d65d950688b44f9881b38a0b9f0ba0b4",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_verlichting_ssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "3c71bf2bdf38-wifiinfo-ssid"
+            },
+            {
+                "config_entry_id": "b7e99d99c8584bc5b34750434b013d1d",
+                "device_id": "d65d950688b44f9881b38a0b9f0ba0b4",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_verlichting_ip_address",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "3c71bf2bdf38-wifiinfo-ip"
+            },
+            {
+                "config_entry_id": "b7e99d99c8584bc5b34750434b013d1d",
+                "device_id": "d65d950688b44f9881b38a0b9f0ba0b4",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_verlichting_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "3c71bf2bdf38-version"
+            },
+            {
+                "config_entry_id": "b7e99d99c8584bc5b34750434b013d1d",
+                "device_id": "d65d950688b44f9881b38a0b9f0ba0b4",
+                "disabled_by": null,
+                "entity_id": "sensor.veranda_verlichting_bssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "3c71bf2bdf38-wifiinfo-bssid"
+            },
+            {
+                "config_entry_id": "b7e99d99c8584bc5b34750434b013d1d",
+                "device_id": "d65d950688b44f9881b38a0b9f0ba0b4",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.veranda_verlichting_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "veranda_lightsbinary_sensorveranda_verlichting_status"
+            },
+            {
+                "config_entry_id": "b7e99d99c8584bc5b34750434b013d1d",
+                "device_id": "d65d950688b44f9881b38a0b9f0ba0b4",
+                "disabled_by": null,
+                "entity_id": "light.veranda_verlichting",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "veranda_lightslightveranda_verlichting"
+            },
+            {
+                "config_entry_id": "9704cf6cab1544979269a590d7a2a7d4",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "weather.home",
+                "name": null,
+                "platform": "met",
+                "unique_id": "52.328608-6.10536"
             }
         ]
     },

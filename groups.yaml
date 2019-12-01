@@ -8,11 +8,11 @@ default_view:
 sunset_automations:
   name: Sunset Automations
   entities:
-    - automation.sunset_spruitje
-    - automation.sunset_lamp_links_achter
-    - automation.sunset_lamp_links_op_tv_meubel
-    - automation.sunset_lamp_schilderij
-    - automation.sunset_lamp_bij_het_raam
+    - automation.sunset_phase_1
+    - automation.sunset_phase_2
+    - automation.sunset_phase_3
+    - automation.sunset_phase_4
+    - automation.sunset_phase_5
     - automation.sunset_buitenlamp_voor
     - automation.sunset_veranda_verlichting
     - automation.midnight_buitenlamp_voor

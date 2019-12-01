@@ -7,22 +7,22 @@
     platform: state
     entity_id: input_select.light_scene
   action:
-    - service: scene.turn_on
+    - service: script.turn_on
       data_template:
         entity_id: >
           {% set scene = trigger.to_state.state %}
           {% if scene == 'Afwezig' %}
-            scene.away
+            script.living_scene_away
           {% elif scene == 'Normaal' %}
-            scene.woonkamer_regular
+            script.living_scene_regular
           {% elif scene == 'Zacht' %}
-            scene.woonkamer_dim
+            script.living_scene_dim
           {% elif scene == 'Erg Zacht' %}
-            scene.woonkamer_very_dim
+            script.living_scene_very_dim
           {% elif scene == 'Maximaal' %}
-            scene.woonkamer_maximal
+            script.living_scene_maximal
           {% else %}
-            scene.woonkamer_all_off
+            script.living_scene_all_off
           {% endif %}
 - id: scene_select
   alias: Scene Select
@@ -308,8 +308,8 @@
   action:
     - service: homeassistant.turn_on
       entity_id: group.sunset_automations
-- id: sunset_spruitje
-  alias: Sunset spruitje
+- id: sunset_phase_1
+  alias: Sunset Phase 1
   initial_state: 'off'
   trigger:
     platform: sun
@@ -320,11 +320,9 @@
     entity_id: group.activity_at_home
     state: 'on'
   action:
-    - service: scene.turn_on
-      entity_id: scene.woonkamer_regular_stage_1
-    - service: script.silent_light_scene_select
-- id: sunset_lamp_links_achter
-  alias: Sunset lamp links achter
+    - service: script.living_scene_regular_phase_1
+- id: sunset_phase_2
+  alias: Sunset Phase 2
   initial_state: 'off'
   trigger:
     platform: sun
@@ -335,11 +333,9 @@
     entity_id: group.activity_at_home
     state: 'on'
   action:
-    - service: scene.turn_on
-      entity_id: scene.woonkamer_regular_stage_2
-    - service: script.silent_light_scene_select
-- id: sunset_lamp_links_op_tv_meubel
-  alias: Sunset lamp links op tv meubel
+    - service: script.living_scene_regular_phase_2
+- id: sunset_phase_3
+  alias: Sunset Phase 3
   initial_state: 'off'
   trigger:
     platform: sun
@@ -350,11 +346,9 @@
     entity_id: group.activity_at_home
     state: 'on'
   action:
-    - service: scene.turn_on
-      entity_id: scene.woonkamer_regular_stage_3
-    - service: script.silent_light_scene_select
-- id: sunset_lamp_schilderij
-  alias: Sunset lamp schilderij
+    - service: script.living_scene_regular_phase_3
+- id: sunset_phase_4
+  alias: Sunset Phase 4
   initial_state: 'off'
   trigger:
     platform: sun
@@ -365,11 +359,9 @@
     entity_id: group.activity_at_home
     state: 'on'
   action:
-    - service: scene.turn_on
-      entity_id: scene.woonkamer_regular_stage_4
-    - service: script.silent_light_scene_select
-- id: sunset_lamp_bij_het_raam
-  alias: Sunset lamp bij het raam
+    - service: script.living_scene_regular_phase_4
+- id: sunset_phase_5
+  alias: Sunset Phase 5
   initial_state: 'off'
   trigger:
     platform: sun

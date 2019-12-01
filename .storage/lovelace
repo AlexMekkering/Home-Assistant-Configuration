@@ -228,6 +228,15 @@
                         {
                             "entities": [
                                 {
+                                    "entity": "weather.home"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
                                     "entity": "sensor.garage_temperatuur",
                                     "name": "Temperatuur"
                                 },
@@ -247,25 +256,6 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "sensor.woonkamer_temperatuur",
-                                    "name": "Temperatuur"
-                                },
-                                {
-                                    "entity": "sensor.woonkamer_luchtvochtigheid",
-                                    "name": "Luchtvochtigheid"
-                                },
-                                {
-                                    "entity": "sensor.woonkamer_luchtdruk",
-                                    "name": "Luchtdruk"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Woonkamer",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
                                     "entity": "sensor.slaapkamer_temperatuur",
                                     "name": "Temperatuur"
                                 },
@@ -280,6 +270,25 @@
                             ],
                             "show_header_toggle": false,
                             "title": "Slaapkamer",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.woonkamer_temperatuur",
+                                    "name": "Temperatuur"
+                                },
+                                {
+                                    "entity": "sensor.woonkamer_luchtvochtigheid",
+                                    "name": "Luchtvochtigheid"
+                                },
+                                {
+                                    "entity": "sensor.woonkamer_luchtdruk",
+                                    "name": "Luchtdruk"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Woonkamer",
                             "type": "entities"
                         },
                         {
