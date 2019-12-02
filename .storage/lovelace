@@ -346,15 +346,6 @@
                                 },
                                 {
                                     "entity": "sensor.ch_water_temp_verwarming"
-                                },
-                                {
-                                    "entity": "sensor.control_setpoint_verwarming"
-                                },
-                                {
-                                    "entity": "sensor.ch_water_pressure_verwarming"
-                                },
-                                {
-                                    "entity": "sensor.outside_temp_verwarming"
                                 }
                             ],
                             "show_header_toggle": false,

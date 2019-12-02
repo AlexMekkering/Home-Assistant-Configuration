@@ -633,17 +633,3 @@
   - service: script.notify_admin
     data:
       message: TEST Rookmelder Zolder
-
-###############################
-# Centrale verwarming
-###############################
-- id: thermostat_outside_temperature
-  alias: Buitentemperatuur Thermostaat
-  trigger:
-  - platform: state
-    entity_id: 'sensor.buiten_temperatuur'
-  action:
-  - service: opentherm_gw.set_outside_temperature
-    data_template:
-      gateway_id: verwarming
-      temperature: "{{ trigger.to_state.state }}"
