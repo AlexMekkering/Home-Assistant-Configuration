@@ -1,3 +1,8 @@
 tv_slaapkamer:
   name: Timer TV Slaapkamer
   duration: 00:30:00
+
+timeout_activity_upstairs:
+  name: Timeout activiteit boven
+  duration: 00:01:00
+ 

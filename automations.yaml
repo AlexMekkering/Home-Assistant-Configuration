@@ -308,6 +308,8 @@
   action:
     - service: homeassistant.turn_on
       entity_id: group.sunset_automations
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.evening_trigger_upstairs
 - id: sunset_phase_1
   alias: Sunset Phase 1
   initial_state: 'off'
@@ -492,13 +494,13 @@
       entity_id: group.away
 
 ###############################
-# Slaapkamer
+# Boven
 ###############################
 - id: slaapkamer_tv
   alias: Slaapkamer TV
   trigger:
-    platform: state
-    entity_id: switch.slaapkamer_tv
+    - platform: state
+      entity_id: switch.slaapkamer_tv
   action:
     - service_template: >
         {% if trigger.to_state.state == 'on' %}
@@ -513,19 +515,41 @@
           {% else %}
             light.slaapkamer_achterwand
           {% endif %}
-- id: slaapkamer_achterwand
-  alias: Slaapkamer Achterwand
+- id: slaapkamer_achterwand_on
+  alias: Slaapkamer Achterwand On
   trigger:
-    platform: state
-    entity_id: light.slaapkamer_achterwand
+    - platform: state
+      entity_id: light.slaapkamer_achterwand
+      from: 'off'
+      to: 'on'
   action:
-    - service_template: >
-        {% if trigger.to_state.state == 'on' %}
-          timer.cancel
-        {% else %}
-          timer.start
-        {% endif %}
+    - service_template: timer.cancel
       entity_id: timer.tv_slaapkamer
+- id: slaapkamer_achterwand_off
+  alias: Slaapkamer Achterwand On
+  trigger:
+    - platform: state
+      entity_id: light.slaapkamer_achterwand
+      from: 'on'
+      to: 'off'
+  action:
+    - service: timer.cancel
+      entity_id: timer.timeout_activity_upstairs
+    - condition: state
+      entity_id: switch.slaapkamer_tv
+      state: 'on'
+    - service_template: timer.start
+      entity_id: timer.tv_slaapkamer
+- id: lamp_overloop_off
+  alias: Lamp Overloop Off
+  trigger:
+    - platform: state
+      entity_id: switch.overloop_lamp
+      from: 'on'
+      to: 'off'
+  action:
+    - service: timer.cancel
+      entity_id: timer.timeout_activity_upstairs
 - id: timer_tv_slaapkamer
   alias: Timer TV Slaapkamer
   trigger:
@@ -535,6 +559,60 @@
         entity_id: timer.tv_slaapkamer
   action:
     - service: script.turn_off_tv_slaapkamer
+- id: timeout_activity_upstairs
+  alias: Timeout Activiteit boven
+  trigger:
+    - platform: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.timeout_activity_upstairs
+  action:
+    - service: light.turn_off
+      entity_id: light.slaapkamer_achterwand
+    - service: switch.turn_off
+      entity_id: switch.overloop_lamp
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.evening_trigger_upstairs
+    - service: script.notify_admin
+      data:
+        message: Timeout Activiteit Boven
+- id: timer_activity_upstairs_cancelled
+  alias: Timeout Activiteit boven
+  trigger:
+    - platform: event
+      event_type: timer.cancelled
+      event_data:
+        entity_id: timer.timeout_activity_upstairs
+  action:
+    - service: script.notify_admin
+      data:
+        message: Timer Activiteit Boven Cancelled
+- id: reset_activity_upstairs
+  alias: Reset Activiteit boven
+  trigger:
+    - platform: event
+      event_type: timer.completed
+      event_data:
+        entity_id: timer.timeout_activity_upstairs
+  action:
+    - service: script.notify_admin
+      data:
+        message: Reset Timer Activiteit Boven
+- id: start_activity_upstairs
+  alias: Start Timer Activiteit boven
+  trigger:
+    - platform: event
+      event_type: timer.started
+      event_data:
+        entity_id: timer.timeout_activity_upstairs
+  action:
+    - service: script.notify_admin
+      data:
+        message: Started Timer Activiteit Boven
+
+###############################
+# Temperatuur Buiten
+###############################
 - id: notify_warm_outside
   alias: Notificatie Warm Buiten
   trigger:

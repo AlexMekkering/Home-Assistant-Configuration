@@ -2,3 +2,7 @@ admin_notifications:
   name: Enable admin notifications
   initial: on
   icon: mdi:car
+
+evening_trigger_upstairs:
+  name: Evening Trigger Upstairs
+  icon: mdi:sleep

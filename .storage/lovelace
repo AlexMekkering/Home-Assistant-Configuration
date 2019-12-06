@@ -72,6 +72,12 @@
                                 },
                                 {
                                     "entity": "timer.tv_slaapkamer"
+                                },
+                                {
+                                    "entity": "input_boolean.evening_trigger_upstairs"
+                                },
+                                {
+                                    "entity": "timer.timeout_activity_upstairs"
                                 }
                             ],
                             "show_header_toggle": false,

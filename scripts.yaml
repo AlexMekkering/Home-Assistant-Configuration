@@ -67,14 +67,11 @@ all_lights_off:
       entity_id: light.eettafel
     - service: light.turn_off
       entity_id: light.veranda_verlichting
+    - service: script.prepare_for_bed
     - condition: sun
       after: sunset
-    - service: script.prepare_for_bed
     - service: switch.turn_on
       entity_id: switch.hal_lamp
-    - delay: 00:00:05
-    - service: switch.turn_on
-      entity_id: switch.overloop_lamp
     - delay: 00:00:55
     - service: switch.turn_off
       entity_id: switch.hal_lamp
@@ -211,18 +208,22 @@ select_lights_all_off:
 prepare_for_bed:
   alias: Klaarmaken om naar bed te gaan
   sequence:
+    - condition: state
+      entity_id: input_boolean.evening_trigger_upstairs
+      state: 'on'
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.evening_trigger_upstairs
+    - service: switch.turn_on
+      entity_id: switch.overloop_lamp
     - service: light.turn_on
       entity_id: light.slaapkamer_achterwand
-    - delay: 00:45:00
-    - service: light.turn_off
-      entity_id: light.slaapkamer_achterwand
-    - service: switch.turn_off
-      entity_id: switch.overloop_lamp
+    - service: timer.start
+      entity_id: timer.timeout_activity_upstairs
 tv_slaapkamer_aan:
   alias: TV slaapkamer aan
   sequence:
-    - service: script.turn_off
-      entity_id: script.prepare_for_bed
+    - service: timer.cancel
+      entity_id: timer.timeout_activity_upstairs
     - condition: state
       entity_id: sun.sun
       state: 'below_horizon'
