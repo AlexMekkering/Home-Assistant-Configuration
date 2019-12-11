@@ -1854,6 +1854,87 @@
                 "name": null,
                 "platform": "met",
                 "unique_id": "52.328608-6.10536"
+            },
+            {
+                "config_entry_id": "72a1698214194630a3268033558500bd",
+                "device_id": "b18342c9643346c188acda352bf647ec",
+                "disabled_by": null,
+                "entity_id": "switch.kerstboom",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "xmas_1switchkerstboom"
+            },
+            {
+                "config_entry_id": "72a1698214194630a3268033558500bd",
+                "device_id": "b18342c9643346c188acda352bf647ec",
+                "disabled_by": null,
+                "entity_id": "switch.kerstboom_restart",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "xmas_1switchkerstboom_restart"
+            },
+            {
+                "config_entry_id": "72a1698214194630a3268033558500bd",
+                "device_id": "b18342c9643346c188acda352bf647ec",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.kerstboom_status",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "xmas_1binary_sensorkerstboom_status"
+            },
+            {
+                "config_entry_id": "72a1698214194630a3268033558500bd",
+                "device_id": "b18342c9643346c188acda352bf647ec",
+                "disabled_by": null,
+                "entity_id": "sensor.kerstboom_uptime",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "5ccf7f9f2a3d-uptime"
+            },
+            {
+                "config_entry_id": "72a1698214194630a3268033558500bd",
+                "device_id": "b18342c9643346c188acda352bf647ec",
+                "disabled_by": null,
+                "entity_id": "sensor.kerstboom_wifi_signal",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "5ccf7f9f2a3d-wifisignal"
+            },
+            {
+                "config_entry_id": "72a1698214194630a3268033558500bd",
+                "device_id": "b18342c9643346c188acda352bf647ec",
+                "disabled_by": null,
+                "entity_id": "sensor.kerstboom_bssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "5ccf7f9f2a3d-wifiinfo-bssid"
+            },
+            {
+                "config_entry_id": "72a1698214194630a3268033558500bd",
+                "device_id": "b18342c9643346c188acda352bf647ec",
+                "disabled_by": null,
+                "entity_id": "sensor.kerstboom_esphome_version",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "5ccf7f9f2a3d-version"
+            },
+            {
+                "config_entry_id": "72a1698214194630a3268033558500bd",
+                "device_id": "b18342c9643346c188acda352bf647ec",
+                "disabled_by": null,
+                "entity_id": "sensor.kerstboom_ip_address",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "5ccf7f9f2a3d-wifiinfo-ip"
+            },
+            {
+                "config_entry_id": "72a1698214194630a3268033558500bd",
+                "device_id": "b18342c9643346c188acda352bf647ec",
+                "disabled_by": null,
+                "entity_id": "sensor.kerstboom_ssid",
+                "name": null,
+                "platform": "esphome",
+                "unique_id": "5ccf7f9f2a3d-wifiinfo-ssid"
             }
         ]
     },

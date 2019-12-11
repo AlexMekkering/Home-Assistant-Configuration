@@ -65,6 +65,8 @@ all_lights_off:
     - service: script.select_lights_all_off
     - service: light.turn_off
       entity_id: light.eettafel
+    - service: switch.turn_off
+      entity_id: switch.kerstboom
     - service: light.turn_off
       entity_id: light.veranda_verlichting
     - service: script.prepare_for_bed
@@ -85,6 +87,14 @@ spruitje_off:
     - service: light.turn_off
       entity_id: light.tv_meubel_spruitje
     - service: script.silent_light_scene_select
+kerstboom_on:
+  sequence:
+    - service: switch.turn_on
+      entity_id: switch.kerstboom
+kerstboom_off:
+  sequence:
+    - service: switch.turn_off
+      entity_id: switch.kerstboom
 veranda_lights_on:
   sequence:
     - service: light.turn_on
@@ -103,6 +113,8 @@ living_scene_regular:
   sequence:
     - service: light.turn_on
       entity_id: light.tv_meubel_spruitje
+    - service: switch.turn_on
+      entity_id: switch.kerstboom
     - service: scene.turn_on
       entity_id: scene.living_regular
 living_scene_regular_phase_1:
@@ -155,6 +167,8 @@ living_scene_all_off:
   sequence:
     - service: light.turn_off
       entity_id: light.tv_meubel_spruitje
+    - service: switch.turn_off
+      entity_id: switch.kerstboom
     - service: scene.turn_on
       entity_id: scene.living_off
     - service: light.turn_off

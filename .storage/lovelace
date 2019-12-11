@@ -40,6 +40,9 @@
                                     "entity": "light.eettafel"
                                 },
                                 {
+                                    "entity": "switch.kerstboom"
+                                },
+                                {
                                     "entity": "script.all_off"
                                 }
                             ],
