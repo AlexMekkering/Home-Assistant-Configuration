@@ -163,6 +163,8 @@
     - service: script.detect_lights
     - service: automation.turn_off
       entity_id: automation.opstarten
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.evening_trigger_upstairs      
     - condition: sun
       after: sunset
       after_offset: "-1:00:00"
@@ -170,6 +172,8 @@
       before: '23:05:00'
     - service: automation.trigger
       entity_id: automation.sunset_preparation
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.evening_trigger_upstairs      
 
 ###############################
 # Remote Control
@@ -418,6 +422,8 @@
       entity_id: switch.hal_buitenlamp_voor
     - service: homeassistant.turn_off
       entity_id: group.sunset_automations
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.evening_trigger_upstairs      
 
 ###############################
 # Vakantietimers
