@@ -4,5 +4,5 @@ tv_slaapkamer:
 
 timeout_activity_upstairs:
   name: Timeout activiteit boven
-  duration: 00:01:00
+  duration: 01:00:00
  

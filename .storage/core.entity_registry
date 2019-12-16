@@ -930,7 +930,7 @@
             },
             {
                 "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
-                "device_id": null,
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
                 "disabled_by": null,
                 "entity_id": "climate.verwarming",
                 "name": null,
@@ -1935,6 +1935,888 @@
                 "name": null,
                 "platform": "esphome",
                 "unique_id": "5ccf7f9f2a3d-wifiinfo-ssid"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_ch2_active_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_ch2_active"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.remote_rw_dhw_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-remote_rw_dhw"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_diagnostic_indication_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_diagnostic_indication"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.remote_rw_max_ch_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-remote_rw_max_ch"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_dhw_present_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_dhw_present"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.rovrd_man_prio_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-rovrd_man_prio"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_control_type_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_control_type"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.rovrd_auto_prio_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-rovrd_auto_prio"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_cooling_supported_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_cooling_supported"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.otgw_gpio_a_state_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_gpio_a_state"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.master_ch_enabled_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-master_ch_enabled"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_dhw_config_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_dhw_config"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.otgw_gpio_b_state_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_gpio_b_state"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.master_dhw_enabled_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-master_dhw_enabled"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_master_low_off_pump_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_master_low_off_pump"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.otgw_ignore_transitions_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_ignore_transitions"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_service_required_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_service_required"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.master_cooling_enabled_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-master_cooling_enabled"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.otgw_ovrd_high_byte_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_ovrd_high_byte"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.master_otc_enabled_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-master_otc_enabled"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_remote_reset_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_remote_reset"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.master_ch2_enabled_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-master_ch2_enabled"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_low_water_pressure_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_low_water_pressure"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_fault_indication_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_fault_indication"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_gas_fault_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_gas_fault"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_ch_active_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_ch_active"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_air_pressure_fault_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_air_pressure_fault"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_dhw_active_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_dhw_active"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_water_overtemp_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_water_overtemp"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_flame_on_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_flame_on"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.remote_transfer_dhw_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-remote_transfer_dhw"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_ch2_present_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_ch2_present"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.remote_transfer_max_ch_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-remote_transfer_max_ch"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "binary_sensor.slave_cooling_active_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_cooling_active"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.slave_max_relative_modulation_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_max_relative_modulation"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.dhw_temp_2_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-dhw_temp_2"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.dhw_pump_hours_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-dhw_pump_hours"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_led_d_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_led_d"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.slave_max_capacity_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_max_capacity"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.exhaust_temp_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-exhaust_temp"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.dhw_burner_hours_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-dhw_burner_hours"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_led_e_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_led_e"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_led_c_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_led_c"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.dhw_temp_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-dhw_temp"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.slave_dhw_max_setp_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_dhw_max_setp"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.master_ot_version_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-master_ot_version"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_led_f_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_led_f"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.slave_min_mod_level_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_min_mod_level"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.slave_dhw_min_setp_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_dhw_min_setp"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.slave_ot_version_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_ot_version"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_gpio_a_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_gpio_a"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.room_setpoint_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-room_setpoint"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.slave_ch_max_setp_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_ch_max_setp"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.master_product_type_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-master_product_type"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_gpio_b_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_gpio_b"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.relative_mod_level_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-relative_mod_level"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.slave_ch_min_setp_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_ch_min_setp"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.master_product_version_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-master_product_version"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_setback_temp_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_setback_temp"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.ch_water_pressure_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-ch_water_pressure"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.dhw_setpoint_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-dhw_setpoint"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.slave_product_type_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_product_type"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_setpoint_ovrd_mode_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_setpoint_ovrd_mode"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.dhw_flow_rate_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-dhw_flow_rate"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.max_ch_setpoint_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-max_ch_setpoint"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.slave_product_version_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_product_version"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_smart_pwr_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_smart_pwr"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.control_setpoint_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-control_setpoint"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.room_setpoint_2_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-room_setpoint_2"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.oem_diag_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-oem_diag"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_mode_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_mode"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_thermostat_detect_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_thermostat_detect"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.master_memberid_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-master_memberid"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.room_temp_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-room_temp"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.burner_starts_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-burner_starts"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_dhw_ovrd_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_dhw_ovrd"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_vref_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_vref"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.slave_memberid_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_memberid"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": null,
+                "entity_id": "sensor.ch_water_temp_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-ch_water_temp"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.ch_pump_starts_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-ch_pump_starts"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_about_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_about"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.slave_oem_fault_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-slave_oem_fault"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.outside_temp_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-outside_temp"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.dhw_pump_starts_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-dhw_pump_starts"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_build_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_build"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.cooling_control_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-cooling_control"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.return_water_temp_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-return_water_temp"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.dhw_burner_starts_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-dhw_burner_starts"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_clockmhz_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_clockmhz"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.control_setpoint_2_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-control_setpoint_2"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.solar_storage_temp_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-solar_storage_temp"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.burner_hours_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-burner_hours"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_led_a_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_led_a"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.room_setpoint_ovrd_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-room_setpoint_ovrd"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.solar_coll_temp_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-solar_coll_temp"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.ch_pump_hours_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-ch_pump_hours"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.otgw_led_b_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-otgw_led_b"
+            },
+            {
+                "config_entry_id": "43490bf8e08e45568a36d7665dda0150",
+                "device_id": "af26b964cf824b4ba0064ea90eb18761",
+                "disabled_by": "integration",
+                "entity_id": "sensor.ch_water_temp_2_verwarming",
+                "name": null,
+                "platform": "opentherm_gw",
+                "unique_id": "verwarming-ch_water_temp_2"
             }
         ]
     },
