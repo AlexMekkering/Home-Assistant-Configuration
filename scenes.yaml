@@ -1,0 +1,137 @@
+- id: '1583075099011'
+  name: living_max
+  entities:
+    light.linksachter:
+      brightness: 254
+      color_temp: 370
+      state: 'on'
+    light.linksvoor:
+      brightness: 254
+      color_temp: 370
+      state: 'on'
+    light.raam:
+      brightness: 254
+      color_temp: 370
+      state: 'on'
+    light.schilderij:
+      brightness: 254
+      color_temp: 370
+      state: 'on'
+- id: '1583075099012'
+  name: living_regular
+  entities:
+    light.linksachter:
+      brightness: 200
+      color_temp: 370
+      state: 'on'
+    light.linksvoor:
+      brightness: 200
+      color_temp: 370
+      state: 'on'
+    light.raam:
+      brightness: 200
+      color_temp: 370
+      state: 'on'
+    light.schilderij:
+      brightness: 200
+      color_temp: 370
+      state: 'on'
+- id: '1583075099013'
+  name: living_regular_phase_1
+  entities:
+    light.linksachter:
+      brightness: 200
+      color_temp: 370
+      state: 'on'
+- id: '1583075099014'
+  name: living_regular_phase_2
+  entities:
+    light.linksachter:
+      brightness: 200
+      color_temp: 370
+      state: 'on'
+    light.linksvoor:
+      brightness: 200
+      color_temp: 370
+      state: 'on'
+- id: '1583075099015'
+  name: living_regular_phase_3
+  entities:
+    light.linksachter:
+      brightness: 200
+      color_temp: 370
+      state: 'on'
+    light.linksvoor:
+      brightness: 200
+      color_temp: 370
+      state: 'on'
+    light.raam:
+      brightness: 200
+      color_temp: 370
+      state: 'on'
+- id: '1583075099016'
+  name: living_dim
+  entities:
+    light.linksachter:
+      brightness: 100
+      color_temp: 370
+      state: 'on'
+    light.linksvoor:
+      brightness: 100
+      color_temp: 370
+      state: 'on'
+    light.raam:
+      brightness: 100
+      color_temp: 370
+      state: 'on'
+    light.schilderij:
+      brightness: 100
+      color_temp: 370
+      state: 'on'
+- id: '1583075099017'
+  name: living_very_dim
+  entities:
+    light.linksachter:
+      brightness: 50
+      color_temp: 370
+      state: 'on'
+    light.linksvoor:
+      brightness: 50
+      color_temp: 370
+      state: 'on'
+    light.raam:
+      brightness: 50
+      color_temp: 370
+      state: 'on'
+    light.schilderij:
+      brightness: 50
+      color_temp: 370
+      state: 'on'
+- id: '1583075099018'
+  name: living_away
+  entities:
+    light.linksachter:
+      brightness: 100
+      color_temp: 370
+      state: 'on'
+    light.linksvoor:
+      brightness: 100
+      color_temp: 370      
+      state: 'on'
+    light.raam:
+      brightness: 100
+      color_temp: 370
+      state: 'on'
+    light.schilderij:
+      state: 'off'
+- id: '1583075099019'
+  name: living_off
+  entities:
+    light.linksachter:
+      state: 'off'
+    light.linksvoor:
+      state: 'off'
+    light.raam:
+      state: 'off'
+    light.schilderij:
+      state: 'off'
