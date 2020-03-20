@@ -1,10 +1,3 @@
-default_view:
-  view: yes
-  icon: mdi:home-assistant
-  entities:
-    - group.rookmelders
-    - group.living_room_lights
-    - script.all_off
 sunset_automations:
   name: Sunset Automations
   entities:
@@ -44,7 +37,7 @@ activity_at_home:
   entities:
     - switch.tv_meubel_tv
     - switch.tv_meubel_receiver
-    - switch.tv_meubel_mediaspeler
+    - switch.tv_meubel_mediaplayer
     - light.tv_meubel_spruitje
     - light.schilderij
     - light.veranda_verlichting

@@ -22,9 +22,7 @@ pyozw.sqlite
 ip_bans.yaml
 .*
 !/.gitignore
-!/.storage
-.storage/**
-!/.storage/core.entity_registry
-!/.storage/lovelace
+.storage/
 config
 ozw_config
+zigbee.db

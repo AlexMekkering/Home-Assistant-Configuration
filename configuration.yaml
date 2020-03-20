@@ -14,6 +14,9 @@ homeassistant:
 
 default_config:
 
+lovelace:
+  mode: yaml
+
 logger: !include logger.yaml
 recorder:
   purge_keep_days: 1
