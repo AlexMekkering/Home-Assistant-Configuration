@@ -20,9 +20,9 @@ secrets.yaml
 known_devices.yaml
 pyozw.sqlite
 ip_bans.yaml
-.*
+/.*
 !/.gitignore
-.storage/
+!/.travis.yml
 config
 ozw_config
 zigbee.db

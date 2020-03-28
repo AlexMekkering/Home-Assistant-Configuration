@@ -1,36 +1,23 @@
+---
+# Welcome to my Home Assistant configuration!
+#
+# Don't be scared by the size of my configuration file...
+# It is probably the smallest you've ever seen.
+#
+# My system is very modular and very differently structured
+# compared to other configurations you'll find online.
+#
+# Basically, each file in the repository does 1 (one, uno, eins)
+# thing only! Click through it, you'll get it pretty fast.
+#
+# The configuration.yaml is only used to bootstrap the system.
+#
 homeassistant:
-  # Name of the location where Home Assistant is running
-  name: Home
-  # Location required to calculate the time the sun rises and sets
-  latitude: !secret latitude
-  longitude: !secret longitude
-  # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: !secret elevation
-  # metric for Metric, imperial for Imperial
-  unit_system: metric
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: !secret timezone
-  customize: !include customize.yaml
+  # Load packages
+  packages: !include_dir_named integrations
 
-default_config:
+  customize: !include_dir_merge_named customizations/entities
 
-lovelace:
-  mode: yaml
+  customize_domain: !include_dir_merge_named customizations/domains
 
-logger: !include logger.yaml
-recorder:
-  purge_keep_days: 1
-influxdb: !include influxdb.yaml
-notify: !include notify.yaml
-group: !include groups.yaml
-media_player: !include mediaplayer.yaml
-sensor: !include sensor.yaml
-binary_sensor: !include binary_sensor.yaml
-input_select: !include input_select.yaml
-input_boolean: !include input_boolean.yaml
-automation: !include automations.yaml
-device_tracker: !include device_tracker.yaml
-script: !include scripts.yaml
-scene: !include scenes.yaml
-shell_command: !include shell_command.yaml
-timer: !include timer.yaml
+  customize_glob: !include_dir_merge_named customizations/globs

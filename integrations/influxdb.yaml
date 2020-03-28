@@ -1,0 +1,8 @@
+---
+influxdb:
+  host: !secret host_influxdb
+  include:
+    domains:
+      - sensor
+  tags:
+    source: up-squared
