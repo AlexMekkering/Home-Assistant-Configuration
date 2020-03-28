@@ -6,4 +6,4 @@
 #
 # https://www.home-assistant.io/integrations/script/
 #
-script: !include_dir_merge_named ../entities/scripts
+script: !include_dir_merge_named ../scripts
