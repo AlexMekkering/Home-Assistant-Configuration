@@ -1,0 +1,73 @@
+---
+- id: away_evening_start
+  alias: Away Evening Start
+  initial_state: "off"
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "+00:05:00"
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: group.someone_home
+        state: "off"
+      - condition: time
+        before: "21:00:00"
+  action:
+    - service: script.select_lights_away
+    - service: automation.turn_on
+      entity_id: automation.away_evening_end
+    - service: script.notify_admin
+      data:
+        message: Afwezigheidsmodus geactiveerd
+- id: away_evening_end
+  alias: Away Evening End
+  initial_state: "off"
+  trigger:
+    platform: time
+    at: "23:00:00"
+  action:
+    - service: script.select_lights_all_off
+    - service: automation.turn_on
+      entity_id: automation.away_morning_start
+    - service: automation.turn_off
+      entity_id: automation.away_evening_end
+- id: away_morning_start
+  alias: Away Morning Start
+  initial_state: "off"
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "-01:00:00"
+  action:
+    - service: script.select_lights_away
+    - service: automation.turn_on
+      entity_id: automation.away_morning_end
+    - service: automation.turn_off
+      entity_id: automation.away_morning_start
+- id: away_morning_end
+  alias: Away Morning End
+  initial_state: "off"
+  trigger:
+    platform: sun
+    event: sunrise
+  action:
+    - service: script.select_lights_all_off
+    - service: automation.turn_off
+      entity_id: automation.away_morning_end
+- id: away_cancel
+  alias: Away Cancel
+  initial_state: "off"
+  trigger:
+    platform: state
+    entity_id: group.someone_home
+    from: "off"
+    to: "on"
+  condition:
+    condition: state
+    entity_id: group.away
+    state: "on"
+  action:
+    - service: homeassistant.turn_off
+      entity_id: group.away

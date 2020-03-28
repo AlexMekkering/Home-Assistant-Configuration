@@ -1,0 +1,26 @@
+increase_volume:
+  alias: Increase Volume
+  sequence:
+    - service: homeassistant.update_entity
+      entity_id: media_player.receiver
+    - condition: state
+      entity_id: media_player.receiver
+      state: "home"
+    - service: media_player.volume_set
+      data_template:
+        entity_id: media_player.receiver
+        volume_level: >
+          {{ (states.media_player.receiver.attributes.volume_level | float + 0.025) | round(4) }}
+decrease_volume:
+  alias: Decrease Volume
+  sequence:
+    - service: homeassistant.update_entity
+      entity_id: media_player.receiver
+    - condition: state
+      entity_id: media_player.receiver
+      state: "home"
+    - service: media_player.volume_set
+      data_template:
+        entity_id: media_player.receiver
+        volume_level: >
+          {{ (states.media_player.receiver.attributes.volume_level | float - 0.025) | round(4) }}

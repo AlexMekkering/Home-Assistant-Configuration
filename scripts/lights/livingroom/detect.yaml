@@ -1,0 +1,10 @@
+detect_lights:
+  alias: Detect light scene based on state
+  sequence:
+    - wait_template: "{{ is_state('binary_sensor.tv_meubel_status', 'on') }}"
+      timeout: 00:00:30
+    - delay: 00:00:05
+    - condition: state
+      entity_id: binary_sensor.tv_meubel_status
+      state: "on"
+    - service: script.silent_light_scene_select

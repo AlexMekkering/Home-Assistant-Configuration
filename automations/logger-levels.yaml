@@ -1,0 +1,36 @@
+- id: select_logger_level_homeassistant
+  alias: Select Logger Level Home Assistant
+  trigger:
+    platform: state
+    entity_id: input_select.logger_level_homeassistant
+  action:
+    - service: logger.set_level
+      data_template:
+        homeassistant: "{{ trigger.to_state.state }}"
+- id: select_logger_level
+  alias: Select Logger Level
+  trigger:
+    platform: state
+    entity_id: input_select.logger_level_zwave
+  action:
+    - service: logger.set_level
+      data_template:
+        openzwave: "{{ trigger.to_state.state }}"
+    - service: logger.set_level
+      data_template:
+        libopenzwave: "{{ trigger.to_state.state }}"
+    - service: logger.set_level
+      data_template:
+        homeassistant.components.zwave.util: "{{ trigger.to_state.state }}"
+- id: select_logger_level_deconz
+  alias: Select Logger Level deCONZ
+  trigger:
+    platform: state
+    entity_id: input_select.logger_level_deconz
+  action:
+    - service: logger.set_level
+      data_template:
+        pydeconz: "{{ trigger.to_state.state }}"
+    - service: logger.set_level
+      data_template:
+        homeassistant.components.deconz: "{{ trigger.to_state.state }}"

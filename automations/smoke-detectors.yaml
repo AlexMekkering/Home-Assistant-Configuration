@@ -1,0 +1,67 @@
+---
+- id: alert_rookmelder_hal
+  alias: Waarschuwing Rookmelder Hal
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.rook_hal'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_alert
+    data:
+      message: Rook in de Hal
+- id: test_rookmelder_hal
+  alias: Test Rookmelder Hal
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.test_rookmelder_hal'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_admin
+    data:
+      message: TEST Rookmelder Hal
+- id: alert_rookmelder_overloop
+  alias: Waarschuwing Rookmelder Overloop
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.rook_overloop'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_alert
+    data:
+      message: Rook op de Overloop
+- id: test_rookmelder_overloop
+  alias: Test Rookmelder Overloop
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.test_rookmelder_overloop'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_admin
+    data:
+      message: TEST Rookmelder Overloop
+- id: alert_rookmelder_zolder
+  alias: Waarschuwing Rookmelder Zolder
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.rook_zolder'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_alert
+    data:
+      message: Rook op Zolder
+- id: test_rookmelder_zolder
+  alias: Test Rookmelder Zolder
+  trigger:
+  - platform: state
+    entity_id: 'binary_sensor.test_rookmelder_zolder'
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_admin
+    data:
+      message: TEST Rookmelder Zolder

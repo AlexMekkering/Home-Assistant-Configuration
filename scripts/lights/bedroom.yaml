@@ -1,0 +1,50 @@
+prepare_for_bed:
+  alias: Klaarmaken om naar bed te gaan
+  sequence:
+    - condition: state
+      entity_id: input_boolean.evening_trigger_upstairs
+      state: 'on'
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.evening_trigger_upstairs
+    - service: switch.turn_on
+      entity_id: switch.overloop_lamp
+    - service: light.turn_on
+      entity_id: light.slaapkamer_achterwand
+    - service: timer.start
+      entity_id: timer.timeout_activity_upstairs
+tv_slaapkamer_aan:
+  alias: TV slaapkamer aan
+  sequence:
+    - service: timer.cancel
+      entity_id: timer.timeout_activity_upstairs
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+    - service: light.turn_on
+      entity_id: light.slaapkamer_achterwand
+toggle_tv_slaapkamer:
+  alias: Toggle TV Slaapkamer
+  sequence:
+    - service_template: >
+        {% if is_state('switch.slaapkamer_tv', 'off') %}
+          switch.turn_on
+        {% else %}
+          script.turn_on
+        {% endif %}
+      data_template:
+        entity_id: >
+          {% if is_state('switch.slaapkamer_tv', 'off') %}
+            switch.slaapkamer_tv
+          {% else %}
+            script.turn_off_tv_slaapkamer
+          {% endif %}
+turn_off_tv_slaapkamer:
+  alias: Turn off TV Slaapkamer
+  sequence:
+    - service: media_player.turn_off
+      entity_id: media_player.slaapkamer
+    - service: light.turn_off
+      entity_id: light.slaapkamer_achterwand
+    - delay: 00:00:15
+    - service: switch.turn_off
+      entity_id: switch.slaapkamer_tv

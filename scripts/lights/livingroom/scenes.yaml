@@ -1,0 +1,71 @@
+
+living_scene_away:
+  sequence:
+    - service: light.turn_off
+      entity_id: light.tv_meubel_spruitje
+    - service: scene.turn_on
+      entity_id: scene.living_away
+living_scene_regular:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.tv_meubel_spruitje
+    - service: switch.turn_on
+      entity_id: switch.kerstboom
+    - service: scene.turn_on
+      entity_id: scene.living_regular
+living_scene_regular_phase_1:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.tv_meubel_spruitje
+    - service: script.silent_light_scene_select
+living_scene_regular_phase_2:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.tv_meubel_spruitje
+    - service: scene.turn_on
+      entity_id: scene.living_regular_phase_1
+    - service: script.silent_light_scene_select
+living_scene_regular_phase_3:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.tv_meubel_spruitje
+    - service: scene.turn_on
+      entity_id: scene.living_regular_phase_2
+    - service: script.silent_light_scene_select
+living_scene_regular_phase_4:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.tv_meubel_spruitje
+    - service: scene.turn_on
+      entity_id: scene.living_regular_phase_3
+    - service: script.silent_light_scene_select
+living_scene_dim:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.tv_meubel_spruitje
+    - service: scene.turn_on
+      entity_id: scene.living_dim
+living_scene_very_dim:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.tv_meubel_spruitje
+    - service: scene.turn_on
+      entity_id: scene.living_very_dim
+living_scene_maximal:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.tv_meubel_spruitje
+    - service: scene.turn_on
+      entity_id: scene.living_max
+    - service: light.turn_on
+      entity_id: light.eettafel
+living_scene_all_off:
+  sequence:
+    - service: light.turn_off
+      entity_id: light.tv_meubel_spruitje
+    - service: switch.turn_off
+      entity_id: switch.kerstboom
+    - service: scene.turn_on
+      entity_id: scene.living_off
+    - service: light.turn_off
+      entity_id: light.eettafel

@@ -1,0 +1,84 @@
+silent_light_scene_select:
+  alias: Silent Light Scene Select
+  sequence:
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: input_select.light_scene
+          state: 'Uit'
+        - condition: state
+          entity_id: light.tv_meubel_spruitje
+          state: 'off'
+    - delay: 00:00:01
+    - service: automation.turn_off
+      entity_id: automation.light_scene_select
+    - service_template: >
+        {% if is_state('light.tv_meubel_spruitje', 'on') %}
+          script.select_lights_dim
+        {% elif is_state('light.raam', 'on') %}
+          script.select_lights_away
+        {% else %}
+          script.select_lights_all_off
+        {% endif %}
+    - service: automation.turn_on
+      entity_id: automation.light_scene_select
+all_lights_off:
+  alias: All Lights Off
+  sequence:
+    - service: script.select_lights_all_off
+    - service: light.turn_off
+      entity_id: light.eettafel
+    - service: switch.turn_off
+      entity_id: switch.kerstboom
+    - service: light.turn_off
+      entity_id: light.veranda_verlichting
+    - service: script.prepare_for_bed
+    - condition: sun
+      after: sunset
+    - service: switch.turn_on
+      entity_id: switch.hal_lamp
+    - delay: 00:00:55
+    - service: switch.turn_off
+      entity_id: switch.hal_lamp
+select_lights_maximal:
+  alias: Select Light Scene Maximal
+  sequence:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.light_scene
+        option: 'Maximaal'
+select_lights_regular:
+  alias: Select Light Scene Regular
+  sequence:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.light_scene
+        option: 'Normaal'
+select_lights_dim:
+  alias: Select Light Scene Dim
+  sequence:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.light_scene
+        option: 'Zacht'
+select_lights_very_dim:
+  alias: Select Light Scene Very Dim
+  sequence:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.light_scene
+        option: 'Erg Zacht'
+select_lights_away:
+  alias: Select Light Scene Away
+  sequence:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.light_scene
+        option: 'Afwezig'
+select_lights_all_off:
+  alias: Select Light Scene All Off
+  sequence:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.light_scene
+        option: 'Uit'

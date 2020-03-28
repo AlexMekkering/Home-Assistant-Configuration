@@ -1,0 +1,62 @@
+---
+- id: light_scene_select
+  alias: Light Scene Select
+  trigger:
+    platform: state
+    entity_id: input_select.light_scene
+  action:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% set scene = trigger.to_state.state %}
+          {% if scene == 'Afwezig' %}
+            script.living_scene_away
+          {% elif scene == 'Normaal' %}
+            script.living_scene_regular
+          {% elif scene == 'Zacht' %}
+            script.living_scene_dim
+          {% elif scene == 'Erg Zacht' %}
+            script.living_scene_very_dim
+          {% elif scene == 'Maximaal' %}
+            script.living_scene_maximal
+          {% else %}
+            script.living_scene_all_off
+          {% endif %}
+- id: scene_select
+  alias: Scene Select
+  trigger:
+    platform: state
+    entity_id: input_select.media_scene
+  action:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% set scene = trigger.to_state.state %}
+          {% if scene == 'Radio luisteren' %}
+            script.listen_radio
+          {% elif scene == 'TV kijken' %}
+            script.watch_tv
+          {% elif scene == 'Media kijken' %}
+            script.watch_media
+          {% else %}
+            script.all_media_off
+          {% endif %}
+- id: toggle_living
+  alias: Toggle Living
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.woonkamer_binnenkomst
+  condition:
+    condition: template
+    value_template: '{{ (trigger.event.data.scene_id // 10) == 2 }}'
+  action:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state('group.living_room_lights', 'on') %}
+            script.all_off
+          {% else %}
+            script.select_lights_regular
+          {% endif %}

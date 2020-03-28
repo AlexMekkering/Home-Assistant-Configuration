@@ -1,0 +1,65 @@
+select_geen:
+  alias: Select media scene Geen
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.media_scene
+        option: "Geen"
+select_tv_kijken:
+  alias: Select media scene TV kijken
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.media_scene
+        option: "TV kijken"
+select_media_kijken:
+  alias: Select media scene Media kijken
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.media_scene
+        option: "Media kijken"
+select_radio_luisteren:
+  alias: Select media scene Radio luisteren
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.media_scene
+        option: "Radio luisteren"
+listen_radio:
+  alias: Listen Radio
+  sequence:
+    - service: automation.turn_off
+      entity_id: automation.turn_on_mediaplayer
+    - service: automation.turn_on
+      entity_id: automation.check_receiver_source
+    - service: script.shutdown_tv
+    - service: script.powerup_receiver
+watch_tv:
+  alias: Watch TV
+  sequence:
+    - service: automation.turn_off
+      entity_id: automation.turn_on_mediaplayer
+    - service: automation.turn_on
+      entity_id: automation.check_receiver_source
+    - service: script.shutdown_mediaplayer
+    - wait_template: "{{ is_state('switch.tv_meubel_mediaplayer', 'off') }}"
+      timeout: 00:00:10
+    - service: script.powerup_tv
+watch_media:
+  alias: Watch Media
+  sequence:
+    - service: automation.turn_on
+      entity_id: automation.turn_on_mediaplayer
+    - service: automation.turn_on
+      entity_id: automation.check_receiver_source
+    - service: script.powerup_mediaplayer
+all_media_off:
+  alias: All Media Off
+  sequence:
+    - service: script.shutdown_receiver
+all_off:
+  alias: All Off
+  sequence:
+    - service: script.select_geen
+    - service: script.all_lights_off
