@@ -1,6 +1,6 @@
 ---
 logger:
-  default: warn
-  # logs:
-  #   pydeconz: debug
-  #   homeassistant.components.deconz: debug
+  default: error
+  logs:
+    # The following tweaks are to suppress some insignificant logs
+    homeassistant.components.onkyo: fatal

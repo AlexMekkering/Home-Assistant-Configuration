@@ -9,10 +9,11 @@ views:
         title: Toggles
         type: entities
       - entities:
+          - entity: input_select.logger_level_default
           - entity: input_select.logger_level_homeassistant
           - entity: input_select.logger_level_zwave
-          - entity: input_select.logger_level_deconz
-        show_header_toggle: false
+          - entity: input_select.logger_level_zigbee
+          - entity: input_select.logger_level_esphome
         title: Logging Levels
         type: entities
     icon: "mdi:settings"

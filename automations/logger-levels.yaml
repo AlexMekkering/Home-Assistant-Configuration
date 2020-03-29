@@ -1,3 +1,12 @@
+- id: select_logger_level_default
+  alias: Select Default Logger Level
+  trigger:
+    platform: state
+    entity_id: input_select.logger_level_default
+  action:
+    - service: logger.set_default_level
+      data_template:
+        level: "{{ trigger.to_state.state }}"
 - id: select_logger_level_homeassistant
   alias: Select Logger Level Home Assistant
   trigger:
@@ -7,30 +16,42 @@
     - service: logger.set_level
       data_template:
         homeassistant: "{{ trigger.to_state.state }}"
-- id: select_logger_level
-  alias: Select Logger Level
+- id: select_logger_level_zwave
+  alias: Select Logger Level Z-Wave
   trigger:
     platform: state
     entity_id: input_select.logger_level_zwave
   action:
     - service: logger.set_level
       data_template:
+        homeassistant.components.zwave: "{{ trigger.to_state.state }}"
+    - service: logger.set_level
+      data_template:
         openzwave: "{{ trigger.to_state.state }}"
     - service: logger.set_level
       data_template:
         libopenzwave: "{{ trigger.to_state.state }}"
-    - service: logger.set_level
-      data_template:
-        homeassistant.components.zwave.util: "{{ trigger.to_state.state }}"
-- id: select_logger_level_deconz
-  alias: Select Logger Level deCONZ
+- id: select_logger_level_zigbee
+  alias: Select Logger Level Zigbee
   trigger:
     platform: state
-    entity_id: input_select.logger_level_deconz
+    entity_id: input_select.logger_level_zigbee
   action:
     - service: logger.set_level
       data_template:
-        pydeconz: "{{ trigger.to_state.state }}"
+        homeassistant.components.zha: "{{ trigger.to_state.state }}"
     - service: logger.set_level
       data_template:
-        homeassistant.components.deconz: "{{ trigger.to_state.state }}"
+        zigpy_deconz: "{{ trigger.to_state.state }}"
+    - service: logger.set_level
+      data_template:
+        zigpy.zcl: "{{ trigger.to_state.state }}"
+- id: select_logger_level_esphome
+  alias: Select Logger Level ESPHome
+  trigger:
+    platform: state
+    entity_id: input_select.logger_level_esphome
+  action:
+    - service: logger.set_level
+      data_template:
+        aioesphomeapi: "{{ trigger.to_state.state }}"

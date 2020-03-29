@@ -7,6 +7,14 @@ media_scene:
     - Geen
   initial: Geen
   icon: mdi:monitor-multiple
+logger_level_default:
+  name: Default Logger Level
+  options:
+    - error
+    - warning
+    - info
+    - debug
+  initial: error
 logger_level_homeassistant:
   name: Logger Level Homeassistant
   options:
@@ -14,20 +22,30 @@ logger_level_homeassistant:
     - warning
     - info
     - debug
+  initial: error
 logger_level_zwave:
-  name: Logger Level ZWave
+  name: Logger Level Z-Wave
   options:
     - error
     - warning
     - info
     - debug
-logger_level_deconz:
-  name: Logger Level deCONZ
+  initial: error
+logger_level_zigbee:
+  name: Logger Level Zigbee
   options:
     - error
     - warning
     - info
     - debug
+logger_level_esphome:
+  name: Logger Level ESPHome
+  options:
+    - error
+    - warning
+    - info
+    - debug
+  initial: error
 light_scene:
   name: Lichtscene
   options:
