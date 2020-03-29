@@ -9,3 +9,10 @@
 #
 lovelace:
   mode: yaml
+  dashboards:
+    lovelace-yaml:
+      title: Admin
+      mode: yaml
+      require_admin: true
+      icon: mdi:settings
+      filename: lovelace-admin.yaml

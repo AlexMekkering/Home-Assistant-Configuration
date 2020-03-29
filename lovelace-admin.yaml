@@ -1,0 +1,63 @@
+title: Admin
+views:
+  - badges:
+      - entity: binary_sensor.updater
+    cards:
+      - entities:
+          - entity: input_boolean.admin_notifications
+        show_header_toggle: false
+        title: Toggles
+        type: entities
+      - entities:
+          - entity: input_select.logger_level_homeassistant
+          - entity: input_select.logger_level_zwave
+          - entity: input_select.logger_level_deconz
+        show_header_toggle: false
+        title: Logging Levels
+        type: entities
+    icon: "mdi:settings"
+    title: Settings
+  - badges: []
+    cards:
+      - entities:
+          - entity: sensor.slaapkamer_ip_address
+          - entity: sensor.slaapkamer_achterwand_ip_address
+          - entity: sensor.garage_ip_address
+          - entity: sensor.smartmeter_ip_address
+          - entity: sensor.tv_meubel_ip_address
+          - entity: sensor.ventilatie_ip_address
+          - entity: sensor.veranda_verlichting_ip_address
+          - entity: sensor.zolder_ip_address
+        show_header_toggle: false
+        title: Esphome
+        type: entities
+    icon: "mdi:switch"
+    title: Sonoff
+  - badges: []
+    cards:
+      - entities:
+          - entity: sensor.worldwide_coronavirus_confirmed
+            name: Confirmed
+          - entity: sensor.worldwide_coronavirus_current
+            name: Current
+          - entity: sensor.worldwide_coronavirus_recovered
+            name: Recovered
+          - entity: sensor.worldwide_coronavirus_deaths
+            name: Diseased
+        show_state: true
+        title: Worldwide
+        type: glance
+      - entities:
+          - entity: sensor.netherlands_coronavirus_confirmed
+            name: Confirmed
+          - entity: sensor.netherlands_coronavirus_current
+            name: Current
+          - entity: sensor.netherlands_coronavirus_recovered
+            name: Recovered
+          - entity: sensor.netherlands_coronavirus_deaths
+            name: Diseased
+        title: The Netherlands
+        type: glance
+    icon: "mdi:biohazard"
+    path: corona
+    title: Corona
