@@ -48,6 +48,11 @@ views:
           - entity: light.veranda_verlichting
         title: Overige Lampen
         type: entities
+      - type: entities
+        title: Deurbel
+        entities:
+          - entity: switch.deurbel_actief
+        show_header_toggle: false
       - entities:
           - entity: switch.zolder_pc
           - entity: switch.zolder_printer
