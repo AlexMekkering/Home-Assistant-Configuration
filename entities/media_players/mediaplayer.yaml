@@ -1,19 +1,3 @@
-- platform: kodi
-  host: !secret host_woonkamer
-  name: Woonkamer
-  turn_off_action:
-    service: kodi.call_method
-    data:
-      entity_id: media_player.woonkamer
-      method: System.Shutdown
-- platform: kodi
-  host: !secret host_slaapkamer
-  name: Slaapkamer
-  turn_off_action:
-    service: kodi.call_method
-    data:
-      entity_id: media_player.slaapkamer
-      method: System.Shutdown
 - platform: onkyo
   host: !secret host_receiver
   name: Receiver

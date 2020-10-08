@@ -14,5 +14,5 @@ lovelace:
       title: Admin
       mode: yaml
       require_admin: true
-      icon: mdi:settings
+      icon: mdi:cog
       filename: lovelace-admin.yaml

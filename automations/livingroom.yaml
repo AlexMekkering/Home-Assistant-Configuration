@@ -60,3 +60,33 @@
           {% else %}
             script.select_lights_regular
           {% endif %}
+- id: '1589741290145'
+  alias: Beweging Achtertuin
+  description: ''
+  trigger:
+  - device_id: 2c887ba43bf44b0fafd4bf06746c24dc
+    domain: binary_sensor
+    entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_f73b95fe_on_off
+    platform: device
+    type: opened
+  condition: []
+  action:
+  - data:
+      message: Beweging Achtertuin
+    service: script.notify_admin
+- id: '1601907810392'
+  alias: Turn off kodi woonkamer
+  description: ''
+  trigger:
+  - platform: device
+    device_id: eb8315e0066511eba1ce870d36463024
+    domain: kodi
+    entity_id: media_player.coreelec
+    type: turn_off
+  condition: []
+  action:
+  - service: kodi.call_method
+    data:
+      method: System.Shutdown
+      entity_id: media_player.coreelec
+  mode: single

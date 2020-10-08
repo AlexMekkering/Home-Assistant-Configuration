@@ -62,7 +62,7 @@ views:
         type: entities
       - entities:
           - entity: media_player.receiver
-          - entity: media_player.woonkamer
+          - entity: media_player.coreelec
           - entity: media_player.slaapkamer
         show_state: false
         title: Mediaspelers

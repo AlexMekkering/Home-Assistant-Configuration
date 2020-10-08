@@ -5,7 +5,7 @@ shutdown_mediaplayer:
       entity_id: switch.tv_meubel_mediaplayer
       state: "on"
     - service: media_player.turn_off
-      entity_id: media_player.woonkamer
+      entity_id: media_player.coreelec
     - delay: 00:00:15
     - service: switch.turn_off
       entity_id: switch.tv_meubel_mediaplayer

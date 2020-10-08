@@ -51,3 +51,20 @@
         entity_id: timer.tv_slaapkamer
   action:
     - service: script.turn_off_tv_slaapkamer
+- id: '1601834029668'
+  alias: Turn off kodi slaapkamer
+  description: ''
+  trigger:
+  - platform: device
+    device_id: b33e416bfea311ea82617173adb0b20c
+    domain: kodi
+    entity_id: media_player.slaapkamer
+    type: turn_off
+  condition: []
+  action:
+  - service: kodi.call_method
+    data:
+      method: System.Shutdown
+      entity_id: media_player.slaapkamer
+    entity_id: media_player.slaapkamer
+  mode: single

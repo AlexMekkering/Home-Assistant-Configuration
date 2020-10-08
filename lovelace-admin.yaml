@@ -16,7 +16,7 @@ views:
           - entity: input_select.logger_level_esphome
         title: Logging Levels
         type: entities
-    icon: "mdi:settings"
+    icon: "mdi:cog"
     title: Settings
   - badges: []
     cards:
