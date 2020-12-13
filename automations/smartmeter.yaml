@@ -1,0 +1,17 @@
+---
+- id: smartmeter_trigger
+  alias: Smartmeter Trigger
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.smartmeter
+      from: 'off'
+      to: 'on'
+  action:
+    - service: input_number.set_value
+      data:
+        value: >-
+          {{ 3600.0 / (now().timestamp() -
+          states.input_number.smartmeter_kwh.last_changed.timestamp())}}
+      entity_id: input_number.smartmeter_w
+    - service: input_number.increment
+      entity_id: input_number.smartmeter_kwh

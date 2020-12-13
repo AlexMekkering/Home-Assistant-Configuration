@@ -49,11 +49,6 @@ views:
           - entity: light.kerstverlichting_buiten
         title: Overige Lampen
         type: entities
-      - type: entities
-        title: Deurbel
-        entities:
-          - entity: switch.deurbel_actief
-        show_header_toggle: false
       - entities:
           - entity: switch.zolder_pc
           - entity: switch.zolder_printer
@@ -141,11 +136,11 @@ views:
         title: Woonkamer
         type: entities
       - entities:
-          - entity: sensor.meterkast_temperatuur
+          - entity: sensor.meterkast_temperature
             name: Temperatuur
-          - entity: sensor.meterkast_luchtvochtigheid
+          - entity: sensor.meterkast_humidity
             name: Luchtvochtigheid
-          - entity: sensor.meterkast_luchtdruk
+          - entity: sensor.meterkast_pressure
             name: Luchtdruk
         show_header_toggle: false
         title: Meterkast
@@ -177,7 +172,6 @@ views:
             name: Power Consumption
           - entity: sensor.smartmeter_total_consumption
             name: Total
-          - entity: sensor.smartmeter_uptime
         show_header_toggle: false
         type: entities
       - entities:

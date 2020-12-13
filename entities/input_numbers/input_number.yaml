@@ -1,0 +1,8 @@
+smartmeter_kwh:
+  min: 0
+  max: 1000000000
+  step: 0.001
+
+smartmeter_w:
+  min: 0
+  max: 1000000000

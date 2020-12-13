@@ -58,3 +58,25 @@
         {% if states.sensor.buiten_temperatuur and states.sensor.woonkamer_temperatuur %}
           {{ (states('sensor.buiten_temperatuur')|float - states('sensor.woonkamer_temperatuur')|float)|round(0)|int }}
         {% endif %}
+
+########
+# Smartmeter sensors
+########
+- platform: template
+  sensors:
+    smartmeter_power_consumption:
+      friendly_name: Power Consumption
+      unit_of_measurement: W
+      icon_template: mdi:power-plug
+      value_template: "{{ states('input_number.smartmeter_w') | round(1) }}"
+    smartmeter_total_consumption:
+      friendly_name: Total Consumption
+      unit_of_measurement: kWh
+      icon_template: mdi:sigma
+      value_template: "{{ states('input_number.smartmeter_kWh') | round(3) }}"
+
+########
+# Meterkast sensors
+########
+- platform: bme280
+  name: Meterkast
