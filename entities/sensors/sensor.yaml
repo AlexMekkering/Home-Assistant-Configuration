@@ -7,8 +7,6 @@
       arg: /
     - type: disk_use_percent
       arg: !secret storage_mount
-    - type: disk_use_percent
-      arg: !secret cache_mount
     - type: processor_use
     - type: load_1m
     - type: load_5m
@@ -19,10 +17,6 @@
       arg: !secret network1_device
     - type: network_out
       arg: !secret network1_device
-    - type: network_in
-      arg: !secret network2_device
-    - type: network_out
-      arg: !secret network2_device
 
 ########
 # CPU temperature

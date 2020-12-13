@@ -185,14 +185,11 @@ views:
           - entity: sensor.swap_use_percent
           - entity: sensor.disk_use_percent
           - entity: sensor.disk_use_percent_boot
-          - entity: sensor.disk_use_percent_mnt_storage
-          - entity: sensor.disk_use_percent_mnt_cache
-          - entity: sensor.network_in_enp2s0
-          - entity: sensor.network_out_enp2s0
-          - entity: sensor.network_in_enp3s0
-          - entity: sensor.network_out_enp3s0
+          - entity: sensor.disk_use_percent_srv_files_storage
+          - entity: sensor.network_in_br0
+          - entity: sensor.network_out_br0
         show_header_toggle: false
-        title: Up Squared
+        title: PiCore1
         type: entities
     icon: "mdi:speedometer"
     title: Monitoring
