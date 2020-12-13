@@ -101,6 +101,8 @@
   action:
     - service: switch.turn_on
       entity_id: switch.hal_buitenlamp_voor
+    - service: light.turn_on
+      entity_id: light.kerstverlichting_buiten
     - service: automation.turn_on
       entity_id: automation.midnight_buitenlamp_voor
     - service: automation.turn_off

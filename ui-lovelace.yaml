@@ -46,6 +46,7 @@ views:
           - entity: switch.hal_buitenlamp_voor
           - entity: switch.overloop_lamp
           - entity: light.veranda_verlichting
+          - entity: light.kerstverlichting_buiten
         title: Overige Lampen
         type: entities
       - type: entities
