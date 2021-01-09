@@ -40,33 +40,33 @@
   name: living_regular_phase_1
   entities:
     light.linksachter:
-      brightness: 200
+      brightness: 254
       color_temp: 370
       state: 'on'
 - id: '1583075099014'
   name: living_regular_phase_2
   entities:
     light.linksachter:
-      brightness: 200
+      brightness: 254
       color_temp: 370
       state: 'on'
     light.linksvoor:
-      brightness: 200
+      brightness: 254
       color_temp: 370
       state: 'on'
 - id: '1583075099015'
   name: living_regular_phase_3
   entities:
     light.linksachter:
-      brightness: 200
+      brightness: 254
       color_temp: 370
       state: 'on'
     light.linksvoor:
-      brightness: 200
+      brightness: 254
       color_temp: 370
       state: 'on'
     light.raam:
-      brightness: 200
+      brightness: 254
       color_temp: 370
       state: 'on'
 - id: '1583075099016'

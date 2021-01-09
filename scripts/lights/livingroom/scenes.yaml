@@ -12,7 +12,7 @@ living_scene_regular:
     - service: switch.turn_on
       entity_id: switch.kerstboom
     - service: scene.turn_on
-      entity_id: scene.living_regular
+      entity_id: scene.living_max
 living_scene_regular_phase_1:
   sequence:
     - service: light.turn_on

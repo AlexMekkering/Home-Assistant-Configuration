@@ -52,14 +52,20 @@
     condition: template
     value_template: '{{ (trigger.event.data.scene_id // 10) == 2 }}'
   action:
-    - service: script.turn_on
-      data_template:
-        entity_id: >
-          {% if is_state('group.living_room_lights', 'on') %}
-            script.all_off
-          {% else %}
-            script.select_lights_regular
-          {% endif %}
+    - choose:
+        - conditions:
+            - condition: state
+              entity_id: group.living_room_lights
+              state: 'on'
+          sequence:
+            - service: script.all_off
+        - conditions:
+            - condition: time
+              before: '12:00:00'
+          sequence:
+            - service: script.select_lights_away
+      default:
+        - service: script.select_lights_regular
 - id: '1589741290145'
   alias: Beweging Achtertuin
   description: ''
