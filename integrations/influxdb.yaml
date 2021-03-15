@@ -1,8 +1,12 @@
 ---
 influxdb:
-  host: !secret host_influxdb
+  api_version: 2
+  ssl: !secret influxdb_ssl
+  host: !secret influxdb_host
+  port: !secret influxdb_port
+  token: !secret influxdb_token
+  organization: !secret influxdb_organization
+  bucket: !secret influxdb_bucket
   include:
     domains:
       - sensor
-  tags:
-    source: up-squared
