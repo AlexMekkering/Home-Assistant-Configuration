@@ -26,6 +26,7 @@
   command: "cat /sys/class/thermal/thermal_zone0/temp"
   unit_of_measurement: "°C"
   value_template: '{{ (value | multiply(0.001)) | round(1) }}'
+  scan_interval: 600
 
 ########
 # Batterijniveaus rookmelders
@@ -68,9 +69,3 @@
       unit_of_measurement: kWh
       icon_template: mdi:sigma
       value_template: "{{ states('input_number.smartmeter_kWh') | round(3) }}"
-
-########
-# Meterkast sensors
-########
-- platform: bme280
-  name: Meterkast

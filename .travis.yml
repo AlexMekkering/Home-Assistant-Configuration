@@ -1,9 +1,12 @@
-dist: xenial
+dist: focal
 language: python
+git:
+  depth: 3
 python:
-  - "3.7"
+  - "3.9"
 before_install:
   - mv travis_secrets.yaml secrets.yaml
+  - rm entities/sensors/bme280.yml
 install:
   - pip3 install homeassistant
 script:

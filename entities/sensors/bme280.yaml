@@ -1,0 +1,6 @@
+########
+# Meterkast sensors
+########
+- platform: bme280
+  name: Meterkast
+  scan_interval: 600
