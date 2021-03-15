@@ -1,0 +1,5 @@
+- platform: rpi_gpio
+  invert_logic: true
+  bouncetime: 20
+  ports:
+    24: Smartmeter

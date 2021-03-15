@@ -27,9 +27,3 @@
     test_rookmelder_zolder:
       friendly_name: "TEST Rookmelder Zolder"
       value_template: "{{ is_state('sensor.rookmelder_zolder_smoke', '3') }}"
-
-- platform: rpi_gpio
-  invert_logic: true
-  bouncetime: 20
-  ports:
-    24: Smartmeter

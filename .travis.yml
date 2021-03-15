@@ -2,11 +2,10 @@ dist: focal
 language: python
 git:
   depth: 3
-python:
-  - "3.9"
 before_install:
   - mv travis_secrets.yaml secrets.yaml
   - rm entities/sensors/bme280.yaml
+  - rm entities/binary_sensors/rpi_gpio.yaml
 install:
   - pip3 install homeassistant
 script:
