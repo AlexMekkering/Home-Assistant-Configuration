@@ -25,18 +25,19 @@
   alias: RC Buttons
   trigger:
     platform: event
-    event_type: zwave.scene_activated
+    event_type: zwave_js_value_notification
     event_data:
-      entity_id: zwave.remote
+      node_id: 9
+      command_class_name: "Scene Activation"
   condition:
     condition: template
-    value_template: "{{ (trigger.event.data.scene_id % 10) <= 5 }}"
+    value_template: "{{ (trigger.event.data.value % 10) <= 5 }}"
   action:
     - service: script.turn_on
       data_template:
         entity_id: >
-          {% set row = trigger.event.data.scene_id // 10 %}
-          {% set side = (trigger.event.data.scene_id % 10) % 2 %}
+          {% set row = trigger.event.data.value // 10 %}
+          {% set side = (trigger.event.data.value % 10) % 2 %}
           {% if row == 1 %}
             script.spruitje_{% if side == 1 %}on{% else %}off{% endif %}
           {% elif row == 6 %}

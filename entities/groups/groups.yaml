@@ -20,9 +20,11 @@ away:
 rookmelders:
   name: Rookmelders
   entities:
-    - binary_sensor.rook_hal
-    - binary_sensor.rook_overloop
-    - binary_sensor.rook_zolder
+    - binary_sensor.rookmelder_hal_smoke_alarm_smoke_detected
+    - binary_sensor.rookmelder_overloop_smoke_alarm_smoke_detected
+    - binary_sensor.rookmelder_zolder_smoke_alarm_smoke_detected
+    - binary_sensor.rookmelder_woonkamer_smoke_alarm_smoke_detected
+    - binary_sensor.carbon_monoxide_sensor_co_alarm_carbon_monoxide_detected
 living_room_lights:
   name: Lampen Woonkamer
   entities:

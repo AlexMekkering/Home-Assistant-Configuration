@@ -47,9 +47,12 @@ views:
           - entity: switch.overloop_lamp
           - entity: light.veranda_verlichting
           - entity: light.kerstverlichting_buiten
+          - entity: light.kerstverlichting_voor
         title: Overige Lampen
         type: entities
       - entities:
+          - entity: light.kantoor
+          - entity: light.zolder
           - entity: switch.zolder_pc
           - entity: switch.zolder_printer
           - entity: light.zolder_bureaulamp
@@ -77,25 +80,40 @@ views:
   - badges: []
     cards:
       - entities:
-          - entity: binary_sensor.rook_hal
-          - entity: binary_sensor.test_rookmelder_hal
+          - entity: binary_sensor.rookmelder_hal_smoke_alarm_smoke_detected
+          - entity: binary_sensor.rookmelder_hal_smoke_alarm_smoke_alarm_test
           - entity: sensor.rookmelder_hal_battery_level
         show_header_toggle: false
         title: Rookmelder Hal
         type: entities
       - entities:
-          - entity: binary_sensor.rook_overloop
-          - entity: binary_sensor.test_rookmelder_overloop
+          - entity: binary_sensor.rookmelder_overloop_smoke_alarm_smoke_detected
+          - entity: binary_sensor.rookmelder_overloop_smoke_alarm_smoke_alarm_test
           - entity: sensor.rookmelder_overloop_battery_level
         show_header_toggle: false
         title: Rookmelder Overloop
         type: entities
       - entities:
-          - entity: binary_sensor.rook_zolder
-          - entity: binary_sensor.test_rookmelder_zolder
+          - entity: binary_sensor.rookmelder_zolder_smoke_alarm_smoke_detected
+          - entity: binary_sensor.rookmelder_zolder_smoke_alarm_smoke_alarm_test
           - entity: sensor.rookmelder_zolder_battery_level
         show_header_toggle: false
         title: Rookmelder Zolder
+        type: entities
+      - entities:
+          - entity: binary_sensor.rookmelder_woonkamer_smoke_alarm_smoke_detected
+          - entity: binary_sensor.rookmelder_woonkamer_smoke_alarm_smoke_alarm_test
+          - entity: sensor.rookmelder_woonkamer_battery_level
+        show_header_toggle: false
+        title: Rookmelder Woonkamer
+        type: entities
+      - entities:
+          - entity: binary_sensor.carbon_monoxide_sensor_co_alarm_carbon_monoxide_detected
+          - entity: binary_sensor.carbon_monoxide_sensor_co_alarm_carbon_monoxide_test
+          - entity: sensor.carbon_monoxide_sensor_carbon_monoxide_co_level
+          - entity: sensor.carbon_monoxide_sensor_battery_level
+        show_header_toggle: false
+        title: CO Melder
         type: entities
     icon: "mdi:shield-check"
     title: Veiligheid
@@ -146,12 +164,16 @@ views:
         title: Meterkast
         type: entities
       - entities:
-          - entity: sensor.rookmelder_zolder_temperature
+          - entity: sensor.rookmelder_zolder_air_temperature
             name: Zolder
-          - entity: sensor.rookmelder_overloop_temperature
+          - entity: sensor.rookmelder_overloop_air_temperature
             name: Overloop
-          - entity: sensor.rookmelder_hal_temperature
+          - entity: sensor.rookmelder_hal_air_temperature
             name: Hal
+          - entity: sensor.rookmelder_woonkamer_air_temperature
+            name: Woonkamer
+          - entity: sensor.carbon_monoxide_sensor_air_temperature
+            name: Washok
         show_header_toggle: false
         title: Temperaturen Rookmelders
         type: entities

@@ -1,0 +1,2 @@
+sensor.energy_value:
+  state_class: measurement

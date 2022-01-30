@@ -33,18 +33,6 @@
 ########
 - platform: template
   sensors:
-    rookmelder_hal_battery_level:
-      friendly_name: "Batterijniveau"
-      device_class: battery
-      value_template: "{{ state_attr('zwave.rookmelder_hal', 'battery_level') }}"
-    rookmelder_overloop_battery_level:
-      friendly_name: "Batterijniveau"
-      device_class: battery
-      value_template: "{{ state_attr('zwave.rookmelder_overloop', 'battery_level') }}"
-    rookmelder_zolder_battery_level:
-      friendly_name: "Batterijniveau"
-      device_class: battery
-      value_template: "{{ state_attr('zwave.rookmelder_zolder', 'battery_level') }}"
     temperatuurverschil_buiten_binnen:
       friendly_name: Temperatuurverschil Buiten-Binnen
       device_class: temperature
@@ -64,8 +52,14 @@
       unit_of_measurement: W
       icon_template: mdi:power-plug
       value_template: "{{ states('input_number.smartmeter_w') | round(1) }}"
+      device_class: power
+      # state_class: measurement
     smartmeter_total_consumption:
       friendly_name: Total Consumption
       unit_of_measurement: kWh
       icon_template: mdi:sigma
       value_template: "{{ states('input_number.smartmeter_kWh') | round(3) }}"
+      device_class: energy
+      # state_class: measurement
+
+- platform: energy_sensor

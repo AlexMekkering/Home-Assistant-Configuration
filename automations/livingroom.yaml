@@ -45,12 +45,13 @@
   alias: Toggle Living
   trigger:
     platform: event
-    event_type: zwave.scene_activated
+    event_type: zwave_js_value_notification
     event_data:
-      entity_id: zwave.woonkamer_binnenkomst
+      node_id: 10
+      command_class_name: "Scene Activation"
   condition:
     condition: template
-    value_template: '{{ (trigger.event.data.scene_id // 10) == 2 }}'
+    value_template: '{{ (trigger.event.data.value // 10) == 2 }}'
   action:
     - choose:
         - conditions:
