@@ -54,5 +54,6 @@ someone_home:
     - light.nachtlampje_joyce
     - switch.zolder_pc
     - binary_sensor.alex_home
-    - light.zolder_bureaulamp
+    - light.kantoor
+    - light.zolder
     - switch.overloop_lamp

@@ -1,6 +1,5 @@
 - id: midnight_buitenlamp_voor
   alias: Midnight buitenlamp voor
-  initial_state: 'off'
   trigger:
     platform: time
     at: '23:05:00'
@@ -9,7 +8,5 @@
       entity_id: switch.hal_buitenlamp_voor
     - service: light.turn_off
       entity_id: light.kerstverlichting_buiten
-    - service: homeassistant.turn_off
-      entity_id: group.sunset_automations
     - service: input_boolean.turn_off
       entity_id: input_boolean.evening_trigger_upstairs

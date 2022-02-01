@@ -32,6 +32,8 @@ all_lights_off:
       entity_id: switch.kerstboom
     - service: light.turn_off
       entity_id: light.veranda_verlichting
+    - service: light.turn_off
+      entity_id: light.kerstverlichting_buiten
     - service: script.prepare_for_bed
     - condition: sun
       after: sunset

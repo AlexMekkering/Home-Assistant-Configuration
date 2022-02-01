@@ -6,13 +6,10 @@
     event: sunset
     offset: "-01:00:00"
   action:
-    - service: homeassistant.turn_on
-      entity_id: group.sunset_automations
     - service: input_boolean.turn_on
       entity_id: input_boolean.evening_trigger_upstairs
 - id: sunset_phase_1
   alias: Sunset Phase 1
-  initial_state: "off"
   trigger:
     platform: sun
     event: sunset
@@ -25,7 +22,6 @@
     - service: script.living_scene_regular_phase_1
 - id: sunset_phase_2
   alias: Sunset Phase 2
-  initial_state: "off"
   trigger:
     platform: sun
     event: sunset
@@ -38,7 +34,6 @@
     - service: script.living_scene_regular_phase_2
 - id: sunset_phase_3
   alias: Sunset Phase 3
-  initial_state: "off"
   trigger:
     platform: sun
     event: sunset
@@ -51,7 +46,6 @@
     - service: script.living_scene_regular_phase_3
 - id: sunset_phase_4
   alias: Sunset Phase 4
-  initial_state: "off"
   trigger:
     platform: sun
     event: sunset
@@ -64,7 +58,6 @@
     - service: script.living_scene_regular_phase_4
 - id: sunset_phase_5
   alias: Sunset Phase 5
-  initial_state: "off"
   trigger:
     platform: sun
     event: sunset
@@ -77,7 +70,6 @@
     - service: script.select_lights_regular
 - id: sunset_veranda_verlichting
   alias: Sunset veranda verlichting
-  initial_state: "off"
   trigger:
     platform: sun
     event: sunset
@@ -89,11 +81,10 @@
   action:
     - service: light.turn_on
       entity_id: light.veranda_verlichting
-    - service: automation.turn_off
-      entity_id: automation.sunset_veranda_verlichting
+    - service: light.turn_on
+      entity_id: light.kerstverlichting_buiten
 - id: sunset_buitenlamp_voor
   alias: Sunset buitenlamp voor
-  initial_state: "off"
   trigger:
     platform: sun
     event: sunset
@@ -101,9 +92,3 @@
   action:
     - service: switch.turn_on
       entity_id: switch.hal_buitenlamp_voor
-    - service: light.turn_on
-      entity_id: light.kerstverlichting_buiten
-    - service: automation.turn_on
-      entity_id: automation.midnight_buitenlamp_voor
-    - service: automation.turn_off
-      entity_id: automation.sunset_buitenlamp_voor
