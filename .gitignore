@@ -10,8 +10,8 @@
 *.db-wal
 *.html
 OZW_Log.txt
-home-assistant.log
-home-assistant_v2.db
+home-assistant.log*
+home-assistant_v2.db*
 *.db-journal
 lib
 deps
@@ -26,3 +26,4 @@ ip_bans.yaml
 config
 ozw_config
 zigbee.db
+__pycache__/

@@ -91,7 +91,7 @@
   alias: Waarschuwing Coolmonoxide
   trigger:
   - platform: state
-    entity_id: 'binary_sensor.carbon_monoxide_sensor_co_alarm_carbon_monoxide_detected'
+    entity_id: 'binary_sensor.koolmonoxidemelder_co_alarm_carbon_monoxide_detected'
     from: 'off'
     to: 'on'
   action:
@@ -102,7 +102,7 @@
   alias: Test Coolmonoxide
   trigger:
   - platform: state
-    entity_id: 'binary_sensor.carbon_monoxide_sensor_co_alarm_carbon_monoxide_test'
+    entity_id: 'binary_sensor.koolmonoxidemelder_co_alarm_carbon_monoxide_test'
     from: 'off'
     to: 'on'
   action:

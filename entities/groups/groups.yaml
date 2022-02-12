@@ -24,7 +24,7 @@ rookmelders:
     - binary_sensor.rookmelder_overloop_smoke_alarm_smoke_detected
     - binary_sensor.rookmelder_zolder_smoke_alarm_smoke_detected
     - binary_sensor.rookmelder_woonkamer_smoke_alarm_smoke_detected
-    - binary_sensor.carbon_monoxide_sensor_co_alarm_carbon_monoxide_detected
+    - binary_sensor.koolmonoxidemelder_co_alarm_carbon_monoxide_detected
 living_room_lights:
   name: Lampen Woonkamer
   entities:
