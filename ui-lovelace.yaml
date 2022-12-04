@@ -51,13 +51,27 @@ views:
         title: Overige Lampen
         type: entities
       - entities:
-          - entity: light.kantoor
           - entity: light.zolder
+        show_header_toggle: false
+        title: Zolder
+        type: entities
+      - entities:
+          - entity: light.kantoor
           - entity: switch.zolder_pc
           - entity: switch.zolder_printer
           - entity: light.zolder_bureaulamp
+          - entity: switch.kantoor_alex
+          - entity: sensor.kantoor_alex_power
+          - entity: sensor.kantoor_alex_energy
         show_header_toggle: false
-        title: Zolder
+        title: Kantoor Alex
+        type: entities
+      - entities:
+          - entity: switch.kantoor_joyce
+          - entity: sensor.kantoor_joyce_power
+          - entity: sensor.kantoor_joyce_energy
+        show_header_toggle: false
+        title: Kantoor Joyce
         type: entities
       - entities:
           - entity: media_player.receiver
@@ -154,16 +168,6 @@ views:
         title: Woonkamer
         type: entities
       - entities:
-          - entity: sensor.meterkast_temperature
-            name: Temperatuur
-          - entity: sensor.meterkast_humidity
-            name: Luchtvochtigheid
-          - entity: sensor.meterkast_pressure
-            name: Luchtdruk
-        show_header_toggle: false
-        title: Meterkast
-        type: entities
-      - entities:
           - entity: sensor.rookmelder_zolder_air_temperature
             name: Zolder
           - entity: sensor.rookmelder_overloop_air_temperature
@@ -190,9 +194,9 @@ views:
       - entity: sun.sun
     cards:
       - entities:
-          - entity: sensor.smartmeter_power_consumption
+          - entity: sensor.smartmeter_power_consumption_2
             name: Power Consumption
-          - entity: sensor.smartmeter_total_consumption
+          - entity: sensor.smartmeter_total_consumption_2
             name: Total
         show_header_toggle: false
         type: entities

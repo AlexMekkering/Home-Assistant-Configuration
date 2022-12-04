@@ -44,6 +44,8 @@ activity_at_home:
     - light.schilderij
     - light.veranda_verlichting
     - switch.hal_lamp
+    - switch.kantoor_alex
+    - switch.kantoor_joyce
 someone_home:
   name: Iemand thuis
   entities:

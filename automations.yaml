@@ -1,1 +1,848 @@
-[]
+- id: away_evening_start
+  alias: Away Evening Start
+  trigger:
+    platform: sun
+    event: sunset
+    offset: +00:05:00
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: group.someone_home
+      state: 'off'
+    - condition: time
+      before: '21:00:00'
+  action:
+  - service: script.select_lights_away
+  - service: automation.turn_on
+    entity_id: automation.away_evening_end
+  - service: script.notify_admin
+    data:
+      message: Afwezigheidsmodus geactiveerd
+- id: away_evening_end
+  alias: Away Evening End
+  initial_state: 'off'
+  trigger:
+    platform: time
+    at: '23:00:00'
+  action:
+  - service: script.select_lights_all_off
+  - service: automation.turn_on
+    entity_id: automation.away_morning_start
+  - service: automation.turn_off
+    entity_id: automation.away_evening_end
+- id: away_morning_start
+  alias: Away Morning Start
+  initial_state: 'off'
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: -01:00:00
+  action:
+  - service: script.select_lights_away
+  - service: automation.turn_on
+    entity_id: automation.away_morning_end
+  - service: automation.turn_off
+    entity_id: automation.away_morning_start
+- id: away_morning_end
+  alias: Away Morning End
+  initial_state: 'off'
+  trigger:
+    platform: sun
+    event: sunrise
+  action:
+  - service: script.select_lights_all_off
+  - service: automation.turn_off
+    entity_id: automation.away_morning_end
+- id: away_cancel
+  alias: Away Cancel
+  trigger:
+    platform: state
+    entity_id: group.someone_home
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: group.away
+    state: 'on'
+  action:
+  - service: homeassistant.turn_off
+    entity_id: group.away
+- id: midnight_buitenlamp_voor
+  alias: Midnight buitenlamp voor
+  trigger:
+    platform: time
+    at: '23:05:00'
+  action:
+  - service: switch.turn_off
+    entity_id: switch.hal_buitenlamp_voor
+  - service: light.turn_off
+    entity_id: light.kerstverlichting_buiten
+  - service: light.turn_off
+    entity_id: light.kerstverlichting_voor
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.evening_trigger_upstairs
+- id: sunset_preparation
+  alias: Sunset Preparation
+  trigger:
+    platform: sun
+    event: sunset
+    offset: -01:00:00
+  action:
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.evening_trigger_upstairs
+- id: sunset_phase_1
+  alias: Sunset Phase 1
+  trigger:
+    platform: sun
+    event: sunset
+    offset: -00:45:00
+  condition:
+    condition: state
+    entity_id: group.activity_at_home
+    state: 'on'
+  action:
+  - service: script.living_scene_regular_phase_1
+- id: sunset_phase_2
+  alias: Sunset Phase 2
+  trigger:
+    platform: sun
+    event: sunset
+    offset: -00:25:00
+  condition:
+    condition: state
+    entity_id: group.activity_at_home
+    state: 'on'
+  action:
+  - service: script.living_scene_regular_phase_2
+- id: sunset_phase_3
+  alias: Sunset Phase 3
+  trigger:
+    platform: sun
+    event: sunset
+    offset: -00:20:00
+  condition:
+    condition: state
+    entity_id: group.activity_at_home
+    state: 'on'
+  action:
+  - service: script.living_scene_regular_phase_3
+- id: sunset_phase_4
+  alias: Sunset Phase 4
+  trigger:
+    platform: sun
+    event: sunset
+    offset: -00:15:00
+  condition:
+    condition: state
+    entity_id: group.activity_at_home
+    state: 'on'
+  action:
+  - service: script.living_scene_regular_phase_4
+- id: sunset_phase_5
+  alias: Sunset Phase 5
+  trigger:
+    platform: sun
+    event: sunset
+    offset: -00:05:00
+  condition:
+    condition: state
+    entity_id: group.activity_at_home
+    state: 'on'
+  action:
+  - service: script.select_lights_regular
+- id: sunset_veranda_verlichting
+  alias: Sunset veranda verlichting
+  trigger:
+    platform: sun
+    event: sunset
+    offset: +00:05:00
+  condition:
+    condition: state
+    entity_id: group.activity_at_home
+    state: 'on'
+  action:
+  # - service: light.turn_on
+  #   entity_id: light.veranda_verlichting
+  - service: light.turn_on
+    entity_id: light.kerstverlichting_buiten
+- id: sunset_buitenlamp_voor
+  alias: Sunset buitenlamp voor
+  trigger:
+    platform: sun
+    event: sunset
+    offset: +00:05:00
+  action:
+  - service: switch.turn_on
+    entity_id: switch.hal_buitenlamp_voor
+  - service: light.turn_on
+    entity_id: light.kerstverlichting_voor
+- id: slaapkamer_tv
+  alias: Slaapkamer TV
+  trigger:
+  - platform: state
+    entity_id: switch.slaapkamer_tv
+  action:
+  - service_template: "{% if trigger.to_state.state == 'on' %}\n  script.turn_on\n{%
+      else %}\n  light.turn_off\n{% endif %}\n"
+    data_template:
+      entity_id: "{% if trigger.to_state.state == 'on' %}\n  script.tv_slaapkamer_aan\n{%
+        else %}\n  light.slaapkamer_achterwand\n{% endif %}\n"
+- id: slaapkamer_achterwand_on
+  alias: Slaapkamer Achterwand On
+  trigger:
+  - platform: state
+    entity_id: light.slaapkamer_achterwand
+    from: 'off'
+    to: 'on'
+  action:
+  - service_template: timer.cancel
+    entity_id: timer.tv_slaapkamer
+- id: slaapkamer_achterwand_off
+  alias: Slaapkamer Achterwand On
+  trigger:
+  - platform: state
+    entity_id: light.slaapkamer_achterwand
+    from: 'on'
+    to: 'off'
+  action:
+  - service: timer.cancel
+    entity_id: timer.timeout_activity_upstairs
+  - condition: state
+    entity_id: switch.slaapkamer_tv
+    state: 'on'
+  - service_template: timer.start
+    entity_id: timer.tv_slaapkamer
+- id: timer_tv_slaapkamer
+  alias: Timer TV Slaapkamer
+  trigger:
+  - platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.tv_slaapkamer
+  action:
+  - service: script.turn_off_tv_slaapkamer
+- id: '1601834029668'
+  alias: Turn off kodi slaapkamer
+  description: ''
+  trigger:
+  - platform: device
+    device_id: b33e416bfea311ea82617173adb0b20c
+    domain: kodi
+    entity_id: media_player.slaapkamer
+    type: turn_off
+  condition: []
+  action:
+  - service: kodi.call_method
+    data:
+      method: System.Shutdown
+      entity_id: media_player.slaapkamer
+    entity_id: media_player.slaapkamer
+  mode: single
+- id: light_scene_select
+  alias: Light Scene Select
+  trigger:
+    platform: state
+    entity_id: input_select.light_scene
+  action:
+  - service: script.turn_on
+    data_template:
+      entity_id: "{% set scene = trigger.to_state.state %} {% if scene == 'Afwezig'
+        %}\n  script.living_scene_away\n{% elif scene == 'Normaal' %}\n  script.living_scene_regular\n{%
+        elif scene == 'Zacht' %}\n  script.living_scene_dim\n{% elif scene == 'Erg
+        Zacht' %}\n  script.living_scene_very_dim\n{% elif scene == 'Maximaal' %}\n
+        \ script.living_scene_maximal\n{% else %}\n  script.living_scene_all_off\n{%
+        endif %}\n"
+- id: scene_select
+  alias: Scene Select
+  trigger:
+    platform: state
+    entity_id: input_select.media_scene
+  action:
+  - service: script.turn_on
+    data_template:
+      entity_id: "{% set scene = trigger.to_state.state %} {% if scene == 'Radio luisteren'
+        %}\n  script.listen_radio\n{% elif scene == 'TV kijken' %}\n  script.watch_tv\n{%
+        elif scene == 'Media kijken' %}\n  script.watch_media\n{% else %}\n  script.all_media_off\n{%
+        endif %}\n"
+- id: toggle_living
+  alias: Toggle Living
+  trigger:
+    platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      node_id: 16
+      command_class_name: Scene Activation
+  condition:
+    condition: template
+    value_template: '{{ (trigger.event.data.value // 10) == 2 }}'
+  action:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: group.living_room_lights
+        state: 'on'
+      sequence:
+      - service: script.all_off
+    - conditions:
+      - condition: time
+        before: '12:00:00'
+      sequence:
+      - service: script.select_lights_away
+    default:
+    - service: script.select_lights_regular
+- id: '1589741290145'
+  alias: Beweging Achtertuin
+  description: ''
+  trigger:
+  - device_id: 2c887ba43bf44b0fafd4bf06746c24dc
+    domain: binary_sensor
+    entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_f73b95fe_on_off
+    platform: device
+    type: opened
+  condition: []
+  action:
+  - data:
+      message: Beweging Achtertuin
+    service: script.notify_admin
+- id: '1601907810392'
+  alias: Turn off kodi woonkamer
+  description: ''
+  trigger:
+  - platform: device
+    device_id: eb8315e0066511eba1ce870d36463024
+    domain: kodi
+    entity_id: media_player.coreelec
+    type: turn_off
+  condition: []
+  action:
+  - service: kodi.call_method
+    data:
+      method: System.Shutdown
+      entity_id: media_player.coreelec
+  mode: single
+- id: select_logger_level_default
+  alias: Select Default Logger Level
+  trigger:
+    platform: state
+    entity_id: input_select.logger_level_default
+  action:
+  - service: logger.set_default_level
+    data_template:
+      level: '{{ trigger.to_state.state }}'
+- id: select_logger_level_homeassistant
+  alias: Select Logger Level Home Assistant
+  trigger:
+    platform: state
+    entity_id: input_select.logger_level_homeassistant
+  action:
+  - service: logger.set_level
+    data_template:
+      homeassistant: '{{ trigger.to_state.state }}'
+- id: select_logger_level_zwave
+  alias: Select Logger Level Z-Wave
+  trigger:
+    platform: state
+    entity_id: input_select.logger_level_zwave
+  action:
+  - service: logger.set_level
+    data_template:
+      homeassistant.components.zwave: '{{ trigger.to_state.state }}'
+  - service: logger.set_level
+    data_template:
+      openzwave: '{{ trigger.to_state.state }}'
+  - service: logger.set_level
+    data_template:
+      libopenzwave: '{{ trigger.to_state.state }}'
+- id: select_logger_level_zigbee
+  alias: Select Logger Level Zigbee
+  trigger:
+    platform: state
+    entity_id: input_select.logger_level_zigbee
+  action:
+  - service: logger.set_level
+    data_template:
+      homeassistant.components.zha: '{{ trigger.to_state.state }}'
+  - service: logger.set_level
+    data_template:
+      zigpy_deconz: '{{ trigger.to_state.state }}'
+  - service: logger.set_level
+    data_template:
+      zigpy.zcl: '{{ trigger.to_state.state }}'
+- id: select_logger_level_esphome
+  alias: Select Logger Level ESPHome
+  trigger:
+    platform: state
+    entity_id: input_select.logger_level_esphome
+  action:
+  - service: logger.set_level
+    data_template:
+      aioesphomeapi: '{{ trigger.to_state.state }}'
+- id: check_receiver_source
+  alias: Check Receiver source
+  initial_state: 'off'
+  trigger:
+    platform: time_pattern
+    seconds: /05
+  action:
+  - service: homeassistant.update_entity
+    entity_id: media_player.receiver
+  - condition: template
+    value_template: '{{ states.media_player.receiver.attributes.source is defined
+      }}'
+  - service_template: "{% set scene = states.input_select.media_scene.state %} {%
+      set source = states.media_player.receiver.attributes.source %} {% if scene ==
+      'Geen' or scene == 'TV kijken' and source == 'TV'\n    or scene == 'Media kijken'
+      and source == 'Mediaplayer'\n    or scene == 'Radio luisteren' and source ==
+      'Radio' %}\n  automation.turn_off\n{% else %}\n  automation.turn_on\n{% endif
+      %}\n"
+    data:
+      entity_id: automation.check_receiver_source
+  - condition: state
+    entity_id: automation.check_receiver_source
+    state: 'on'
+  - service: media_player.select_source
+    data_template:
+      entity_id: media_player.receiver
+      source: "{% if is_state('input_select.media_scene', 'Radio luisteren') %}\n
+        \ Radio\n{% elif is_state('input_select.media_scene', 'Media kijken') %}\n
+        \ Mediaplayer\n{% else %}\n  TV\n{% endif %}\n"
+- id: turn_on_mediaplayer
+  alias: Turn on mediaplayer
+  initial_state: 'off'
+  trigger:
+    platform: state
+    entity_id: automation.check_receiver_source
+    to: 'off'
+  condition:
+    condition: template
+    value_template: '{{ is_state(''input_select.media_scene'', ''Media kijken'') }}'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.tv_meubel_mediaplayer
+- id: notify_warm_outside
+  alias: Notificatie Warm Buiten
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.temperatuurverschil_buiten_binnen
+    above: 0
+  action:
+  - service: script.notify_admin
+    data:
+      message: Het is buiten warmer dan binnen
+  - service: automation.turn_on
+    entity_id: automation.notificatie_koud_buiten
+  - service: automation.turn_off
+    entity_id: automation.notificatie_warm_buiten
+- id: notify_cold_outside
+  alias: Notificatie Koud Buiten
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.temperatuurverschil_buiten_binnen
+    below: 0
+  action:
+  - service: script.notify_admin
+    data:
+      message: Het is buiten kouder dan binnen
+  - service: automation.turn_on
+    entity_id: automation.notificatie_warm_buiten
+  - service: automation.turn_off
+    entity_id: automation.notificatie_koud_buiten
+- id: rf_button_tv_slaapkamer
+  alias: RF Button TV Slaapkamer
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.rf_button_tv_slaapkamer
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.toggle_tv_slaapkamer
+- id: rf_button_watch_tv
+  alias: RF Button Watch TV
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.rf_button_watch_tv
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.select_tv_kijken
+- id: rf_button_watch_media
+  alias: RF Button Watch Media
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.rf_button_watch_media
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.select_media_kijken
+- id: rf_button_listen_music
+  alias: RF Button Listen Music
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.rf_button_listen_music
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.select_radio_luisteren
+- id: rf_button_all_off
+  alias: RF Button All Off
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.rf_button_all_off
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.all_off
+- id: smartmeter_trigger
+  alias: Smartmeter Trigger
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.smartmeter
+    from: 'off'
+    to: 'on'
+  action:
+  - service: input_number.set_value
+    data:
+      value: '{{ 3600.0 / (now().timestamp() - states.input_number.smartmeter_kwh.last_changed.timestamp())}}'
+    entity_id: input_number.smartmeter_w
+  - service: input_number.increment
+    entity_id: input_number.smartmeter_kwh
+- id: alert_rookmelder_hal
+  alias: Waarschuwing Rookmelder Hal
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.rookmelder_hal_smoke_alarm_smoke_detected
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_alert
+    data:
+      message: Rook in de Hal
+- id: test_rookmelder_hal
+  alias: Test Rookmelder Hal
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.rookmelder_hal_smoke_alarm_smoke_alarm_test
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_admin
+    data:
+      message: TEST Rookmelder Hal
+- id: alert_rookmelder_overloop
+  alias: Waarschuwing Rookmelder Overloop
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.rookmelder_overloop_smoke_alarm_smoke_detected
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_alert
+    data:
+      message: Rook op de Overloop
+- id: test_rookmelder_overloop
+  alias: Test Rookmelder Overloop
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.rookmelder_overloop_smoke_alarm_smoke_alarm_test
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_admin
+    data:
+      message: TEST Rookmelder Overloop
+- id: alert_rookmelder_zolder
+  alias: Waarschuwing Rookmelder Zolder
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.rookmelder_zolder_smoke_alarm_smoke_detected
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_alert
+    data:
+      message: Rook op Zolder
+- id: test_rookmelder_zolder
+  alias: Test Rookmelder Zolder
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.rookmelder_zolder_smoke_alarm_smoke_alarm_test
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_admin
+    data:
+      message: TEST Rookmelder Zolder
+- id: alert_rookmelder_woonkamer
+  alias: Waarschuwing Rookmelder Woonkamer
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.rookmelder_woonkamer_smoke_alarm_smoke_detected
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_alert
+    data:
+      message: Rook in de Woonkamer
+- id: test_rookmelder_woonkamer
+  alias: Test Rookmelder Woonkamer
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.rookmelder_woonkamer_smoke_alarm_smoke_alarm_test
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_admin
+    data:
+      message: TEST Rookmelder Woonkamer
+- id: alert_coolmonoxide
+  alias: Waarschuwing Coolmonoxide
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.koolmonoxidemelder_co_alarm_carbon_monoxide_detected
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_alert
+    data:
+      message: Coolmonoxide te hoog
+- id: test_coolmonoxide
+  alias: Test Coolmonoxide
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.koolmonoxidemelder_co_alarm_carbon_monoxide_test
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_admin
+    data:
+      message: TEST Coolmonoxide
+- id: startup
+  alias: Opstarten
+  initial_state: 'on'
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+  - service: script.detect_media
+  - service: script.detect_lights
+  - service: automation.turn_off
+    entity_id: automation.opstarten
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.evening_trigger_upstairs
+  - condition: sun
+    after: sunset
+    after_offset: '-1:00:00'
+  - condition: time
+    before: '23:05:00'
+  - service: automation.trigger
+    entity_id: automation.sunset_preparation
+- id: timer_activity_upstairs_cancelled
+  alias: Timeout Activiteit boven
+  trigger:
+  - platform: event
+    event_type: timer.cancelled
+    event_data:
+      entity_id: timer.timeout_activity_upstairs
+  action:
+  - service: script.notify_admin
+    data:
+      message: Timer Activiteit Boven Cancelled
+- id: reset_activity_upstairs
+  alias: Reset Activiteit boven
+  trigger:
+  - platform: event
+    event_type: timer.completed
+    event_data:
+      entity_id: timer.timeout_activity_upstairs
+  action:
+  - service: script.notify_admin
+    data:
+      message: Reset Timer Activiteit Boven
+- id: start_activity_upstairs
+  alias: Start Timer Activiteit boven
+  trigger:
+  - platform: event
+    event_type: timer.started
+    event_data:
+      entity_id: timer.timeout_activity_upstairs
+  action:
+  - service: script.notify_admin
+    data:
+      message: Started Timer Activiteit Boven
+- id: rc_buttons
+  alias: RC Buttons
+  trigger:
+    platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      node_id: 9
+      command_class_name: Scene Activation
+  condition:
+    condition: template
+    value_template: '{{ (trigger.event.data.value % 10) <= 5 }}'
+  action:
+  - service: script.turn_on
+    data_template:
+      entity_id: "{% set row = trigger.event.data.value // 10 %} {% set side = (trigger.event.data.value
+        % 10) % 2 %} {% if row == 1 %}\n  script.spruitje_{% if side == 1 %}on{% else
+        %}off{% endif %}\n{% elif row == 6 %}\n  script.kerstboom_{% if side == 1
+        %}on{% else %}off{% endif %}\n{% elif row == 7 %}\n  script.veranda_lights_{%
+        if side == 1 %}on{% else %}off{% endif %}\n{% elif row >= 8 and row <= 10
+        %}\n  {% if side == 1 %}\n    {% if row == 8 %}\n      script.select_tv_kijken\n
+        \   {% elif row == 9 %}\n      script.select_media_kijken\n    {% else %}\n
+        \     script.select_radio_luisteren\n    {% endif %}\n  {% else %}\n    script.select_geen\n
+        \ {% endif %}\n{% elif row == 11 %}\n  {% if side == 1 %}\n    script.select_lights_maximal\n
+        \ {% else %}\n    script.all_off\n  {% endif %}\n{% elif side == 1 and row
+        == 2 %}\n  script.select_lights_regular\n{% elif side == 1 and row == 3 %}\n
+        \ script.select_lights_dim\n{% elif side == 1 and row == 4 %}\n  script.select_lights_very_dim\n{%
+        elif side == 1 and row == 5 %}\n  script.select_lights_away\n{% else %}\n
+        \ script.select_lights_all_off\n{% endif %}\n"
+- id: lamp_overloop_off
+  alias: Lamp Overloop Off
+  trigger:
+  - platform: state
+    entity_id: switch.overloop_lamp
+    from: 'on'
+    to: 'off'
+  action:
+  - service: timer.cancel
+    entity_id: timer.timeout_activity_upstairs
+- id: timeout_activity_upstairs
+  alias: Timeout Activiteit boven
+  trigger:
+  - platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.timeout_activity_upstairs
+  action:
+  - service: light.turn_off
+    entity_id: light.slaapkamer_achterwand
+  - service: switch.turn_off
+    entity_id: switch.overloop_lamp
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.evening_trigger_upstairs
+  - service: script.notify_admin
+    data:
+      message: Timeout Activiteit Boven
+- id: '1665931770644'
+  alias: Deurbel
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: d86e65d9e97dbd19c4b5518d2c26f83d
+    entity_id: binary_sensor.deurbel
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: script.notify_admin
+    data:
+      message: Er staat iemand voor de deur
+  mode: single
+- id: '1668960889704'
+  alias: RF Kantoor Lights turn on
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: 0e2f21dcb6184429af0b6a267a151678
+    entity_id: binary_sensor.rf_button_kantoor_lights
+    domain: binary_sensor
+  condition:
+  - condition: state
+    entity_id: light.kantoor
+    state: 'off'
+  action:
+  - service: light.turn_on
+    data: {}
+    target:
+      entity_id: light.kantoor
+  mode: single
+- id: '1668967856358'
+  alias: RF Kantoor Mains on
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: 0e2f21dcb6184429af0b6a267a151678
+    entity_id: binary_sensor.rf_button_kantoor_lights
+    domain: binary_sensor
+  condition:
+  - condition: device
+    type: is_off
+    device_id: 6020789fb55e3fbfe3220d056b6ee187
+    entity_id: switch.kantoor_alex
+    domain: switch
+  action:
+  - service: switch.turn_on
+    data: {}
+    target:
+      entity_id: switch.kantoor_alex
+  mode: single
+- id: '1668968231502'
+  alias: Kantoor Alex Auto turn off
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.kantoor_alex_power
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
+    below: 10
+  condition:
+  - condition: state
+    entity_id: switch.kantoor_alex
+    state: 'on'
+  action:
+  - service: switch.turn_off
+    data: {}
+    target:
+      entity_id: switch.kantoor_alex
+  mode: single
+- id: '1668968557946'
+  alias: Kantoor Joyce Auto turn off
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.kantoor_joyce_power
+    for:
+      hours: 0
+      minutes: 15
+      seconds: 0
+    below: 3
+  condition:
+  - condition: state
+    entity_id: switch.kantoor_joyce
+    state: 'on'
+  action:
+  - service: switch.turn_off
+    data: {}
+    target:
+      entity_id: switch.kantoor_joyce
+  mode: single
+- id: '1668969907904'
+  alias: RF Kantoor Lights turn off
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: 0e2f21dcb6184429af0b6a267a151678
+    entity_id: binary_sensor.rf_button_kantoor_lights
+    domain: binary_sensor
+  condition:
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: light.kantoor
+      state: 'on'
+    - condition: state
+      entity_id: switch.kantoor_alex
+      state: 'on'
+  action:
+  - service: light.turn_off
+    data: {}
+    target:
+      entity_id: light.kantoor
+  mode: single

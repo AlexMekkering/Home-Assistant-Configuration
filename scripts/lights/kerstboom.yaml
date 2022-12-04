@@ -1,8 +1,0 @@
-kerstboom_on:
-  sequence:
-    - service: switch.turn_on
-      entity_id: switch.kerstboom
-kerstboom_off:
-  sequence:
-    - service: switch.turn_off
-      entity_id: switch.kerstboom
