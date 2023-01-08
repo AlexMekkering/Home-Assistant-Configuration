@@ -6,7 +6,7 @@
     - type: disk_use_percent
       arg: /
     - type: disk_use_percent
-      arg: !secret storage_mount
+      arg: /storage
     - type: processor_use
     - type: load_1m
     - type: load_5m
@@ -14,10 +14,13 @@
     - type: memory_use_percent
     - type: swap_use_percent
     - type: network_in
-      arg: !secret network1_device
+      arg: eth0
     - type: network_out
-      arg: !secret network1_device
-
+      arg: eth0
+    - type: network_in
+      arg: eth1
+    - type: network_out
+      arg: eth1
 ########
 # CPU temperature
 ########
@@ -61,5 +64,3 @@
       value_template: "{{ states('input_number.smartmeter_kWh') | round(3) }}"
       device_class: energy
       # state_class: measurement
-
-- platform: energy_sensor

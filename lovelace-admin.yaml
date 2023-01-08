@@ -1,7 +1,6 @@
 title: Admin
 views:
-  - badges:
-      - entity: binary_sensor.updater
+  - badges: []
     cards:
       - entities:
           - entity: input_boolean.admin_notifications
@@ -34,31 +33,3 @@ views:
         type: entities
     icon: "mdi:switch"
     title: Sonoff
-  - badges: []
-    cards:
-      - entities:
-          - entity: sensor.worldwide_coronavirus_confirmed
-            name: Confirmed
-          - entity: sensor.worldwide_coronavirus_current
-            name: Current
-          - entity: sensor.worldwide_coronavirus_recovered
-            name: Recovered
-          - entity: sensor.worldwide_coronavirus_deaths
-            name: Diseased
-        show_state: true
-        title: Worldwide
-        type: glance
-      - entities:
-          - entity: sensor.netherlands_coronavirus_confirmed
-            name: Confirmed
-          - entity: sensor.netherlands_coronavirus_current
-            name: Current
-          - entity: sensor.netherlands_coronavirus_recovered
-            name: Recovered
-          - entity: sensor.netherlands_coronavirus_deaths
-            name: Diseased
-        title: The Netherlands
-        type: glance
-    icon: "mdi:biohazard"
-    path: corona
-    title: Corona

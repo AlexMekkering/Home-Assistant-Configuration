@@ -1,9 +1,9 @@
 ---
 influxdb:
   api_version: 2
-  ssl: !secret influxdb_ssl
-  host: !secret influxdb_host
-  port: !secret influxdb_port
+  ssl: false
+  host: influxdb
+  port: 8086
   token: !secret influxdb_token
   organization: !secret influxdb_organization
   bucket: !secret influxdb_bucket

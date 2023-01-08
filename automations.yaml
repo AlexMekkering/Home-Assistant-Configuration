@@ -162,8 +162,6 @@
     entity_id: group.activity_at_home
     state: 'on'
   action:
-  # - service: light.turn_on
-  #   entity_id: light.veranda_verlichting
   - service: light.turn_on
     entity_id: light.kerstverlichting_buiten
 - id: sunset_buitenlamp_voor
@@ -227,7 +225,7 @@
   description: ''
   trigger:
   - platform: device
-    device_id: b33e416bfea311ea82617173adb0b20c
+    device_id: 60e236123004f25f46606590707c3ff2
     domain: kodi
     entity_id: media_player.slaapkamer
     type: turn_off
@@ -310,16 +308,16 @@
   description: ''
   trigger:
   - platform: device
-    device_id: eb8315e0066511eba1ce870d36463024
+    device_id: 14cec4539558d2082d9f938eb157f20b
     domain: kodi
-    entity_id: media_player.coreelec
+    entity_id: media_player.woonkamer
     type: turn_off
   condition: []
   action:
   - service: kodi.call_method
     data:
       method: System.Shutdown
-      entity_id: media_player.coreelec
+      entity_id: media_player.woonkamer
   mode: single
 - id: select_logger_level_default
   alias: Select Default Logger Level

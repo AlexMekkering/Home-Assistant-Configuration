@@ -4,8 +4,6 @@
 *.crt
 *.key
 *.conf
-*.json
-*.py
 *.db-shm
 *.db-wal
 *.html
@@ -27,3 +25,4 @@ config
 ozw_config
 zigbee.db
 __pycache__/
+backups/

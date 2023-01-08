@@ -75,7 +75,7 @@ views:
         type: entities
       - entities:
           - entity: media_player.receiver
-          - entity: media_player.coreelec
+          - entity: media_player.woonkamer
           - entity: media_player.slaapkamer
         show_state: false
         title: Mediaspelers
@@ -94,36 +94,36 @@ views:
   - badges: []
     cards:
       - entities:
-          - entity: binary_sensor.rookmelder_hal_smoke_alarm_smoke_detected
-          - entity: binary_sensor.rookmelder_hal_smoke_alarm_smoke_alarm_test
+          - entity: binary_sensor.rookmelder_hal_smoke_detected
+          - entity: binary_sensor.rookmelder_hal_smoke_alarm_test
           - entity: sensor.rookmelder_hal_battery_level
         show_header_toggle: false
         title: Rookmelder Hal
         type: entities
       - entities:
-          - entity: binary_sensor.rookmelder_overloop_smoke_alarm_smoke_detected
-          - entity: binary_sensor.rookmelder_overloop_smoke_alarm_smoke_alarm_test
+          - entity: binary_sensor.rookmelder_overloop_smoke_detected
+          - entity: binary_sensor.rookmelder_overloop_smoke_alarm_test
           - entity: sensor.rookmelder_overloop_battery_level
         show_header_toggle: false
         title: Rookmelder Overloop
         type: entities
       - entities:
-          - entity: binary_sensor.rookmelder_zolder_smoke_alarm_smoke_detected
-          - entity: binary_sensor.rookmelder_zolder_smoke_alarm_smoke_alarm_test
+          - entity: binary_sensor.rookmelder_zolder_smoke_detected
+          - entity: binary_sensor.rookmelder_zolder_smoke_alarm_test
           - entity: sensor.rookmelder_zolder_battery_level
         show_header_toggle: false
         title: Rookmelder Zolder
         type: entities
       - entities:
-          - entity: binary_sensor.rookmelder_woonkamer_smoke_alarm_smoke_detected
-          - entity: binary_sensor.rookmelder_woonkamer_smoke_alarm_smoke_alarm_test
+          - entity: binary_sensor.rookmelder_woonkamer_smoke_detected
+          - entity: binary_sensor.rookmelder_woonkamer_smoke_alarm_test
           - entity: sensor.rookmelder_woonkamer_battery_level
         show_header_toggle: false
         title: Rookmelder Woonkamer
         type: entities
       - entities:
-          - entity: binary_sensor.koolmonoxidemelder_co_alarm_carbon_monoxide_detected
-          - entity: binary_sensor.koolmonoxidemelder_co_alarm_carbon_monoxide_test
+          - entity: binary_sensor.koolmonoxidemelder_carbon_monoxide_detected
+          - entity: binary_sensor.koolmonoxidemelder_carbon_monoxide_test
           - entity: sensor.koolmonoxidemelder_carbon_monoxide_co_level
           - entity: sensor.koolmonoxidemelder_battery_level
         show_header_toggle: false
@@ -211,9 +211,11 @@ views:
           - entity: sensor.swap_use_percent
           - entity: sensor.disk_use_percent
           - entity: sensor.disk_use_percent_boot
-          - entity: sensor.disk_use_percent_srv_files_storage
-          - entity: sensor.network_in_br0
-          - entity: sensor.network_out_br0
+          - entity: sensor.disk_use_percent_storage
+          - entity: sensor.network_in_eth0
+          - entity: sensor.network_out_eth0
+          - entity: sensor.network_in_eth1
+          - entity: sensor.network_out_eth1
         show_header_toggle: false
         title: PiCore1
         type: entities
