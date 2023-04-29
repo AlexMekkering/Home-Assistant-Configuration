@@ -17,14 +17,6 @@ away:
     - automation.away_evening_end
     - automation.away_morning_start
     - automation.away_morning_end
-rookmelders:
-  name: Rookmelders
-  entities:
-    - binary_sensor.rookmelder_hal_smoke_alarm_smoke_detected
-    - binary_sensor.rookmelder_overloop_smoke_alarm_smoke_detected
-    - binary_sensor.rookmelder_zolder_smoke_alarm_smoke_detected
-    - binary_sensor.rookmelder_woonkamer_smoke_alarm_smoke_detected
-    - binary_sensor.koolmonoxidemelder_co_alarm_carbon_monoxide_detected
 living_room_lights:
   name: Lampen Woonkamer
   entities:

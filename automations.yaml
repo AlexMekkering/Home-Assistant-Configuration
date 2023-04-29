@@ -844,3 +844,48 @@
     target:
       entity_id: light.kantoor
   mode: single
+- id: '1675195819710'
+  alias: Create Backup
+  description: ''
+  trigger:
+  - platform: time
+    at: 00:30:00
+  condition: []
+  action:
+  - service: backup.create
+    data: {}
+  - service: shell_command.purge_backups
+    data: {}
+  mode: single
+- id: '1682782151685'
+  alias: Buitenverlichting Garage On
+  description: ''
+  trigger:
+  - platform: device
+    type: turned_on
+    device_id: 3256673f65079c914533ea76c37ccdc9
+    entity_id: switch.hal_buitenlamp_voor
+    domain: switch
+  condition: []
+  action:
+  - type: turn_on
+    device_id: fd2f7c73c759b784ca1d04a348372f05
+    entity_id: switch.buitenverlichting_garage
+    domain: switch
+  mode: single
+- id: '1682782219304'
+  alias: Buitenverlichting Garage Off
+  description: ''
+  trigger:
+  - platform: device
+    type: turned_off
+    device_id: 3256673f65079c914533ea76c37ccdc9
+    entity_id: switch.hal_buitenlamp_voor
+    domain: switch
+  condition: []
+  action:
+  - type: turn_off
+    device_id: fd2f7c73c759b784ca1d04a348372f05
+    entity_id: switch.buitenverlichting_garage
+    domain: switch
+  mode: single

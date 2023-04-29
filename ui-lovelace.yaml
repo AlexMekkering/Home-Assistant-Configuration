@@ -67,11 +67,12 @@ views:
         title: Kantoor Alex
         type: entities
       - entities:
+          - entity: light.studiekamer
           - entity: switch.kantoor_joyce
           - entity: sensor.kantoor_joyce_power
           - entity: sensor.kantoor_joyce_energy
         show_header_toggle: false
-        title: Kantoor Joyce
+        title: Studiekamer
         type: entities
       - entities:
           - entity: media_player.receiver
