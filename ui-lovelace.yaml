@@ -1,6 +1,10 @@
 title: Home
 views:
-  - badges: []
+  - badges:
+      - entity: binary_sensor.rookmelder_woonkamer_smoke_detected
+      - entity: sensor.rookmelder_woonkamer_battery_level
+      - entity: binary_sensor.rookmelder_hal_smoke_detected
+      - entity: sensor.rookmelder_hal_battery_level
     cards:
       - entities:
           - entity: input_select.media_scene
@@ -17,18 +21,12 @@ views:
           - entity: light.eettafel
           - entity: switch.kerstboom
           - entity: script.all_off
-          - entity: binary_sensor.rookmelder_woonkamer_smoke_detected
-          - entity: binary_sensor.rookmelder_woonkamer_smoke_alarm_test
-          - entity: sensor.rookmelder_woonkamer_battery_level
         show_header_toggle: true
         title: Woonkamer
         type: entities
       - entities:
           - entity: switch.hal_lamp
           - entity: light.toilet
-          - entity: binary_sensor.rookmelder_hal_smoke_detected
-          - entity: binary_sensor.rookmelder_hal_smoke_alarm_test
-          - entity: sensor.rookmelder_hal_battery_level
         show_header_toggle: false
         title: Overig
         type: entities
@@ -36,13 +34,20 @@ views:
     panel: false
     path: default_view
     title: Woonkamer
-  - badges: []
+  - badges:
+      - entity: binary_sensor.rookmelder_overloop_smoke_detected
+      - entity: sensor.rookmelder_overloop_battery_level
+      - entity: sensor.licht_slaapkamer_electric_consumption_w
+      - entity: sensor.licht_slaapkamer_electric_consumption_kwh
+      - entity: sensor.licht_studiekamer_electric_consumption_w
+      - entity: sensor.licht_studiekamer_electric_consumption_kwh
+      - entity: sensor.licht_kledingkamer_electric_consumption_w
+      - entity: sensor.licht_kledingkamer_electric_consumption_kwh
+      - entity: sensor.kantoor_joyce_power
+      - entity: sensor.kantoor_joyce_energy
     cards:
       - entities:
           - entity: switch.overloop_lamp
-          - entity: binary_sensor.rookmelder_overloop_smoke_detected
-          - entity: binary_sensor.rookmelder_overloop_smoke_alarm_test
-          - entity: sensor.rookmelder_overloop_battery_level
         show_header_toggle: false
         title: Overloop
         type: entities
@@ -55,41 +60,36 @@ views:
           - entity: timer.tv_slaapkamer
           - entity: input_boolean.evening_trigger_upstairs
           - entity: timer.timeout_activity_upstairs
-          - entity: sensor.licht_slaapkamer_electric_consumption_w
-          - entity: sensor.licht_slaapkamer_electric_consumption_kwh
         show_header_toggle: false
         title: Slaapkamer
         type: entities
       - entities:
           - entity: light.licht_studiekamer
           - entity: switch.kantoor_joyce
-          - entity: sensor.kantoor_joyce_power
-          - entity: sensor.kantoor_joyce_energy
-          - entity: sensor.licht_studiekamer_electric_consumption_w
-          - entity: sensor.licht_studiekamer_electric_consumption_kwh
         show_header_toggle: false
         title: Studiekamer
         type: entities
       - entities:
           - entity: light.licht_kledingkamer
-          - entity: sensor.licht_kledingkamer_electric_consumption_w
-          - entity: sensor.licht_kledingkamer_electric_consumption_kwh
         show_header_toggle: false
         title: Kledingkamer
         type: entities
     icon: "mdi:home-floor-1"
     title: 1e Verdieping
-  - badges: []
+  - badges:
+      - entity: binary_sensor.rookmelder_zolder_smoke_detected
+      - entity: sensor.rookmelder_zolder_battery_level
+      - entity: binary_sensor.koolmonoxidemelder_carbon_monoxide_detected
+      - entity: sensor.koolmonoxidemelder_carbon_monoxide_co_level
+      - entity: sensor.koolmonoxidemelder_battery_level
+      - entity: sensor.kantoor_alex_power
+      - entity: sensor.kantoor_alex_energy
+      - entity: sensor.ventilatie_power
+      - entity: sensor.ventilatie_voltage
+      - entity: sensor.ventilatie_current
     cards:
       - entities:
           - entity: light.zolder
-          - entity: binary_sensor.rookmelder_zolder_smoke_detected
-          - entity: binary_sensor.rookmelder_zolder_smoke_alarm_test
-          - entity: sensor.rookmelder_zolder_battery_level
-          - entity: binary_sensor.koolmonoxidemelder_carbon_monoxide_detected
-          - entity: binary_sensor.koolmonoxidemelder_carbon_monoxide_test
-          - entity: sensor.koolmonoxidemelder_carbon_monoxide_co_level
-          - entity: sensor.koolmonoxidemelder_battery_level
         show_header_toggle: false
         title: Zolder
         type: entities
@@ -99,23 +99,19 @@ views:
           - entity: switch.zolder_printer
           - entity: light.zolder_bureaulamp
           - entity: switch.kantoor_alex
-          - entity: sensor.kantoor_alex_power
-          - entity: sensor.kantoor_alex_energy
         show_header_toggle: false
         title: Kantoor Alex
         type: entities
       - entities:
           - entity: switch.ventilatie
-          - entity: sensor.ventilatie_power
-          - entity: sensor.ventilatie_voltage
-          - entity: sensor.ventilatie_current
           - entity: switch.ventilatie_auto_poweroff
         show_header_toggle: false
         title: Mechanische Ventilatie
         type: entities
     icon: "mdi:home-roof"
     title: Zolder
-  - badges: []
+  - badges:
+      - entity: sensor.buiten_temperatuur
     cards:
       - entities:
           - entity: switch.hal_buitenlamp_voor
@@ -126,7 +122,7 @@ views:
           - entity: light.kerstverlichting_voor
           - entity: cover.zonwering_achter
         show_header_toggle: false
-        title: Buitenboel
+        title: Bediening Buiten
         type: entities
     icon: "mdi:home-city"
     title: Buiten
@@ -185,6 +181,9 @@ views:
   - badges:
       - entity: sensor.binnentemperatuur
       - entity: sensor.buiten_temperatuur
+      - entity: sensor.luchtvochtigheid_binnen
+      - entity: sensor.luchtdruk
+      - entity: sun.sun
     cards:
       - entities:
           - entity: weather.home
