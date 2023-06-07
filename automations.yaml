@@ -872,6 +872,10 @@
     device_id: fd2f7c73c759b784ca1d04a348372f05
     entity_id: switch.buitenverlichting_garage
     domain: switch
+  - type: turn_on
+    device_id: 3ded2b6511a0ae53d22d7d587a0abe4a
+    entity_id: light.buitenverlichting_achter
+    domain: light
   mode: single
 - id: '1682782219304'
   alias: Buitenverlichting Garage Off
@@ -888,4 +892,8 @@
     device_id: fd2f7c73c759b784ca1d04a348372f05
     entity_id: switch.buitenverlichting_garage
     domain: switch
+  - type: turn_off
+    device_id: 3ded2b6511a0ae53d22d7d587a0abe4a
+    entity_id: light.buitenverlichting_achter
+    domain: light
   mode: single
