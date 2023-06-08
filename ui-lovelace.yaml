@@ -114,9 +114,9 @@ views:
       - entity: sensor.buiten_temperatuur
     cards:
       - entities:
-          - entity: switch.hal_buitenlamp_voor
+          - entity: light.schakelaars_hal_2
           - entity: light.buitenverlichting_achter
-          - entity: switch.buitenverlichting_garage
+          - entity: light.buitenverlichting_garage
           - entity: light.veranda_verlichting
           - entity: light.kerstverlichting_buiten
           - entity: light.kerstverlichting_voor
