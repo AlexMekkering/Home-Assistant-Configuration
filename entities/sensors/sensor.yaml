@@ -21,15 +21,6 @@
       arg: eth1
     - type: network_out
       arg: eth1
-########
-# CPU temperature
-########
-- platform: command_line
-  name: CPU Temperature
-  command: "cat /sys/class/thermal/thermal_zone1/temp"
-  unit_of_measurement: "°C"
-  value_template: '{{ (value | multiply(0.001)) | round(1) }}'
-  scan_interval: 600
 
 ########
 # Batterijniveaus rookmelders
