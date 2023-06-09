@@ -23,20 +23,6 @@
       arg: eth1
 
 ########
-# Batterijniveaus rookmelders
-########
-- platform: template
-  sensors:
-    temperatuurverschil_buiten_binnen:
-      friendly_name: Temperatuurverschil Buiten-Binnen
-      device_class: temperature
-      unit_of_measurement: "°C"
-      value_template: >
-        {% if states.sensor.buiten_temperatuur and states.sensor.woonkamer_temperatuur %}
-          {{ (states('sensor.buiten_temperatuur')|float - states('sensor.woonkamer_temperatuur')|float)|round(0)|int }}
-        {% endif %}
-
-########
 # Smartmeter sensors
 ########
 - platform: template
