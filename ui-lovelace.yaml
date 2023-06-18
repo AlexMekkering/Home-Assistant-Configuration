@@ -126,18 +126,71 @@ views:
         type: entities
     icon: "mdi:home-city"
     title: Buiten
-  - badges: []
+  - badges:
+      - entity: sensor.binnentemperatuur
+      - entity: sensor.temperatuur_range_binnen
+      - entity: sensor.buiten_temperatuur
+      - entity: sensor.temperatuur_range
+      - entity: sensor.luchtvochtigheid_binnen
+      - entity: sensor.luchtdruk
+      - entity: sun.sun
     cards:
       - entities:
-          - entity: media_player.receiver
-          - entity: media_player.woonkamer
-          - entity: media_player.slaapkamer
-        show_state: false
-        show_header_toggle: true
-        title: Mediaspelers
-        type: glance
-    icon: "mdi:desktop-classic"
-    title: Apparaten
+          - entity: weather.home
+        show_header_toggle: false
+        type: entities
+      - entities:
+          - entity: sensor.garage_temperatuur
+            name: Temperatuur
+          - entity: sensor.garage_luchtvochtigheid
+            name: Luchtvochtigheid
+          - entity: sensor.buiten_temperatuur
+            name: Buitentemperatuur
+        show_header_toggle: false
+        title: Garage
+        type: entities
+      - entities:
+          - entity: sensor.slaapkamer_temperatuur
+            name: Temperatuur
+          - entity: sensor.slaapkamer_luchtvochtigheid
+            name: Luchtvochtigheid
+          - entity: sensor.slaapkamer_luchtdruk
+            name: Luchtdruk
+        show_header_toggle: false
+        title: Slaapkamer
+        type: entities
+      - entities:
+          - entity: sensor.woonkamer_temperatuur
+            name: Temperatuur
+          - entity: sensor.woonkamer_luchtvochtigheid
+            name: Luchtvochtigheid
+          - entity: sensor.woonkamer_luchtdruk
+            name: Luchtdruk
+          - entity: sensor.zonwering_remote_air_temperature
+        show_header_toggle: false
+        title: Woonkamer
+        type: entities
+      - entities:
+          - entity: sensor.rookmelder_zolder_air_temperature
+            name: Zolder
+          - entity: sensor.rookmelder_overloop_air_temperature
+            name: Overloop
+          - entity: sensor.rookmelder_hal_air_temperature
+            name: Hal
+          - entity: sensor.rookmelder_woonkamer_air_temperature
+            name: Woonkamer
+          - entity: sensor.koolmonoxidemelder_air_temperature
+            name: Washok
+        show_header_toggle: false
+        title: Temperaturen Rookmelders
+        type: entities
+      - entities:
+          - entity: sensor.temperatuurverschil_buiten_binnen
+        show_header_toggle: false
+        title: Temperatuurmonitoring
+        type: entities
+    icon: "mdi:thermometer-lines"
+    title: Klimaat
   - badges: []
     cards:
       - entities:
@@ -178,68 +231,18 @@ views:
         type: entities
     icon: "mdi:shield-check"
     title: Veiligheid
-  - badges:
-      - entity: sensor.binnentemperatuur
-      - entity: sensor.buiten_temperatuur
-      - entity: sensor.luchtvochtigheid_binnen
-      - entity: sensor.luchtdruk
-      - entity: sun.sun
+  - badges: []
     cards:
       - entities:
-          - entity: weather.home
-        show_header_toggle: false
-        type: entities
-      - entities:
-          - entity: sensor.garage_temperatuur
-            name: Temperatuur
-          - entity: sensor.garage_luchtvochtigheid
-            name: Luchtvochtigheid
-          - entity: sensor.buiten_temperatuur
-            name: Buitentemperatuur
-        show_header_toggle: false
-        title: Garage
-        type: entities
-      - entities:
-          - entity: sensor.slaapkamer_temperatuur
-            name: Temperatuur
-          - entity: sensor.slaapkamer_luchtvochtigheid
-            name: Luchtvochtigheid
-          - entity: sensor.slaapkamer_luchtdruk
-            name: Luchtdruk
-        show_header_toggle: false
-        title: Slaapkamer
-        type: entities
-      - entities:
-          - entity: sensor.woonkamer_temperatuur
-            name: Temperatuur
-          - entity: sensor.woonkamer_luchtvochtigheid
-            name: Luchtvochtigheid
-          - entity: sensor.woonkamer_luchtdruk
-            name: Luchtdruk
-        show_header_toggle: false
-        title: Woonkamer
-        type: entities
-      - entities:
-          - entity: sensor.rookmelder_zolder_air_temperature
-            name: Zolder
-          - entity: sensor.rookmelder_overloop_air_temperature
-            name: Overloop
-          - entity: sensor.rookmelder_hal_air_temperature
-            name: Hal
-          - entity: sensor.rookmelder_woonkamer_air_temperature
-            name: Woonkamer
-          - entity: sensor.koolmonoxidemelder_air_temperature
-            name: Washok
-        show_header_toggle: false
-        title: Temperaturen Rookmelders
-        type: entities
-      - entities:
-          - entity: sensor.temperatuurverschil_buiten_binnen
-        show_header_toggle: false
-        title: Temperatuurmonitoring
-        type: entities
-    icon: "mdi:thermometer-lines"
-    title: Klimaat
+          - entity: media_player.receiver
+          - entity: media_player.woonkamer
+          - entity: media_player.slaapkamer
+        show_state: false
+        show_header_toggle: true
+        title: Mediaspelers
+        type: glance
+    icon: "mdi:desktop-classic"
+    title: Apparaten
   - badges:
       - entity: person.alex
       - entity: person.joyce
