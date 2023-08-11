@@ -788,7 +788,7 @@
       hours: 0
       minutes: 15
       seconds: 0
-    below: 10
+    below: 15
   condition:
   - condition: state
     entity_id: switch.kantoor_alex
@@ -896,4 +896,86 @@
     device_id: 3ded2b6511a0ae53d22d7d587a0abe4a
     entity_id: light.buitenverlichting_achter
     domain: light
+  mode: single
+- id: '1691308597750'
+  alias: Walli Toggle
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      command_class: 91
+      value: KeyPressed
+    variables:
+      intent: '{{ ''on'' if trigger.event.data.property_key == ''001'' else ''off''
+        }}'
+      entity: '{{ device_entities(trigger.event.data.device_id) | select(''is_state_attr'',
+        ''supported_features'', 32) | first }}'
+      do_toggle: '{{ is_state(entity, intent) }}'
+  condition:
+  - condition: template
+    value_template: '{{ do_toggle }}'
+    enabled: true
+  action:
+  - service: light.toggle
+    data: {}
+    target:
+      entity_id: '{{ entity }}'
+  mode: single
+- id: '1691314108806'
+  alias: Walli Refresh
+  description: ''
+  trigger:
+  - platform: time_pattern
+    minutes: /10
+  condition: []
+  action:
+  - service: zwave_js.refresh_value
+    data:
+      refresh_all_values: false
+      entity_id:
+      - light.licht_kledingkamer
+      - light.licht_slaapkamer
+      - light.toilet
+      - light.licht_studiekamer
+  mode: single
+- id: '1691766165307'
+  alias: Badkamer Wastafel follows main On
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - light.licht_badkamer
+    to: 'on'
+  condition: []
+  action:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 1
+      milliseconds: 0
+  - type: turn_on
+    device_id: 39c3f875de190fce10400c0425e5badd
+    entity_id: f3b09b14e0b03e7e83518b151b3083cf
+    domain: switch
+  mode: single
+- id: '1691766212418'
+  alias: Badkamer Wastafel follows main Off
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - light.licht_badkamer
+    to: 'off'
+  condition: []
+  action:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 1
+      milliseconds: 0
+  - type: turn_off
+    device_id: 39c3f875de190fce10400c0425e5badd
+    entity_id: f3b09b14e0b03e7e83518b151b3083cf
+    domain: switch
   mode: single
