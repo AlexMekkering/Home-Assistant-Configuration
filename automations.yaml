@@ -941,14 +941,13 @@
       - light.licht_badkamer
       - light.buitenverlichting_achter
   mode: single
-- id: '1691766165307'
-  alias: Badkamer Wastafel follows main On
+- id: '1691833100779'
+  alias: Badkamer Wastafel follows main
   description: ''
   trigger:
   - platform: state
     entity_id:
     - light.licht_badkamer
-    to: 'on'
   condition: []
   action:
   - delay:
@@ -956,28 +955,7 @@
       minutes: 0
       seconds: 1
       milliseconds: 0
-  - type: turn_on
-    device_id: 39c3f875de190fce10400c0425e5badd
-    entity_id: f3b09b14e0b03e7e83518b151b3083cf
-    domain: switch
-  mode: single
-- id: '1691766212418'
-  alias: Badkamer Wastafel follows main Off
-  description: ''
-  trigger:
-  - platform: state
-    entity_id:
-    - light.licht_badkamer
-    to: 'off'
-  condition: []
-  action:
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 1
-      milliseconds: 0
-  - type: turn_off
-    device_id: 39c3f875de190fce10400c0425e5badd
-    entity_id: f3b09b14e0b03e7e83518b151b3083cf
-    domain: switch
+  - service: switch.turn_{{ trigger.to_state.state }}
+    data:
+      entity_id: switch.wastafel_badkamer
   mode: single
