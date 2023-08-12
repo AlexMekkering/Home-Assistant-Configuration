@@ -38,16 +38,26 @@ activity_at_home:
     - switch.hal_lamp
     - switch.kantoor_alex
     - switch.kantoor_joyce
+verlichting_1e_verdieping:
+  name: Verlichting kamers 1e verdieping
+  entities:
+    - light.licht_badkamer
+    - light.licht_kledingkamer
+    - light.licht_slaapkamer
+    - light.licht_studiekamer
+verlichting_zolder:
+  name: Verlichting zolder
+  entities:
+    - light.kantoor
+    - light.zolder
 someone_home:
   name: Iemand thuis
   entities:
+    - group.verlichting_1e_verdieping
+    - group.verlichting_zolder
     - group.activity_at_home
     - light.slaapkamer_achterwand
     - switch.slaapkamer_tv
     - light.nachtlampje_alex
     - light.nachtlampje_joyce
-    - switch.zolder_pc
     - binary_sensor.alex_home
-    - light.kantoor
-    - light.zolder
-    - switch.overloop_lamp

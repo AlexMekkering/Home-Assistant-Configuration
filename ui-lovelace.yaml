@@ -43,6 +43,10 @@ views:
       - entity: sensor.licht_studiekamer_electric_consumption_kwh
       - entity: sensor.licht_kledingkamer_electric_consumption_w
       - entity: sensor.licht_kledingkamer_electric_consumption_kwh
+      - entity: sensor.licht_badkamer_electric_consumption_w
+      - entity: sensor.licht_badkamer_electric_consumption_kwh
+      - entity: sensor.wastafel_badkamer_electric_consumption_w
+      - entity: sensor.wastafel_badkamer_electric_consumption_kwh
       - entity: sensor.kantoor_joyce_power
       - entity: sensor.kantoor_joyce_energy
     cards:
@@ -73,6 +77,12 @@ views:
           - entity: light.licht_kledingkamer
         show_header_toggle: false
         title: Kledingkamer
+        type: entities
+      - entities:
+          - entity: light.licht_badkamer
+          - entity: switch.wastafel_badkamer
+        show_header_toggle: false
+        title: Badkamer
         type: entities
     icon: "mdi:home-floor-1"
     title: 1e Verdieping

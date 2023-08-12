@@ -938,6 +938,8 @@
       - light.licht_slaapkamer
       - light.toilet
       - light.licht_studiekamer
+      - light.licht_badkamer
+      - light.buitenverlichting_achter
   mode: single
 - id: '1691766165307'
   alias: Badkamer Wastafel follows main On
