@@ -742,11 +742,10 @@
   alias: RF Kantoor Lights turn on
   description: ''
   trigger:
-  - type: turned_on
-    platform: device
-    device_id: 0e2f21dcb6184429af0b6a267a151678
-    entity_id: binary_sensor.rf_button_kantoor_lights
-    domain: binary_sensor
+  - platform: state
+    entity_id:
+    - binary_sensor.rf_button_office_lights
+    to: 'on'
   condition:
   - condition: state
     entity_id: light.kantoor
@@ -761,11 +760,10 @@
   alias: RF Kantoor Mains on
   description: ''
   trigger:
-  - type: turned_on
-    platform: device
-    device_id: 0e2f21dcb6184429af0b6a267a151678
-    entity_id: binary_sensor.rf_button_kantoor_lights
-    domain: binary_sensor
+  - platform: state
+    entity_id:
+    - binary_sensor.rf_button_office_lights
+    to: 'on'
   condition:
   - condition: device
     type: is_off
@@ -788,7 +786,7 @@
       hours: 0
       minutes: 15
       seconds: 0
-    below: 15
+    below: 16
   condition:
   - condition: state
     entity_id: switch.kantoor_alex
@@ -824,11 +822,10 @@
   alias: RF Kantoor Lights turn off
   description: ''
   trigger:
-  - type: turned_on
-    platform: device
-    device_id: 0e2f21dcb6184429af0b6a267a151678
-    entity_id: binary_sensor.rf_button_kantoor_lights
-    domain: binary_sensor
+  - platform: state
+    entity_id:
+    - binary_sensor.rf_button_office_lights
+    to: 'on'
   condition:
   - condition: and
     conditions:
@@ -959,3 +956,25 @@
     data:
       entity_id: switch.wastafel_badkamer
   mode: single
+- id: '1692126269530'
+  alias: Mechanische Ventilatie Auto Off
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.mechanische_ventilatie_power
+    above: 15
+  condition: []
+  action:
+  - wait_for_trigger:
+    - platform: numeric_state
+      entity_id: sensor.mechanische_ventilatie_power
+      for:
+        hours: 0
+        minutes: 30
+        seconds: 0
+      below: 15
+  - service: fan.turn_off
+    data: {}
+    target:
+      entity_id: fan.mechanische_ventilatie
+  mode: restart

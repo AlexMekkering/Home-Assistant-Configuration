@@ -94,9 +94,7 @@ views:
       - entity: sensor.koolmonoxidemelder_battery_level
       - entity: sensor.kantoor_alex_power
       - entity: sensor.kantoor_alex_energy
-      - entity: sensor.ventilatie_power
-      - entity: sensor.ventilatie_voltage
-      - entity: sensor.ventilatie_current
+      - entity: sensor.mechanische_ventilatie_power
     cards:
       - entities:
           - entity: light.zolder
@@ -113,8 +111,8 @@ views:
         title: Kantoor Alex
         type: entities
       - entities:
-          - entity: switch.ventilatie
-          - entity: switch.ventilatie_auto_poweroff
+          - entity: fan.mechanische_ventilatie
+          - entity: sensor.mechanische_ventilatie_power
         show_header_toggle: false
         title: Mechanische Ventilatie
         type: entities
