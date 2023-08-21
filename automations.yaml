@@ -289,20 +289,6 @@
       - service: script.select_lights_away
     default:
     - service: script.select_lights_regular
-- id: '1589741290145'
-  alias: Beweging Achtertuin
-  description: ''
-  trigger:
-  - device_id: 2c887ba43bf44b0fafd4bf06746c24dc
-    domain: binary_sensor
-    entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_f73b95fe_on_off
-    platform: device
-    type: opened
-  condition: []
-  action:
-  - data:
-      message: Beweging Achtertuin
-    service: script.notify_admin
 - id: '1601907810392'
   alias: Turn off kodi woonkamer
   description: ''
@@ -505,116 +491,39 @@
     entity_id: input_number.smartmeter_w
   - service: input_number.increment
     entity_id: input_number.smartmeter_kwh
-- id: alert_rookmelder_hal
-  alias: Waarschuwing Rookmelder Hal
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.rookmelder_hal_smoke_alarm_smoke_detected
-    from: 'off'
-    to: 'on'
-  action:
-  - service: script.notify_alert
-    data:
-      message: Rook in de Hal
-- id: test_rookmelder_hal
-  alias: Test Rookmelder Hal
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.rookmelder_hal_smoke_alarm_smoke_alarm_test
-    from: 'off'
-    to: 'on'
-  action:
-  - service: script.notify_admin
-    data:
-      message: TEST Rookmelder Hal
-- id: alert_rookmelder_overloop
-  alias: Waarschuwing Rookmelder Overloop
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.rookmelder_overloop_smoke_alarm_smoke_detected
-    from: 'off'
-    to: 'on'
-  action:
-  - service: script.notify_alert
-    data:
-      message: Rook op de Overloop
-- id: test_rookmelder_overloop
-  alias: Test Rookmelder Overloop
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.rookmelder_overloop_smoke_alarm_smoke_alarm_test
-    from: 'off'
-    to: 'on'
-  action:
-  - service: script.notify_admin
-    data:
-      message: TEST Rookmelder Overloop
-- id: alert_rookmelder_zolder
-  alias: Waarschuwing Rookmelder Zolder
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.rookmelder_zolder_smoke_alarm_smoke_detected
-    from: 'off'
-    to: 'on'
-  action:
-  - service: script.notify_alert
-    data:
-      message: Rook op Zolder
-- id: test_rookmelder_zolder
-  alias: Test Rookmelder Zolder
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.rookmelder_zolder_smoke_alarm_smoke_alarm_test
-    from: 'off'
-    to: 'on'
-  action:
-  - service: script.notify_admin
-    data:
-      message: TEST Rookmelder Zolder
-- id: alert_rookmelder_woonkamer
-  alias: Waarschuwing Rookmelder Woonkamer
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.rookmelder_woonkamer_smoke_alarm_smoke_detected
-    from: 'off'
-    to: 'on'
-  action:
-  - service: script.notify_alert
-    data:
-      message: Rook in de Woonkamer
-- id: test_rookmelder_woonkamer
-  alias: Test Rookmelder Woonkamer
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.rookmelder_woonkamer_smoke_alarm_smoke_alarm_test
-    from: 'off'
-    to: 'on'
-  action:
-  - service: script.notify_admin
-    data:
-      message: TEST Rookmelder Woonkamer
 - id: alert_coolmonoxide
-  alias: Waarschuwing Coolmonoxide
+  alias: Waarschuwing Rook en/of Koolmonoxide
+  description: ''
   trigger:
   - platform: state
-    entity_id: binary_sensor.koolmonoxidemelder_co_alarm_carbon_monoxide_detected
-    from: 'off'
+    entity_id:
+    - binary_sensor.koolmonoxidemelder_carbon_monoxide_detected
+    - binary_sensor.rookmelder_hal_smoke_detected
+    - binary_sensor.rookmelder_woonkamer_smoke_detected
+    - binary_sensor.rookmelder_zolder_smoke_detected
+    - binary_sensor.rookmelder_overloop_smoke_detected
     to: 'on'
   action:
   - service: script.notify_alert
     data:
-      message: Coolmonoxide te hoog
+      message: '{{ trigger.to_state.name }}'
 - id: test_coolmonoxide
-  alias: Test Coolmonoxide
+  alias: Test Rook en/of Koolmonoxide
+  description: ''
   trigger:
   - platform: state
-    entity_id: binary_sensor.koolmonoxidemelder_co_alarm_carbon_monoxide_test
+    entity_id:
+    - binary_sensor.koolmonoxidemelder_carbon_monoxide_test
+    - binary_sensor.rookmelder_hal_smoke_alarm_test
+    - binary_sensor.rookmelder_zolder_smoke_alarm_test
+    - binary_sensor.rookmelder_overloop_smoke_alarm_test
+    - binary_sensor.rookmelder_woonkamer_smoke_alarm_test
     from: 'off'
     to: 'on'
   action:
   - service: script.notify_admin
     data:
-      message: TEST Coolmonoxide
+      message: '{{ trigger.to_state.name }}'
 - id: startup
   alias: Opstarten
   initial_state: 'on'
@@ -854,46 +763,6 @@
   - service: shell_command.purge_backups
     data: {}
   mode: single
-- id: '1682782151685'
-  alias: Buitenverlichting Garage On
-  description: ''
-  trigger:
-  - platform: device
-    type: turned_on
-    device_id: 3256673f65079c914533ea76c37ccdc9
-    entity_id: switch.hal_buitenlamp_voor
-    domain: switch
-  condition: []
-  action:
-  - type: turn_on
-    device_id: fd2f7c73c759b784ca1d04a348372f05
-    entity_id: switch.buitenverlichting_garage
-    domain: switch
-  - type: turn_on
-    device_id: 3ded2b6511a0ae53d22d7d587a0abe4a
-    entity_id: light.buitenverlichting_achter
-    domain: light
-  mode: single
-- id: '1682782219304'
-  alias: Buitenverlichting Garage Off
-  description: ''
-  trigger:
-  - platform: device
-    type: turned_off
-    device_id: 3256673f65079c914533ea76c37ccdc9
-    entity_id: switch.hal_buitenlamp_voor
-    domain: switch
-  condition: []
-  action:
-  - type: turn_off
-    device_id: fd2f7c73c759b784ca1d04a348372f05
-    entity_id: switch.buitenverlichting_garage
-    domain: switch
-  - type: turn_off
-    device_id: 3ded2b6511a0ae53d22d7d587a0abe4a
-    entity_id: light.buitenverlichting_achter
-    domain: light
-  mode: single
 - id: '1691308597750'
   alias: Walli Toggle
   description: ''
@@ -978,3 +847,19 @@
     target:
       entity_id: fan.mechanische_ventilatie
   mode: restart
+- id: '1692597555320'
+  alias: Sync Buitenverlichting
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - light.schakelaars_hal_2
+  condition: []
+  action:
+  - service: light.turn_{{ trigger.to_state.state }}
+    data:
+      entity_id: light.buitenverlichting_garage
+  - service: light.turn_{{ trigger.to_state.state }}
+    data:
+      entity_id: light.buitenverlichting_achter
+  mode: single
