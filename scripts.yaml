@@ -1,423 +1,414 @@
 detect_lights:
   alias: Detect light scene based on state
   sequence:
-    - wait_template: "{{ is_state('binary_sensor.tv_meubel_status', 'on') }}"
-      timeout: 00:00:30
-    - delay: 00:00:05
-    - condition: state
-      entity_id: binary_sensor.tv_meubel_status
-      state: "on"
-    - service: script.silent_light_scene_select
+  - wait_template: '{{ is_state(''binary_sensor.tv_meubel_status'', ''on'') }}'
+    timeout: 00:00:30
+  - delay: 00:00:05
+  - condition: state
+    entity_id: binary_sensor.tv_meubel_status
+    state: 'on'
+  - service: script.silent_light_scene_select
 living_scene_away:
   sequence:
-    - service: light.turn_off
-      entity_id: light.tv_meubel_spruitje
-    - service: scene.turn_on
-      entity_id: scene.living_away
+  - service: light.turn_off
+    entity_id: light.tv_meubel_spruitje
+  - service: scene.turn_on
+    entity_id: scene.living_away
 living_scene_regular:
   sequence:
-    - service: light.turn_on
-      entity_id: light.tv_meubel_spruitje
-    - service: switch.turn_on
-      entity_id: switch.kerstboom
-    - service: scene.turn_on
-      entity_id: scene.living_max
+  - service: light.turn_on
+    entity_id: light.tv_meubel_spruitje
+  - service: switch.turn_on
+    entity_id: switch.kerstboom
+  - service: scene.turn_on
+    entity_id: scene.living_max
 living_scene_regular_phase_1:
   sequence:
-    - service: light.turn_on
-      entity_id: light.tv_meubel_spruitje
-    - service: script.silent_light_scene_select
+  - service: light.turn_on
+    entity_id: light.tv_meubel_spruitje
+  - service: script.silent_light_scene_select
 living_scene_regular_phase_2:
   sequence:
-    - service: light.turn_on
-      entity_id: light.tv_meubel_spruitje
-    - service: scene.turn_on
-      entity_id: scene.living_regular_phase_1
-    - service: script.silent_light_scene_select
+  - service: light.turn_on
+    entity_id: light.tv_meubel_spruitje
+  - service: scene.turn_on
+    entity_id: scene.living_regular_phase_1
+  - service: script.silent_light_scene_select
 living_scene_regular_phase_3:
   sequence:
-    - service: light.turn_on
-      entity_id: light.tv_meubel_spruitje
-    - service: scene.turn_on
-      entity_id: scene.living_regular_phase_2
-    - service: script.silent_light_scene_select
+  - service: light.turn_on
+    entity_id: light.tv_meubel_spruitje
+  - service: scene.turn_on
+    entity_id: scene.living_regular_phase_2
+  - service: script.silent_light_scene_select
 living_scene_regular_phase_4:
   sequence:
-    - service: light.turn_on
-      entity_id: light.tv_meubel_spruitje
-    - service: scene.turn_on
-      entity_id: scene.living_regular_phase_3
-    - service: script.silent_light_scene_select
+  - service: light.turn_on
+    entity_id: light.tv_meubel_spruitje
+  - service: scene.turn_on
+    entity_id: scene.living_regular_phase_3
+  - service: script.silent_light_scene_select
 living_scene_dim:
   sequence:
-    - service: light.turn_on
-      entity_id: light.tv_meubel_spruitje
-    - service: scene.turn_on
-      entity_id: scene.living_dim
+  - service: light.turn_on
+    entity_id: light.tv_meubel_spruitje
+  - service: scene.turn_on
+    entity_id: scene.living_dim
 living_scene_very_dim:
   sequence:
-    - service: light.turn_on
-      entity_id: light.tv_meubel_spruitje
-    - service: scene.turn_on
-      entity_id: scene.living_very_dim
+  - service: light.turn_on
+    entity_id: light.tv_meubel_spruitje
+  - service: scene.turn_on
+    entity_id: scene.living_very_dim
 living_scene_maximal:
   sequence:
-    - service: light.turn_on
-      entity_id: light.tv_meubel_spruitje
-    - service: scene.turn_on
-      entity_id: scene.living_max
-    - service: light.turn_on
-      entity_id: light.eettafel
+  - service: light.turn_on
+    entity_id: light.tv_meubel_spruitje
+  - service: scene.turn_on
+    entity_id: scene.living_max
+  - service: light.turn_on
+    entity_id: light.eettafel
 living_scene_all_off:
   sequence:
-    - service: light.turn_off
-      entity_id: light.tv_meubel_spruitje
-    - service: switch.turn_off
-      entity_id: switch.kerstboom
-    - service: scene.turn_on
-      entity_id: scene.living_off
-    - service: light.turn_off
-      entity_id: light.eettafel
+  - service: light.turn_off
+    entity_id: light.tv_meubel_spruitje
+  - service: switch.turn_off
+    entity_id: switch.kerstboom
+  - service: scene.turn_on
+    entity_id: scene.living_off
+  - service: light.turn_off
+    entity_id: light.eettafel
 silent_light_scene_select:
   alias: Silent Light Scene Select
   sequence:
-    - condition: or
-      conditions:
-        - condition: state
-          entity_id: input_select.light_scene
-          state: 'Uit'
-        - condition: state
-          entity_id: light.tv_meubel_spruitje
-          state: 'off'
-    - delay: 00:00:01
-    - service: automation.turn_off
-      entity_id: automation.light_scene_select
-    - service_template: >
-        {% if is_state('light.tv_meubel_spruitje', 'on') %}
-          script.select_lights_dim
-        {% elif is_state('light.raam', 'on') %}
-          script.select_lights_away
-        {% else %}
-          script.select_lights_all_off
-        {% endif %}
-    - service: automation.turn_on
-      entity_id: automation.light_scene_select
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: input_select.light_scene
+      state: Uit
+    - condition: state
+      entity_id: light.tv_meubel_spruitje
+      state: 'off'
+  - delay: 00:00:01
+  - service: automation.turn_off
+    entity_id: automation.light_scene_select
+  - service_template: "{% if is_state('light.tv_meubel_spruitje', 'on') %}\n  script.select_lights_dim\n{%
+      elif is_state('light.raam', 'on') %}\n  script.select_lights_away\n{% else %}\n
+      \ script.select_lights_all_off\n{% endif %}\n"
+  - service: automation.turn_on
+    entity_id: automation.light_scene_select
 all_lights_off:
   alias: All Lights Off
   sequence:
-    - service: script.select_lights_all_off
-    - service: light.turn_off
-      entity_id: light.eettafel
-    - service: switch.turn_off
-      entity_id: switch.kerstboom
-    - service: light.turn_off
-      entity_id: light.veranda_verlichting
-    - service: light.turn_off
-      entity_id: light.kerstverlichting_buiten
-    - service: script.prepare_for_bed
-    - condition: sun
-      after: sunset
-    - service: switch.turn_on
-      entity_id: switch.hal_lamp
-    - delay: 00:00:55
-    - service: switch.turn_off
-      entity_id: switch.hal_lamp
+  - service: script.select_lights_all_off
+  - service: light.turn_off
+    entity_id: light.eettafel
+  - service: switch.turn_off
+    entity_id: switch.kerstboom
+  - service: light.turn_off
+    entity_id: light.veranda_verlichting
+  - service: light.turn_off
+    entity_id: light.kerstverlichting_buiten
+  - service: script.prepare_for_bed
+  - condition: sun
+    after: sunset
+  - service: switch.turn_on
+    entity_id: switch.hal_lamp
+  - delay: 00:00:55
+  - service: switch.turn_off
+    entity_id: switch.hal_lamp
 select_lights_maximal:
   alias: Select Light Scene Maximal
   sequence:
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.light_scene
-        option: 'Maximaal'
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.light_scene
+      option: Maximaal
 select_lights_regular:
   alias: Select Light Scene Regular
   sequence:
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.light_scene
-        option: 'Normaal'
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.light_scene
+      option: Normaal
 select_lights_dim:
   alias: Select Light Scene Dim
   sequence:
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.light_scene
-        option: 'Zacht'
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.light_scene
+      option: Zacht
 select_lights_very_dim:
   alias: Select Light Scene Very Dim
   sequence:
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.light_scene
-        option: 'Erg Zacht'
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.light_scene
+      option: Erg Zacht
 select_lights_away:
   alias: Select Light Scene Away
   sequence:
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.light_scene
-        option: 'Afwezig'
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.light_scene
+      option: Afwezig
 select_lights_all_off:
   alias: Select Light Scene All Off
   sequence:
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.light_scene
-        option: 'Uit'
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.light_scene
+      option: Uit
 kerstboom_on:
   sequence:
-    - service: switch.turn_on
-      entity_id: switch.kerstboom
+  - service: switch.turn_on
+    entity_id: switch.kerstboom
 kerstboom_off:
   sequence:
-    - service: switch.turn_off
-      entity_id: switch.kerstboom
+  - service: switch.turn_off
+    entity_id: switch.kerstboom
 spruitje_on:
   sequence:
-    - service: light.turn_on
-      entity_id: light.tv_meubel_spruitje
-    - service: script.silent_light_scene_select
+  - service: light.turn_on
+    entity_id: light.tv_meubel_spruitje
+  - service: script.silent_light_scene_select
 spruitje_off:
   sequence:
-    - service: light.turn_off
-      entity_id: light.tv_meubel_spruitje
-    - service: script.silent_light_scene_select
+  - service: light.turn_off
+    entity_id: light.tv_meubel_spruitje
+  - service: script.silent_light_scene_select
 veranda_lights_on:
   sequence:
-    - service: light.turn_on
-      entity_id: light.veranda_verlichting
+  - service: light.turn_on
+    data: {}
+    target:
+      entity_id:
+      - light.buitenverlichting_veranda
 veranda_lights_off:
   sequence:
-    - service: light.turn_off
-      entity_id: light.veranda_verlichting
+  - service: light.turn_off
+    data: {}
+    target:
+      entity_id:
+      - light.buitenverlichting_veranda
 detect_media:
   alias: Select media scene based on state
   sequence:
-    - wait_template: "{{ is_state('binary_sensor.tv_meubel_status', 'on') }}"
-      timeout: 00:00:30
-    - delay: 00:00:05
-    - service_template: >
-        {% if is_state('switch.tv_meubel_mediaplayer', 'on') %}
-          script.select_media_kijken
-        {% elif is_state('switch.tv_meubel_tv', 'on') %}
-          script.select_tv_kijken
-        {% elif is_state('switch.tv_meubel_receiver', 'on') %}
-          script.select_radio_luisteren
-        {% else %}
-          script.select_geen
-        {% endif %}
+  - wait_template: '{{ is_state(''binary_sensor.tv_meubel_status'', ''on'') }}'
+    timeout: 00:00:30
+  - delay: 00:00:05
+  - service_template: "{% if is_state('switch.tv_meubel_mediaplayer', 'on') %}\n  script.select_media_kijken\n{%
+      elif is_state('switch.tv_meubel_tv', 'on') %}\n  script.select_tv_kijken\n{%
+      elif is_state('switch.tv_meubel_receiver', 'on') %}\n  script.select_radio_luisteren\n{%
+      else %}\n  script.select_geen\n{% endif %}\n"
 increase_volume:
   alias: Increase Volume
   sequence:
-    - service: homeassistant.update_entity
+  - service: homeassistant.update_entity
+    entity_id: media_player.receiver
+  - condition: state
+    entity_id: media_player.receiver
+    state: home
+  - service: media_player.volume_set
+    data_template:
       entity_id: media_player.receiver
-    - condition: state
-      entity_id: media_player.receiver
-      state: "home"
-    - service: media_player.volume_set
-      data_template:
-        entity_id: media_player.receiver
-        volume_level: >
-          {{ (states.media_player.receiver.attributes.volume_level | float + 0.025) | round(4) }}
+      volume_level: '{{ (states.media_player.receiver.attributes.volume_level | float
+        + 0.025) | round(4) }}
+
+        '
 decrease_volume:
   alias: Decrease Volume
   sequence:
-    - service: homeassistant.update_entity
+  - service: homeassistant.update_entity
+    entity_id: media_player.receiver
+  - condition: state
+    entity_id: media_player.receiver
+    state: home
+  - service: media_player.volume_set
+    data_template:
       entity_id: media_player.receiver
-    - condition: state
-      entity_id: media_player.receiver
-      state: "home"
-    - service: media_player.volume_set
-      data_template:
-        entity_id: media_player.receiver
-        volume_level: >
-          {{ (states.media_player.receiver.attributes.volume_level | float - 0.025) | round(4) }}
+      volume_level: '{{ (states.media_player.receiver.attributes.volume_level | float
+        - 0.025) | round(4) }}
+
+        '
 select_geen:
   alias: Select media scene Geen
   sequence:
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.media_scene
-        option: "Geen"
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.media_scene
+      option: Geen
 select_tv_kijken:
   alias: Select media scene TV kijken
   sequence:
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.media_scene
-        option: "TV kijken"
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.media_scene
+      option: TV kijken
 select_media_kijken:
   alias: Select media scene Media kijken
   sequence:
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.media_scene
-        option: "Media kijken"
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.media_scene
+      option: Media kijken
 select_radio_luisteren:
   alias: Select media scene Radio luisteren
   sequence:
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.media_scene
-        option: "Radio luisteren"
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.media_scene
+      option: Radio luisteren
 listen_radio:
   alias: Listen Radio
   sequence:
-    - service: automation.turn_off
-      entity_id: automation.turn_on_mediaplayer
-    - service: automation.turn_on
-      entity_id: automation.check_receiver_source
-    - service: script.shutdown_tv
-    - service: script.powerup_receiver
+  - service: automation.turn_off
+    entity_id: automation.turn_on_mediaplayer
+  - service: automation.turn_on
+    entity_id: automation.check_receiver_source
+  - service: script.shutdown_tv
+  - service: script.powerup_receiver
 watch_tv:
   alias: Watch TV
   sequence:
-    - service: automation.turn_off
-      entity_id: automation.turn_on_mediaplayer
-    - service: automation.turn_on
-      entity_id: automation.check_receiver_source
-    - service: script.shutdown_mediaplayer
-    - wait_template: "{{ is_state('switch.tv_meubel_mediaplayer', 'off') }}"
-      timeout: 00:00:10
-    - service: script.powerup_tv
+  - service: automation.turn_off
+    entity_id: automation.turn_on_mediaplayer
+  - service: automation.turn_on
+    entity_id: automation.check_receiver_source
+  - service: script.shutdown_mediaplayer
+  - wait_template: '{{ is_state(''switch.tv_meubel_mediaplayer'', ''off'') }}'
+    timeout: 00:00:10
+  - service: script.powerup_tv
 watch_media:
   alias: Watch Media
   sequence:
-    - service: automation.turn_on
-      entity_id: automation.turn_on_mediaplayer
-    - service: automation.turn_on
-      entity_id: automation.check_receiver_source
-    - service: script.powerup_mediaplayer
+  - service: automation.turn_on
+    entity_id: automation.turn_on_mediaplayer
+  - service: automation.turn_on
+    entity_id: automation.check_receiver_source
+  - service: script.powerup_mediaplayer
 all_media_off:
   alias: All Media Off
   sequence:
-    - service: script.shutdown_receiver
+  - service: script.shutdown_receiver
 all_off:
   alias: All Off
   sequence:
-    - service: script.select_geen
-    - service: script.all_lights_off
+  - service: script.select_geen
+  - service: script.all_lights_off
 shutdown_mediaplayer:
   alias: Shutdown Mediaplayer
   sequence:
-    - condition: state
-      entity_id: switch.tv_meubel_mediaplayer
-      state: "on"
-    - service: media_player.turn_off
-      entity_id: media_player.woonkamer
-    - delay: 00:00:15
-    - service: switch.turn_off
-      entity_id: switch.tv_meubel_mediaplayer
+  - condition: state
+    entity_id: switch.tv_meubel_mediaplayer
+    state: 'on'
+  - service: media_player.turn_off
+    entity_id: media_player.woonkamer
+  - delay: 00:00:15
+  - service: switch.turn_off
+    entity_id: switch.tv_meubel_mediaplayer
 shutdown_tv:
   alias: Shutdown TV
   sequence:
-    - condition: state
-      entity_id: switch.tv_meubel_tv
-      state: "on"
-    - service: script.shutdown_mediaplayer
-    - wait_template: "{{ is_state('switch.tv_meubel_mediaplayer', 'off') }}"
-      timeout: 00:00:20
-    - service: switch.turn_off
-      entity_id: switch.tv_meubel_tv
+  - condition: state
+    entity_id: switch.tv_meubel_tv
+    state: 'on'
+  - service: script.shutdown_mediaplayer
+  - wait_template: '{{ is_state(''switch.tv_meubel_mediaplayer'', ''off'') }}'
+    timeout: 00:00:20
+  - service: switch.turn_off
+    entity_id: switch.tv_meubel_tv
 shutdown_receiver:
   alias: Shutdown Receiver
   sequence:
-    - condition: state
-      entity_id: switch.tv_meubel_receiver
-      state: "on"
-    - service: script.shutdown_tv
-    - wait_template: "{{ is_state('switch.tv_meubel_tv', 'off') }}"
-      timeout: 00:00:25
-    - service: media_player.select_source
-      data:
-        entity_id: media_player.receiver
-        source: "TV"
-    - delay: 00:00:05
-    - service: switch.turn_off
-      entity_id: switch.tv_meubel_receiver
+  - condition: state
+    entity_id: switch.tv_meubel_receiver
+    state: 'on'
+  - service: script.shutdown_tv
+  - wait_template: '{{ is_state(''switch.tv_meubel_tv'', ''off'') }}'
+    timeout: 00:00:25
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.receiver
+      source: TV
+  - delay: 00:00:05
+  - service: switch.turn_off
+    entity_id: switch.tv_meubel_receiver
 powerup_receiver:
   alias: Setup Receiver when it's ready to be
   sequence:
-    - service: switch.turn_on
-      entity_id: switch.tv_meubel_receiver
+  - service: switch.turn_on
+    entity_id: switch.tv_meubel_receiver
 powerup_tv:
   alias: Powerup TV
   sequence:
-    - service: script.powerup_receiver
-    - service: switch.turn_on
-      entity_id: switch.tv_meubel_tv
+  - service: script.powerup_receiver
+  - service: switch.turn_on
+    entity_id: switch.tv_meubel_tv
 powerup_mediaplayer:
   alias: Powerup Mediaplayer
   sequence:
-    - service: script.powerup_tv
+  - service: script.powerup_tv
 prepare_for_bed:
   alias: Klaarmaken om naar bed te gaan
   sequence:
-    - condition: state
-      entity_id: input_boolean.evening_trigger_upstairs
-      state: 'on'
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.evening_trigger_upstairs
-    - service: switch.turn_on
-      entity_id: switch.overloop_lamp
-    - service: light.turn_on
-      entity_id: light.slaapkamer_achterwand
-    - service: timer.start
-      entity_id: timer.timeout_activity_upstairs
+  - condition: state
+    entity_id: input_boolean.evening_trigger_upstairs
+    state: 'on'
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.evening_trigger_upstairs
+  - service: switch.turn_on
+    entity_id: switch.overloop_lamp
+  - service: light.turn_on
+    entity_id: light.slaapkamer_achterwand
+  - service: timer.start
+    entity_id: timer.timeout_activity_upstairs
 tv_slaapkamer_aan:
   alias: TV slaapkamer aan
   sequence:
-    - service: timer.cancel
-      entity_id: timer.timeout_activity_upstairs
-    - condition: state
-      entity_id: sun.sun
-      state: 'below_horizon'
-    - service: light.turn_on
-      entity_id: light.slaapkamer_achterwand
+  - service: timer.cancel
+    entity_id: timer.timeout_activity_upstairs
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  - service: light.turn_on
+    entity_id: light.slaapkamer_achterwand
 toggle_tv_slaapkamer:
   alias: Toggle TV Slaapkamer
   sequence:
-    - service_template: >
-        {% if is_state('switch.slaapkamer_tv', 'off') %}
-          switch.turn_on
-        {% else %}
-          script.turn_on
-        {% endif %}
-      data_template:
-        entity_id: >
-          {% if is_state('switch.slaapkamer_tv', 'off') %}
-            switch.slaapkamer_tv
-          {% else %}
-            script.turn_off_tv_slaapkamer
-          {% endif %}
+  - service_template: "{% if is_state('switch.slaapkamer_tv', 'off') %}\n  switch.turn_on\n{%
+      else %}\n  script.turn_on\n{% endif %}\n"
+    data_template:
+      entity_id: "{% if is_state('switch.slaapkamer_tv', 'off') %}\n  switch.slaapkamer_tv\n{%
+        else %}\n  script.turn_off_tv_slaapkamer\n{% endif %}\n"
 turn_off_tv_slaapkamer:
   alias: Turn off TV Slaapkamer
   sequence:
-    - service: media_player.turn_off
-      entity_id: media_player.slaapkamer
-    - service: light.turn_off
-      entity_id: light.slaapkamer_achterwand
-    - delay: 00:00:15
-    - service: switch.turn_off
-      entity_id: switch.slaapkamer_tv
+  - service: media_player.turn_off
+    entity_id: media_player.slaapkamer
+  - service: light.turn_off
+    entity_id: light.slaapkamer_achterwand
+  - delay: 00:00:15
+  - service: switch.turn_off
+    entity_id: switch.slaapkamer_tv
 noop:
   alias: noop
   sequence:
     delay: 00:00:00
 notify_admin:
   sequence:
-    - condition: state
-      entity_id: input_boolean.admin_notifications
-      state: "on"
-    - service: notify.pushover_admin
-      data_template:
-        title: "Admin message"
-        message: "{{ message }}"
+  - condition: state
+    entity_id: input_boolean.admin_notifications
+    state: 'on'
+  - service: notify.pushover_admin
+    data_template:
+      title: Admin message
+      message: '{{ message }}'
 notify_alert:
   sequence:
-    - service: notify.pushover
-      data_template:
-        title: "Alert!!!"
-        message: "{{ message }}"
-        data:
-          priority: 1
+  - service: notify.pushover
+    data_template:
+      title: Alert!!!
+      message: '{{ message }}'
+      data:
+        priority: 1

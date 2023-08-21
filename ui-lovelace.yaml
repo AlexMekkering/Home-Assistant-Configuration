@@ -125,7 +125,7 @@ views:
           - entity: light.schakelaars_hal_2
           - entity: light.buitenverlichting_achter
           - entity: light.buitenverlichting_garage
-          - entity: light.veranda_verlichting
+          - entity: light.buitenverlichting_veranda
           - entity: light.kerstverlichting_buiten
           - entity: light.kerstverlichting_voor
           - entity: cover.zonwering_achter
