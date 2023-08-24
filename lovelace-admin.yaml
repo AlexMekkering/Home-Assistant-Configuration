@@ -17,19 +17,3 @@ views:
         type: entities
     icon: "mdi:cog"
     title: Settings
-  - badges: []
-    cards:
-      - entities:
-          - entity: sensor.slaapkamer_ip_address
-          - entity: sensor.slaapkamer_achterwand_ip_address
-          - entity: sensor.garage_ip_address
-          - entity: sensor.smartmeter_ip_address
-          - entity: sensor.tv_meubel_ip_address
-          - entity: sensor.ventilatie_ip_address
-          - entity: sensor.veranda_verlichting_ip_address
-          - entity: sensor.zolder_ip_address
-        show_header_toggle: false
-        title: Esphome
-        type: entities
-    icon: "mdi:switch"
-    title: Sonoff

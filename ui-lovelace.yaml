@@ -80,7 +80,7 @@ views:
         type: entities
       - entities:
           - entity: light.licht_badkamer
-          - entity: switch.wastafel_badkamer
+          - entity: light.wastafel_badkamer
         show_header_toggle: false
         title: Badkamer
         type: entities
