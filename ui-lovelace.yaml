@@ -203,35 +203,30 @@ views:
     cards:
       - entities:
           - entity: binary_sensor.rookmelder_hal_smoke_detected
-          - entity: binary_sensor.rookmelder_hal_smoke_alarm_test
           - entity: sensor.rookmelder_hal_battery_level
         show_header_toggle: false
         title: Rookmelder Hal
         type: entities
       - entities:
           - entity: binary_sensor.rookmelder_overloop_smoke_detected
-          - entity: binary_sensor.rookmelder_overloop_smoke_alarm_test
           - entity: sensor.rookmelder_overloop_battery_level
         show_header_toggle: false
         title: Rookmelder Overloop
         type: entities
       - entities:
           - entity: binary_sensor.rookmelder_zolder_smoke_detected
-          - entity: binary_sensor.rookmelder_zolder_smoke_alarm_test
           - entity: sensor.rookmelder_zolder_battery_level
         show_header_toggle: false
         title: Rookmelder Zolder
         type: entities
       - entities:
           - entity: binary_sensor.rookmelder_woonkamer_smoke_detected
-          - entity: binary_sensor.rookmelder_woonkamer_smoke_alarm_test
           - entity: sensor.rookmelder_woonkamer_battery_level
         show_header_toggle: false
         title: Rookmelder Woonkamer
         type: entities
       - entities:
           - entity: binary_sensor.koolmonoxidemelder_carbon_monoxide_detected
-          - entity: binary_sensor.koolmonoxidemelder_carbon_monoxide_test
           - entity: sensor.koolmonoxidemelder_carbon_monoxide_co_level
           - entity: sensor.koolmonoxidemelder_battery_level
         show_header_toggle: false
