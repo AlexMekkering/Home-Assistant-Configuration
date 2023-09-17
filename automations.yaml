@@ -863,3 +863,21 @@
     data:
       entity_id: light.buitenverlichting_achter
   mode: single
+- id: '1694939067662'
+  alias: Remote Kantoor turn mains on
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      command_class: 91
+      value: KeyPressed
+      node_id: 63
+      property_key: '003'
+  condition: []
+  action:
+  - service: switch.turn_on
+    data: {}
+    target:
+      entity_id: switch.kantoor_alex
+  mode: single
