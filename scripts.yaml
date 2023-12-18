@@ -197,10 +197,13 @@ detect_media:
   - wait_template: '{{ is_state(''binary_sensor.tv_meubel_status'', ''on'') }}'
     timeout: 00:00:30
   - delay: 00:00:05
-  - service_template: "{% if is_state('switch.tv_meubel_mediaplayer', 'on') %}\n  script.select_media_kijken\n{%
-      elif is_state('switch.tv_meubel_tv', 'on') %}\n  script.select_tv_kijken\n{%
-      elif is_state('switch.tv_meubel_receiver', 'on') %}\n  script.select_radio_luisteren\n{%
-      else %}\n  script.select_geen\n{% endif %}\n"
+  - service_template: "{% if is_state('media_player.denon_avc_x4800h', 'on') and is_state_attr('media_player.denon_avc_x4800h',
+      'source', 'Media Player') %}\n  script.select_media_kijken\n{% elif is_state('media_player.denon_avc_x4800h',
+      'on') and is_state_attr('media_player.denon_avc_x4800h', 'source', 'TV Audio')
+      %}\n  script.select_tv_kijken\n{% elif is_state('media_player.denon_avc_x4800h',
+      'on') and is_state_attr('media_player.denon_avc_x4800h', 'source', 'HEOS Music')
+      %}\n  script.select_radio_luisteren\n{% else %}\n  script.select_geen\n{% endif
+      %}\n"
 increase_volume:
   alias: Increase Volume
   sequence:
@@ -321,30 +324,28 @@ shutdown_tv:
 shutdown_receiver:
   alias: Shutdown Receiver
   sequence:
-  - condition: state
-    entity_id: switch.tv_meubel_receiver
-    state: 'on'
   - service: script.shutdown_tv
-  - wait_template: '{{ is_state(''switch.tv_meubel_tv'', ''off'') }}'
-    timeout: 00:00:25
-  - service: media_player.select_source
-    data:
-      entity_id: media_player.receiver
-      source: TV
-  - delay: 00:00:05
-  - service: switch.turn_off
-    entity_id: switch.tv_meubel_receiver
+    data: {}
+  - service: media_player.turn_off
+    data: {}
+    target:
+      entity_id: media_player.denon_avc_x4800h
 powerup_receiver:
   alias: Setup Receiver when it's ready to be
   sequence:
-  - service: switch.turn_on
-    entity_id: switch.tv_meubel_receiver
+  - service: media_player.turn_on
+    data: {}
+    target:
+      entity_id: media_player.denon_avc_x4800h
 powerup_tv:
   alias: Powerup TV
   sequence:
   - service: script.powerup_receiver
+    data: {}
   - service: switch.turn_on
-    entity_id: switch.tv_meubel_tv
+    data: {}
+    target:
+      entity_id: switch.tv_meubel_tv
 powerup_mediaplayer:
   alias: Powerup Mediaplayer
   sequence:

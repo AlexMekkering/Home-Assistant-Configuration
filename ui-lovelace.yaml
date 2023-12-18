@@ -30,6 +30,14 @@ views:
         show_header_toggle: false
         title: Overig
         type: entities
+      # - type: media-control
+      #   entity: media_player.denon_avc_x4800h
+      - entities:
+          - entity: media_player.denon_avc_x4800h
+          - entity: media_player.denon_avc_x4800h_2
+        show_header_toggle: false
+        title: Versterker
+        type: entities
     icon: "mdi:home-assistant"
     panel: false
     path: default_view
@@ -48,7 +56,7 @@ views:
       - entity: sensor.wastafel_badkamer_electric_consumption_w
       - entity: sensor.wastafel_badkamer_electric_consumption_kwh
       - entity: sensor.kantoor_joyce_power
-      - entity: sensor.kantoor_joyce_energy
+      - entity: sensor.kantoor_joyce_electric_consumption_kwh
     cards:
       - entities:
           - entity: switch.overloop_lamp
@@ -70,6 +78,7 @@ views:
       - entities:
           - entity: light.licht_studiekamer
           - entity: switch.kantoor_joyce
+          - entity: automation.kantoor_joyce_auto_turn_off
         show_header_toggle: false
         title: Studiekamer
         type: entities
@@ -93,7 +102,7 @@ views:
       - entity: sensor.koolmonoxidemelder_carbon_monoxide_co_level
       - entity: sensor.koolmonoxidemelder_battery_level
       - entity: sensor.kantoor_alex_power
-      - entity: sensor.kantoor_alex_energy
+      - entity: sensor.kantoor_alex_electric_consumption_kwh
       - entity: sensor.mechanische_ventilatie_power
     cards:
       - entities:
@@ -107,12 +116,14 @@ views:
           - entity: switch.zolder_printer
           - entity: light.zolder_bureaulamp
           - entity: switch.kantoor_alex
+          - entity: automation.kantoor_auto_turn_off
         show_header_toggle: false
         title: Kantoor Alex
         type: entities
       - entities:
           - entity: fan.mechanische_ventilatie
           - entity: sensor.mechanische_ventilatie_power
+          - entity: automation.mechanische_ventilatie_auto_off
         show_header_toggle: false
         title: Mechanische Ventilatie
         type: entities

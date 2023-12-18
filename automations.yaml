@@ -364,22 +364,19 @@
       aioesphomeapi: '{{ trigger.to_state.state }}'
 - id: check_receiver_source
   alias: Check Receiver source
-  initial_state: 'off'
   trigger:
-    platform: time_pattern
+  - platform: time_pattern
     seconds: /05
   action:
-  - service: homeassistant.update_entity
-    entity_id: media_player.receiver
   - condition: template
-    value_template: '{{ states.media_player.receiver.attributes.source is defined
-      }}'
+    value_template: '{{ states.media_player.denon_avc_x4800h.attributes.source is
+      defined }}'
   - service_template: "{% set scene = states.input_select.media_scene.state %} {%
-      set source = states.media_player.receiver.attributes.source %} {% if scene ==
-      'Geen' or scene == 'TV kijken' and source == 'TV'\n    or scene == 'Media kijken'
-      and source == 'Mediaplayer'\n    or scene == 'Radio luisteren' and source ==
-      'Radio' %}\n  automation.turn_off\n{% else %}\n  automation.turn_on\n{% endif
-      %}\n"
+      set source = states.media_player.denon_avc_x4800h.attributes.source %} {% if
+      scene == 'Geen' or scene == 'TV kijken' and source == 'TV Audio'\n    or scene
+      == 'Media kijken' and source == 'Media Player'\n    or scene == 'Radio luisteren'
+      and source == 'HEOS Music' %}\n  automation.turn_off\n{% else %}\n  automation.turn_on\n{%
+      endif %}\n"
     data:
       entity_id: automation.check_receiver_source
   - condition: state
@@ -387,10 +384,11 @@
     state: 'on'
   - service: media_player.select_source
     data_template:
-      entity_id: media_player.receiver
+      entity_id: media_player.denon_avc_x4800h
       source: "{% if is_state('input_select.media_scene', 'Radio luisteren') %}\n
-        \ Radio\n{% elif is_state('input_select.media_scene', 'Media kijken') %}\n
-        \ Mediaplayer\n{% else %}\n  TV\n{% endif %}\n"
+        \ HEOS Music\n{% elif is_state('input_select.media_scene', 'Media kijken')
+        %}\n  Media Player\n{% else %}\n  TV Audio\n{% endif %}\n"
+  initial_state: 'off'
 - id: turn_on_mediaplayer
   alias: Turn on mediaplayer
   initial_state: 'off'
@@ -665,26 +663,6 @@
     target:
       entity_id: light.kantoor
   mode: single
-- id: '1668967856358'
-  alias: RF Kantoor Mains on
-  description: ''
-  trigger:
-  - platform: state
-    entity_id:
-    - binary_sensor.rf_button_office_lights
-    to: 'on'
-  condition:
-  - condition: device
-    type: is_off
-    device_id: 6020789fb55e3fbfe3220d056b6ee187
-    entity_id: switch.kantoor_alex
-    domain: switch
-  action:
-  - service: switch.turn_on
-    data: {}
-    target:
-      entity_id: switch.kantoor_alex
-  mode: single
 - id: '1668968231502'
   alias: Kantoor Alex Auto turn off
   description: ''
@@ -854,6 +832,11 @@
   - platform: state
     entity_id:
     - light.schakelaars_hal_2
+    to: 'on'
+  - platform: state
+    entity_id:
+    - light.schakelaars_hal_2
+    to: 'off'
   condition: []
   action:
   - service: light.turn_{{ trigger.to_state.state }}
@@ -862,6 +845,9 @@
   - service: light.turn_{{ trigger.to_state.state }}
     data:
       entity_id: light.buitenverlichting_achter
+  - service: light.turn_{{ trigger.to_state.state }}
+    data:
+      entity_id: light.kerstverlichting_voor
   mode: single
 - id: '1694939067662'
   alias: Remote Kantoor turn mains on
@@ -880,4 +866,38 @@
     data: {}
     target:
       entity_id: switch.kantoor_alex
+  mode: single
+- id: '1695009249911'
+  alias: Kantoor remote turn on bureaulamp
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave_js_value_notification
+    event_data:
+      command_class: 91
+      value: KeyPressed
+      node_id: 63
+      property_key: '004'
+  condition: []
+  action:
+  - service: light.toggle
+    data: {}
+    target:
+      entity_id: light.zolder_bureaulamp
+  mode: single
+- id: '1702881572111'
+  alias: RF Kantoor Mains On
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.rf_button_office_lights
+    to: 'on'
+    from: 'off'
+  condition: []
+  action:
+  - service: switch.turn_on
+    target:
+      entity_id: switch.kantoor_alex
+    data: {}
   mode: single
