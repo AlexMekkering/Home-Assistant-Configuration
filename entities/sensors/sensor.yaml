@@ -1,27 +1,3 @@
-- platform: systemmonitor
-  resources:
-    - type: last_boot
-    - type: disk_use_percent
-      arg: /boot
-    - type: disk_use_percent
-      arg: /
-    - type: disk_use_percent
-      arg: /storage
-    - type: processor_use
-    - type: load_1m
-    - type: load_5m
-    - type: load_15m
-    - type: memory_use_percent
-    - type: swap_use_percent
-    - type: network_in
-      arg: eth0
-    - type: network_out
-      arg: eth0
-    - type: network_in
-      arg: eth1
-    - type: network_out
-      arg: eth1
-
 ########
 # Smartmeter sensors
 ########
@@ -41,3 +17,16 @@
       value_template: "{{ states('input_number.smartmeter_kWh') | round(3) }}"
       device_class: energy
       # state_class: measurement
+
+- platform: statistics
+  name: "Kantoor Alex Power Mean 5min"
+  entity_id: sensor.kantoor_alex_power
+  state_characteristic: mean
+  max_age:
+    minutes: 5
+- platform: statistics
+  name: "Kantoor Joyce Power Mean 5min"
+  entity_id: sensor.kantoor_joyce_power
+  state_characteristic: mean
+  max_age:
+    minutes: 5

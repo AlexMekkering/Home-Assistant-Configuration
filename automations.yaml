@@ -668,10 +668,11 @@
   description: ''
   trigger:
   - platform: numeric_state
-    entity_id: sensor.kantoor_alex_power
+    entity_id:
+    - sensor.kantoor_alex_power_mean_5min
     for:
       hours: 0
-      minutes: 15
+      minutes: 10
       seconds: 0
     below: 16
   condition:
@@ -689,10 +690,11 @@
   description: ''
   trigger:
   - platform: numeric_state
-    entity_id: sensor.kantoor_joyce_power
+    entity_id:
+    - sensor.kantoor_joyce_power_mean_5min
     for:
       hours: 0
-      minutes: 15
+      minutes: 10
       seconds: 0
     below: 3
   condition:

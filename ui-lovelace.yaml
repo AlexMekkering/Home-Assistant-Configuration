@@ -19,7 +19,7 @@ views:
           - entity: light.linksachter
           - entity: light.schilderij
           - entity: light.eettafel
-          - entity: switch.kerstboom
+          # - entity: switch.kerstboom
           - entity: script.all_off
         show_header_toggle: true
         title: Woonkamer
@@ -56,6 +56,7 @@ views:
       - entity: sensor.wastafel_badkamer_electric_consumption_w
       - entity: sensor.wastafel_badkamer_electric_consumption_kwh
       - entity: sensor.kantoor_joyce_power
+      - entity: sensor.kantoor_joyce_power_mean_5min
       - entity: sensor.kantoor_joyce_electric_consumption_kwh
     cards:
       - entities:
@@ -102,6 +103,7 @@ views:
       - entity: sensor.koolmonoxidemelder_carbon_monoxide_co_level
       - entity: sensor.koolmonoxidemelder_battery_level
       - entity: sensor.kantoor_alex_power
+      - entity: sensor.kantoor_alex_power_mean_5min
       - entity: sensor.kantoor_alex_electric_consumption_kwh
       - entity: sensor.mechanische_ventilatie_power
     cards:
@@ -181,10 +183,10 @@ views:
       - entities:
           - entity: sensor.woonkamer_temperatuur
             name: Temperatuur
-          - entity: sensor.woonkamer_luchtvochtigheid
-            name: Luchtvochtigheid
-          - entity: sensor.woonkamer_luchtdruk
-            name: Luchtdruk
+          # - entity: sensor.woonkamer_luchtvochtigheid
+          #   name: Luchtvochtigheid
+          # - entity: sensor.woonkamer_luchtdruk
+          #   name: Luchtdruk
           - entity: sensor.zonwering_remote_air_temperature
         show_header_toggle: false
         title: Woonkamer
