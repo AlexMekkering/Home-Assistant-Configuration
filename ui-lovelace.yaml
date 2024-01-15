@@ -132,7 +132,7 @@ views:
     icon: "mdi:home-roof"
     title: Zolder
   - badges:
-      - entity: sensor.buiten_temperatuur
+      - entity: sensor.buitensensor_air_temperature
     cards:
       - entities:
           - entity: light.schakelaars_hal_2
@@ -150,7 +150,7 @@ views:
   - badges:
       - entity: sensor.binnentemperatuur
       - entity: sensor.temperatuur_range_binnen
-      - entity: sensor.buiten_temperatuur
+      - entity: sensor.buitensensor_air_temperature
       - entity: sensor.temperatuur_range
       - entity: sensor.luchtvochtigheid_binnen
       - entity: sensor.luchtdruk
@@ -161,14 +161,14 @@ views:
         show_header_toggle: false
         type: entities
       - entities:
-          - entity: sensor.garage_temperatuur
-            name: Temperatuur
-          - entity: sensor.garage_luchtvochtigheid
-            name: Luchtvochtigheid
-          - entity: sensor.buiten_temperatuur
+          # - entity: sensor.garage_temperatuur
+          #   name: Temperatuur
+          # - entity: sensor.garage_luchtvochtigheid
+          #   name: Luchtvochtigheid
+          - entity: sensor.buitensensor_air_temperature
             name: Buitentemperatuur
         show_header_toggle: false
-        title: Garage
+        title: Buitensensor
         type: entities
       - entities:
           - entity: sensor.slaapkamer_temperatuur

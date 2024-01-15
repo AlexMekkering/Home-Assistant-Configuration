@@ -30,7 +30,7 @@ activity_at_home:
   name: Activiteit thuis
   entities:
     - switch.tv_meubel_tv
-    - switch.tv_meubel_receiver
+    - binary_sensor.receiver
     - switch.tv_meubel_mediaplayer
     - light.tv_meubel_spruitje
     - light.schilderij

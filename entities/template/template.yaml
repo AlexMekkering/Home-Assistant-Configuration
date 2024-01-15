@@ -3,6 +3,6 @@
     device_class: temperature
     unit_of_measurement: "°C"
     state: >
-      {{ (states('sensor.buiten_temperatuur')|float - states('sensor.woonkamer_temperatuur')|float)|round(0)|int }}
+      {{ (states('sensor.buitensensor_air_temperature')|float - states('sensor.woonkamer_temperatuur')|float)|round(0)|int }}
     availability: >
-      {{ is_number(states(sensor.buiten_temperatuur)) and is_number(states(sensor.woonkamer_temperatuur))}}
+      {{ is_number(states(sensor.buitensensor_air_temperature)) and is_number(states(sensor.woonkamer_temperatuur))}}
