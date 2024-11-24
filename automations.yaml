@@ -254,14 +254,15 @@
 - id: scene_select
   alias: Scene Select
   trigger:
-    platform: state
+  - platform: state
     entity_id: input_select.media_scene
   action:
   - service: script.turn_on
     data_template:
       entity_id: "{% set scene = trigger.to_state.state %} {% if scene == 'Radio luisteren'
         %}\n  script.listen_radio\n{% elif scene == 'TV kijken' %}\n  script.watch_tv\n{%
-        elif scene == 'Media kijken' %}\n  script.watch_media\n{% else %}\n  script.all_media_off\n{%
+        elif scene == 'Media kijken' %}\n  script.watch_media\n{% elif scene == 'Mediabox
+        kijken' %}\n  script.watch_mediabox\n{% else %}\n  script.all_media_off\n{%
         endif %}\n"
 - id: toggle_living
   alias: Toggle Living
@@ -294,9 +295,9 @@
   description: ''
   trigger:
   - platform: device
-    device_id: 14cec4539558d2082d9f938eb157f20b
+    device_id: 4e4baa235c6fc91749ada1e24683d001
     domain: kodi
-    entity_id: media_player.woonkamer
+    entity_id: cc87eec8286d5eedcdb0afdb5efb954d
     type: turn_off
   condition: []
   action:
@@ -367,6 +368,8 @@
   trigger:
   - platform: time_pattern
     seconds: /05
+    enabled: true
+  condition: []
   action:
   - condition: template
     value_template: '{{ states.media_player.denon_avc_x4800h.attributes.source is
@@ -375,8 +378,8 @@
       set source = states.media_player.denon_avc_x4800h.attributes.source %} {% if
       scene == 'Geen' or scene == 'TV kijken' and source == 'TV Audio'\n    or scene
       == 'Media kijken' and source == 'Media Player'\n    or scene == 'Radio luisteren'
-      and source == 'HEOS Music' %}\n  automation.turn_off\n{% else %}\n  automation.turn_on\n{%
-      endif %}\n"
+      and source == 'HEOS Music' or scene == 'Mediabox kijken' and source =='Mediabox'%}\n
+      \ automation.turn_off\n{% else %}\n  automation.turn_on\n{% endif %}\n"
     data:
       entity_id: automation.check_receiver_source
   - condition: state
@@ -387,7 +390,8 @@
       entity_id: media_player.denon_avc_x4800h
       source: "{% if is_state('input_select.media_scene', 'Radio luisteren') %}\n
         \ HEOS Music\n{% elif is_state('input_select.media_scene', 'Media kijken')
-        %}\n  Media Player\n{% else %}\n  TV Audio\n{% endif %}\n"
+        %}\n  Media Player\n{% elif is_state('input_select.media_scene', 'Mediabox
+        kijken') %}\n  Mediabox\n{% else %}\n  TV Audio\n{% endif %}\n"
   initial_state: 'off'
 - id: turn_on_mediaplayer
   alias: Turn on mediaplayer
@@ -674,7 +678,7 @@
       hours: 0
       minutes: 10
       seconds: 0
-    below: 16
+    below: 18
   condition:
   - condition: state
     entity_id: switch.kantoor_alex
@@ -696,7 +700,7 @@
       hours: 0
       minutes: 10
       seconds: 0
-    below: 3
+    below: 10
   condition:
   - condition: state
     entity_id: switch.kantoor_joyce

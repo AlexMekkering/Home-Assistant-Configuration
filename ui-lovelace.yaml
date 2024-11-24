@@ -25,6 +25,7 @@ views:
         title: Woonkamer
         type: entities
       - entities:
+          - entity: light.verlichting_keuken
           - entity: switch.hal_lamp
           - entity: light.licht_toilet
         show_header_toggle: false
@@ -265,7 +266,7 @@ views:
       - entity: sun.sun
     cards:
       - entities:
-          - entity: sensor.smartmeter_power_consumption_2
+          - entity: sensor.power_consumption
             name: Power Consumption
           - entity: sensor.smartmeter_total_consumption_2
             name: Total
@@ -289,6 +290,13 @@ views:
           - entity: sensor.network_out_eth1
         show_header_toggle: false
         title: PiCore1
+        type: entities
+      - entities:
+          - entity: binary_sensor.sda_spinning
+            name: SDA Spinning
+          - entity: binary_sensor.sdb_spinning
+            name: SDB Spinning
+        show_header_toggle: false
         type: entities
     icon: "mdi:speedometer"
     title: Monitoring

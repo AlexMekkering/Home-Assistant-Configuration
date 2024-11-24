@@ -5,4 +5,4 @@
     state: >
       {{ (states('sensor.buitensensor_air_temperature')|float - states('sensor.woonkamer_temperatuur')|float)|round(0)|int }}
     availability: >
-      {{ is_number(states(sensor.buitensensor_air_temperature)) and is_number(states(sensor.woonkamer_temperatuur))}}
+      {{ has_value('sensor.buitensensor_air_temperature') and has_value('sensor.woonkamer_temperatuur')}}

@@ -30,3 +30,9 @@
   state_characteristic: mean
   max_age:
     minutes: 5
+- platform: file
+  name: HDD spinning mode sda
+  file_path: /tmp/spinning_mode_sda
+- platform: file
+  name: HDD spinning mode sdb
+  file_path: /tmp/spinning_mode_sdb

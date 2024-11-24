@@ -103,6 +103,8 @@ all_lights_off:
   - service: script.select_lights_all_off
   - service: light.turn_off
     entity_id: light.eettafel
+  - service: light.turn_off
+    entity_id: light.verlighting_keuken
   - service: switch.turn_off
     entity_id: switch.kerstboom
   - service: light.turn_off
@@ -290,6 +292,12 @@ watch_media:
   - service: automation.turn_on
     entity_id: automation.check_receiver_source
   - service: script.powerup_mediaplayer
+watch_mediabox:
+  alias: Watch Mediabox
+  sequence:
+  - service: script.powerup_mediabox
+  - service: automation.turn_on
+    entity_id: automation.check_receiver_source
 all_media_off:
   alias: All Media Off
   sequence:
@@ -348,6 +356,10 @@ powerup_tv:
       entity_id: switch.tv_meubel_tv
 powerup_mediaplayer:
   alias: Powerup Mediaplayer
+  sequence:
+  - service: script.powerup_tv
+powerup_mediabox:
+  alias: Powerup Mediabox
   sequence:
   - service: script.powerup_tv
 prepare_for_bed:
