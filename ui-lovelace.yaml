@@ -19,7 +19,7 @@ views:
           - entity: light.linksachter
           - entity: light.schilderij
           - entity: light.eettafel
-          # - entity: switch.kerstboom
+          - entity: light.kerstboom
           - entity: script.all_off
         show_header_toggle: true
         title: Woonkamer

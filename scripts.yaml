@@ -10,74 +10,52 @@ detect_lights:
   - service: script.silent_light_scene_select
 living_scene_away:
   sequence:
-  - service: light.turn_off
-    entity_id: light.tv_meubel_spruitje
-  - service: scene.turn_on
-    entity_id: scene.living_away
+  - entity_id: scene.living_away
+    action: scene.turn_on
 living_scene_regular:
   sequence:
-  - service: light.turn_on
-    entity_id: light.tv_meubel_spruitje
-  - service: switch.turn_on
-    entity_id: switch.kerstboom
-  - service: scene.turn_on
-    entity_id: scene.living_max
+  - action: scene.turn_on
+    data: {}
+    target:
+      entity_id: scene.living_regular
 living_scene_regular_phase_1:
   sequence:
-  - service: light.turn_on
-    entity_id: light.tv_meubel_spruitje
-  - service: script.silent_light_scene_select
+  - action: script.silent_light_scene_select
+    data: {}
 living_scene_regular_phase_2:
   sequence:
-  - service: light.turn_on
-    entity_id: light.tv_meubel_spruitje
-  - service: scene.turn_on
-    entity_id: scene.living_regular_phase_1
-  - service: script.silent_light_scene_select
+  - entity_id: scene.living_regular_phase_1
+    action: scene.turn_on
+  - action: script.silent_light_scene_select
+    data: {}
 living_scene_regular_phase_3:
   sequence:
-  - service: light.turn_on
-    entity_id: light.tv_meubel_spruitje
-  - service: scene.turn_on
-    entity_id: scene.living_regular_phase_2
-  - service: script.silent_light_scene_select
+  - entity_id: scene.living_regular_phase_2
+    action: scene.turn_on
+  - action: script.silent_light_scene_select
+    data: {}
 living_scene_regular_phase_4:
   sequence:
-  - service: light.turn_on
-    entity_id: light.tv_meubel_spruitje
-  - service: scene.turn_on
-    entity_id: scene.living_regular_phase_3
-  - service: script.silent_light_scene_select
+  - entity_id: scene.living_regular_phase_3
+    action: scene.turn_on
+  - action: script.silent_light_scene_select
+    data: {}
 living_scene_dim:
   sequence:
-  - service: light.turn_on
-    entity_id: light.tv_meubel_spruitje
-  - service: scene.turn_on
-    entity_id: scene.living_dim
+  - entity_id: scene.living_dim
+    action: scene.turn_on
 living_scene_very_dim:
   sequence:
-  - service: light.turn_on
-    entity_id: light.tv_meubel_spruitje
-  - service: scene.turn_on
-    entity_id: scene.living_very_dim
+  - entity_id: scene.living_very_dim
+    action: scene.turn_on
 living_scene_maximal:
   sequence:
-  - service: light.turn_on
-    entity_id: light.tv_meubel_spruitje
-  - service: scene.turn_on
-    entity_id: scene.living_max
-  - service: light.turn_on
-    entity_id: light.eettafel
+  - entity_id: scene.living_max
+    action: scene.turn_on
 living_scene_all_off:
   sequence:
-  - service: light.turn_off
-    entity_id: light.tv_meubel_spruitje
-  - service: switch.turn_off
-    entity_id: switch.kerstboom
-  - service: scene.turn_on
-    entity_id: scene.living_off
-  - service: light.turn_off
-    entity_id: light.eettafel
+  - entity_id: scene.living_off
+    action: scene.turn_on
 silent_light_scene_select:
   alias: Silent Light Scene Select
   sequence:
@@ -103,8 +81,6 @@ all_lights_off:
   - service: script.select_lights_all_off
   - service: light.turn_off
     entity_id: light.eettafel
-  - service: light.turn_off
-    entity_id: light.verlighting_keuken
   - service: switch.turn_off
     entity_id: switch.kerstboom
   - service: light.turn_off
@@ -163,12 +139,16 @@ select_lights_all_off:
       option: Uit
 kerstboom_on:
   sequence:
-  - service: switch.turn_on
-    entity_id: switch.kerstboom
+  - action: light.turn_on
+    target:
+      entity_id: light.kerstboom
+    data: {}
 kerstboom_off:
   sequence:
-  - service: switch.turn_off
-    entity_id: switch.kerstboom
+  - action: light.turn_off
+    target:
+      entity_id: light.kerstboom
+    data: {}
 spruitje_on:
   sequence:
   - service: light.turn_on
@@ -196,8 +176,6 @@ veranda_lights_off:
 detect_media:
   alias: Select media scene based on state
   sequence:
-  # - wait_template: '{{ is_state(''binary_sensor.tv_meubel_status'', ''on'') }}'
-  #   timeout: 00:00:30
   - delay: 00:00:05
   - service_template: "{% if is_state('media_player.denon_avc_x4800h', 'on') and is_state_attr('media_player.denon_avc_x4800h',
       'source', 'Media Player') %}\n  script.select_media_kijken\n{% elif is_state('media_player.denon_avc_x4800h',
