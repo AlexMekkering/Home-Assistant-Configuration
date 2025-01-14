@@ -162,10 +162,6 @@ views:
         show_header_toggle: false
         type: entities
       - entities:
-          # - entity: sensor.garage_temperatuur
-          #   name: Temperatuur
-          # - entity: sensor.garage_luchtvochtigheid
-          #   name: Luchtvochtigheid
           - entity: sensor.buitensensor_air_temperature
             name: Buitentemperatuur
         show_header_toggle: false
@@ -183,12 +179,15 @@ views:
         type: entities
       - entities:
           - entity: sensor.woonkamer_temperatuur
-            name: Temperatuur
-          # - entity: sensor.woonkamer_luchtvochtigheid
-          #   name: Luchtvochtigheid
-          # - entity: sensor.woonkamer_luchtdruk
-          #   name: Luchtdruk
+            name: Kast Temperatuur
+          - entity: sensor.esp32_bluetooth_proxy_800c8c_woonkamer_temperatuur
+            name: TV Meubel Temperatuur
+          - entity: sensor.esp32_bluetooth_proxy_800c8c_woonkamer_luchtvochtigheid
+            name: TV Meubel Luchtvochtigheid
+          - entity: sensor.esp32_bluetooth_proxy_800c8c_woonkamer_luchtdruk
+            name: TV Meubel Luchtdruk
           - entity: sensor.zonwering_remote_air_temperature
+            name: Buitendeur Temperatuur
         show_header_toggle: false
         title: Woonkamer
         type: entities
@@ -268,14 +267,12 @@ views:
       - entities:
           - entity: sensor.power_consumption
             name: Power Consumption
-          - entity: sensor.smartmeter_total_consumption_2
-            name: Total
         show_header_toggle: false
         type: entities
       - entities:
           - entity: sensor.last_boot
           - entity: sensor.processor_use
-          - entity: sensor.cpu_temperature
+          - entity: sensor.system_monitor_processor_temperature
           - entity: sensor.load_1m
           - entity: sensor.load_5m
           - entity: sensor.load_15m

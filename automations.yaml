@@ -197,15 +197,16 @@
   - service_template: timer.cancel
     entity_id: timer.tv_slaapkamer
 - id: slaapkamer_achterwand_off
-  alias: Slaapkamer Achterwand On
-  trigger:
-  - platform: state
-    entity_id: light.slaapkamer_achterwand
+  alias: Slaapkamer Achterwand Off
+  description: ''
+  triggers:
+  - entity_id: light.slaapkamer_achterwand
     from: 'on'
     to: 'off'
-  action:
-  - service: timer.cancel
-    entity_id: timer.timeout_activity_upstairs
+    trigger: state
+  actions:
+  - entity_id: timer.timeout_activity_upstairs
+    action: timer.cancel
   - condition: state
     entity_id: switch.slaapkamer_tv
     state: 'on'
@@ -479,20 +480,6 @@
     to: 'on'
   action:
   - service: script.all_off
-- id: smartmeter_trigger
-  alias: Smartmeter Trigger
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.smartmeter
-    from: 'off'
-    to: 'on'
-  action:
-  - service: input_number.set_value
-    data:
-      value: '{{ 3600.0 / (now().timestamp() - states.input_number.smartmeter_kwh.last_changed.timestamp())}}'
-    entity_id: input_number.smartmeter_w
-  - service: input_number.increment
-    entity_id: input_number.smartmeter_kwh
 - id: alert_coolmonoxide
   alias: Waarschuwing Rook en/of Koolmonoxide
   description: ''
@@ -634,21 +621,6 @@
   - service: script.notify_admin
     data:
       message: Timeout Activiteit Boven
-- id: '1665931770644'
-  alias: Deurbel
-  description: ''
-  trigger:
-  - type: turned_on
-    platform: device
-    device_id: d86e65d9e97dbd19c4b5518d2c26f83d
-    entity_id: binary_sensor.deurbel
-    domain: binary_sensor
-  condition: []
-  action:
-  - service: script.notify_admin
-    data:
-      message: Er staat iemand voor de deur
-  mode: single
 - id: '1668960889704'
   alias: RF Kantoor Lights turn on
   description: ''
@@ -733,19 +705,6 @@
     data: {}
     target:
       entity_id: light.kantoor
-  mode: single
-- id: '1675195819710'
-  alias: Create Backup
-  description: ''
-  trigger:
-  - platform: time
-    at: 00:30:00
-  condition: []
-  action:
-  - service: backup.create
-    data: {}
-  - service: shell_command.purge_backups
-    data: {}
   mode: single
 - id: '1691308597750'
   alias: Walli Toggle
