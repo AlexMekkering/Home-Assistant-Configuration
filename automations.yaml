@@ -267,30 +267,38 @@
         endif %}\n"
 - id: toggle_living
   alias: Toggle Living
-  trigger:
-    platform: event
-    event_type: zwave_js_value_notification
+  triggers:
+  - event_type: zwave_js_value_notification
     event_data:
       node_id: 16
       command_class_name: Scene Activation
-  condition:
-    condition: template
+    trigger: event
+  conditions:
+  - condition: template
     value_template: '{{ (trigger.event.data.value // 10) == 2 }}'
-  action:
+  actions:
   - choose:
     - conditions:
       - condition: state
         entity_id: group.living_room_lights
         state: 'on'
       sequence:
-      - service: script.all_off
+      - action: script.all_off
+        data: {}
     - conditions:
       - condition: time
         before: '12:00:00'
       sequence:
-      - service: script.select_lights_away
+      - action: script.select_lights_away
+        data: {}
+      - action: light.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.verlichting_keuken
     default:
-    - service: script.select_lights_regular
+    - action: script.select_lights_regular
+      data: {}
 - id: '1601907810392'
   alias: Turn off kodi woonkamer
   description: ''
