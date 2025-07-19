@@ -2,30 +2,12 @@
   name: living_max
   entities:
     light.linksvoor:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 4000
-      min_mireds: 250
-      max_mireds: 454
       supported_color_modes:
-      - color_temp
-      color_mode: color_temp
-      brightness: 254
-      color_temp_kelvin: 2702
-      color_temp: 370
-      hs_color:
-      - 28.391
-      - 65.659
-      rgb_color:
-      - 255
-      - 167
-      - 88
-      xy_color:
-      - 0.524
-      - 0.388
-      off_with_transition: false
-      off_brightness:
-      friendly_name: Linksvoor
-      supported_features: 40
+      - brightness
+      color_mode: brightness
+      brightness: 229
+      friendly_name: 'Linksvoor '
+      supported_features: 32
       state: 'on'
     light.raam:
       min_color_temp_kelvin: 2202
@@ -50,7 +32,7 @@
       - 0.388
       off_with_transition: false
       off_brightness:
-      friendly_name: Raam Licht
+      friendly_name: Raam
       supported_features: 40
       state: 'on'
     light.schilderij:
@@ -97,11 +79,10 @@
     light.kerstboom:
       supported_color_modes:
       - onoff
-      color_mode: onoff
       icon: mdi:pine-tree
       friendly_name: Kerstboom
       supported_features: 0
-      state: 'on'
+      state: unavailable
     light.eettafel:
       supported_color_modes:
       - brightness
@@ -123,30 +104,12 @@
   name: living_regular
   entities:
     light.linksvoor:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 4000
-      min_mireds: 250
-      max_mireds: 454
       supported_color_modes:
-      - color_temp
-      color_mode: color_temp
-      brightness: 254
-      color_temp_kelvin: 2702
-      color_temp: 370
-      hs_color:
-      - 28.391
-      - 65.659
-      rgb_color:
-      - 255
-      - 167
-      - 88
-      xy_color:
-      - 0.524
-      - 0.388
-      off_with_transition: false
-      off_brightness:
-      friendly_name: Linksvoor
-      supported_features: 40
+      - brightness
+      color_mode: brightness
+      brightness: 52
+      friendly_name: 'Linksvoor '
+      supported_features: 32
       state: 'on'
     light.raam:
       min_color_temp_kelvin: 2202
@@ -171,7 +134,7 @@
       - 0.388
       off_with_transition: false
       off_brightness:
-      friendly_name: Raam Licht
+      friendly_name: Raam
       supported_features: 40
       state: 'on'
     light.schilderij:
@@ -211,11 +174,10 @@
     light.kerstboom:
       supported_color_modes:
       - onoff
-      color_mode: onoff
       icon: mdi:pine-tree
       friendly_name: Kerstboom
       supported_features: 0
-      state: 'on'
+      state: unavailable
     light.tv_meubel_spruitje:
       supported_color_modes:
       - onoff
@@ -257,30 +219,12 @@
   name: living_regular_phase_2
   entities:
     light.linksvoor:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 4000
-      min_mireds: 250
-      max_mireds: 454
       supported_color_modes:
-      - color_temp
-      color_mode: color_temp
-      brightness: 254
-      color_temp_kelvin: 2702
-      color_temp: 370
-      hs_color:
-      - 28.391
-      - 65.659
-      rgb_color:
-      - 255
-      - 167
-      - 88
-      xy_color:
-      - 0.524
-      - 0.388
-      off_with_transition: false
-      off_brightness:
-      friendly_name: Linksvoor
-      supported_features: 40
+      - brightness
+      color_mode: brightness
+      brightness: 52
+      friendly_name: 'Linksvoor '
+      supported_features: 32
       state: 'on'
     light.linksachter:
       supported_color_modes:
@@ -306,30 +250,12 @@
   name: living_regular_phase_3
   entities:
     light.linksvoor:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 4000
-      min_mireds: 250
-      max_mireds: 454
       supported_color_modes:
-      - color_temp
-      color_mode: color_temp
-      brightness: 254
-      color_temp_kelvin: 2702
-      color_temp: 370
-      hs_color:
-      - 28.391
-      - 65.659
-      rgb_color:
-      - 255
-      - 167
-      - 88
-      xy_color:
-      - 0.524
-      - 0.388
-      off_with_transition: false
-      off_brightness:
-      friendly_name: Linksvoor
-      supported_features: 40
+      - brightness
+      color_mode: brightness
+      brightness: 52
+      friendly_name: 'Linksvoor '
+      supported_features: 32
       state: 'on'
     light.raam:
       min_color_temp_kelvin: 2202
@@ -354,7 +280,7 @@
       - 0.388
       off_with_transition: false
       off_brightness:
-      friendly_name: Raam Licht
+      friendly_name: Raam
       supported_features: 40
       state: 'on'
     light.linksachter:
@@ -381,30 +307,12 @@
   name: living_dim
   entities:
     light.linksvoor:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 4000
-      min_mireds: 250
-      max_mireds: 454
       supported_color_modes:
-      - color_temp
-      color_mode: color_temp
-      brightness: 100
-      color_temp_kelvin: 2702
-      color_temp: 370
-      hs_color:
-      - 28.391
-      - 65.659
-      rgb_color:
-      - 255
-      - 167
-      - 88
-      xy_color:
-      - 0.524
-      - 0.388
-      off_with_transition: false
-      off_brightness:
-      friendly_name: Linksvoor
-      supported_features: 40
+      - brightness
+      color_mode: brightness
+      brightness: 77
+      friendly_name: 'Linksvoor '
+      supported_features: 32
       state: 'on'
     light.raam:
       min_color_temp_kelvin: 2202
@@ -429,7 +337,7 @@
       - 0.388
       off_with_transition: false
       off_brightness:
-      friendly_name: Raam Licht
+      friendly_name: Raam
       supported_features: 40
       state: 'on'
     light.schilderij:
@@ -469,11 +377,10 @@
     light.kerstboom:
       supported_color_modes:
       - onoff
-      color_mode: onoff
       icon: mdi:pine-tree
       friendly_name: Kerstboom
       supported_features: 0
-      state: 'on'
+      state: unavailable
   metadata:
     light.linksachter:
       entity_only: true
@@ -485,30 +392,12 @@
   name: living_very_dim
   entities:
     light.linksvoor:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 4000
-      min_mireds: 250
-      max_mireds: 454
       supported_color_modes:
-      - color_temp
-      color_mode: color_temp
-      brightness: 50
-      color_temp_kelvin: 2702
-      color_temp: 370
-      hs_color:
-      - 28.391
-      - 65.659
-      rgb_color:
-      - 255
-      - 167
-      - 88
-      xy_color:
-      - 0.524
-      - 0.388
-      off_with_transition: false
-      off_brightness:
-      friendly_name: Linksvoor
-      supported_features: 40
+      - brightness
+      color_mode: brightness
+      brightness: 52
+      friendly_name: 'Linksvoor '
+      supported_features: 32
       state: 'on'
     light.raam:
       min_color_temp_kelvin: 2202
@@ -533,7 +422,7 @@
       - 0.388
       off_with_transition: false
       off_brightness:
-      friendly_name: Raam Licht
+      friendly_name: Raam
       supported_features: 40
       state: 'on'
     light.schilderij:
@@ -580,11 +469,10 @@
     light.kerstboom:
       supported_color_modes:
       - onoff
-      color_mode: onoff
       icon: mdi:pine-tree
       friendly_name: Kerstboom
       supported_features: 0
-      state: 'on'
+      state: unavailable
   metadata:
     light.linksachter:
       entity_only: true
@@ -596,30 +484,12 @@
   name: living_away
   entities:
     light.linksvoor:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 4000
-      min_mireds: 250
-      max_mireds: 454
       supported_color_modes:
-      - color_temp
-      color_mode: color_temp
-      brightness: 100
-      color_temp_kelvin: 2702
-      color_temp: 370
-      hs_color:
-      - 28.391
-      - 65.659
-      rgb_color:
-      - 255
-      - 167
-      - 88
-      xy_color:
-      - 0.524
-      - 0.388
-      off_with_transition: false
-      off_brightness:
-      friendly_name: Linksvoor
-      supported_features: 40
+      - brightness
+      color_mode: brightness
+      brightness: 77
+      friendly_name: 'Linksvoor '
+      supported_features: 32
       state: 'on'
     light.raam:
       min_color_temp_kelvin: 2202
@@ -644,7 +514,7 @@
       - 0.388
       off_with_transition: false
       off_brightness:
-      friendly_name: Raam Licht
+      friendly_name: Raam
       supported_features: 40
       state: 'on'
     light.schilderij:
@@ -684,11 +554,10 @@
     light.kerstboom:
       supported_color_modes:
       - onoff
-      color_mode:
       icon: mdi:pine-tree
       friendly_name: Kerstboom
       supported_features: 0
-      state: 'off'
+      state: unavailable
   metadata:
     light.linksachter:
       entity_only: true

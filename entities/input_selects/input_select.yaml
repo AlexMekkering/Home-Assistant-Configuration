@@ -4,7 +4,6 @@ media_scene:
     - TV kijken
     - Media kijken
     - Radio luisteren
-    - Mediabox kijken
     - Geen
   initial: Geen
   icon: mdi:monitor-multiple

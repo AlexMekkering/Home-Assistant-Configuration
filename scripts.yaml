@@ -188,36 +188,6 @@ detect_media:
       'on') and is_state_attr('media_player.denon_avc_x4800h', 'source', 'HEOS Music')
       %}\n  script.select_radio_luisteren\n{% else %}\n  script.select_geen\n{% endif
       %}\n"
-increase_volume:
-  alias: Increase Volume
-  sequence:
-  - service: homeassistant.update_entity
-    entity_id: media_player.receiver
-  - condition: state
-    entity_id: media_player.receiver
-    state: home
-  - service: media_player.volume_set
-    data_template:
-      entity_id: media_player.receiver
-      volume_level: '{{ (states.media_player.receiver.attributes.volume_level | float
-        + 0.025) | round(4) }}
-
-        '
-decrease_volume:
-  alias: Decrease Volume
-  sequence:
-  - service: homeassistant.update_entity
-    entity_id: media_player.receiver
-  - condition: state
-    entity_id: media_player.receiver
-    state: home
-  - service: media_player.volume_set
-    data_template:
-      entity_id: media_player.receiver
-      volume_level: '{{ (states.media_player.receiver.attributes.volume_level | float
-        - 0.025) | round(4) }}
-
-        '
 select_geen:
   alias: Select media scene Geen
   sequence:
@@ -274,12 +244,6 @@ watch_media:
   - service: automation.turn_on
     entity_id: automation.check_receiver_source
   - service: script.powerup_mediaplayer
-watch_mediabox:
-  alias: Watch Mediabox
-  sequence:
-  - service: script.powerup_mediabox
-  - service: automation.turn_on
-    entity_id: automation.check_receiver_source
 all_media_off:
   alias: All Media Off
   sequence:
@@ -304,13 +268,16 @@ shutdown_tv:
   alias: Shutdown TV
   sequence:
   - condition: state
-    entity_id: switch.tv_meubel_tv
     state: 'on'
-  - service: script.shutdown_mediaplayer
+    entity_id: media_player.tv
+  - action: script.shutdown_mediaplayer
+    data: {}
   - wait_template: '{{ is_state(''switch.tv_meubel_mediaplayer'', ''off'') }}'
     timeout: 00:00:20
-  - service: switch.turn_off
-    entity_id: switch.tv_meubel_tv
+  - action: media_player.turn_off
+    target:
+      entity_id: media_player.tv
+    data: {}
 shutdown_receiver:
   alias: Shutdown Receiver
   sequence:
@@ -330,18 +297,15 @@ powerup_receiver:
 powerup_tv:
   alias: Powerup TV
   sequence:
-  - service: script.powerup_receiver
-    data: {}
-  - service: switch.turn_on
-    data: {}
+  - data: {}
+    action: script.powerup_receiver
+  - action: media_player.turn_on
     target:
-      entity_id: switch.tv_meubel_tv
+      entity_id:
+      - media_player.tv
+    data: {}
 powerup_mediaplayer:
   alias: Powerup Mediaplayer
-  sequence:
-  - service: script.powerup_tv
-powerup_mediabox:
-  alias: Powerup Mediabox
   sequence:
   - service: script.powerup_tv
 prepare_for_bed:

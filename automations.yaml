@@ -254,17 +254,16 @@
         endif %}\n"
 - id: scene_select
   alias: Scene Select
-  trigger:
-  - platform: state
-    entity_id: input_select.media_scene
-  action:
-  - service: script.turn_on
-    data_template:
+  triggers:
+  - entity_id: input_select.media_scene
+    trigger: state
+  actions:
+  - data_template:
       entity_id: "{% set scene = trigger.to_state.state %} {% if scene == 'Radio luisteren'
         %}\n  script.listen_radio\n{% elif scene == 'TV kijken' %}\n  script.watch_tv\n{%
-        elif scene == 'Media kijken' %}\n  script.watch_media\n{% elif scene == 'Mediabox
-        kijken' %}\n  script.watch_mediabox\n{% else %}\n  script.all_media_off\n{%
+        elif scene == 'Media kijken' %}\n  script.watch_media\n{% else %}\n  script.all_media_off\n{%
         endif %}\n"
+    action: script.turn_on
 - id: toggle_living
   alias: Toggle Living
   triggers:
@@ -374,12 +373,12 @@
       aioesphomeapi: '{{ trigger.to_state.state }}'
 - id: check_receiver_source
   alias: Check Receiver source
-  trigger:
-  - platform: time_pattern
-    seconds: /05
+  triggers:
+  - seconds: /05
     enabled: true
-  condition: []
-  action:
+    trigger: time_pattern
+  conditions: []
+  actions:
   - condition: template
     value_template: '{{ states.media_player.denon_avc_x4800h.attributes.source is
       defined }}'
@@ -387,20 +386,19 @@
       set source = states.media_player.denon_avc_x4800h.attributes.source %} {% if
       scene == 'Geen' or scene == 'TV kijken' and source == 'TV Audio'\n    or scene
       == 'Media kijken' and source == 'Media Player'\n    or scene == 'Radio luisteren'
-      and source == 'HEOS Music' or scene == 'Mediabox kijken' and source =='Mediabox'%}\n
-      \ automation.turn_off\n{% else %}\n  automation.turn_on\n{% endif %}\n"
+      and source == 'HEOS Music'\n    %}\n  automation.turn_off\n{% else %}\n  automation.turn_on\n{%
+      endif %}\n"
     data:
       entity_id: automation.check_receiver_source
   - condition: state
     entity_id: automation.check_receiver_source
     state: 'on'
-  - service: media_player.select_source
-    data_template:
+  - data_template:
       entity_id: media_player.denon_avc_x4800h
       source: "{% if is_state('input_select.media_scene', 'Radio luisteren') %}\n
         \ HEOS Music\n{% elif is_state('input_select.media_scene', 'Media kijken')
-        %}\n  Media Player\n{% elif is_state('input_select.media_scene', 'Mediabox
-        kijken') %}\n  Mediabox\n{% else %}\n  TV Audio\n{% endif %}\n"
+        %}\n  Media Player\n{% else %}\n  TV Audio\n{% endif %}\n"
+    action: media_player.select_source
   initial_state: 'off'
 - id: turn_on_mediaplayer
   alias: Turn on mediaplayer
@@ -523,24 +521,28 @@
       message: '{{ trigger.to_state.name }}'
 - id: startup
   alias: Opstarten
-  initial_state: 'on'
-  trigger:
-    platform: homeassistant
-    event: start
-  action:
-  - service: script.detect_media
-  - service: script.detect_lights
-  - service: automation.turn_off
-    entity_id: automation.opstarten
-  - service: input_boolean.turn_off
-    entity_id: input_boolean.evening_trigger_upstairs
+  triggers:
+  - event: start
+    trigger: homeassistant
+  actions:
+  - action: automation.trigger
+    metadata: {}
+    data:
+      skip_condition: true
+    target:
+      entity_id: automation.sync_scene_select
+  - action: script.detect_lights
+    data: {}
+  - entity_id: input_boolean.evening_trigger_upstairs
+    action: input_boolean.turn_off
   - condition: sun
     after: sunset
     after_offset: '-1:00:00'
   - condition: time
     before: '23:05:00'
-  - service: automation.trigger
-    entity_id: automation.sunset_preparation
+  - entity_id: automation.sunset_preparation
+    action: automation.trigger
+  initial_state: 'on'
 - id: timer_activity_upstairs_cancelled
   alias: Timeout Activiteit boven
   trigger:
@@ -873,4 +875,76 @@
     target:
       entity_id: switch.kantoor_alex
     data: {}
+  mode: single
+- id: '1752905451995'
+  alias: Sync Scene Select
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - media_player.denon_avc_x4800h
+  - trigger: state
+    entity_id:
+    - media_player.tv
+  - trigger: state
+    entity_id:
+    - switch.tv_meubel_mediaplayer
+  conditions:
+  - condition: state
+    entity_id: binary_sensor.all_media_available
+    state: 'on'
+  actions:
+  - action: automation.turn_off
+    metadata: {}
+    data:
+      stop_actions: false
+    target:
+      entity_id: automation.scene_select
+  - if:
+    - condition: state
+      entity_id: switch.tv_meubel_mediaplayer
+      state: 'on'
+    then:
+    - action: input_select.select_option
+      metadata: {}
+      data:
+        option: Media kijken
+      target:
+        entity_id: input_select.media_scene
+    else:
+    - if:
+      - condition: state
+        entity_id: media_player.tv
+        state: 'on'
+      then:
+      - action: input_select.select_option
+        metadata: {}
+        data:
+          option: TV kijken
+        target:
+          entity_id: input_select.media_scene
+      else:
+      - if:
+        - condition: state
+          entity_id: media_player.denon_avc_x4800h
+          state: 'on'
+        then:
+        - action: input_select.select_option
+          metadata: {}
+          data:
+            option: Radio luisteren
+          target:
+            entity_id: input_select.media_scene
+        else:
+        - action: input_select.select_option
+          metadata: {}
+          data:
+            option: Geen
+          target:
+            entity_id: input_select.media_scene
+  - action: automation.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: automation.scene_select
   mode: single
