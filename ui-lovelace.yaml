@@ -31,13 +31,13 @@ views:
         show_header_toggle: false
         title: Overig
         type: entities
-      # - type: media-control
-      #   entity: media_player.denon_avc_x4800h
       - entities:
-          - entity: media_player.denon_avc_x4800h
-          - entity: media_player.denon_avc_x4800h_2
+          - entity: media_player.receiver
+          - entity: media_player.tv
+          - entity: switch.tv_meubel_mediaplayer
+          - entity: media_player.woonkamer
         show_header_toggle: false
-        title: Versterker
+        title: Multimedia
         type: entities
     icon: "mdi:home-assistant"
     panel: false

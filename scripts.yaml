@@ -177,17 +177,6 @@ veranda_lights_off:
     target:
       entity_id:
       - light.buitenverlichting_veranda
-detect_media:
-  alias: Select media scene based on state
-  sequence:
-  - delay: 00:00:05
-  - service_template: "{% if is_state('media_player.denon_avc_x4800h', 'on') and is_state_attr('media_player.denon_avc_x4800h',
-      'source', 'Media Player') %}\n  script.select_media_kijken\n{% elif is_state('media_player.denon_avc_x4800h',
-      'on') and is_state_attr('media_player.denon_avc_x4800h', 'source', 'TV Audio')
-      %}\n  script.select_tv_kijken\n{% elif is_state('media_player.denon_avc_x4800h',
-      'on') and is_state_attr('media_player.denon_avc_x4800h', 'source', 'HEOS Music')
-      %}\n  script.select_radio_luisteren\n{% else %}\n  script.select_geen\n{% endif
-      %}\n"
 select_geen:
   alias: Select media scene Geen
   sequence:
@@ -219,31 +208,28 @@ select_radio_luisteren:
 listen_radio:
   alias: Listen Radio
   sequence:
-  - service: automation.turn_off
-    entity_id: automation.turn_on_mediaplayer
-  - service: automation.turn_on
-    entity_id: automation.check_receiver_source
-  - service: script.shutdown_tv
-  - service: script.powerup_receiver
+  - action: script.shutdown_tv
+    data: {}
+  - action: media_player.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: media_player.receiver
 watch_tv:
   alias: Watch TV
   sequence:
-  - service: automation.turn_off
-    entity_id: automation.turn_on_mediaplayer
-  - service: automation.turn_on
-    entity_id: automation.check_receiver_source
-  - service: script.shutdown_mediaplayer
+  - action: script.shutdown_mediaplayer
+    data: {}
   - wait_template: '{{ is_state(''switch.tv_meubel_mediaplayer'', ''off'') }}'
     timeout: 00:00:10
-  - service: script.powerup_tv
+  - action: script.powerup_tv
+    data: {}
 watch_media:
   alias: Watch Media
   sequence:
-  - service: automation.turn_on
-    entity_id: automation.turn_on_mediaplayer
-  - service: automation.turn_on
-    entity_id: automation.check_receiver_source
-  - service: script.powerup_mediaplayer
+  - action: script.powerup_mediaplayer
+    data: {}
+  description: ''
 all_media_off:
   alias: All Media Off
   sequence:
@@ -259,11 +245,15 @@ shutdown_mediaplayer:
   - condition: state
     entity_id: switch.tv_meubel_mediaplayer
     state: 'on'
-  - service: media_player.turn_off
-    entity_id: media_player.woonkamer
-  - delay: 00:00:15
-  - service: switch.turn_off
-    entity_id: switch.tv_meubel_mediaplayer
+  - entity_id: media_player.woonkamer
+    action: media_player.turn_off
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - entity_id: switch.tv_meubel_mediaplayer
+    action: switch.turn_off
 shutdown_tv:
   alias: Shutdown TV
   sequence:
@@ -281,33 +271,41 @@ shutdown_tv:
 shutdown_receiver:
   alias: Shutdown Receiver
   sequence:
-  - service: script.shutdown_tv
-    data: {}
-  - service: media_player.turn_off
-    data: {}
+  - data: {}
+    action: script.shutdown_tv
+  - data: {}
+    action: media_player.turn_off
     target:
-      entity_id: media_player.denon_avc_x4800h
-powerup_receiver:
-  alias: Setup Receiver when it's ready to be
-  sequence:
-  - service: media_player.turn_on
-    data: {}
-    target:
-      entity_id: media_player.denon_avc_x4800h
+      entity_id: media_player.receiver
 powerup_tv:
   alias: Powerup TV
   sequence:
-  - data: {}
-    action: script.powerup_receiver
   - action: media_player.turn_on
     target:
       entity_id:
       - media_player.tv
     data: {}
+  description: ''
 powerup_mediaplayer:
   alias: Powerup Mediaplayer
   sequence:
-  - service: script.powerup_tv
+  - action: script.powerup_tv
+    data: {}
+  - wait_template: '{{is_state("input_boolean.tv_operative", "on")}}'
+    continue_on_timeout: false
+    timeout: '30'
+  - action: media_player.select_source
+    metadata: {}
+    data:
+      source: Media Player
+    target:
+      entity_id: media_player.receiver
+  - action: switch.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.tv_meubel_mediaplayer
+  description: ''
 prepare_for_bed:
   alias: Klaarmaken om naar bed te gaan
   sequence:
