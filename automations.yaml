@@ -948,3 +948,111 @@
       target:
         entity_id: input_boolean.tv_operative
   mode: restart
+- id: '1753601989961'
+  alias: Watch Media From Tv
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - media_player.tv
+    attribute: source
+    to: HDMI 3 (eARC/ARC)
+  conditions: []
+  actions:
+  - action: script.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: script.watch_media
+  mode: single
+- id: '1753602369816'
+  alias: Watch Tv From Tv
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - media_player.tv
+  conditions:
+  - condition: template
+    value_template: '{{is_state(''media_player.tv'', ''on'') and ''source'' in trigger.from_state.attributes
+      and trigger.from_state.attributes[''source''] in (''Kodi'', ''HDMI 3 (eARC/ARC'')
+      and not ''source'' in trigger.to_state.attributes}}'
+  actions:
+  - action: script.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: script.watch_tv
+    enabled: true
+  mode: single
+- id: '1754072343842'
+  alias: Pause Mediaplayer when Tv Off
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - media_player.tv
+    to: 'off'
+  conditions:
+  - condition: state
+    entity_id: switch.tv_meubel_mediaplayer
+    state: 'on'
+  actions:
+  - action: timer.start
+    metadata: {}
+    data: {}
+    target:
+      entity_id: timer.mediaplayer_shutdown
+  - action: media_player.media_pause
+    metadata: {}
+    data: {}
+    target:
+      entity_id: media_player.woonkamer
+  mode: single
+- id: '1754072519829'
+  alias: Cancel mediaplayer shutdown when Tv on
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - media_player.tv
+    from: 'off'
+    to: 'on'
+  conditions:
+  - condition: state
+    entity_id: switch.tv_meubel_mediaplayer
+    state: 'on'
+  actions:
+  - action: timer.cancel
+    metadata: {}
+    data: {}
+    target:
+      entity_id: timer.mediaplayer_shutdown
+  mode: single
+- id: '1754072967557'
+  alias: Poweroff Mediaplayer when timer fires
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - timer.mediaplayer_shutdown
+    from: active
+    to: idle
+  conditions: []
+  actions:
+  - action: media_player.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: media_player.woonkamer
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 10
+      milliseconds: 0
+  - action: switch.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.tv_meubel_mediaplayer
+  mode: single
