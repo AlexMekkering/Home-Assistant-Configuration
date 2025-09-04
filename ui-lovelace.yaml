@@ -105,7 +105,7 @@ views:
       - entity: sensor.koolmonoxidemelder_battery_level
       - entity: sensor.kantoor_alex_power
       - entity: sensor.kantoor_alex_power_mean_5min
-      - entity: sensor.kantoor_alex_electric_consumption_kwh
+      - entity: sensor.kantoor_alex_energy
       - entity: sensor.mechanische_ventilatie_power
     cards:
       - entities:

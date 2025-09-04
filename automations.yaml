@@ -610,24 +610,24 @@
 - id: '1668968231502'
   alias: Kantoor Alex Auto turn off
   description: ''
-  trigger:
-  - platform: numeric_state
-    entity_id:
+  triggers:
+  - entity_id:
     - sensor.kantoor_alex_power_mean_5min
     for:
       hours: 0
       minutes: 10
       seconds: 0
-    below: 18
-  condition:
+    below: 20
+    trigger: numeric_state
+  conditions:
   - condition: state
     entity_id: switch.kantoor_alex
     state: 'on'
-  action:
-  - service: switch.turn_off
-    data: {}
+  actions:
+  - data: {}
     target:
       entity_id: switch.kantoor_alex
+    action: switch.turn_off
   mode: single
 - id: '1668968557946'
   alias: Kantoor Joyce Auto turn off

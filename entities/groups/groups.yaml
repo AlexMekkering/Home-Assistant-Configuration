@@ -29,12 +29,11 @@ living_room_lights:
 activity_at_home:
   name: Activiteit thuis
   entities:
-    - switch.tv_meubel_tv
-    - binary_sensor.receiver
-    - switch.tv_meubel_mediaplayer
+    - input_boolean.tv_operative
     - light.tv_meubel_spruitje
     - light.schilderij
     - light.veranda_verlichting
+    - light.verlichting_keuken
     - switch.hal_lamp
     - switch.kantoor_alex
     - switch.kantoor_joyce
