@@ -8,8 +8,14 @@
 # https://www.home-assistant.io/lovelace/yaml-mode/
 #
 lovelace:
-  mode: yaml
+  resource_mode: yaml
   dashboards:
+    lovelace:
+      mode: yaml
+      filename: ui-lovelace.yaml
+      title: Overview
+      icon: mdi:view-dashboard
+      show_in_sidebar: true
     lovelace-yaml:
       title: Admin
       mode: yaml
